@@ -3,20 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Foundry | About</title>
+
+  <title>About The Foundry</title>
+  <meta
+    name="description"
+    content="The Foundry builds simple, affordable websites for small businesses, backed by FoundryCare and clear ownership."
+  />
+
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body>
-  <main class="page foundry-info-page">
-    <section class="section">
-      <p class="eyebrow">The Foundry</p>
-      <h1>Simple websites. Carefully made.</h1>
-      <p>Many businesses do not lack a website because they are careless. They lack a website because they have been busy building a business, serving customers, answering calls, and doing the mahi.</p>
+  <header class="site-header">
+    <a class="brand-mark" href="../" aria-label="The Foundry home">
+      <span class="brand-symbol" aria-hidden="true">◆</span>
+      <span>The Foundry</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../start/">Start</a>
+      <a href="../explore/storyteller/">Explore</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero about-hero">
+      <div class="hero-card split-card">
+        <div>
+          <p class="eyebrow">About The Foundry</p>
+
+          <h1>Simple websites. Carefully made.</h1>
+        </div>
+
+        <div class="copy-block">
+          <p>
+            The Foundry helps small businesses establish a professional online
+            presence without turning the website into another job.
+          </p>
+
+          <p>
+            The aim is simple: a good site, a clear process, fair ownership,
+            and ongoing care when you want it.
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="section foundrycare-module" data-include="foundrycare"></section>
-    <section class="section ownership-module" data-include="ownership"></section>
+
+    <section class="soft-section">
+      <div class="section-inner narrow">
+        <p class="eyebrow">Why it exists</p>
+
+        <h2>You have been busy building a business.</h2>
+
+        <p>
+          Many businesses do not lack a website because they are careless.
+          They lack a website because they have been serving customers,
+          answering phones, opening doors and doing the work.
+        </p>
+
+        <p>
+          The Foundry helps with the website part.
+        </p>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="section-inner detail-grid">
+        <article class="detail-card">
+          <p class="eyebrow">Website</p>
+          <h2>$800</h2>
+          <p>
+            A custom, mobile-friendly website with email enquiries, launch support
+            and six months of FoundryCare.
+          </p>
+        </article>
+
+        <article class="detail-card">
+          <p class="eyebrow">FoundryCare</p>
+          <h2>$40 / month</h2>
+          <p>
+            Hosting, maintenance, content updates, search and listing reviews,
+            two-monthly check-ins and website stewardship.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">Ownership</p>
+          <h2>The website belongs to you.</h2>
+        </div>
+
+        <div>
+          <p>
+            You receive a copy of your website at launch, and an updated copy every
+            six months. You can leave FoundryCare at any time and return later with
+            no rejoining fee.
+          </p>
+
+          <a class="button button-primary" href="../start/">Hand me the problem</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"></footer>
+
+  <footer class="site-footer">
+    <p>The Foundry</p>
+    <p><a href="mailto:foundry@rkdb.nz">foundry@rkdb.nz</a></p>
+  </footer>
+
   <script src="../script.js"></script>
 </body>
 </html>
