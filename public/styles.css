@@ -150,6 +150,10 @@ p {
   font-size: 0.95rem;
 }
 
+.start-page .button {
+  margin-top: 1.25rem;
+}
+
 .back-link {
   position: fixed;
   top: clamp(1rem, 3vw, 2rem);
