@@ -1,0 +1,118 @@
+* { box-sizing: border-box; }
+:root {
+  --ink: #211812;
+  --muted: #735f4e;
+  --cream: #fbf4e8;
+  --bronze: #b9803e;
+  --bronze-deep: #775022;
+  --line: rgba(91, 62, 36, 0.14);
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, #fff9ef 0%, var(--cream) 45%, #ead7bd 100%);
+}
+a { color: inherit; }
+.page, .demo-site {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+.hero, .section, .demo-hero {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  display: grid;
+  gap: clamp(0.55rem, 2vw, 1.25rem);
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+.hero.compact h1, .demo-hero h1, .section h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+.eyebrow {
+  margin: 0 0 1.4rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--bronze-deep);
+  font-weight: 800;
+}
+p {
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--muted);
+}
+.short-copy { max-width: 560px; margin: 1.4rem auto 0; }
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.2rem;
+}
+.button, .floating-like {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.35rem;
+  padding: 0.95rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.button:hover, .button:focus-visible, .floating-like:hover, .floating-like:focus-visible {
+  transform: translateY(-3px);
+  outline: none;
+}
+.button-primary, .floating-like {
+  color: #fff8ea;
+  background: linear-gradient(135deg, #c49350 0%, #a66f30 42%, #63401e 100%);
+  box-shadow: 0 16px 34px rgba(105, 66, 26, 0.26), inset 0 1px 0 rgba(255,255,255,0.28);
+}
+.button-secondary {
+  color: var(--bronze-deep);
+  background: rgba(255, 250, 241, 0.72);
+  border: 1px solid rgba(119, 80, 34, 0.2);
+}
+.small-link { margin-top: 1.5rem; font-size: 0.95rem; }
+.floating-like {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10;
+}
+.site-footer {
+  padding: 4rem 1rem 5rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.site-footer::before {
+  content: "THE FOUNDRY\A\A Simple websites.\A Carefully made.\A\A foundry@rkdb.nz";
+  white-space: pre;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .page, .demo-site { padding: 2rem 1rem; }
+  .button, .button-row { width: 100%; }
+  .floating-like { left: 1rem; right: 1rem; }
+}
