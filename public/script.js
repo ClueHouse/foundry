@@ -8,7 +8,13 @@ function setStartEmailLinks() {
   const links = document.querySelectorAll(".email-start");
   const subject = "Hand Me The Problem";
 
-  const body = `You're only a few clicks away from having a website.
+const body = `Hi, I'm Rob.
+
+I own The Foundry.
+
+The Foundry was built to make having a website effortless.
+
+You're almost ready to launch.
 
 There is no obligation.
 
