@@ -7,17 +7,17 @@ function encodeMail(body) {
 function setStartEmailLinks() {
   const links = document.querySelectorAll(".email-start");
   const subject = "Hand Me The Problem";
-  const body = `Tell me who you are.
+const body = `You're only a few clicks away from having a website.
 
-I'll spend a little time getting to know your business and send back a few ideas for what your website could become.
+There is no obligation.
 
-Business name:
+I'll do some homework and come back with a few mockups.
 
-Business address:
+If one feels right, we'll refine it together.
 
-What do you do?
+If not, no harm done.
 
-Anything else you'd like me to know?
+In a few sentences, tell me who you are, where you are, and what you'd like your customers to know.
 `;
   links.forEach((link) => {
     link.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeMail(body)}`;
