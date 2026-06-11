@@ -15,13 +15,13 @@
   <style>
     body.foundry-info-page {
       position: relative;
-background: #080504;
+      background: #050302;
       color: #fff8ea;
     }
 
     .foundry-info-page .site-header {
-background: #080504;
-      border-bottom: 1px solid rgba(255, 248, 234, 0.1);
+      background: #050302;
+      border-bottom: 1px solid rgba(255, 248, 234, 0.08);
     }
 
     .foundry-info-page .brand-mark,
@@ -50,59 +50,33 @@ background: #080504;
       width: min(1120px, 100%);
       margin: 0 auto;
     }
-.foundry-opening-tile {
-  min-height: calc(100svh - 72px);
-  display: grid;
-  align-items: center;
-background: #080504;
-}
 
-.foundry-hero-card {
-  width: min(1120px, 88vw);
-  min-height: clamp(640px, 78vh, 860px);
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: hidden;
+    .foundry-opening-tile {
+      min-height: calc(100svh - 72px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(2.2rem, 5vw, 4.5rem);
+      background: #050302;
+      padding-top: clamp(2rem, 5vw, 4rem);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+    }
 
-  background-image: url("../assets/brand/foundryplaque.png");
-  background-position: center 30%;
-  background-repeat: no-repeat;
-  background-size: contain;
+    .foundry-logo-image {
+      width: min(980px, 82vw);
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      background-image: url("../assets/brand/foundryplaque.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  box-shadow: none;
-}
-
-.foundry-hero-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(19,11,8,0.25) 0%,
-      rgba(19,11,8,0.55) 45%,
-      rgba(19,11,8,0.95) 100%
-    );
-}
-
-.foundry-opening {
-  position: relative;
-  z-index: 2;
-
-  width: min(760px, 88%);
-  margin: 0 auto;
-
-  text-align: center;
-
-  padding-top: 520px;
-  padding-bottom: 40px;
-}
+    .foundry-opening {
+      width: min(760px, 88%);
+      margin: 0 auto;
+      text-align: center;
+    }
 
     .foundry-subtitle {
       margin: 0;
@@ -237,17 +211,15 @@ background: #080504;
 
       .foundry-opening-tile {
         min-height: calc(100svh - 68px);
+        gap: 2rem;
       }
 
-      .foundry-hero-card {
+      .foundry-logo-image {
         width: min(100%, 94vw);
-        min-height: 74vh;
-        background-size: cover;
       }
 
       .foundry-opening {
         text-align: center;
-        padding-bottom: clamp(2.2rem, 10vw, 4rem);
       }
 
       .foundry-info-page .site-header {
@@ -268,21 +240,21 @@ background: #080504;
 
   <main>
     <section class="foundry-tile foundry-opening-tile">
-      <div class="foundry-hero-card">
-        <div class="foundry-opening">
-          <p class="foundry-subtitle">
-            Your piece of the web.
-          </p>
+      <div class="foundry-logo-image" aria-label="The Foundry"></div>
 
-          <div class="foundry-rule" aria-hidden="true"></div>
+      <div class="foundry-opening">
+        <p class="foundry-subtitle">
+          Your piece of the web.
+        </p>
 
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
+        <div class="foundry-rule" aria-hidden="true"></div>
+
+        <ul class="foundry-promise-list" aria-label="The Foundry promises">
+          <li>Sites that evolve with you.</li>
+          <li>Clear pricing.</li>
+          <li>Fair ownership.</li>
+          <li>FoundryCare.</li>
+        </ul>
       </div>
     </section>
 
