@@ -50,51 +50,59 @@
       width: min(1120px, 100%);
       margin: 0 auto;
     }
+.foundry-opening-tile {
+  min-height: calc(100svh - 72px);
+  display: grid;
+  align-items: center;
+  background: #130b08;
+}
 
-    .foundry-opening-tile {
-      min-height: calc(100svh - 72px);
-      display: grid;
-      align-items: center;
-      background: #130b08;
-    }
+.foundry-hero-card {
+  width: min(1120px, 88vw);
+  min-height: clamp(640px, 78vh, 860px);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
 
-    .foundry-hero-card {
-      width: min(1120px, 88vw);
-      min-height: clamp(480px, 67vh, 720px);
-      margin: 0 auto;
-      position: relative;
-      display: grid;
-      align-items: end;
-      overflow: hidden;
-      background-image: url("../assets/brand/foundryplaque.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      box-shadow: 0 34px 110px rgba(0, 0, 0, 0.45);
-    }
+  background-image: url("../assets/brand/foundryplaque.png");
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    .foundry-hero-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      background: linear-gradient(
-        180deg,
-        rgba(8, 5, 4, 0) 0%,
-        rgba(8, 5, 4, 0.08) 45%,
-        rgba(8, 5, 4, 0.68) 100%
-      );
-    }
+  box-shadow: none;
+}
 
-    .foundry-opening {
-      position: relative;
-      z-index: 2;
-      width: min(760px, 88%);
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 0 clamp(2.8rem, 5vw, 4.6rem);
-    }
+.foundry-hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(19,11,8,0.25) 0%,
+      rgba(19,11,8,0.55) 45%,
+      rgba(19,11,8,0.95) 100%
+    );
+}
+
+.foundry-opening {
+  position: relative;
+  z-index: 2;
+
+  width: min(760px, 88%);
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding-top: 520px;
+  padding-bottom: 40px;
+}
 
     .foundry-subtitle {
       margin: 0;
