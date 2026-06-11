@@ -15,7 +15,7 @@
   <style>
     body.foundry-info-page {
       position: relative;
-      background: #100b08;
+      background: #21110b;
       color: #fff8ea;
     }
 
@@ -26,13 +26,13 @@
       z-index: -2;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 22%, rgba(214, 78, 18, 0.16), transparent 28rem),
-        radial-gradient(circle at 50% 50%, rgba(114, 44, 20, 0.18), transparent 38rem),
-        linear-gradient(135deg, #120b08 0%, #1a0f0a 48%, #090706 100%);
+        radial-gradient(circle at 50% 18%, rgba(181, 65, 18, 0.18), transparent 28rem),
+        radial-gradient(circle at 50% 58%, rgba(88, 32, 16, 0.28), transparent 42rem),
+        linear-gradient(135deg, #120907 0%, #26130c 48%, #0b0705 100%);
     }
 
     .foundry-info-page .site-header {
-      background: rgba(12, 8, 6, 0.72);
+      background: rgba(12, 7, 5, 0.78);
       border-bottom: 1px solid rgba(255, 248, 234, 0.1);
       backdrop-filter: blur(12px);
     }
@@ -68,9 +68,11 @@
       position: relative;
       min-height: calc(100svh - 72px);
       display: grid;
-      align-items: center;
+      align-items: end;
       overflow: hidden;
-      background: #100b08;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(107, 39, 16, 0.45), transparent 34rem),
+        linear-gradient(135deg, #170b07 0%, #2a140c 46%, #090605 100%);
     }
 
     .foundry-opening-tile::before {
@@ -80,9 +82,13 @@
       z-index: 0;
       pointer-events: none;
       background-image: url("../assets/brand/foundryplaque.png");
-      background-position: center;
+      background-position: center 38%;
       background-repeat: no-repeat;
-background-size: min(1100px, 70%);
+      background-size: min(1120px, 78vw);
+      opacity: 0.98;
+      filter:
+        drop-shadow(0 0 36px rgba(255, 92, 20, 0.24))
+        drop-shadow(0 26px 70px rgba(0, 0, 0, 0.48));
     }
 
     .foundry-opening-tile::after {
@@ -92,34 +98,44 @@ background-size: min(1100px, 70%);
       z-index: 1;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 46%, transparent 0 26rem, rgba(8, 5, 4, 0.18) 42rem, rgba(8, 5, 4, 0.72) 100%),
-        linear-gradient(180deg, rgba(8, 5, 4, 0.08), rgba(8, 5, 4, 0.44));
+        radial-gradient(
+          circle at 50% 38%,
+          rgba(0, 0, 0, 0) 0 17rem,
+          rgba(12, 6, 4, 0.18) 31rem,
+          rgba(8, 5, 4, 0.76) 100%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(8, 5, 4, 0.06) 0%,
+          rgba(8, 5, 4, 0.1) 38%,
+          rgba(8, 5, 4, 0.82) 100%
+        );
     }
 
     .foundry-opening {
       position: relative;
       z-index: 2;
       text-align: center;
-      padding-top: clamp(10rem, 22vw, 19rem);
+      padding-bottom: clamp(3rem, 7vw, 6rem);
     }
 
     .foundry-subtitle {
       margin: 0;
-      font-size: clamp(1.35rem, 2.3vw, 2.4rem);
+      font-size: clamp(1.35rem, 2.2vw, 2.2rem);
       line-height: 1.1;
       letter-spacing: -0.035em;
-      color: rgba(255, 248, 234, 0.9);
-      text-shadow: 0 2px 22px rgba(0, 0, 0, 0.75);
+      color: rgba(255, 248, 234, 0.94);
+      text-shadow: 0 2px 22px rgba(0, 0, 0, 0.86);
     }
 
     .foundry-rule {
-      width: min(220px, 45%);
+      width: min(180px, 42%);
       height: 1px;
-      margin: clamp(2.4rem, 5vw, 4.5rem) auto;
+      margin: clamp(1.8rem, 3.4vw, 3rem) auto;
       background: linear-gradient(
         90deg,
         transparent,
-        rgba(255, 138, 50, 0.85),
+        rgba(255, 138, 50, 0.88),
         transparent
       );
     }
@@ -129,15 +145,15 @@ background-size: min(1100px, 70%);
       padding: 0;
       list-style: none;
       display: grid;
-      gap: clamp(1.2rem, 2.4vw, 2rem);
+      gap: clamp(0.8rem, 1.5vw, 1.25rem);
     }
 
     .foundry-promise-list li {
-      font-size: clamp(1.65rem, 3.2vw, 3.7rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
+      font-size: clamp(1.45rem, 2.55vw, 2.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
       color: #fff8ea;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.78);
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
     }
 
     .foundry-two-column,
@@ -239,12 +255,13 @@ background-size: min(1100px, 70%);
       }
 
       .foundry-opening-tile::before {
-        background-size: cover;
+        background-position: center 30%;
+        background-size: min(780px, 116vw);
       }
 
       .foundry-opening {
         text-align: center;
-        padding-top: clamp(9rem, 38vw, 15rem);
+        padding-bottom: clamp(2.4rem, 10vw, 4.5rem);
       }
 
       .foundry-info-page .site-header {
