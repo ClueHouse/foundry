@@ -13,12 +13,41 @@
   <link rel="stylesheet" href="../styles.css" />
 
   <style>
-    body.foundry-info-page {
-      background:
-        radial-gradient(circle at top left, rgba(184, 128, 62, 0.18), transparent 34rem),
-        linear-gradient(135deg, #2a1d16 0%, #3a281d 48%, #1f1712 100%);
-      color: #fff8ea;
-    }
+body.foundry-info-page {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(184, 128, 62, 0.18), transparent 30rem),
+    radial-gradient(circle at 82% 72%, rgba(92, 52, 28, 0.3), transparent 36rem),
+    radial-gradient(circle at 48% 42%, rgba(255, 248, 234, 0.035), transparent 28rem),
+    linear-gradient(135deg, #241711 0%, #3a261b 45%, #17100c 100%);
+  color: #fff8ea;
+}
+
+body.foundry-info-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.24;
+  background-image:
+    repeating-linear-gradient(
+      42deg,
+      rgba(255, 248, 234, 0.032) 0,
+      rgba(255, 248, 234, 0.032) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      -38deg,
+      rgba(0, 0, 0, 0.11) 0,
+      rgba(0, 0, 0, 0.11) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    radial-gradient(circle at 22% 34%, rgba(217, 167, 102, 0.08), transparent 18rem),
+    radial-gradient(circle at 70% 18%, rgba(255, 248, 234, 0.035), transparent 20rem);
+}
 
     .foundry-info-page .site-header {
       background: rgba(38, 26, 19, 0.82);
