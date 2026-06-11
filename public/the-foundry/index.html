@@ -4,111 +4,332 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>About The Foundry</title>
+  <title>The Foundry</title>
   <meta
     name="description"
-    content="The Foundry builds simple, affordable websites for small businesses, backed by FoundryCare and clear ownership."
+    content="The Foundry builds simple websites with clear pricing, fair ownership and ongoing support."
   />
 
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    body.foundry-info-page {
+      background:
+        radial-gradient(circle at top left, rgba(184, 128, 62, 0.18), transparent 34rem),
+        linear-gradient(135deg, #2a1d16 0%, #3a281d 48%, #1f1712 100%);
+      color: #fff8ea;
+    }
+
+    .foundry-info-page .site-header {
+      background: rgba(38, 26, 19, 0.82);
+      border-bottom: 1px solid rgba(255, 248, 234, 0.12);
+    }
+
+    .foundry-info-page .brand-mark,
+    .foundry-info-page .site-nav,
+    .foundry-info-page .eyebrow {
+      color: #d9a766;
+    }
+
+    .foundry-info-page p {
+      color: rgba(255, 248, 234, 0.78);
+    }
+
+    .foundry-info-page .site-nav a,
+    .foundry-info-page .brand-mark {
+      text-decoration: none;
+    }
+
+    .foundry-info-page main {
+      width: 100%;
+    }
+
+    .foundry-tile {
+      padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+      border-top: 1px solid rgba(255, 248, 234, 0.12);
+    }
+
+    .foundry-tile:first-of-type {
+      border-top: 0;
+    }
+
+    .foundry-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .foundry-hero-card {
+      padding: clamp(2.2rem, 5vw, 5rem);
+      border: 1px solid rgba(255, 248, 234, 0.14);
+      border-radius: clamp(28px, 4vw, 54px);
+      background:
+        linear-gradient(135deg, rgba(255, 248, 234, 0.10), rgba(255, 248, 234, 0.035));
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.22);
+    }
+
+    .foundry-hero-grid,
+    .foundry-two-column,
+    .foundry-price-grid {
+      display: grid;
+      gap: clamp(2rem, 5vw, 5rem);
+    }
+
+    .foundry-hero-grid,
+    .foundry-two-column {
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+    }
+
+    .foundry-price-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .foundry-title {
+      margin: 0;
+      font-size: clamp(4rem, 11vw, 11rem);
+      line-height: 0.78;
+      letter-spacing: -0.085em;
+      font-weight: 500;
+      color: #fff8ea;
+    }
+
+    .foundry-promise-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .foundry-promise-list li {
+      font-size: clamp(1.55rem, 3vw, 3.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      color: #fff8ea;
+    }
+
+    .foundry-tile h2 {
+      margin: 0 0 1.2rem;
+      font-size: clamp(2.7rem, 6vw, 6.2rem);
+      line-height: 0.88;
+      letter-spacing: -0.065em;
+      font-weight: 500;
+      color: #fff8ea;
+    }
+
+    .foundry-copy {
+      max-width: 640px;
+    }
+
+    .foundry-copy p {
+      margin: 0 0 1rem;
+    }
+
+    .foundry-card {
+      padding: clamp(2rem, 4vw, 4rem);
+      border: 1px solid rgba(255, 248, 234, 0.14);
+      border-radius: 32px;
+      background: rgba(255, 248, 234, 0.07);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+    }
+
+    .foundry-card h3 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+      color: #fff8ea;
+    }
+
+    .foundry-list {
+      margin: 1.4rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+      color: rgba(255, 248, 234, 0.82);
+      font-size: clamp(1rem, 1.4vw, 1.22rem);
+      line-height: 1.45;
+    }
+
+    .foundry-list li::before {
+      content: "— ";
+      color: #d9a766;
+    }
+
+    @media (max-width: 760px) {
+      .foundry-hero-grid,
+      .foundry-two-column,
+      .foundry-price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .foundry-title {
+        font-size: clamp(4.4rem, 18vw, 7rem);
+      }
+
+      .foundry-hero-card,
+      .foundry-tile {
+        text-align: left;
+      }
+
+      .foundry-info-page .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="foundry-info-page">
   <header class="site-header">
     <a class="brand-mark" href="../" aria-label="The Foundry home">
       <span class="brand-symbol" aria-hidden="true">◆</span>
       <span>The Foundry</span>
     </a>
 
-<nav class="site-nav" aria-label="Main navigation">
-  <a href="../start/">Sort It</a>
-  <a href="../possibilities/">Explore</a>
-</nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../start/">Sort It</a>
+      <a href="../possibilities/">Explore</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero about-hero">
-      <div class="hero-card split-card">
-        <div>
-          <p class="eyebrow">About The Foundry</p>
+    <section class="foundry-tile">
+      <div class="foundry-inner">
+        <div class="foundry-hero-card foundry-hero-grid">
+          <div>
+            <p class="eyebrow">The Foundry</p>
+            <h1 class="foundry-title">The Foundry</h1>
+          </div>
 
-          <h1>Simple websites. Carefully made.</h1>
-        </div>
-
-        <div class="copy-block">
-          <p>
-            The Foundry helps small businesses establish a professional online
-            presence without turning the website into another job.
-          </p>
-
-          <p>
-            The aim is simple: a good site, a clear process, fair ownership,
-            and ongoing care when you want it.
-          </p>
+          <div>
+            <ul class="foundry-promise-list" aria-label="The Foundry promises">
+              <li>Simple websites.</li>
+              <li>Clear pricing.</li>
+              <li>Fair ownership.</li>
+              <li>Ongoing support.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="soft-section">
-      <div class="section-inner narrow">
-        <p class="eyebrow">Why it exists</p>
-
-        <h2>You have been busy building a business.</h2>
-
-        <p>
-          Many businesses do not lack a website because they are careless.
-          They lack a website because they have been serving customers,
-          answering phones, opening doors and doing the work.
-        </p>
-
-        <p>
-          The Foundry helps with the website part.
-        </p>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <div class="section-inner detail-grid">
-        <article class="detail-card">
-          <p class="eyebrow">Website</p>
-          <h2>$800</h2>
-          <p>
-            A custom, mobile-friendly website with email enquiries, launch support
-            and six months of FoundryCare.
-          </p>
-        </article>
-
-        <article class="detail-card">
-          <p class="eyebrow">FoundryCare</p>
-          <h2>$40 / month</h2>
-          <p>
-            Hosting, maintenance, content updates, search and listing reviews,
-            two-monthly check-ins and website stewardship.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="soft-section">
-      <div class="section-inner two-column">
+    <section class="foundry-tile">
+      <div class="foundry-inner foundry-two-column">
         <div>
-          <p class="eyebrow">Ownership</p>
+          <p class="eyebrow">Simple websites</p>
+          <h2>You have been busy building a business.</h2>
+        </div>
+
+        <div class="foundry-copy">
+          <p>
+            Many businesses do not lack a website because they are careless.
+          </p>
+
+          <p>
+            They lack a website because they have been serving customers,
+            answering phones, opening doors and doing the mahi.
+          </p>
+
+          <p>
+            The Foundry helps with the website part.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="foundry-tile">
+      <div class="foundry-inner">
+        <p class="eyebrow">Clear pricing</p>
+
+        <div class="foundry-price-grid">
+          <article class="foundry-card">
+            <h3>$800</h3>
+            <p>
+              A custom, mobile-friendly website.
+            </p>
+
+            <ul class="foundry-list">
+              <li>Email enquiries to your inbox</li>
+              <li>Launch support</li>
+              <li>Six months of FoundryCare included</li>
+            </ul>
+          </article>
+
+          <article class="foundry-card">
+            <h3>$40 / month</h3>
+            <p>
+              FoundryCare keeps your website looked after.
+            </p>
+
+            <ul class="foundry-list">
+              <li>Hosting</li>
+              <li>Maintenance</li>
+              <li>Content updates</li>
+              <li>Search and listing reviews</li>
+              <li>Two-monthly check-ins</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="foundry-tile">
+      <div class="foundry-inner foundry-two-column">
+        <div>
+          <p class="eyebrow">Fair ownership</p>
           <h2>The website belongs to you.</h2>
         </div>
 
-        <div>
+        <div class="foundry-copy">
           <p>
-            You receive a copy of your website at launch, and an updated copy every
-            six months. You can leave FoundryCare at any time and return later with
-            no rejoining fee.
+            You receive a copy of your website at launch.
           </p>
 
-          <a class="button button-primary" href="../start/">Hand me the problem</a>
+          <p>
+            You receive an updated copy every six months.
+          </p>
+
+          <p>
+            You can leave FoundryCare at any time.
+          </p>
+
+          <p>
+            You can return later with no rejoining fee.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="foundry-tile">
+      <div class="foundry-inner foundry-two-column">
+        <div>
+          <p class="eyebrow">Ongoing support</p>
+          <h2>A website should not become another job.</h2>
+        </div>
+
+        <div class="foundry-copy">
+          <p>
+            FoundryCare is website stewardship.
+          </p>
+
+          <p>
+            Need a change?
+          </p>
+
+          <p>
+            Send an email.
+          </p>
+
+          <p>
+            The website gets looked after.
+          </p>
         </div>
       </div>
     </section>
   </main>
-
 
   <script src="../script.js"></script>
 </body>
