@@ -15,26 +15,13 @@
   <style>
     body.foundry-info-page {
       position: relative;
-      background: #21110b;
+      background: #130b08;
       color: #fff8ea;
     }
 
-    body.foundry-info-page::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(181, 65, 18, 0.18), transparent 28rem),
-        radial-gradient(circle at 50% 58%, rgba(88, 32, 16, 0.28), transparent 42rem),
-        linear-gradient(135deg, #120907 0%, #26130c 48%, #0b0705 100%);
-    }
-
     .foundry-info-page .site-header {
-      background: rgba(12, 7, 5, 0.78);
+      background: #130b08;
       border-bottom: 1px solid rgba(255, 248, 234, 0.1);
-      backdrop-filter: blur(12px);
     }
 
     .foundry-info-page .brand-mark,
@@ -65,58 +52,48 @@
     }
 
     .foundry-opening-tile {
-      position: relative;
       min-height: calc(100svh - 72px);
+      display: grid;
+      align-items: center;
+      background: #130b08;
+    }
+
+    .foundry-hero-card {
+      width: min(1120px, 88vw);
+      min-height: clamp(480px, 67vh, 720px);
+      margin: 0 auto;
+      position: relative;
       display: grid;
       align-items: end;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 50% 45%, rgba(107, 39, 16, 0.45), transparent 34rem),
-        linear-gradient(135deg, #170b07 0%, #2a140c 46%, #090605 100%);
-    }
-
-    .foundry-opening-tile::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
       background-image: url("../assets/brand/foundryplaque.png");
-      background-position: center 38%;
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: min(1120px, 78vw);
-      opacity: 0.98;
-      filter:
-        drop-shadow(0 0 36px rgba(255, 92, 20, 0.24))
-        drop-shadow(0 26px 70px rgba(0, 0, 0, 0.48));
+      background-size: cover;
+      box-shadow: 0 34px 110px rgba(0, 0, 0, 0.45);
     }
 
-    .foundry-opening-tile::after {
+    .foundry-hero-card::after {
       content: "";
       position: absolute;
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      background:
-        radial-gradient(
-          circle at 50% 38%,
-          rgba(0, 0, 0, 0) 0 17rem,
-          rgba(12, 6, 4, 0.18) 31rem,
-          rgba(8, 5, 4, 0.76) 100%
-        ),
-        linear-gradient(
-          180deg,
-          rgba(8, 5, 4, 0.06) 0%,
-          rgba(8, 5, 4, 0.1) 38%,
-          rgba(8, 5, 4, 0.82) 100%
-        );
+      background: linear-gradient(
+        180deg,
+        rgba(8, 5, 4, 0) 0%,
+        rgba(8, 5, 4, 0.08) 45%,
+        rgba(8, 5, 4, 0.68) 100%
+      );
     }
 
     .foundry-opening {
       position: relative;
       z-index: 2;
+      width: min(760px, 88%);
+      margin: 0 auto;
       text-align: center;
-      padding-bottom: clamp(3rem, 7vw, 6rem);
+      padding: 0 0 clamp(2.8rem, 5vw, 4.6rem);
     }
 
     .foundry-subtitle {
@@ -254,14 +231,15 @@
         min-height: calc(100svh - 68px);
       }
 
-      .foundry-opening-tile::before {
-        background-position: center 30%;
-        background-size: min(780px, 116vw);
+      .foundry-hero-card {
+        width: min(100%, 94vw);
+        min-height: 74vh;
+        background-size: cover;
       }
 
       .foundry-opening {
         text-align: center;
-        padding-bottom: clamp(2.4rem, 10vw, 4.5rem);
+        padding-bottom: clamp(2.2rem, 10vw, 4rem);
       }
 
       .foundry-info-page .site-header {
@@ -282,19 +260,21 @@
 
   <main>
     <section class="foundry-tile foundry-opening-tile">
-      <div class="foundry-inner foundry-opening">
-        <p class="foundry-subtitle">
-          Your piece of the web.
-        </p>
+      <div class="foundry-hero-card">
+        <div class="foundry-opening">
+          <p class="foundry-subtitle">
+            Your piece of the web.
+          </p>
 
-        <div class="foundry-rule" aria-hidden="true"></div>
+          <div class="foundry-rule" aria-hidden="true"></div>
 
-        <ul class="foundry-promise-list" aria-label="The Foundry promises">
-          <li>Sites that evolve with you.</li>
-          <li>Clear pricing.</li>
-          <li>Fair ownership.</li>
-          <li>FoundryCare.</li>
-        </ul>
+          <ul class="foundry-promise-list" aria-label="The Foundry promises">
+            <li>Sites that evolve with you.</li>
+            <li>Clear pricing.</li>
+            <li>Fair ownership.</li>
+            <li>FoundryCare.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
