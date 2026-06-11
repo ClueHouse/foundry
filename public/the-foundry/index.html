@@ -7,7 +7,7 @@
   <title>The Foundry</title>
   <meta
     name="description"
-    content="The Foundry builds simple websites with clear pricing, fair ownership and ongoing support."
+    content="The Foundry builds simple websites with clear pricing, fair ownership and FoundryCare."
   />
 
   <link rel="stylesheet" href="../styles.css" />
@@ -142,6 +142,24 @@
       color: #fff8ea;
     }
 
+    .foundry-card-link {
+      display: inline-flex;
+      margin-top: 2rem;
+      color: #d9a766;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .foundry-card-link:hover,
+    .foundry-card-link:focus-visible {
+      color: #fff8ea;
+      outline: none;
+    }
+
     .foundry-list {
       margin: 1.4rem 0 0;
       padding: 0;
@@ -154,6 +172,22 @@
     }
 
     .foundry-list li::before {
+      content: "— ";
+      color: #d9a766;
+    }
+
+    .foundrycare-list {
+      margin: 1.8rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.9rem;
+      color: rgba(255, 248, 234, 0.86);
+      font-size: clamp(1.08rem, 1.55vw, 1.34rem);
+      line-height: 1.4;
+    }
+
+    .foundrycare-list li::before {
       content: "— ";
       color: #d9a766;
     }
@@ -209,7 +243,7 @@
               <li>Simple websites.</li>
               <li>Clear pricing.</li>
               <li>Fair ownership.</li>
-              <li>Ongoing support.</li>
+              <li>FoundryCare.</li>
             </ul>
           </div>
         </div>
@@ -247,30 +281,34 @@
         <div class="foundry-price-grid">
           <article class="foundry-card">
             <h3>$800</h3>
+
             <p>
-              A custom, mobile-friendly website.
+              Website
             </p>
 
             <ul class="foundry-list">
-              <li>Email enquiries to your inbox</li>
-              <li>Launch support</li>
+              <li>Custom website</li>
+              <li>Mobile friendly</li>
               <li>Six months of FoundryCare included</li>
             </ul>
           </article>
 
           <article class="foundry-card">
-            <h3>$40 / month</h3>
+            <h3>$40/month</h3>
+
             <p>
-              FoundryCare keeps your website looked after.
+              FoundryCare
             </p>
 
             <ul class="foundry-list">
               <li>Hosting</li>
+              <li>Updates</li>
               <li>Maintenance</li>
-              <li>Content updates</li>
-              <li>Search and listing reviews</li>
-              <li>Two-monthly check-ins</li>
             </ul>
+
+            <a class="foundry-card-link" href="#foundrycare">
+              What's included?
+            </a>
           </article>
         </div>
       </div>
@@ -303,29 +341,31 @@
       </div>
     </section>
 
-    <section class="foundry-tile">
+    <section id="foundrycare" class="foundry-tile">
       <div class="foundry-inner foundry-two-column">
         <div>
-          <p class="eyebrow">Ongoing support</p>
-          <h2>A website should not become another job.</h2>
+          <p class="eyebrow">FoundryCare</p>
+          <h2>Your website should not become another job.</h2>
         </div>
 
         <div class="foundry-copy">
           <p>
-            FoundryCare is website stewardship.
+            FoundryCare keeps your website healthy.
           </p>
 
-          <p>
-            Need a change?
-          </p>
-
-          <p>
-            Send an email.
-          </p>
-
-          <p>
-            The website gets looked after.
-          </p>
+          <ul class="foundrycare-list">
+            <li>Hosting</li>
+            <li>Maintenance</li>
+            <li>Content updates</li>
+            <li>Search and listing reviews</li>
+            <li>Two-monthly check-ins</li>
+            <li>Small changes when you need them</li>
+            <li>One email</li>
+            <li>One phone call</li>
+            <li>No tickets</li>
+            <li>No queues</li>
+            <li>No fuss</li>
+          </ul>
         </div>
       </div>
     </section>
