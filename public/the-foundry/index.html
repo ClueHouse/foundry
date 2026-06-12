@@ -46,11 +46,16 @@
         linear-gradient(135deg, #000 0%, #070302 48%, #000 100%);
     }
 
-    .foundry-info-page .site-header {
-      background: rgba(0, 0, 0, 0.92);
-      border-bottom: 1px solid rgba(255, 248, 234, 0.08);
-      backdrop-filter: blur(10px);
-    }
+.foundry-info-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(5, 3, 2, 0.92);
+  backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid rgba(255, 248, 234, 0.08);
+}
 
 .foundry-info-page .brand-mark,
 .foundry-info-page .eyebrow {
