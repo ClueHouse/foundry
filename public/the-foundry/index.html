@@ -15,12 +15,12 @@
   <style>
     body.foundry-info-page {
       position: relative;
-      background: #050302;
+      background: #000;
       color: #fff8ea;
     }
 
     .foundry-info-page .site-header {
-      background: #050302;
+      background: #000;
       border-bottom: 1px solid rgba(255, 248, 234, 0.08);
     }
 
@@ -40,6 +40,7 @@
     .foundry-tile {
       padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
       border-top: 1px solid rgba(255, 248, 234, 0.11);
+      background: #000;
     }
 
     .foundry-tile:first-of-type {
@@ -56,17 +57,16 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: clamp(2.2rem, 5vw, 4.5rem);
-      background: #050302;
-      padding-top: clamp(2rem, 5vw, 4rem);
-      padding-bottom: clamp(4rem, 8vw, 7rem);
+      background: #000;
+      padding: 0;
+      overflow: hidden;
     }
 
     .foundry-logo-image {
-      width: min(980px, 82vw);
+      width: min(1200px, 92vw);
       aspect-ratio: 16 / 9;
-      margin: 0 auto;
-      background-image: url("../assets/brand/foundryplaque.png");
+      margin: clamp(2rem, 5vw, 4rem) auto 0;
+      background-image: url("../assets/brand/foundrylogo.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -74,13 +74,13 @@
 
     .foundry-opening {
       width: min(760px, 88%);
-      margin: 0 auto;
+      margin: clamp(1.6rem, 3vw, 2.8rem) auto 0;
       text-align: center;
     }
 
     .foundry-subtitle {
       margin: 0;
-      font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+      font-size: clamp(1.45rem, 2.4vw, 2.45rem);
       line-height: 1.1;
       letter-spacing: -0.035em;
       color: rgba(255, 248, 234, 0.94);
@@ -90,7 +90,7 @@
     .foundry-rule {
       width: min(180px, 42%);
       height: 1px;
-      margin: clamp(1.8rem, 3.4vw, 3rem) auto;
+      margin: clamp(1.5rem, 3vw, 2.4rem) auto;
       background: linear-gradient(
         90deg,
         transparent,
@@ -104,12 +104,12 @@
       padding: 0;
       list-style: none;
       display: grid;
-      gap: clamp(0.8rem, 1.5vw, 1.25rem);
+      gap: clamp(0.7rem, 1.2vw, 1.05rem);
     }
 
     .foundry-promise-list li {
-      font-size: clamp(1.45rem, 2.55vw, 2.9rem);
-      line-height: 0.98;
+      font-size: clamp(1.35rem, 2.2vw, 2.5rem);
+      line-height: 1;
       letter-spacing: -0.045em;
       color: #fff8ea;
       text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
@@ -211,15 +211,17 @@
 
       .foundry-opening-tile {
         min-height: calc(100svh - 68px);
-        gap: 2rem;
+        justify-content: center;
       }
 
       .foundry-logo-image {
-        width: min(100%, 94vw);
+        width: min(100%, 96vw);
+        margin-top: 1rem;
       }
 
       .foundry-opening {
         text-align: center;
+        margin-top: 1.2rem;
       }
 
       .foundry-info-page .site-header {
@@ -267,12 +269,7 @@
 
         <div class="foundry-copy">
           <p>Many businesses do not lack a website because they are careless.</p>
-
-          <p>
-            They lack a website because they have been serving customers,
-            answering phones, opening doors and doing the mahi.
-          </p>
-
+          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
           <p>The Foundry helps with the website part.</p>
         </div>
       </div>
@@ -285,9 +282,7 @@
         <div class="foundry-price-grid">
           <article class="foundry-card">
             <h3>$800</h3>
-
             <p>Website</p>
-
             <ul class="foundry-list">
               <li>Custom website</li>
               <li>Mobile friendly</li>
@@ -297,18 +292,13 @@
 
           <article class="foundry-card">
             <h3>$40/month</h3>
-
             <p>FoundryCare</p>
-
             <ul class="foundry-list">
               <li>Hosting</li>
               <li>Updates</li>
               <li>Maintenance</li>
             </ul>
-
-            <a class="foundry-card-link" href="#foundrycare">
-              What's included?
-            </a>
+            <a class="foundry-card-link" href="#foundrycare">What's included?</a>
           </article>
         </div>
       </div>
@@ -339,7 +329,6 @@
 
         <div class="foundry-copy">
           <p>FoundryCare keeps your website healthy.</p>
-
           <ul class="foundrycare-list">
             <li>Hosting</li>
             <li>Maintenance</li>
