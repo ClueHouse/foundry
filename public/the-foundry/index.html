@@ -211,10 +211,13 @@
     }
 
     .foundry-promise-list li {
-      font-size: clamp(1.35rem, 2.2vw, 2.5rem);
-      line-height: 1.08;
-      letter-spacing: 0.01em;
-      color: #fff8ea;
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #e7cfb2;
       text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
     }
 
@@ -231,12 +234,14 @@
 
     .foundry-price-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(5rem, 10vw, 12rem);
+      align-items: start;
     }
 
     .foundry-tile h2 {
       margin: 0 0 1.2rem;
       font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(2.8rem, 5vw, 5.8rem);
+      font-size: clamp(3.2rem, 5.8vw, 6.4rem);
       line-height: 0.9;
       letter-spacing: -0.03em;
       text-transform: uppercase;
@@ -257,11 +262,11 @@
     }
 
     .foundry-card {
-      padding: clamp(2rem, 4vw, 4rem);
-      border: 1px solid rgba(255, 248, 234, 0.14);
-      border-radius: 32px;
-      background: rgba(255, 248, 234, 0.06);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     .foundry-card h3 {
