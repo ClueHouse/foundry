@@ -1,470 +1,199 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>The Foundry</title>
-  <meta
-    name="description"
-    content="The Foundry builds sites that evolve with you, with clear pricing, fair ownership and FoundryCare."
-  />
+<title>The Foundry Font Test</title>
 
-  <link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../styles.css">
 
-  <style>
-    body.foundry-info-page {
-      position: relative;
-      background: #000;
-      color: #d8b28c;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cutive+Mono&family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Space+Mono:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
 
-    body.foundry-info-page::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.18;
-      background:
-        radial-gradient(circle at 50% 22%, rgba(255, 111, 28, 0.08), transparent 34rem),
-        radial-gradient(circle at 52% 46%, rgba(94, 33, 13, 0.18), transparent 48rem),
-        repeating-linear-gradient(
-          36deg,
-          rgba(255, 138, 50, 0.035) 0,
-          rgba(255, 138, 50, 0.035) 1px,
-          transparent 1px,
-          transparent 13px
-        ),
-        repeating-linear-gradient(
-          -28deg,
-          rgba(255, 248, 234, 0.025) 0,
-          rgba(255, 248, 234, 0.025) 1px,
-          transparent 1px,
-          transparent 19px
-        ),
-        linear-gradient(135deg, #000 0%, #070302 48%, #000 100%);
-    }
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#d8b28c;
+}
 
-    .foundry-info-page .site-header {
-      background: rgba(0, 0, 0, 0.92);
-      border-bottom: 1px solid rgba(255, 248, 234, 0.08);
-      backdrop-filter: blur(10px);
-    }
+.sample{
+    padding:80px 20px 120px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    text-align:center;
+}
 
-    .foundry-info-page .brand-mark,
-    .foundry-info-page .eyebrow {
-      color: #ff8a32;
-    }
+.logo{
+    width:min(1100px,92vw);
+    aspect-ratio:16/9;
+    margin:0 auto 30px;
+    background:url("../assets/brand/foundrylogo.png") center/contain no-repeat;
+}
 
-    .foundry-info-page p {
-      color: rgba(216, 178, 140, 0.86);
-    }
+.label{
+    color:#ff8a32;
+    font:700 12px Arial,sans-serif;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
 
-    .foundry-info-page main {
-      width: 100%;
-    }
+.tagline{
+    font-size:clamp(1.8rem,2.8vw,3rem);
+    margin:0 0 24px;
+}
 
-    .foundry-tile {
-      padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
-      border-top: 1px solid rgba(255, 248, 234, 0.11);
-      background: transparent;
-    }
+.points{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
 
-    .foundry-tile:first-of-type {
-      border-top: 0;
-    }
+.points li{
+    font-size:clamp(1.2rem,1.8vw,2rem);
+    margin:.5rem 0;
+}
 
-    .foundry-inner {
-      width: min(1120px, 100%);
-      margin: 0 auto;
-    }
+.font-courier .tagline,
+.font-courier .points li{
+    font-family:"Courier New",monospace;
+    font-weight:700;
+}
 
-    .foundry-opening-tile {
-      min-height: calc(100svh - 72px);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background: transparent;
-      padding: 0 0 clamp(4rem, 8vw, 7rem);
-      overflow: hidden;
-    }
+.font-american .tagline,
+.font-american .points li{
+    font-family:"American Typewriter","Courier New",serif;
+}
 
-    .foundry-font-sample {
-      width: min(1320px, 96vw);
-      margin: 0 auto clamp(5rem, 9vw, 8rem);
-      text-align: center;
-    }
+.font-ibm .tagline,
+.font-ibm .points li{
+    font-family:"IBM Plex Mono",monospace;
+}
 
-    .foundry-font-sample:last-child {
-      margin-bottom: 0;
-    }
+.font-space .tagline,
+.font-space .points li{
+    font-family:"Space Mono",monospace;
+}
 
-    .foundry-logo-image {
-      width: min(1120px, 92vw);
-      aspect-ratio: 16 / 9;
-      margin: clamp(2rem, 5vw, 4rem) auto clamp(1.6rem, 3vw, 2.6rem);
-      background-image: url("../assets/brand/foundrylogo.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+.font-cutive .tagline,
+.font-cutive .points li{
+    font-family:"Cutive Mono",monospace;
+}
 
-    .foundry-opening {
-      width: min(760px, 88%);
-      margin: 0 auto;
-      text-align: center;
-    }
+.font-special .tagline,
+.font-special .points li{
+    font-family:"Special Elite",monospace;
+}
 
-    .foundry-sample-label {
-      margin: 0 0 0.9rem;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.7rem;
-      line-height: 1;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(255, 138, 50, 0.72);
-    }
+.font-playfair .tagline,
+.font-playfair .points li{
+    font-family:"Playfair Display",serif;
+}
 
-    .foundry-subtitle {
-      margin: 0;
-      font-size: clamp(1.45rem, 2.4vw, 2.45rem);
-      line-height: 1.1;
-      letter-spacing: -0.035em;
-      color: #d8b28c;
-      text-shadow: 0 2px 22px rgba(0, 0, 0, 0.86);
-    }
-
-    .foundry-rule {
-      position: relative;
-      width: min(620px, 82vw);
-      height: 2px;
-      margin: clamp(1.4rem, 2.8vw, 2.25rem) auto clamp(1.8rem, 3.2vw, 2.8rem);
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 76, 14, 0.06) 13%,
-        rgba(255, 94, 20, 0.55) 34%,
-        rgba(255, 208, 84, 0.96) 50%,
-        rgba(255, 94, 20, 0.55) 66%,
-        rgba(255, 76, 14, 0.06) 87%,
-        transparent 100%
-      );
-      box-shadow:
-        0 0 10px rgba(255, 104, 24, 0.72),
-        0 0 28px rgba(255, 78, 18, 0.44),
-        0 0 58px rgba(255, 78, 18, 0.2);
-    }
-
-    .foundry-rule::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 58%;
-      height: 10px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(
-        ellipse at center,
-        rgba(255, 189, 64, 0.46) 0%,
-        rgba(255, 98, 22, 0.22) 36%,
-        transparent 72%
-      );
-      filter: blur(6px);
-      pointer-events: none;
-    }
-
-    .foundry-promise-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: clamp(0.7rem, 1.2vw, 1.05rem);
-    }
-
-    .foundry-promise-list li {
-      font-size: clamp(1.35rem, 2.2vw, 2.5rem);
-      line-height: 1;
-      letter-spacing: -0.035em;
-      color: #d8b28c;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
-    }
-
-    /* FONT OPTION 1 — Georgia */
-    .font-georgia .foundry-subtitle,
-    .font-georgia .foundry-promise-list li {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-    }
-
-    /* FONT OPTION 2 — Baskerville */
-    .font-baskerville .foundry-subtitle,
-    .font-baskerville .foundry-promise-list li {
-      font-family: Baskerville, "Libre Baskerville", "Times New Roman", serif;
-      font-weight: 500;
-      letter-spacing: -0.025em;
-    }
-
-    /* FONT OPTION 3 — Garamond */
-    .font-garamond .foundry-subtitle,
-    .font-garamond .foundry-promise-list li {
-      font-family: Garamond, "Cormorant Garamond", Georgia, serif;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-    }
-
-    /* FONT OPTION 4 — Palatino */
-    .font-palatino .foundry-subtitle,
-    .font-palatino .foundry-promise-list li {
-      font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      font-weight: 500;
-      letter-spacing: -0.03em;
-    }
-
-    /* FONT OPTION 5 — Trebuchet */
-    .font-trebuchet .foundry-subtitle,
-    .font-trebuchet .foundry-promise-list li {
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      font-weight: 500;
-      letter-spacing: -0.055em;
-    }
-
-    /* FONT OPTION 6 — Arial */
-    .font-arial .foundry-subtitle,
-    .font-arial .foundry-promise-list li {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500;
-      letter-spacing: -0.045em;
-    }
-
-    .foundry-two-column,
-    .foundry-price-grid {
-      display: grid;
-      gap: clamp(2rem, 5vw, 5rem);
-    }
-
-    .foundry-two-column {
-      grid-template-columns: 0.95fr 1.05fr;
-      align-items: center;
-    }
-
-    .foundry-price-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .foundry-tile h2 {
-      margin: 0 0 1.2rem;
-      font-size: clamp(2.7rem, 6vw, 6.2rem);
-      line-height: 0.88;
-      letter-spacing: -0.065em;
-      font-weight: 500;
-      color: #fff8ea;
-    }
-
-    .foundry-copy {
-      max-width: 640px;
-    }
-
-    .foundry-copy p {
-      margin: 0 0 1rem;
-    }
-
-    .foundry-card {
-      padding: clamp(2rem, 4vw, 4rem);
-      border: 1px solid rgba(255, 248, 234, 0.14);
-      border-radius: 32px;
-      background: rgba(255, 248, 234, 0.06);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
-    }
-
-    .foundry-card h3 {
-      margin: 0 0 0.8rem;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.9;
-      letter-spacing: -0.06em;
-      font-weight: 500;
-      color: #fff8ea;
-    }
-
-    .foundry-card-link {
-      display: inline-flex;
-      margin-top: 2rem;
-      color: #ff8a32;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    .foundry-list,
-    .foundrycare-list {
-      margin: 1.4rem 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 0.75rem;
-      color: rgba(255, 248, 234, 0.84);
-      font-size: clamp(1rem, 1.4vw, 1.22rem);
-      line-height: 1.45;
-    }
-
-    .foundrycare-list {
-      gap: 0.9rem;
-      font-size: clamp(1.08rem, 1.55vw, 1.34rem);
-    }
-
-    .foundry-list li::before,
-    .foundrycare-list li::before {
-      content: "— ";
-      color: #ff8a32;
-    }
-
-    @media (max-width: 760px) {
-      .foundry-two-column,
-      .foundry-price-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .foundry-tile {
-        text-align: left;
-      }
-
-      .foundry-opening-tile {
-        min-height: calc(100svh - 68px);
-      }
-
-      .foundry-logo-image {
-        width: min(100%, 98vw);
-        margin-top: 1rem;
-      }
-
-      .foundry-font-sample {
-        margin-bottom: 4rem;
-      }
-
-      .foundry-opening {
-        text-align: center;
-        margin-top: 1.6rem;
-      }
-
-      .foundry-rule {
-        width: min(460px, 86vw);
-      }
-
-      .foundry-info-page .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-  </style>
+.font-cinzel .tagline,
+.font-cinzel .points li{
+    font-family:"Cinzel",serif;
+}
+</style>
 </head>
 
-<body class="foundry-info-page">
-  <header class="site-header">
-    <a class="brand-mark" href="../" aria-label="The Foundry home">
-      <span class="brand-symbol" aria-hidden="true">◆</span>
-      <span>The Foundry</span>
-    </a>
-  </header>
+<body>
 
-  <main>
-    <section class="foundry-tile foundry-opening-tile">
+<section class="sample font-courier">
+<div class="logo"></div>
+<div class="label">Option 1 — Courier New</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-georgia">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 1 — Georgia</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-american">
+<div class="logo"></div>
+<div class="label">Option 2 — American Typewriter</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-baskerville">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 2 — Baskerville</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-ibm">
+<div class="logo"></div>
+<div class="label">Option 3 — IBM Plex Mono</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-garamond">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 3 — Garamond</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-space">
+<div class="logo"></div>
+<div class="label">Option 4 — Space Mono</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-palatino">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 4 — Palatino</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-cutive">
+<div class="logo"></div>
+<div class="label">Option 5 — Cutive Mono</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-trebuchet">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 5 — Trebuchet</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-special">
+<div class="logo"></div>
+<div class="label">Option 6 — Special Elite</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-      <div class="foundry-font-sample font-arial">
-        <div class="foundry-logo-image" aria-label="The Foundry"></div>
-        <div class="foundry-opening">
-          <p class="foundry-sample-label">Option 6 — Arial</p>
-          <p class="foundry-subtitle">Your piece of the web.</p>
-          <div class="foundry-rule" aria-hidden="true"></div>
-          <ul class="foundry-promise-list" aria-label="The Foundry promises">
-            <li>Sites that evolve with you.</li>
-            <li>Clear pricing.</li>
-            <li>Fair ownership.</li>
-            <li>FoundryCare.</li>
-          </ul>
-        </div>
-      </div>
+<section class="sample font-playfair">
+<div class="logo"></div>
+<div class="label">Option 7 — Playfair Display</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-    </section>
-  </main>
+<section class="sample font-cinzel">
+<div class="logo"></div>
+<div class="label">Option 8 — Cinzel</div>
+<p class="tagline">Your piece of the web.</p>
+<ul class="points">
+<li>Sites that evolve with you.</li>
+<li>Clear pricing.</li>
+<li>Fair ownership.</li>
+<li>FoundryCare.</li>
+</ul>
+</section>
 
-  <script src="../script.js"></script>
 </body>
 </html>
