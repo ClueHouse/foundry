@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body.foundry-info-page {
@@ -63,16 +63,6 @@
       color: #ff8a32;
     }
 
-    .foundry-info-page .eyebrow {
-      color: #ff8a32;
-      font-family: "Olivetti Lettera 22 Typewriter", "Courier New", monospace;
-      font-size: 0.9rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
     .foundry-mini-logo {
       display: inline-flex;
       flex-direction: column;
@@ -106,25 +96,6 @@
 
     .foundry-info-page main {
       width: 100%;
-    }
-
-    .foundry-tile {
-      padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
-      border-top: 1px solid rgba(255, 248, 234, 0.11);
-      background: transparent;
-    }
-
-    .foundry-opening-tile + .foundry-tile {
-      border-top: none;
-    }
-
-    .foundry-tile:first-of-type {
-      border-top: 0;
-    }
-
-    .foundry-inner {
-      width: min(1120px, 100%);
-      margin: 0 auto;
     }
 
     .foundry-opening-tile {
@@ -202,99 +173,64 @@
       pointer-events: none;
     }
 
-    .foundry-promise-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .foundry-sections {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: clamp(3.5rem, 7vw, 7rem) clamp(1.4rem, 4vw, 4rem) clamp(4.5rem, 8vw, 8rem);
       display: grid;
-      gap: clamp(0.7rem, 1.2vw, 1.05rem);
+      gap: clamp(4rem, 7vw, 7rem);
     }
 
-    .foundry-promise-list li {
+    .foundry-section {
+      border-top: 1px solid rgba(255, 248, 234, 0.11);
+      padding-top: clamp(3rem, 5vw, 5rem);
+    }
+
+    .foundry-section:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .foundry-section h2 {
+      margin: 0 0 0.85rem;
       font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(1.8rem, 2.8vw, 3.2rem);
+      font-size: clamp(2.6rem, 5.4vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      text-transform: none;
       font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
       color: #e7cfb2;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.72);
     }
 
-    .foundry-two-column,
-    .foundry-price-grid {
-      display: grid;
-      gap: clamp(2rem, 5vw, 5rem);
-    }
-
-    .foundry-two-column {
-      grid-template-columns: 0.95fr 1.05fr;
-      align-items: center;
-    }
-
-    .foundry-price-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(5rem, 10vw, 12rem);
-      align-items: start;
-    }
-
-    .foundry-tile h2 {
-      margin: 0 0 1.2rem;
-      font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(3.2rem, 5.8vw, 6.4rem);
-      line-height: 0.9;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #e7cfb2;
-      max-width: 620px;
+    .foundry-section h3 {
+      margin: 0 0 1.4rem;
+      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
+      font-size: clamp(1.1rem, 2vw, 1.55rem);
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      color: #ff8a32;
     }
 
     .foundry-copy {
-      max-width: 640px;
+      max-width: 760px;
     }
 
     .foundry-copy p {
       margin: 0 0 1rem;
       color: rgba(231, 207, 178, 0.88);
-      font-size: clamp(1.05rem, 1.45vw, 1.25rem);
-      line-height: 1.6;
+      font-size: clamp(1.08rem, 1.55vw, 1.34rem);
+      line-height: 1.62;
     }
 
-    .foundry-card {
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
-    }
-
-    .foundry-card h3 {
-      margin: 0 0 0.8rem;
-      font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.9;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #e7cfb2;
-    }
-
-    .foundry-card-link {
-      display: inline-flex;
-      margin-top: 2rem;
-      color: #ff8a32;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      font-weight: 800;
+    .foundry-copy p:last-child {
+      margin-bottom: 0;
     }
 
     .foundry-list,
     .foundrycare-list {
-      margin: 1.4rem 0 0;
+      margin: 1.2rem 0 0;
       padding: 0;
       list-style: none;
       display: grid;
@@ -305,8 +241,9 @@
     }
 
     .foundrycare-list {
-      gap: 0.9rem;
-      font-size: clamp(1.08rem, 1.55vw, 1.34rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem 2rem;
+      font-size: clamp(1.04rem, 1.45vw, 1.26rem);
     }
 
     .foundry-list li::before,
@@ -315,19 +252,23 @@
       color: #ff8a32;
     }
 
+    .foundry-card-link {
+      display: inline-flex;
+      margin-top: 1.6rem;
+      color: #ff8a32;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
     @media (max-width: 760px) {
-      .foundry-two-column,
-      .foundry-price-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .foundry-tile {
-        text-align: left;
-      }
-
       .foundry-opening-tile {
-        min-height: calc(100svh - 68px);
+        min-height: auto;
         justify-content: center;
+        padding-bottom: 2rem;
       }
 
       .foundry-logo-image {
@@ -349,8 +290,17 @@
         flex-direction: column;
       }
 
-      .foundry-tile h2 {
-        font-size: clamp(2.8rem, 12vw, 4.8rem);
+      .foundry-sections {
+        padding-top: 3.5rem;
+        gap: 4.2rem;
+      }
+
+      .foundry-section h2 {
+        font-size: clamp(2.5rem, 10.5vw, 4.4rem);
+      }
+
+      .foundrycare-list {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -379,85 +329,49 @@
         </p>
 
         <div class="foundry-rule" aria-hidden="true"></div>
-
-        <ul class="foundry-promise-list" aria-label="The Foundry promises">
-          <li>Sites that evolve with you.</li>
-          <li>Clear pricing.</li>
-          <li>Fair ownership.</li>
-          <li>FoundryCare.</li>
-        </ul>
       </div>
     </section>
 
-    <section class="foundry-tile">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
+    <div class="foundry-sections">
+      <section class="foundry-section">
+        <h2>Sites that evolve with you.</h2>
+        <h3>You have been busy running a business.</h3>
 
         <div class="foundry-copy">
           <p>Many businesses do not lack a website because they are careless.</p>
           <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
           <p>The Foundry helps with the website part.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="foundry-tile">
-      <div class="foundry-inner">
-        <p class="eyebrow">PRICING</p>
+      <section class="foundry-section">
+        <h2>Clear pricing.</h2>
+        <h3>No surprises. No hidden costs.</h3>
 
-        <div class="foundry-price-grid">
-          <article class="foundry-card">
-            <h3>$800</h3>
-            <p>Website</p>
-            <ul class="foundry-list">
-              <li>Custom website</li>
-              <li>Mobile friendly</li>
-              <li>Six months of FoundryCare included</li>
-            </ul>
-          </article>
-
-          <article class="foundry-card">
-            <h3>$40/month</h3>
-            <p>FoundryCare</p>
-            <ul class="foundry-list">
-              <li>Hosting</li>
-              <li>Updates</li>
-              <li>Maintenance</li>
-            </ul>
-            <a class="foundry-card-link" href="#foundrycare">What's included?</a>
-          </article>
+        <div class="foundry-copy">
+          <p>The Foundry website costs $800 and includes a custom, mobile-friendly site with six months of FoundryCare included.</p>
+          <p>After that, FoundryCare is $40 per month and covers hosting, maintenance and ongoing support.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="foundry-tile">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <p class="eyebrow">OWNERSHIP</p>
-          <h2>The website belongs to you.</h2>
-        </div>
+      <section class="foundry-section">
+        <h2>Fair ownership.</h2>
+        <h3>The website belongs to you.</h3>
 
         <div class="foundry-copy">
           <p>You receive a copy of your website at launch.</p>
           <p>You receive an updated copy every six months.</p>
-          <p>You can leave FoundryCare at any time.</p>
-          <p>You can return later with no rejoining fee.</p>
+          <p>You can leave FoundryCare at any time and return later with no rejoining fee.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="foundrycare" class="foundry-tile">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <p class="eyebrow">CARE</p>
-          <h2>Your website should not become another job.</h2>
-        </div>
+      <section id="foundrycare" class="foundry-section">
+        <h2>FoundryCare.</h2>
+        <h3>Your website should not become another job.</h3>
 
         <div class="foundry-copy">
-          <p>FoundryCare keeps your website healthy.</p>
+          <p>FoundryCare keeps your website healthy with the practical things that keep it useful.</p>
+
           <ul class="foundrycare-list">
             <li>Hosting</li>
             <li>Maintenance</li>
@@ -472,8 +386,8 @@
             <li>No fuss</li>
           </ul>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <script src="../script.js"></script>
