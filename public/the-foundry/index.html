@@ -14,8 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Barlow+Condensed:wght@600;700&family=Chivo:wght@600;700;800&family=Exo+2:wght@600;700&family=IBM+Plex+Sans:wght@600;700&family=League+Spartan:wght@700;800&family=Manrope:wght@700;800&family=Oswald:wght@600;700&family=Rajdhani:wght@600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body.foundry-info-page {
@@ -51,58 +50,56 @@
         linear-gradient(135deg, #000 0%, #070302 48%, #000 100%);
     }
 
-.foundry-info-page .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    .foundry-info-page .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 3, 2, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 248, 234, 0.08);
+    }
 
-  background: rgba(5, 3, 2, 0.92);
-  backdrop-filter: blur(8px);
+    .foundry-info-page .brand-mark {
+      color: #ff8a32;
+    }
 
-  border-bottom: 1px solid rgba(255, 248, 234, 0.08);
-}
-
-.foundry-info-page .brand-mark {
-  color: #ff8a32;
-}
-
-.foundry-info-page .eyebrow {
-  color: #ff8a32;
-  font-family: "Olivetti Lettera 22 Typewriter", "Courier New", monospace;
-  font-size: 0.9rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
+    .foundry-info-page .eyebrow {
+      color: #ff8a32;
+      font-family: "Olivetti Lettera 22 Typewriter", "Courier New", monospace;
+      font-size: 0.9rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
 
     .foundry-mini-logo {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  color: #ff8a32;
-  text-decoration: none;
-  line-height: 1;
-}
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      color: #ff8a32;
+      text-decoration: none;
+      line-height: 1;
+    }
 
-.mini-top {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.34rem;
-  font-weight: 800;
-  letter-spacing: 0.32em;
-}
+    .mini-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.34rem;
+      font-weight: 800;
+      letter-spacing: 0.32em;
+    }
 
-.mini-foundry {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.70rem;
-  font-weight: 800;
-  letter-spacing: 0.26em;
-}
-    
+    .mini-foundry {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.70rem;
+      font-weight: 800;
+      letter-spacing: 0.26em;
+    }
+
     .foundry-info-page p {
       color: rgba(216, 178, 140, 0.86);
     }
@@ -118,9 +115,9 @@
     }
 
     .foundry-opening-tile + .foundry-tile {
-  border-top: none;
-}
-    
+      border-top: none;
+    }
+
     .foundry-tile:first-of-type {
       border-top: 0;
     }
@@ -141,7 +138,7 @@
     }
 
     .foundry-logo-image {
-width: min(1180px, 90vw);
+      width: min(1180px, 90vw);
       aspect-ratio: 16 / 9;
       margin: clamp(2rem, 5vw, 4rem) auto 0;
       background-image: url("../assets/brand/foundrylogo.png");
@@ -213,13 +210,13 @@ width: min(1180px, 90vw);
       gap: clamp(0.7rem, 1.2vw, 1.05rem);
     }
 
-.foundry-promise-list li {
-  font-size: clamp(1.35rem, 2.2vw, 2.5rem);
-  line-height: 1.08;
-  letter-spacing: 0.01em;
-  color: #fff8ea;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
-}
+    .foundry-promise-list li {
+      font-size: clamp(1.35rem, 2.2vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+      color: #fff8ea;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.86);
+    }
 
     .foundry-two-column,
     .foundry-price-grid {
@@ -236,87 +233,16 @@ width: min(1180px, 90vw);
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .font-test-label {
-      display: inline-flex;
-      margin-bottom: clamp(1.2rem, 2vw, 2rem);
-      color: rgba(255, 138, 50, 0.72);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
-      line-height: 1;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
     .foundry-tile h2 {
       margin: 0 0 1.2rem;
-      font-size: clamp(3.4rem, 7vw, 7.4rem);
-      line-height: 0.82;
-      letter-spacing: -0.065em;
-      font-weight: 800;
-      color: #fff8ea;
-      max-width: 620px;
-    }
-
-    .font-league h2 {
-      font-family: "League Spartan", Arial, sans-serif;
-      letter-spacing: -0.07em;
-    }
-
-    .font-archivo h2 {
-      font-family: "Archivo", Arial, sans-serif;
-      letter-spacing: -0.075em;
-      line-height: 0.84;
-    }
-
-    .font-chivo h2 {
-      font-family: "Chivo", Arial, sans-serif;
-      letter-spacing: -0.07em;
-      line-height: 0.84;
-    }
-
-    .font-manrope h2 {
-      font-family: "Manrope", Arial, sans-serif;
-      letter-spacing: -0.08em;
-      line-height: 0.82;
-    }
-
-    .font-ibm h2 {
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      letter-spacing: -0.075em;
-      line-height: 0.84;
-    }
-
-    .font-space h2 {
-      font-family: "Space Grotesk", Arial, sans-serif;
-      letter-spacing: -0.08em;
-      line-height: 0.84;
-    }
-
-    .font-oswald h2 {
       font-family: "Oswald", Arial, sans-serif;
-      letter-spacing: -0.035em;
+      font-size: clamp(2.8rem, 5vw, 5.8rem);
       line-height: 0.9;
+      letter-spacing: -0.03em;
       text-transform: uppercase;
-    }
-
-    .font-barlow h2 {
-      font-family: "Barlow Condensed", Arial, sans-serif;
-      letter-spacing: -0.025em;
-      line-height: 0.88;
-      text-transform: uppercase;
-    }
-
-    .font-rajdhani h2 {
-      font-family: "Rajdhani", Arial, sans-serif;
-      letter-spacing: -0.045em;
-      line-height: 0.84;
-    }
-
-    .font-exo h2 {
-      font-family: "Exo 2", Arial, sans-serif;
-      letter-spacing: -0.06em;
-      line-height: 0.86;
+      font-weight: 600;
+      color: #e7cfb2;
+      max-width: 620px;
     }
 
     .foundry-copy {
@@ -325,6 +251,9 @@ width: min(1180px, 90vw);
 
     .foundry-copy p {
       margin: 0 0 1rem;
+      color: rgba(231, 207, 178, 0.88);
+      font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+      line-height: 1.6;
     }
 
     .foundry-card {
@@ -337,11 +266,13 @@ width: min(1180px, 90vw);
 
     .foundry-card h3 {
       margin: 0 0 0.8rem;
+      font-family: "Oswald", Arial, sans-serif;
       font-size: clamp(2.6rem, 5vw, 5rem);
       line-height: 0.9;
-      letter-spacing: -0.06em;
-      font-weight: 500;
-      color: #fff8ea;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #e7cfb2;
     }
 
     .foundry-card-link {
@@ -412,25 +343,29 @@ width: min(1180px, 90vw);
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .foundry-tile h2 {
+        font-size: clamp(2.8rem, 12vw, 4.8rem);
+      }
     }
   </style>
 </head>
 
 <body class="foundry-info-page">
   <header class="site-header">
-<a class="brand-mark foundry-mini-logo" href="../" aria-label="The Foundry home">
-<span class="mini-top">
-  THE
-</span>
+    <a class="brand-mark foundry-mini-logo" href="../" aria-label="The Foundry home">
+      <span class="mini-top">
+        THE
+      </span>
 
-<span class="mini-foundry">
-  FOUNDRY
-</span>
-</a>
+      <span class="mini-foundry">
+        FOUNDRY
+      </span>
+    </a>
   </header>
 
   <main>
-<section class="foundry-opening-tile">
+    <section class="foundry-opening-tile">
       <div class="foundry-logo-image" aria-label="The Foundry"></div>
 
       <div class="foundry-opening">
@@ -449,13 +384,13 @@ width: min(1180px, 90vw);
       </div>
     </section>
 
-    <section class="foundry-tile font-league">
+    <section class="foundry-tile">
       <div class="foundry-inner foundry-two-column">
         <div>
-          <span class="font-test-label">Option 1 — League Spartan</span>
           <p class="eyebrow">SITES</p>
           <h2>You have been busy building a business.</h2>
         </div>
+
         <div class="foundry-copy">
           <p>Many businesses do not lack a website because they are careless.</p>
           <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
@@ -464,137 +399,73 @@ width: min(1180px, 90vw);
       </div>
     </section>
 
-    <section class="foundry-tile font-archivo">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 2 — Archivo</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
+    <section class="foundry-tile">
+      <div class="foundry-inner">
+        <p class="eyebrow">PRICING</p>
+
+        <div class="foundry-price-grid">
+          <article class="foundry-card">
+            <h3>$800</h3>
+            <p>Website</p>
+            <ul class="foundry-list">
+              <li>Custom website</li>
+              <li>Mobile friendly</li>
+              <li>Six months of FoundryCare included</li>
+            </ul>
+          </article>
+
+          <article class="foundry-card">
+            <h3>$40/month</h3>
+            <p>FoundryCare</p>
+            <ul class="foundry-list">
+              <li>Hosting</li>
+              <li>Updates</li>
+              <li>Maintenance</li>
+            </ul>
+            <a class="foundry-card-link" href="#foundrycare">What's included?</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="foundry-tile font-chivo">
+    <section class="foundry-tile">
       <div class="foundry-inner foundry-two-column">
         <div>
-          <span class="font-test-label">Option 3 — Chivo</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
+          <p class="eyebrow">OWNERSHIP</p>
+          <h2>The website belongs to you.</h2>
         </div>
+
         <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
+          <p>You receive a copy of your website at launch.</p>
+          <p>You receive an updated copy every six months.</p>
+          <p>You can leave FoundryCare at any time.</p>
+          <p>You can return later with no rejoining fee.</p>
         </div>
       </div>
     </section>
 
-    <section class="foundry-tile font-manrope">
+    <section id="foundrycare" class="foundry-tile">
       <div class="foundry-inner foundry-two-column">
         <div>
-          <span class="font-test-label">Option 4 — Manrope</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
+          <p class="eyebrow">CARE</p>
+          <h2>Your website should not become another job.</h2>
         </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="foundry-tile font-ibm">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 5 — IBM Plex Sans</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
         <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="foundry-tile font-space">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 6 — Space Grotesk</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="foundry-tile font-oswald">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 7 — Oswald</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="foundry-tile font-barlow">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 8 — Barlow Condensed</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="foundry-tile font-rajdhani">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 9 — Rajdhani</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="foundry-tile font-exo">
-      <div class="foundry-inner foundry-two-column">
-        <div>
-          <span class="font-test-label">Option 10 — Exo 2</span>
-          <p class="eyebrow">SITES</p>
-          <h2>You have been busy building a business.</h2>
-        </div>
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
+          <p>FoundryCare keeps your website healthy.</p>
+          <ul class="foundrycare-list">
+            <li>Hosting</li>
+            <li>Maintenance</li>
+            <li>Content updates</li>
+            <li>Search and listing reviews</li>
+            <li>Two-monthly check-ins</li>
+            <li>Small changes when you need them</li>
+            <li>One email</li>
+            <li>One phone call</li>
+            <li>No tickets</li>
+            <li>No queues</li>
+            <li>No fuss</li>
+          </ul>
         </div>
       </div>
     </section>
