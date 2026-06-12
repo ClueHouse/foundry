@@ -101,8 +101,8 @@
     }
 
     .foundry-opening {
-      width: min(680px, 86%);
-      margin: clamp(2.2rem, 4vw, 4rem) auto 0;
+      width: min(760px, 88%);
+      margin: clamp(2rem, 4vw, 3.6rem) auto 0;
       text-align: center;
     }
 
@@ -116,15 +116,42 @@
     }
 
     .foundry-rule {
-      width: min(180px, 42%);
-      height: 1px;
-      margin: clamp(1.5rem, 3vw, 2.4rem) auto;
+      position: relative;
+      width: min(620px, 82vw);
+      height: 2px;
+      margin: clamp(1.4rem, 2.8vw, 2.25rem) auto clamp(1.8rem, 3.2vw, 2.8rem);
       background: linear-gradient(
         90deg,
-        transparent,
-        rgba(255, 138, 50, 0.88),
-        transparent
+        transparent 0%,
+        rgba(255, 76, 14, 0.06) 13%,
+        rgba(255, 94, 20, 0.55) 34%,
+        rgba(255, 208, 84, 0.96) 50%,
+        rgba(255, 94, 20, 0.55) 66%,
+        rgba(255, 76, 14, 0.06) 87%,
+        transparent 100%
       );
+      box-shadow:
+        0 0 10px rgba(255, 104, 24, 0.72),
+        0 0 28px rgba(255, 78, 18, 0.44),
+        0 0 58px rgba(255, 78, 18, 0.2);
+    }
+
+    .foundry-rule::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 58%;
+      height: 10px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 189, 64, 0.46) 0%,
+        rgba(255, 98, 22, 0.22) 36%,
+        transparent 72%
+      );
+      filter: blur(6px);
+      pointer-events: none;
     }
 
     .foundry-promise-list {
@@ -250,6 +277,10 @@
       .foundry-opening {
         text-align: center;
         margin-top: 1.6rem;
+      }
+
+      .foundry-rule {
+        width: min(460px, 86vw);
       }
 
       .foundry-info-page .site-header {
