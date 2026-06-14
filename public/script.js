@@ -62,19 +62,22 @@ function setupFoundryOverlay() {
   const foundryToggle = document.getElementById("foundryToggle");
   const foundryOverlay = document.getElementById("foundryOverlay");
   const foundryClose = document.getElementById("foundryClose");
+  const siteBlurWrap = document.getElementById("siteBlurWrap");
 
-  if (!foundryToggle || !foundryOverlay || !foundryClose) {
+  if (!foundryToggle || !foundryOverlay || !foundryClose || !siteBlurWrap) {
     return;
   }
 
   function openFoundryOverlay() {
     foundryOverlay.classList.add("is-open");
+    siteBlurWrap.classList.add("is-blurred");
     foundryOverlay.setAttribute("aria-hidden", "false");
     foundryToggle.setAttribute("aria-expanded", "true");
   }
 
   function closeFoundryOverlay() {
     foundryOverlay.classList.remove("is-open");
+    siteBlurWrap.classList.remove("is-blurred");
     foundryOverlay.setAttribute("aria-hidden", "true");
     foundryToggle.setAttribute("aria-expanded", "false");
   }
