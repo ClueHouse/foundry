@@ -58,5 +58,36 @@ ________________________________________
   });
 }
 
+const foundryToggle = document.getElementById("foundryToggle");
+const foundryOverlay = document.getElementById("foundryOverlay");
+const foundryClose = document.getElementById("foundryClose");
+
+function openFoundryOverlay() {
+  foundryOverlay.classList.add("is-open");
+  foundryOverlay.setAttribute("aria-hidden", "false");
+  foundryToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeFoundryOverlay() {
+  foundryOverlay.classList.remove("is-open");
+  foundryOverlay.setAttribute("aria-hidden", "true");
+  foundryToggle.setAttribute("aria-expanded", "false");
+}
+
+foundryToggle.addEventListener("click", openFoundryOverlay);
+foundryClose.addEventListener("click", closeFoundryOverlay);
+
+foundryOverlay.addEventListener("click", function (event) {
+  if (event.target === foundryOverlay) {
+    closeFoundryOverlay();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeFoundryOverlay();
+  }
+});
+
 setStartEmailLinks();
 setConceptEmailLinks();
