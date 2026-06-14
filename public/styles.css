@@ -65,8 +65,9 @@ a {
 }
 
 .home-icon {
-  font-size: 1.05rem;
-  line-height: 1;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .home-link:hover,
