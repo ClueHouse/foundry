@@ -12,21 +12,38 @@
 
 <body>
   <header class="site-title-bar">
+
     <a class="home-link" href="./" aria-label="Home">
-<span class="home-icon">⌘</span>
-      <span>Home</span>
+      <span class="home-text">HOME</span>
+      <img
+        src="./assets/brand/foundry-home.png"
+        alt=""
+        class="home-icon"
+      />
     </a>
 
-    <button class="foundry-mark" type="button" id="foundryToggle" aria-expanded="false">
+    <button
+      class="foundry-mark"
+      type="button"
+      id="foundryToggle"
+      aria-expanded="false"
+    >
       <span class="foundry-mark-small">The</span>
       <span class="foundry-mark-large">Foundry</span>
-      <img src="./assets/brand/foundry-anvil.png" alt="" class="foundry-mark-anvil" />
+
+      <img
+        src="./assets/brand/foundry-anvil.png"
+        alt=""
+        class="foundry-mark-anvil"
+      />
     </button>
+
   </header>
 
   <div class="site-blur-wrap" id="siteBlurWrap">
     <main class="page home-page">
       <section class="hero">
+
         <h1>
           <span>Your new site.</span>
           <span>Stupidly easy.</span>
@@ -38,22 +55,44 @@
           <a class="button button-primary" href="./start/">Sort It</a>
           <a class="button button-secondary" href="./possibilities/">Explore</a>
         </div>
+
       </section>
     </main>
   </div>
 
-  <section class="foundry-overlay" id="foundryOverlay" aria-hidden="true">
-    <button class="foundry-close" type="button" id="foundryClose" aria-label="Close">×</button>
+  <section
+    class="foundry-overlay"
+    id="foundryOverlay"
+    aria-hidden="true"
+  >
+
+    <button
+      class="foundry-close"
+      type="button"
+      id="foundryClose"
+      aria-label="Close"
+    >
+      ×
+    </button>
 
     <div class="foundry-window-wrap">
-      <a class="foundry-window" href="./why-a-website/">
+
+      <a
+        class="foundry-window"
+        href="./why-a-website/"
+      >
         <span>Why have a website?</span>
       </a>
 
-      <a class="foundry-window" href="./the-foundry/">
+      <a
+        class="foundry-window"
+        href="./the-foundry/"
+      >
         <span>Why choose The Foundry?</span>
       </a>
+
     </div>
+
   </section>
 
   <script src="./script.js"></script>
