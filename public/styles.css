@@ -55,7 +55,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  margin-top: 10px;
+  margin-top: 0px;
   color: var(--bronze-deep);
   text-decoration: none;
   text-transform: uppercase;
