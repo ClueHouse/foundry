@@ -77,10 +77,10 @@ a {
 }
 
 .foundry-mark {
-  justify-self: center;
+  justify-self: end;
   display: grid;
   place-items: center;
-  gap: 1px;
+  gap: 0;
   border: 0;
   background: transparent;
   color: var(--bronze-deep);
