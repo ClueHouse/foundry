@@ -8,7 +8,7 @@ function setStartEmailLinks() {
   const links = document.querySelectorAll(".email-start");
   const subject = "Hand Me The Problem";
 
-const body = `Hi, I'm Rob.
+  const body = `Hi, I'm Rob.
 
 I own The Foundry.
 
@@ -58,36 +58,43 @@ ________________________________________
   });
 }
 
-const foundryToggle = document.getElementById("foundryToggle");
-const foundryOverlay = document.getElementById("foundryOverlay");
-const foundryClose = document.getElementById("foundryClose");
+function setupFoundryOverlay() {
+  const foundryToggle = document.getElementById("foundryToggle");
+  const foundryOverlay = document.getElementById("foundryOverlay");
+  const foundryClose = document.getElementById("foundryClose");
 
-function openFoundryOverlay() {
-  foundryOverlay.classList.add("is-open");
-  foundryOverlay.setAttribute("aria-hidden", "false");
-  foundryToggle.setAttribute("aria-expanded", "true");
-}
-
-function closeFoundryOverlay() {
-  foundryOverlay.classList.remove("is-open");
-  foundryOverlay.setAttribute("aria-hidden", "true");
-  foundryToggle.setAttribute("aria-expanded", "false");
-}
-
-foundryToggle.addEventListener("click", openFoundryOverlay);
-foundryClose.addEventListener("click", closeFoundryOverlay);
-
-foundryOverlay.addEventListener("click", function (event) {
-  if (event.target === foundryOverlay) {
-    closeFoundryOverlay();
+  if (!foundryToggle || !foundryOverlay || !foundryClose) {
+    return;
   }
-});
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeFoundryOverlay();
+  function openFoundryOverlay() {
+    foundryOverlay.classList.add("is-open");
+    foundryOverlay.setAttribute("aria-hidden", "false");
+    foundryToggle.setAttribute("aria-expanded", "true");
   }
-});
+
+  function closeFoundryOverlay() {
+    foundryOverlay.classList.remove("is-open");
+    foundryOverlay.setAttribute("aria-hidden", "true");
+    foundryToggle.setAttribute("aria-expanded", "false");
+  }
+
+  foundryToggle.addEventListener("click", openFoundryOverlay);
+  foundryClose.addEventListener("click", closeFoundryOverlay);
+
+  foundryOverlay.addEventListener("click", function (event) {
+    if (event.target === foundryOverlay) {
+      closeFoundryOverlay();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeFoundryOverlay();
+    }
+  });
+}
 
 setStartEmailLinks();
 setConceptEmailLinks();
+setupFoundryOverlay();
