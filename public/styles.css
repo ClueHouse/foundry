@@ -543,6 +543,37 @@ p {
   outline: none;
 }
 
+.foundry-menu-list {
+  width: min(420px, 92%);
+  gap: 0;
+  background: rgba(255,255,255,0.92);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(26,14,6,0.28);
+}
+
+.foundry-menu-link {
+  display: block;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bronze-deep);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.foundry-menu-link:last-child {
+  border-bottom: 0;
+}
+
+.foundry-menu-link:hover,
+.foundry-menu-link:focus-visible {
+  background: rgba(255,138,50,0.08);
+}
+
 /* MOBILE */
 
 @media (max-width: 760px) {
