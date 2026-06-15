@@ -266,7 +266,22 @@ p {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: rgba(33, 24, 18, 0.34);
+  background: rgba(33, 24, 18, 0);
+}
+
+.foundry-overlay.is-open {
+  display: flex;
+  animation: foundryOverlayFade 1.5s ease forwards;
+}
+
+@keyframes foundryOverlayFade {
+  from {
+    background: rgba(33, 24, 18, 0);
+  }
+
+  to {
+    background: rgba(33, 24, 18, 0.34);
+  }
 }
 
 .foundry-overlay.is-open {
