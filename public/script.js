@@ -60,29 +60,47 @@ ________________________________________
 
 function setupFoundryOverlay() {
   const foundryToggle = document.getElementById("foundryToggle");
+  const foundryToggleMobile = document.getElementById("foundryToggleMobile");
   const foundryOverlay = document.getElementById("foundryOverlay");
   const foundryClose = document.getElementById("foundryClose");
   const siteBlurWrap = document.getElementById("siteBlurWrap");
 
-  if (!foundryToggle || !foundryOverlay || !foundryClose || !siteBlurWrap) {
+  if (!foundryOverlay || !foundryClose || !siteBlurWrap) {
     return;
+  }
+
+  function setExpanded(value) {
+    if (foundryToggle) {
+      foundryToggle.setAttribute("aria-expanded", value);
+    }
+
+    if (foundryToggleMobile) {
+      foundryToggleMobile.setAttribute("aria-expanded", value);
+    }
   }
 
   function openFoundryOverlay() {
     foundryOverlay.classList.add("is-open");
     siteBlurWrap.classList.add("is-blurred");
     foundryOverlay.setAttribute("aria-hidden", "false");
-    foundryToggle.setAttribute("aria-expanded", "true");
+    setExpanded("true");
   }
 
   function closeFoundryOverlay() {
     foundryOverlay.classList.remove("is-open");
     siteBlurWrap.classList.remove("is-blurred");
     foundryOverlay.setAttribute("aria-hidden", "true");
-    foundryToggle.setAttribute("aria-expanded", "false");
+    setExpanded("false");
   }
 
-  foundryToggle.addEventListener("click", openFoundryOverlay);
+  if (foundryToggle) {
+    foundryToggle.addEventListener("click", openFoundryOverlay);
+  }
+
+  if (foundryToggleMobile) {
+    foundryToggleMobile.addEventListener("click", openFoundryOverlay);
+  }
+
   foundryClose.addEventListener("click", closeFoundryOverlay);
 
   foundryOverlay.addEventListener("click", function (event) {
