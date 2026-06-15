@@ -301,8 +301,13 @@ p {
   padding: 2rem;
   border: 1px solid rgba(255, 232, 196, 0.42);
   border-radius: 26px;
-  background:
-    linear-gradient(135deg, rgba(255, 250, 241, 0.94), rgba(229, 199, 154, 0.86));
+background:
+  linear-gradient(
+    135deg,
+    #fff9ef 0%,
+    #f3e4c8 50%,
+    #e4c89b 100%
+  );
   color: var(--ink);
   text-align: center;
   text-decoration: none;
