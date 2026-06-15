@@ -584,13 +584,10 @@ p {
     align-items: flex-start;
     justify-content: flex-start;
   }
-
-  .home-link,
-  .foundry-mark {
-    display: none;
-  }
-
-  .mobile-menu-button {
+.site-title-bar > .home-link,
+.site-title-bar > .foundry-mark {
+  display: none;
+}
     display: inline-flex;
     align-items: center;
     justify-content: center;
