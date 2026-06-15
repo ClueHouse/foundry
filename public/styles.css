@@ -284,10 +284,6 @@ p {
   }
 }
 
-.foundry-overlay.is-open {
-  display: flex;
-}
-
 .foundry-close {
   display: none;
 }
