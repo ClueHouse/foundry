@@ -7,7 +7,7 @@
   --muted: #735f4e;
   --cream: #fbf4e8;
   --bronze: #b9803e;
---bronze-deep: #ff8a32;
+  --bronze-deep: #ff8a32;
   --line: rgba(91, 62, 36, 0.14);
 }
 
@@ -45,8 +45,13 @@ a {
 }
 
 .home-link,
-.foundry-mark {
+.foundry-mark,
+.mobile-menu-button {
   pointer-events: auto;
+}
+
+.mobile-menu-button {
+  display: none;
 }
 
 .home-link {
@@ -55,7 +60,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  margin-top: 0px;
+  margin-top: 0;
   color: var(--bronze-deep);
   text-decoration: none;
 }
@@ -77,7 +82,9 @@ a {
 .home-link:hover,
 .home-link:focus-visible,
 .foundry-mark:hover,
-.foundry-mark:focus-visible {
+.foundry-mark:focus-visible,
+.mobile-menu-button:hover,
+.mobile-menu-button:focus-visible {
   color: var(--bronze);
   outline: none;
 }
@@ -301,13 +308,13 @@ p {
   padding: 2rem;
   border: 1px solid rgba(255, 232, 196, 0.42);
   border-radius: 26px;
-background:
-  linear-gradient(
-    135deg,
-    #fff9ef 0%,
-    #f3e4c8 50%,
-    #e4c89b 100%
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #fff9ef 0%,
+      #f3e4c8 50%,
+      #e4c89b 100%
+    );
   color: var(--ink);
   text-align: center;
   text-decoration: none;
@@ -540,29 +547,36 @@ background:
 
 @media (max-width: 760px) {
   .site-title-bar {
-    height: 96px;
-    padding: 14px 18px 0;
+    height: 72px;
+    padding: 16px 18px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
-  .home-link {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
+  .home-link,
+  .foundry-mark {
+    display: none;
   }
 
-  .home-icon {
-    font-size: 0.95rem;
-  }
-
-  .foundry-mark-small {
-    font-size: 0.56rem;
-  }
-
-  .foundry-mark-large {
-    font-size: 0.8rem;
-  }
-
-  .foundry-mark-anvil {
-    width: 52px;
+  .mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 250, 241, 0.68);
+    color: var(--bronze-deep);
+    font-family: Arial, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow:
+      0 12px 28px rgba(105, 66, 26, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45);
   }
 
   .site-header {
@@ -594,10 +608,10 @@ background:
     padding: 2rem 1rem;
   }
 
-.hero h1 {
-  font-size: clamp(2.9rem, 16vw, 5rem);
-  margin-top: 3.5rem;
-}
+  .hero h1 {
+    font-size: clamp(2.9rem, 16vw, 5rem);
+    margin-top: 2.2rem;
+  }
 
   .button,
   .button-row {
