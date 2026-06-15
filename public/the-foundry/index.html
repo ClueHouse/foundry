@@ -181,12 +181,23 @@
       gap: clamp(4rem, 7vw, 7rem);
     }
 
+    .foundry-principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+
     .foundry-section {
       border-top: 1px solid rgba(255, 248, 234, 0.11);
       padding-top: clamp(3rem, 5vw, 5rem);
     }
 
     .foundry-section:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .foundry-principles-grid .foundry-section {
       border-top: 0;
       padding-top: 0;
     }
@@ -201,6 +212,10 @@
       font-weight: 500;
       color: #e7cfb2;
       text-shadow: 0 2px 24px rgba(0, 0, 0, 0.72);
+    }
+
+    .foundry-principles-grid .foundry-section h2 {
+      font-size: clamp(2rem, 2.8vw, 3rem);
     }
 
     .foundry-section h3 {
@@ -222,6 +237,10 @@
       color: rgba(231, 207, 178, 0.88);
       font-size: clamp(1.08rem, 1.55vw, 1.34rem);
       line-height: 1.62;
+    }
+
+    .foundry-principles-grid .foundry-copy p {
+      font-size: clamp(1rem, 1.1vw, 1.15rem);
     }
 
     .foundry-copy p:last-child {
@@ -272,8 +291,10 @@
       }
 
       .foundry-logo-image {
-        width: min(100%, 98vw);
+        width: 120vw;
+        max-width: none;
         margin-top: 1rem;
+        margin-left: calc(50% - 60vw);
       }
 
       .foundry-opening {
@@ -295,7 +316,16 @@
         gap: 4.2rem;
       }
 
+      .foundry-principles-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
       .foundry-section h2 {
+        font-size: clamp(2.5rem, 10.5vw, 4.4rem);
+      }
+
+      .foundry-principles-grid .foundry-section h2 {
         font-size: clamp(2.5rem, 10.5vw, 4.4rem);
       }
 
@@ -333,37 +363,43 @@
     </section>
 
     <div class="foundry-sections">
-      <section class="foundry-section">
-        <h2>Sites that evolve with you.</h2>
-        <h3>You have been busy running a business.</h3>
+      <div class="foundry-principles-grid">
+        <section class="foundry-section">
+          <h2>Sites that evolve with you.</h2>
+          <h3>You have been busy running a business.</h3>
 
-        <div class="foundry-copy">
-          <p>Many businesses do not lack a website because they are careless.</p>
-          <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
-          <p>The Foundry helps with the website part.</p>
-        </div>
-      </section>
+          <div class="foundry-copy">
+            <p>Many businesses do not lack a website because they are careless.</p>
+            <p>They lack a website because they have been serving customers, answering phones, opening doors and doing the mahi.</p>
+            <p>The Foundry helps with the website part.</p>
+          </div>
+        </section>
 
-      <section class="foundry-section">
-        <h2>Clear pricing.</h2>
-        <h3>No surprises. No hidden costs.</h3>
+        <section class="foundry-section">
+          <h2>Clear pricing.</h2>
+          <h3>No surprises. No hidden costs.</h3>
 
-        <div class="foundry-copy">
-          <p>The Foundry website costs $800 and includes a custom, mobile-friendly site with six months of FoundryCare included.</p>
-          <p>After that, FoundryCare is $40 per month and covers hosting, maintenance and ongoing support.</p>
-        </div>
-      </section>
+          <div class="foundry-copy">
+            <p>The Foundry website costs $800 and includes a custom, mobile-friendly site with six months of FoundryCare included.</p>
+            <p>After that, FoundryCare is $40 per month and covers hosting, maintenance and ongoing support.</p>
 
-      <section class="foundry-section">
-        <h2>Fair ownership.</h2>
-        <h3>The website belongs to you.</h3>
+            <a class="foundry-card-link" href="#foundrycare">
+              What's included?
+            </a>
+          </div>
+        </section>
 
-        <div class="foundry-copy">
-          <p>You receive a copy of your website at launch.</p>
-          <p>You receive an updated copy every six months.</p>
-          <p>You can leave FoundryCare at any time and return later with no rejoining fee.</p>
-        </div>
-      </section>
+        <section class="foundry-section">
+          <h2>Fair ownership.</h2>
+          <h3>The website belongs to you.</h3>
+
+          <div class="foundry-copy">
+            <p>You receive a copy of your website at launch.</p>
+            <p>You receive an updated copy every six months.</p>
+            <p>You can leave FoundryCare at any time and return later with no rejoining fee.</p>
+          </div>
+        </section>
+      </div>
 
       <section id="foundrycare" class="foundry-section">
         <h2>FoundryCare.</h2>
