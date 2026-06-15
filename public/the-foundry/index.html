@@ -7,7 +7,7 @@
   <title>The Foundry</title>
   <meta
     name="description"
-    content="The Foundry builds sites that evolve with you, with clear pricing, fair ownership and FoundryCare."
+    content="The Foundry is a Tauranga web design studio shaped by one idea: simplicity, done well."
   />
 
   <link rel="stylesheet" href="../styles.css" />
@@ -79,7 +79,7 @@
     }
 
     .foundry-opening {
-      width: min(760px, 88%);
+      width: min(780px, 88%);
       margin: clamp(2rem, 4vw, 3.6rem) auto 0;
       text-align: center;
       font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
@@ -87,11 +87,19 @@
 
     .foundry-subtitle {
       margin: 0;
-      font-size: clamp(1.45rem, 2.4vw, 2.45rem);
-      line-height: 1.2;
+      font-size: clamp(1.15rem, 1.65vw, 1.55rem);
+      line-height: 1.55;
       letter-spacing: 0.02em;
       color: #d8b28c;
       text-shadow: 0 2px 22px rgba(0, 0, 0, 0.86);
+    }
+
+    .foundry-subtitle p {
+      margin: 0 0 0.85rem;
+    }
+
+    .foundry-subtitle p:last-child {
+      margin-bottom: 0;
     }
 
     .foundry-rule {
@@ -168,7 +176,6 @@
       font-size: clamp(2.6rem, 5.4vw, 5.4rem);
       line-height: 0.95;
       letter-spacing: 0.01em;
-      text-transform: none;
       font-weight: 500;
       color: #e7cfb2;
       text-shadow: 0 2px 24px rgba(0, 0, 0, 0.72);
@@ -181,7 +188,7 @@
     .foundry-section h3 {
       margin: 0 0 1.4rem;
       font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
-      font-size: clamp(1.1rem, 2vw, 1.55rem);
+      font-size: clamp(1.25rem, 2.2vw, 1.75rem);
       line-height: 1.35;
       letter-spacing: 0.02em;
       font-weight: 400;
@@ -207,40 +214,127 @@
       margin-bottom: 0;
     }
 
-    .foundry-list,
+    .foundrycare-intro {
+      margin-bottom: 1.4rem;
+    }
+
     .foundrycare-list {
-      margin: 1.2rem 0 0;
+      margin: 1.4rem 0 0;
       padding: 0;
       list-style: none;
       display: grid;
-      gap: 0.75rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem 2rem;
       color: rgba(255, 248, 234, 0.84);
-      font-size: clamp(1rem, 1.4vw, 1.22rem);
+      font-size: clamp(1.04rem, 1.45vw, 1.26rem);
       line-height: 1.45;
     }
 
-    .foundrycare-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem 2rem;
-      font-size: clamp(1.04rem, 1.45vw, 1.26rem);
-    }
-
-    .foundry-list li::before,
     .foundrycare-list li::before {
       content: "— ";
       color: #ff8a32;
     }
 
-    .foundry-card-link {
+    .foundry-card-link,
+    .foundry-modal-open,
+    .foundry-modal-close {
       display: inline-flex;
       margin-top: 1.6rem;
       color: #ff8a32;
+      background: transparent;
+      border: 0;
+      padding: 0;
       text-decoration: none;
       font-family: Arial, sans-serif;
       font-size: 0.78rem;
       letter-spacing: 0.13em;
       text-transform: uppercase;
       font-weight: 800;
+      cursor: pointer;
+    }
+
+    .foundry-card-link:hover,
+    .foundry-modal-open:hover,
+    .foundry-modal-close:hover {
+      color: #ffd054;
+    }
+
+    .foundry-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      background: rgba(0, 0, 0, 0.82);
+    }
+
+    .foundry-modal.is-open {
+      display: flex;
+    }
+
+    .foundry-modal-panel {
+      width: min(860px, 94vw);
+      max-height: min(82vh, 820px);
+      overflow: auto;
+      border: 1px solid rgba(255, 138, 50, 0.32);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255, 111, 28, 0.12), transparent 28rem),
+        #080302;
+      box-shadow:
+        0 0 34px rgba(255, 78, 18, 0.24),
+        0 28px 80px rgba(0, 0, 0, 0.72);
+      padding: clamp(1.5rem, 4vw, 3.2rem);
+    }
+
+    .foundry-modal-panel h2 {
+      margin: 0 0 1.8rem;
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      font-weight: 500;
+      color: #e7cfb2;
+    }
+
+    .foundry-definition {
+      border-top: 1px solid rgba(255, 248, 234, 0.11);
+      padding-top: 1.45rem;
+      margin-top: 1.45rem;
+    }
+
+    .foundry-definition:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .foundry-definition h3 {
+      margin: 0 0 0.75rem;
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: clamp(1.45rem, 2.7vw, 2.25rem);
+      line-height: 1;
+      font-weight: 500;
+      color: #ff8a32;
+    }
+
+    .foundry-definition p {
+      margin: 0 0 0.85rem;
+      color: rgba(231, 207, 178, 0.9);
+      font-size: clamp(1rem, 1.25vw, 1.14rem);
+      line-height: 1.58;
+    }
+
+    .foundry-definition ul {
+      margin: 0.7rem 0 1rem;
+      padding-left: 1.1rem;
+      color: rgba(231, 207, 178, 0.9);
+      font-size: clamp(1rem, 1.25vw, 1.14rem);
+      line-height: 1.55;
+    }
+
+    .foundry-modal-close {
+      margin-top: 2rem;
     }
 
     @media (max-width: 760px) {
@@ -276,10 +370,7 @@
         gap: 3rem;
       }
 
-      .foundry-section h2 {
-        font-size: clamp(2.5rem, 10.5vw, 4.4rem);
-      }
-
+      .foundry-section h2,
       .foundry-principles-grid .foundry-section h2 {
         font-size: clamp(2.5rem, 10.5vw, 4.4rem);
       }
@@ -293,10 +384,10 @@
 
 <body class="foundry-info-page">
   <header class="site-title-bar">
-<a class="home-link" href="../">
-  <span class="home-text">HOME</span>
-</a>
-<div></div>
+    <a class="home-link" href="../">
+      <span class="home-text">HOME</span>
+    </a>
+    <div></div>
   </header>
 
   <main>
@@ -304,9 +395,11 @@
       <div class="foundry-logo-image" aria-label="The Foundry"></div>
 
       <div class="foundry-opening">
-        <p class="foundry-subtitle">
-          Built on four principles.
-        </p>
+        <div class="foundry-subtitle">
+          <p>The Foundry is a Tauranga web design studio shaped by one idea: simplicity, done well.</p>
+          <p>Our small print matches our large print.</p>
+          <p>Our work follows four key principles.</p>
+        </div>
 
         <div class="foundry-rule" aria-hidden="true"></div>
       </div>
@@ -315,20 +408,20 @@
     <div class="foundry-sections">
       <div class="foundry-principles-grid">
         <section class="foundry-section">
-          <h2>Sites that keep up.</h2>
+          <h2>Simple Launch.</h2>
 
           <div class="foundry-copy">
-            <p>You're doing the mahi.</p>
-            <p>Let us sort out your website.</p>
+            <p>Focus on your business.</p>
+            <p>We'll handle the website.</p>
           </div>
         </section>
 
         <section class="foundry-section">
-          <h2>Clear pricing.</h2>
+          <h2>Clear Pricing.</h2>
 
           <div class="foundry-copy">
-            <p>Your website will costs $800.</p>
-            <p>FoundryCare is $40 per month.</p>
+            <p>$800. Website launched.</p>
+            <p>Six months FoundryCare.</p>
 
             <a class="foundry-card-link" href="#foundrycare">
               What's included?
@@ -337,40 +430,128 @@
         </section>
 
         <section class="foundry-section">
-          <h2>Fair ownership.</h2>
+          <h2>Fair Ownership.</h2>
 
           <div class="foundry-copy">
-            <p>The website belongs to you.</p>
-            <p>You receive a copy of your website at launch.</p>
-             </div>
+            <p>You paid for it.</p>
+            <p>The site is yours.</p>
+          </div>
         </section>
       </div>
 
       <section id="foundrycare" class="foundry-section">
         <h2>FoundryCare.</h2>
-        <h3>Your website should not become another job.</h3>
+        <h3>We stand by our work.</h3>
 
         <div class="foundry-copy">
-          <p>FoundryCare keeps your website healthy with the practical things that keep it useful.</p>
+          <p class="foundrycare-intro">
+            Every Foundry website includes six months of FoundryCare. After that, FoundryCare continues for $40 per month.
+          </p>
 
           <ul class="foundrycare-list">
             <li>Hosting</li>
-            <li>Maintenance</li>
-            <li>Content updates</li>
-            <li>Search and listing reviews</li>
-            <li>Two-monthly check-ins</li>
-            <li>Small changes when you need them</li>
-            <li>One email</li>
-            <li>One phone call</li>
-            <li>No tickets</li>
-            <li>No queues</li>
-            <li>No fuss</li>
+            <li>Security &amp; Maintenance</li>
+            <li>Content Updates</li>
+            <li>Search &amp; Listing Reviews</li>
+            <li>Regular Check-ins</li>
+            <li>Website Archive</li>
           </ul>
+
+          <button class="foundry-modal-open" type="button" aria-controls="foundrycare-definitions">
+            What do these mean?
+          </button>
         </div>
       </section>
     </div>
   </main>
 
+  <div class="foundry-modal" id="foundrycare-definitions" aria-hidden="true">
+    <div class="foundry-modal-panel" role="dialog" aria-modal="true" aria-labelledby="foundrycare-definitions-title">
+      <h2 id="foundrycare-definitions-title">FoundryCare explained.</h2>
+
+      <section class="foundry-definition">
+        <h3>Hosting</h3>
+        <p>Your website is hosted and maintained on Foundry-managed infrastructure.</p>
+        <p>This includes:</p>
+        <ul>
+          <li>Website hosting costs</li>
+          <li>Domain and DNS configuration</li>
+          <li>SSL certificate management</li>
+          <li>Ongoing platform administration</li>
+        </ul>
+        <p>You don't need to arrange separate hosting or manage technical infrastructure.</p>
+      </section>
+
+      <section class="foundry-definition">
+        <h3>Security &amp; Maintenance</h3>
+        <p>Forms break. Certificates expire. Technology changes.</p>
+        <p>We work hard at keeping your website healthy.</p>
+      </section>
+
+      <section class="foundry-definition">
+        <h3>Content Updates</h3>
+        <p>Your website will evolve with you.</p>
+        <p>Seasonal specials, important events, and that weekly deal all deserve a place on your website.</p>
+        <p>Contact us to discuss strategies for handling more frequently changing content.</p>
+      </section>
+
+      <section class="foundry-definition">
+        <h3>Search &amp; Listing Reviews</h3>
+        <p>Your customers shouldn't be reading "Add a website?" when looking for your business.</p>
+        <p>We'll make sure key business listings and directories point customers to your site.</p>
+      </section>
+
+      <section class="foundry-definition">
+        <h3>Regular Check-ins</h3>
+        <p>We will not disappear after launch.</p>
+        <p>We periodically check in to ensure your website remains accurate and to identify opportunities for it to work harder for you.</p>
+      </section>
+
+      <section class="foundry-definition">
+        <h3>Website Archive</h3>
+        <p>You paid for your website. You should always have a copy of it.</p>
+        <p>Every six months, we'll provide an up-to-date archive of your website for your records.</p>
+      </section>
+
+      <button class="foundry-modal-close" type="button">
+        Close
+      </button>
+    </div>
+  </div>
+
   <script src="../script.js"></script>
+
+  <script>
+    const foundryModal = document.getElementById("foundrycare-definitions");
+    const foundryModalOpen = document.querySelector(".foundry-modal-open");
+    const foundryModalClose = document.querySelector(".foundry-modal-close");
+
+    function openFoundryModal() {
+      foundryModal.classList.add("is-open");
+      foundryModal.setAttribute("aria-hidden", "false");
+      foundryModalClose.focus();
+    }
+
+    function closeFoundryModal() {
+      foundryModal.classList.remove("is-open");
+      foundryModal.setAttribute("aria-hidden", "true");
+      foundryModalOpen.focus();
+    }
+
+    foundryModalOpen.addEventListener("click", openFoundryModal);
+    foundryModalClose.addEventListener("click", closeFoundryModal);
+
+    foundryModal.addEventListener("click", function (event) {
+      if (event.target === foundryModal) {
+        closeFoundryModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && foundryModal.classList.contains("is-open")) {
+        closeFoundryModal();
+      }
+    });
+  </script>
 </body>
 </html>
