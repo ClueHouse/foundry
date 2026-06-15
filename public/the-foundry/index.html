@@ -50,46 +50,6 @@
         linear-gradient(135deg, #000 0%, #070302 48%, #000 100%);
     }
 
-    .foundry-info-page .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 3, 2, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255, 248, 234, 0.08);
-    }
-
-    .foundry-info-page .brand-mark {
-      color: #ff8a32;
-    }
-
-    .foundry-mini-logo {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      color: #ff8a32;
-      text-decoration: none;
-      line-height: 1;
-    }
-
-    .mini-top {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.34rem;
-      font-weight: 800;
-      letter-spacing: 0.32em;
-    }
-
-    .mini-foundry {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.70rem;
-      font-weight: 800;
-      letter-spacing: 0.26em;
-    }
-
     .foundry-info-page p {
       color: rgba(216, 178, 140, 0.86);
     }
@@ -306,11 +266,6 @@
         width: min(460px, 86vw);
       }
 
-      .foundry-info-page .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
       .foundry-sections {
         padding-top: 3.5rem;
         gap: 4.2rem;
@@ -335,35 +290,35 @@
     }
   </style>
 </head>
-<header class="site-title-bar">
 
-  <a class="home-link" href="../">
-    <span class="home-text">HOME</span>
+<body class="foundry-info-page">
+  <header class="site-title-bar">
+    <a class="home-link" href="../">
+      <span class="home-text">HOME</span>
 
-    <img
-      src="../assets/brand/foundry-home.png"
-      alt=""
-      class="home-icon"
-    />
-  </a>
+      <img
+        src="../assets/brand/foundry-home.png"
+        alt=""
+        class="home-icon"
+      />
+    </a>
 
-  <button
-    class="foundry-mark"
-    type="button"
-    disabled
-  >
-    <span class="foundry-mark-small">THE</span>
+    <button
+      class="foundry-mark"
+      type="button"
+      disabled
+    >
+      <span class="foundry-mark-small">THE</span>
 
-    <span class="foundry-mark-large">FOUNDRY</span>
+      <span class="foundry-mark-large">FOUNDRY</span>
 
-    <img
-      src="../assets/brand/foundry-anvil.png"
-      alt=""
-      class="foundry-mark-anvil"
-    />
-  </button>
-
-</header>
+      <img
+        src="../assets/brand/foundry-anvil.png"
+        alt=""
+        class="foundry-mark-anvil"
+      />
+    </button>
+  </header>
 
   <main>
     <section class="foundry-opening-tile">
