@@ -65,9 +65,6 @@ a {
   height: auto;
   object-fit: contain;
   margin-top: -8px;
-  filter:
-  drop-shadow(0 0 4px rgba(255, 138, 50, 0.55))
-  drop-shadow(0 0 12px rgba(255, 138, 50, 0.35));
 }
 
 .home-text {
