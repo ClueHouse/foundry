@@ -594,9 +594,10 @@ background:
     padding: 2rem 1rem;
   }
 
-  .hero h1 {
-    font-size: clamp(3.2rem, 18vw, 5.5rem);
-  }
+.hero h1 {
+  font-size: clamp(2.9rem, 16vw, 5rem);
+  margin-top: 3.5rem;
+}
 
   .button,
   .button-row {
