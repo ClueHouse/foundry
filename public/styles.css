@@ -120,7 +120,7 @@ a {
 
 .site-blur-wrap {
   min-height: 100vh;
-  transition: filter 220ms ease, transform 220ms ease;
+  transition: filter 1.5s ease, transform 1.5s ease;
 }
 
 .site-blur-wrap.is-blurred {
@@ -274,16 +274,7 @@ p {
 }
 
 .foundry-close {
-  position: fixed;
-  top: 24px;
-  right: 32px;
-  border: 0;
-  background: transparent;
-  color: #fff8ea;
-  font-size: 3rem;
-  line-height: 1;
-  cursor: pointer;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  display: none;
 }
 
 .foundry-window-wrap {
@@ -311,7 +302,30 @@ p {
   box-shadow:
     0 28px 80px rgba(26, 14, 6, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.foundry-overlay.is-open .foundry-window:nth-child(1) {
+  animation: foundryWindowReveal 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.foundry-overlay.is-open .foundry-window:nth-child(2) {
+  animation: foundryWindowReveal 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes foundryWindowReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .foundry-window:hover,
