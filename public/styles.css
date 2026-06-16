@@ -664,3 +664,35 @@ p {
     border-radius: 22px;
   }
 }
+
+.tablet-mockup {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.tablet-screen {
+  background: #f4f2ee;
+  border-radius: 24px;
+  padding: 4rem;
+}
+
+.website-reason h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.website-reason em {
+  font-size: 1.4rem;
+  color: #9b6a42;
+}
+
+.website-reason p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #222;
+}
