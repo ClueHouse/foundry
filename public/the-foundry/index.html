@@ -15,427 +15,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body.foundry-info-page {
-      position: relative;
-      background: #000;
-      color: #d8b28c;
-    }
-
-    body.foundry-info-page::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.18;
-      background:
-        radial-gradient(circle at 50% 22%, rgba(255, 111, 28, 0.08), transparent 34rem),
-        radial-gradient(circle at 52% 46%, rgba(94, 33, 13, 0.18), transparent 48rem),
-        repeating-linear-gradient(
-          36deg,
-          rgba(255, 138, 50, 0.035) 0,
-          rgba(255, 138, 50, 0.035) 1px,
-          transparent 1px,
-          transparent 13px
-        ),
-        repeating-linear-gradient(
-          -28deg,
-          rgba(255, 248, 234, 0.025) 0,
-          rgba(255, 248, 234, 0.025) 1px,
-          transparent 1px,
-          transparent 19px
-        ),
-        linear-gradient(135deg, #000 0%, #070302 48%, #000 100%);
-    }
-
-    .foundry-info-page p {
-      color: rgba(216, 178, 140, 0.86);
-    }
-
-    .foundry-info-page main {
-      width: 100%;
-    }
-
-    .foundry-opening-tile {
-      min-height: calc(100svh - 72px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: transparent;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .foundry-logo-image {
-      width: min(1180px, 90vw);
-      aspect-ratio: 16 / 9;
-      margin: clamp(2rem, 5vw, 4rem) auto 0;
-      background-image: url("../assets/brand/foundrylogo.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .foundry-opening {
-      width: min(980px, 92%);
-      margin: clamp(2rem, 4vw, 3.6rem) auto 0;
-      text-align: center;
-      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
-    }
-
-    .foundry-subtitle {
-      margin: 0;
-      line-height: 1.75;
-      letter-spacing: 0.03em;
-      color: #f4d8b6;
-      text-shadow:
-        0 0 16px rgba(255, 190, 120, 0.28),
-        0 2px 22px rgba(0, 0, 0, 0.86);
-    }
-
-    .foundry-subtitle p {
-      margin: 0 0 1rem;
-      font-size: clamp(26px, 2.8vw, 38px);
-      line-height: 1.75;
-      letter-spacing: 0.08em;
-      color: #f6d9b8;
-      text-shadow:
-        0 0 16px rgba(255, 190, 120, 0.42),
-        0 0 32px rgba(255, 140, 60, 0.18),
-        0 2px 22px rgba(0, 0, 0, 0.9);
-    }
-
-    .foundry-subtitle p:last-child {
-      margin-bottom: 0;
-    }
-
-    .foundry-rule {
-      position: relative;
-      width: min(620px, 82vw);
-      height: 2px;
-      margin: clamp(1.4rem, 2.8vw, 2.25rem) auto clamp(1.8rem, 3.2vw, 2.8rem);
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 76, 14, 0.06) 13%,
-        rgba(255, 94, 20, 0.55) 34%,
-        rgba(255, 208, 84, 0.96) 50%,
-        rgba(255, 94, 20, 0.55) 66%,
-        rgba(255, 76, 14, 0.06) 87%,
-        transparent 100%
-      );
-      box-shadow:
-        0 0 10px rgba(255, 104, 24, 0.72),
-        0 0 28px rgba(255, 78, 18, 0.44),
-        0 0 58px rgba(255, 78, 18, 0.2);
-    }
-
-    .foundry-rule::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 58%;
-      height: 10px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(
-        ellipse at center,
-        rgba(255, 189, 64, 0.46) 0%,
-        rgba(255, 98, 22, 0.22) 36%,
-        transparent 72%
-      );
-      filter: blur(6px);
-      pointer-events: none;
-    }
-
-    .foundry-sections {
-      width: min(980px, 100%);
-      margin: 0 auto;
-      padding: clamp(3.5rem, 7vw, 7rem) clamp(1.4rem, 4vw, 4rem) clamp(4.5rem, 8vw, 8rem);
-      display: grid;
-      gap: clamp(4rem, 7vw, 7rem);
-    }
-
-    .foundry-principles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: clamp(2rem, 4vw, 4rem);
-    }
-
-    .foundry-section {
-      border-top: 1px solid rgba(255, 248, 234, 0.11);
-      padding-top: clamp(3rem, 5vw, 5rem);
-    }
-
-    .foundry-section:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .foundry-principles-grid .foundry-section {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .foundry-section h2 {
-      margin: 0 0 0.85rem;
-      font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(2.6rem, 5.4vw, 5.4rem);
-      line-height: 0.95;
-      letter-spacing: 0.01em;
-      font-weight: 500;
-      color: #e7cfb2;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.72);
-    }
-
-    .foundry-principles-grid .foundry-section h2 {
-      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
-      font-size: clamp(2.2rem, 2.9vw, 3rem);
-      line-height: 0.9;
-      letter-spacing: 0.04em;
-      font-weight: 400;
-      color: #fff1de;
-      text-shadow:
-        0 0 12px rgba(255, 170, 90, 0.22),
-        0 2px 18px rgba(0, 0, 0, 0.72);
-    }
-
-    .foundry-accent {
-      color: #ff9f45;
-      text-shadow:
-        0 0 10px rgba(255, 140, 40, 0.35);
-    }
-
-.foundrycare-section {
-  border-top: 0 !important;
-  text-align: center;
-  padding-top: 1rem;
-}
-
-    .foundrycare-section .foundry-copy {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .foundrycare-title {
-      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace !important;
-      font-size: clamp(2.6rem, 4vw, 4.2rem) !important;
-      line-height: 1.05;
-      letter-spacing: 0.04em;
-      font-weight: 400 !important;
-      color: #e7cfb2 !important;
-    }
-
-    .foundry-section h3 {
-      margin: 0 0 1.4rem;
-      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
-      font-size: clamp(1.25rem, 2.2vw, 1.75rem);
-      line-height: 0.9;
-      letter-spacing: 0.02em;
-      font-weight: 400;
-      color: #ff8a32;
-    }
-
-    .foundry-copy {
-      max-width: 760px;
-    }
-
-    .foundry-copy p {
-      margin: 0 0 1rem;
-      color: rgba(231, 207, 178, 0.88);
-      font-size: clamp(1.08rem, 1.55vw, 1.34rem);
-      line-height: 1.62;
-    }
-
-    .foundry-principles-grid .foundry-copy p {
-      font-size: clamp(1rem, 1.1vw, 1.15rem);
-    }
-
-    .foundry-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .foundrycare-intro {
-      margin-bottom: 1.4rem;
-    }
-
-    .foundrycare-list {
-      margin: 1.4rem auto 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem 2rem;
-      color: rgba(255, 248, 234, 0.84);
-      font-size: clamp(1.04rem, 1.45vw, 1.26rem);
-      line-height: 1.45;
-      text-align: left;
-    }
-
-    .foundrycare-list li::before {
-      content: "— ";
-      color: #ff8a32;
-    }
-
-    .foundry-card-link,
-    .foundry-modal-open,
-    .foundry-modal-close {
-      display: inline-flex;
-      margin-top: 0.8rem;
-      color: #ff8a32;
-      background: transparent;
-      border: 0;
-      padding: 0;
-      text-decoration: none;
-      font-family: "Zai Olivetti Lettera 22 Typewriter", "Special Elite", "Courier New", monospace;
-      font-size: 1.25rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 400;
-      cursor: pointer;
-    }
-
-    .foundry-card-link:hover,
-    .foundry-modal-open:hover,
-    .foundry-modal-close:hover {
-      color: #ffd054;
-    }
-
-    .foundry-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 50;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1.2rem;
-      background: rgba(0, 0, 0, 0.82);
-    }
-
-    .foundry-modal.is-open {
-      display: flex;
-    }
-
-    .foundry-modal-panel {
-      width: min(860px, 94vw);
-      max-height: min(82vh, 820px);
-      overflow: auto;
-      border: 1px solid rgba(255, 138, 50, 0.32);
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255, 111, 28, 0.12), transparent 28rem),
-        #080302;
-      box-shadow:
-        0 0 34px rgba(255, 78, 18, 0.24),
-        0 28px 80px rgba(0, 0, 0, 0.72);
-      padding: clamp(1.5rem, 4vw, 3.2rem);
-    }
-
-    .foundry-modal-panel h2 {
-      margin: 0 0 1.8rem;
-      font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      line-height: 0.95;
-      font-weight: 500;
-      color: #e7cfb2;
-    }
-
-    .foundry-definition {
-      border-top: 1px solid rgba(255, 248, 234, 0.11);
-      padding-top: 1.45rem;
-      margin-top: 1.45rem;
-    }
-
-    .foundry-definition:first-of-type {
-      border-top: 0;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .foundry-definition h3 {
-      margin: 0 0 0.75rem;
-      font-family: "Oswald", Arial, sans-serif;
-      font-size: clamp(1.45rem, 2.7vw, 2.25rem);
-      line-height: 1;
-      font-weight: 500;
-      color: #ff8a32;
-    }
-
-    .foundry-definition p {
-      margin: 0 0 0.85rem;
-      color: rgba(231, 207, 178, 0.9);
-      font-size: clamp(1rem, 1.25vw, 1.14rem);
-      line-height: 1.58;
-    }
-
-    .foundry-definition ul {
-      margin: 0.7rem 0 1rem;
-      padding-left: 1.1rem;
-      color: rgba(231, 207, 178, 0.9);
-      font-size: clamp(1rem, 1.25vw, 1.14rem);
-      line-height: 1.55;
-    }
-
-    .foundry-modal-close {
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 760px) {
-      .foundry-opening-tile {
-        min-height: auto;
-        justify-content: center;
-        padding-bottom: 2rem;
-      }
-
-      .foundry-sections {
-  gap: 2.5rem;
-}
-
-      .foundry-logo-image {
-        width: 120vw;
-        max-width: none;
-        margin-top: 1rem;
-        margin-left: calc(50% - 60vw);
-      }
-
-      .foundry-opening {
-        width: min(94vw, 94%);
-        text-align: center;
-        margin-top: 1.6rem;
-      }
-
-      .foundry-subtitle p {
-        font-size: clamp(20px, 5.6vw, 28px);
-        line-height: 1.7;
-        letter-spacing: 0.06em;
-      }
-
-      .foundry-rule {
-        width: min(460px, 86vw);
-      }
-
-      .foundry-sections {
-        padding-top: 3.5rem;
-        gap: 4.2rem;
-      }
-
-      .foundry-principles-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .foundry-section h2,
-      .foundry-principles-grid .foundry-section h2 {
-        font-size: clamp(2.5rem, 10.5vw, 4.4rem);
-      }
-
-      .foundrycare-list {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
-    }
-  </style>
 </head>
 
 <body class="foundry-info-page">
@@ -443,68 +22,93 @@
     <a class="home-link" href="../">
       <span class="home-text">HOME</span>
     </a>
-    <div></div>
+    <button class="foundry-mark" type="button" aria-label="The Foundry">
+      <svg class="foundry-mark-anvil" viewBox="0 0 512 320" xmlns="http://www.w3.org/2000/svg">
+        <use href="../public/assets/brand/anvil-mark.svg#anvil"></use>
+      </svg>
+    </button>
   </header>
 
   <main>
-    <section class="foundry-opening-tile">
-      <div class="foundry-logo-image" aria-label="The Foundry"></div>
+    <section class="foundry-hero">
+      <div class="foundry-hero-content">
+        <svg class="foundry-hero-anvil" viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg">
+          <use href="../public/assets/brand/anvil-hero.svg#anvil"></use>
+        </svg>
 
-      <div class="foundry-opening">
-        <div class="foundry-subtitle">
-          <p>The Foundry is a Tauranga web design studio shaped by one idea: simplicity, done well.</p>
-          <p>Our small print matches our large print.</p>
-          <p>Our work follows four key principles.</p>
+        <div class="foundry-hero-text">
+          <p class="foundry-hero-intro">The Foundry is a Tauranga web design</p>
+          <p class="foundry-hero-intro">studio shaped by one idea:</p>
+          
+          <p class="foundry-hero-tagline">Simplicity, done well.</p>
+          
+          <div class="foundry-divider" aria-hidden="true"></div>
+          
+          <p class="foundry-hero-secondary">Our small print matches our large print.</p>
+          <p class="foundry-hero-secondary">Our work follows four key principles.</p>
         </div>
-
-        <div class="foundry-rule" aria-hidden="true"></div>
       </div>
     </section>
 
-    <div class="foundry-sections">
+    <section class="foundry-principles">
       <div class="foundry-principles-grid">
-        <section class="foundry-section">
-          <h2><span class="foundry-accent">Simple</span><br>Launch.</h2>
+        <div class="foundry-principle-card">
+          <svg class="foundry-principle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 8v24M20 32h24M32 32v20M24 52h16M28 20l-8 8M36 20l8 8"></path>
+            </g>
+          </svg>
+          <h2>Simple<br><span class="foundry-accent">Launch.</span></h2>
+          <p>Focus on your business.</p>
+          <p>We'll handle the website.</p>
+        </div>
 
-          <div class="foundry-copy">
-            <p>Focus on your business.</p>
-            <p>We'll handle the website.</p>
-          </div>
-        </section>
+        <div class="foundry-principle-card">
+          <svg class="foundry-principle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 16l24-8v32l-24 8z"></path>
+              <circle cx="32" cy="32" r="4"></circle>
+            </g>
+          </svg>
+          <h2>Clear<br><span class="foundry-accent">Pricing.</span></h2>
+          <p>$800. Website launched.</p>
+          <p>Six months <a href="#foundrycare" class="foundry-link">FoundryCare.</a></p>
+        </div>
 
-        <section class="foundry-section">
-          <h2><span class="foundry-accent">Clear</span><br>Pricing.</h2>
+        <div class="foundry-principle-card">
+          <svg class="foundry-principle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 28l-4 8 4 8M40 28l4 8-4 8M32 20v24"></path>
+            </g>
+          </svg>
+          <h2>Fair<br><span class="foundry-accent">Ownership.</span></h2>
+          <p>You paid for it.</p>
+          <p>The site is yours.</p>
+        </div>
 
-          <div class="foundry-copy">
-            <p>$800. Website launched.</p>
-            <p>Six months FoundryCare.</p>
-
-            <a class="foundry-card-link" href="#foundrycare">
-              What's included?
-            </a>
-          </div>
-        </section>
-
-        <section class="foundry-section">
-          <h2><span class="foundry-accent">Fair</span><br>Ownership.</h2>
-
-          <div class="foundry-copy">
-            <p>You paid for it.</p>
-            <p>The site is yours.</p>
-          </div>
-        </section>
+        <div class="foundry-principle-card">
+          <svg class="foundry-principle-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 32c0-8.84 7.16-16 16-16s16 7.16 16 16-7.16 16-16 16-16-7.16-16-16z"></path>
+              <path d="M24 32l6 6 12-12"></path>
+            </g>
+          </svg>
+          <h2>Foundry<br><span class="foundry-accent">Care.</span></h2>
+          <p>We stand by our work.</p>
+          <p>You're never on your own.</p>
+        </div>
       </div>
+    </section>
 
-      <section id="foundrycare" class="foundry-section foundrycare-section">
-        <h2 class="foundrycare-title">FoundryCare.</h2>
-        <h3>We stand by our work.</h3>
-
-        <div class="foundry-copy">
-          <p class="foundrycare-intro">
-            Every Foundry website includes six months of FoundryCare. After that, FoundryCare continues for $40 per month, or $200 per six months.
-          </p>
-
-          <ul class="foundrycare-list">
+    <section id="foundrycare" class="foundry-care">
+      <div class="foundry-care-content">
+        <h2>FoundryCare<span class="foundry-accent">.</span></h2>
+        <p class="foundry-care-tagline">WE STAND BY OUR WORK.</p>
+        
+        <p class="foundry-care-intro">Every Foundry website includes six months of FoundryCare. After that, FoundryCare continues for $40 per month, or $200 per six months.</p>
+        
+        <div class="foundry-care-list-wrapper">
+          <ul class="foundry-care-list">
             <li>Hosting</li>
             <li>Security &amp; Maintenance</li>
             <li>Content Updates</li>
@@ -512,13 +116,13 @@
             <li>Regular Check-ins</li>
             <li>Website Archive</li>
           </ul>
-
-          <button class="foundry-modal-open" type="button" aria-controls="foundrycare-definitions">
-            What do these mean?
-          </button>
         </div>
-      </section>
-    </div>
+        
+        <button class="foundry-care-button" type="button" aria-controls="foundrycare-definitions">
+          WHAT'S INCLUDED?
+        </button>
+      </div>
+    </section>
   </main>
 
   <div class="foundry-modal" id="foundrycare-definitions" aria-hidden="true">
@@ -579,7 +183,7 @@
 
   <script>
     const foundryModal = document.getElementById("foundrycare-definitions");
-    const foundryModalOpen = document.querySelector(".foundry-modal-open");
+    const foundryModalOpen = document.querySelector(".foundry-care-button");
     const foundryModalClose = document.querySelector(".foundry-modal-close");
 
     function openFoundryModal() {
