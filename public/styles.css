@@ -581,7 +581,7 @@ p {
 .tablet-mockup {
   width: 1400px;
   max-width: none;
-  margin: 5rem 0 5rem 28%;
+margin: 5rem 0 5rem 48%;
   padding: 28px;
   background:
     linear-gradient(145deg, #1a1714 0%, #080706 52%, #19140f 100%);
