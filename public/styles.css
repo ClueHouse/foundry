@@ -364,6 +364,38 @@ p {
   font-size: clamp(1.1rem, 3vw, 2rem);
 }
 
+.foundry-menu-list {
+  display: none;
+  width: min(420px, 92%);
+  gap: 0;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(26, 14, 6, 0.28);
+}
+
+.foundry-menu-link {
+  display: block;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bronze-deep);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.foundry-menu-link:last-child {
+  border-bottom: 0;
+}
+
+.foundry-menu-link:hover,
+.foundry-menu-link:focus-visible {
+  background: rgba(255, 138, 50, 0.08);
+}
+
 /* EXISTING INNER PAGES */
 
 .start-body {
@@ -543,37 +575,6 @@ p {
   outline: none;
 }
 
-.foundry-menu-list {
-  width: min(420px, 92%);
-  gap: 0;
-  background: rgba(255,255,255,0.92);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 28px 80px rgba(26,14,6,0.28);
-}
-
-.foundry-menu-link {
-  display: block;
-  padding: 1.2rem 1.5rem;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--bronze-deep);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.foundry-menu-link:last-child {
-  border-bottom: 0;
-}
-
-.foundry-menu-link:hover,
-.foundry-menu-link:focus-visible {
-  background: rgba(255,138,50,0.08);
-}
-
 /* MOBILE */
 
 @media (max-width: 760px) {
@@ -584,10 +585,13 @@ p {
     align-items: flex-start;
     justify-content: flex-start;
   }
-.site-title-bar > .home-link,
-.site-title-bar > .foundry-mark {
-  display: none;
-}
+
+  .site-title-bar > .home-link,
+  .site-title-bar > .foundry-mark {
+    display: none;
+  }
+
+  .mobile-menu-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -605,6 +609,14 @@ p {
     box-shadow:
       0 12px 28px rgba(105, 66, 26, 0.12),
       inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  }
+
+  .foundry-desktop-menu {
+    display: none;
+  }
+
+  .foundry-menu-list {
+    display: grid;
   }
 
   .site-header {
@@ -665,13 +677,15 @@ p {
   }
 }
 
+/* WHY A WEBSITE MOCKUP */
+
 .tablet-mockup {
   max-width: 900px;
   margin: 4rem auto;
   padding: 20px;
   background: #111;
   border-radius: 40px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .tablet-screen {
@@ -681,7 +695,7 @@ p {
 }
 
 .website-reason h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
