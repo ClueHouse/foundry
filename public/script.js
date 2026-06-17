@@ -6,6 +6,11 @@ function encodeMail(body) {
 
 function setStartEmailLinks() {
   const links = document.querySelectorAll(".email-start");
+
+  if (!links.length) {
+    return;
+  }
+
   const subject = "Hand Me The Problem";
 
   const body = `Hi, I'm Rob.
@@ -35,11 +40,16 @@ ________________________________________
 }
 
 function setConceptEmailLinks() {
+  const links = document.querySelectorAll(".email-concept");
+
+  if (!links.length) {
+    return;
+  }
+
   const concept =
     document.querySelector("[data-concept]")?.dataset.concept ||
     "A Foundry Possibility";
 
-  const links = document.querySelectorAll(".email-concept");
   const subject = `Foundry Concept Interest - ${concept}`;
 
   const body = `I like this direction: ${concept}
@@ -110,8 +120,59 @@ function setupFoundryOverlay() {
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && foundryOverlay.classList.contains("is-open")) {
       closeFoundryOverlay();
+    }
+  });
+}
+
+function setupFoundryCareModal() {
+  const foundryModal = document.getElementById("foundrycare-definitions");
+  const foundryModalOpen = document.querySelector(".foundry-care-button");
+  const foundryModalClose = document.querySelector(".foundry-modal-close");
+
+  if (!foundryModal || !foundryModalOpen || !foundryModalClose) {
+    return;
+  }
+
+  function openFoundryModal() {
+    const foundryModalPanel = foundryModal.querySelector(".foundry-modal-panel");
+
+    foundryModal.classList.add("is-open");
+    foundryModal.setAttribute("aria-hidden", "false");
+
+    if (foundryModalPanel) {
+      foundryModalPanel.scrollTop = 0;
+    }
+
+    requestAnimationFrame(function () {
+      const modalTitle = document.getElementById("foundrycare-definitions-title");
+
+      if (modalTitle) {
+        modalTitle.setAttribute("tabindex", "-1");
+        modalTitle.focus();
+      }
+    });
+  }
+
+  function closeFoundryModal() {
+    foundryModal.classList.remove("is-open");
+    foundryModal.setAttribute("aria-hidden", "true");
+    foundryModalOpen.focus();
+  }
+
+  foundryModalOpen.addEventListener("click", openFoundryModal);
+  foundryModalClose.addEventListener("click", closeFoundryModal);
+
+  foundryModal.addEventListener("click", function (event) {
+    if (event.target === foundryModal) {
+      closeFoundryModal();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && foundryModal.classList.contains("is-open")) {
+      closeFoundryModal();
     }
   });
 }
@@ -119,3 +180,4 @@ function setupFoundryOverlay() {
 setStartEmailLinks();
 setConceptEmailLinks();
 setupFoundryOverlay();
+setupFoundryCareModal();
