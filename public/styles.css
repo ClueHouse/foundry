@@ -812,7 +812,6 @@ body.foundry-info-page main {
   display: flex;
   flex-direction: column;
   align-items: center;
-.foundry-hero-content {
   gap: 2rem;
 }
 
