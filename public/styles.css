@@ -1363,21 +1363,5 @@ body.foundry-info-page main {
     font-size: 1.02rem;
   }
 
-  .foundry-header-spacer {
-  width: 1px;
-  height: 1px;
-}
 
-.foundry-header-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.foundry-header-right .foundry-brand {
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  line-height: 1;
-}
 }
