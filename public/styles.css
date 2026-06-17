@@ -990,6 +990,11 @@ font-size: clamp(1.35rem, 1.8vw, 1.9rem);
   font-weight: 600;
 }
 
+.foundry-care-content h2 .foundry-accent {
+  color: rgba(255, 248, 234, 0.95);
+  text-shadow: none;
+}
+
 .foundry-care-tagline {
   margin: 0 0 2rem;
   font-size: clamp(0.85rem, 1.2vw, 1rem);
