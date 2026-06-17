@@ -1175,13 +1175,24 @@ body.foundry-info-page main {
 }
 
 .foundry-back-home a {
-  color: #ff7f18;
+  color: rgba(255,248,234,.92);
+
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  letter-spacing: .08em;
+
   text-transform: uppercase;
+
+  transition:
+    color .2s ease,
+    opacity .2s ease;
+
+  opacity: .85;
 }
 
 .foundry-back-home a:hover {
