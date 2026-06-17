@@ -14,30 +14,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body class="foundry-info-page">
-<header class="foundry-header">
+  <header class="foundry-header">
+    <span class="foundry-brand">THE FOUNDRY</span>
 
-<span class="foundry-brand">
-  THE FOUNDRY
-</span>
-
-<div class="foundry-anvil-menu">
-  <img
-    class="foundry-header-anvil"
-    src="/assets/brand/anvil-mark.svg"
-    alt=""
-  />
-</div>
-
-</header>
+    <div class="foundry-anvil-menu" aria-hidden="true">
+      <img
+        class="foundry-header-anvil"
+        src="/assets/brand/anvil-mark.svg"
+        alt=""
+      />
+    </div>
+  </header>
 
   <main>
     <section class="foundry-hero">
       <div class="foundry-hero-content">
-        <img class="foundry-hero-anvil" src="/assets/brand/anvil-hero.svg" alt="">
+        <img
+          class="foundry-hero-anvil"
+          src="/assets/brand/anvil-hero.svg"
+          alt=""
+        >
 
         <div class="foundry-hero-text">
           <p class="foundry-hero-intro">The Foundry is a Tauranga web design</p>
@@ -55,7 +58,6 @@
 
     <section class="foundry-principles">
       <div class="foundry-principles-grid">
-
         <div class="foundry-principle-card">
           <svg class="foundry-principle-icon" viewBox="0 0 64 64" aria-hidden="true">
             <g fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
@@ -112,7 +114,6 @@
           <p>We stand by our work.</p>
           <p>You're never on your own.</p>
         </div>
-
       </div>
     </section>
 
@@ -121,7 +122,10 @@
         <h2>Foundry<span class="foundry-accent">Care.</span></h2>
         <p class="foundry-care-tagline">WE STAND BY OUR WORK.</p>
 
-        <p class="foundry-care-intro">Every Foundry website includes six months of FoundryCare. After that, FoundryCare continues for $40 per month, or $200 per six months.</p>
+        <p class="foundry-care-intro">
+          Every Foundry website includes six months of FoundryCare. After that,
+          FoundryCare continues for $40 per month, or $200 per six months.
+        </p>
 
         <div class="foundry-care-list-wrapper">
           <ul class="foundry-care-list">
@@ -134,7 +138,11 @@
           </ul>
         </div>
 
-        <button class="foundry-care-button" type="button" aria-controls="foundrycare-definitions">
+        <button
+          class="foundry-care-button"
+          type="button"
+          aria-controls="foundrycare-definitions"
+        >
           WHAT'S INCLUDED?
         </button>
       </div>
@@ -193,59 +201,10 @@
         <p>Every six months, we'll provide an up-to-date archive of your website for your records.</p>
       </section>
 
-      <button class="foundry-modal-close" type="button">
-        Close
-      </button>
+      <button class="foundry-modal-close" type="button">Close</button>
     </div>
   </div>
 
   <script src="../script.js"></script>
-
-  <script>
-    const foundryModal = document.getElementById("foundrycare-definitions");
-    const foundryModalOpen = document.querySelector(".foundry-care-button");
-    const foundryModalClose = document.querySelector(".foundry-modal-close");
-
-function openFoundryModal() {
-  const foundryModalPanel = foundryModal.querySelector(".foundry-modal-panel");
-
-  foundryModal.classList.add("is-open");
-  foundryModal.setAttribute("aria-hidden", "false");
-
-  if (foundryModalPanel) {
-    foundryModalPanel.scrollTop = 0;
-  }
-
-  requestAnimationFrame(function () {
-    const modalTitle = document.getElementById("foundrycare-definitions-title");
-
-    if (modalTitle) {
-      modalTitle.setAttribute("tabindex", "-1");
-      modalTitle.focus();
-    }
-  });
-}
-
-    function closeFoundryModal() {
-      foundryModal.classList.remove("is-open");
-      foundryModal.setAttribute("aria-hidden", "true");
-      foundryModalOpen.focus();
-    }
-
-    foundryModalOpen.addEventListener("click", openFoundryModal);
-    foundryModalClose.addEventListener("click", closeFoundryModal);
-
-    foundryModal.addEventListener("click", function (event) {
-      if (event.target === foundryModal) {
-        closeFoundryModal();
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && foundryModal.classList.contains("is-open")) {
-        closeFoundryModal();
-      }
-    });
-  </script>
 </body>
 </html>
