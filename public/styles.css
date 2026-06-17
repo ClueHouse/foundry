@@ -991,8 +991,8 @@ font-size: clamp(2.4rem, 4vw, 3.6rem);
 }
 
 .foundry-care-content h2 .foundry-accent {
-  color: rgba(255, 248, 234, 0.95);
-  text-shadow: none;
+  color: #ff8a32;
+  text-shadow: 0 0 10px rgba(255, 138, 50, 0.28);
 }
 
 .foundry-care-tagline {
