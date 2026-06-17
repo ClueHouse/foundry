@@ -1164,25 +1164,26 @@ body.foundry-info-page main {
   position: absolute;
 
   left: 50%;
-  bottom: -28px;
+  bottom: -26px;
 
   transform: translateX(-50%);
 
-  width: 240px;
-  height: 70px;
+  width: 320px;
+  height: 90px;
 
   pointer-events: none;
 
   background:
     radial-gradient(
       ellipse at center,
-      rgba(255,127,24,.55) 0%,
-      rgba(255,127,24,.30) 34%,
-      rgba(255,127,24,.12) 62%,
+      rgba(255,138,50,.95) 0%,
+      rgba(255,138,50,.70) 18%,
+      rgba(255,138,50,.40) 42%,
+      rgba(255,138,50,.18) 68%,
       transparent 100%
     );
 
-  filter: blur(18px);
+  filter: blur(22px);
 
   z-index: -1;
 }
