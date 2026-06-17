@@ -1144,10 +1144,11 @@ body.foundry-info-page main {
   cursor: pointer;
   text-decoration: none;
 
-  box-shadow:
-    0 0 24px rgba(255,127,24,.18),
-    0 0 60px rgba(255,127,24,.10),
-    inset 0 1px 0 rgba(255,255,255,.08);
+box-shadow:
+  0 0 18px rgba(255,127,24,.40),
+  0 0 50px rgba(255,127,24,.30),
+  0 0 100px rgba(255,127,24,.18),
+  inset 0 1px 0 rgba(255,255,255,.08);
 
   transition:
     transform .2s ease,
