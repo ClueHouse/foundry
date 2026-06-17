@@ -812,7 +812,8 @@ body.foundry-info-page main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(3rem, 6vw, 5rem);
+.foundry-hero-content {
+  gap: 2rem;
 }
 
 .foundry-hero-anvil {
