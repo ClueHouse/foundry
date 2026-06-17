@@ -74,6 +74,35 @@ a {
   display: block;
 }
 
+.foundry-anvil-menu {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+
+  line-height: 0;
+  cursor: pointer;
+}
+
+.foundry-anvil-menu img {
+  display: block;
+}
+
+.foundry-anvil-menu:focus-visible {
+  outline: 1px solid #ff7f18;
+  outline-offset: 6px;
+}
+
 /* HOME PAGE */
 
 .site-blur-wrap {
