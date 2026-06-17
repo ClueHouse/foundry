@@ -1118,22 +1118,41 @@ body.foundry-info-page main {
 
 .foundry-care-button {
   display: inline-flex;
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  color: #ff7f18;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 42px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,127,24,.9);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(40,16,8,.95) 0%,
+      rgba(18,8,4,.98) 100%
+    );
+
+  color: #ff8a32;
+
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.96rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
-  line-height: 1.4;
+  letter-spacing: .22em;
   text-transform: uppercase;
+
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 7px;
-  text-decoration-thickness: 1px;
-  box-shadow: none;
+  text-decoration: none;
+
+  box-shadow:
+    0 0 24px rgba(255,127,24,.18),
+    0 0 60px rgba(255,127,24,.10),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    color .2s ease;
 }
 
 .foundry-care-button:hover,
