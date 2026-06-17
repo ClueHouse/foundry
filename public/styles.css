@@ -1244,11 +1244,13 @@ font-size: clamp(2.4rem, 4vw, 3.6rem);
   }
 
 .foundry-care {
-  padding: 140px 40px 80px;
-  .foundry-care-list {
-    grid-template-columns: 1fr;
-    gap: 1rem 0;
-  }
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+}
+
+.foundry-care-list {
+  grid-template-columns: 1fr;
+  gap: 1rem 0;
+}
 
   .foundry-care-list li {
     text-align: left;
