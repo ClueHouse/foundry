@@ -91,7 +91,8 @@ a {
   outline: none;
 
   line-height: 0;
-
+  cursor: default;
+}
 
 .foundry-anvil-menu img {
   display: block;
@@ -100,6 +101,10 @@ a {
 .foundry-anvil-menu:focus-visible {
   outline: 1px solid #ff7f18;
   outline-offset: 6px;
+}
+
+.mobile-menu-button {
+  display: none;
 }
 
 /* HOME PAGE */
@@ -1140,10 +1145,7 @@ body.foundry-info-page main {
   outline: none;
 }
 
-
-
-
-  .foundry-back-home {
+.foundry-back-home {
   text-align: center;
   padding: 0 0 80px;
 }
@@ -1417,25 +1419,5 @@ body.foundry-info-page main {
   .foundry-care-list li {
     font-size: 1.02rem;
   }
-
-  .foundry-back-home {
-  text-align: center;
-  padding: 0 0 80px;
-}
-
-.foundry-back-home a {
-  color: #ff7f18;
-  text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.foundry-back-home a:hover {
-  color: #ffd054;
-}
-
 
 }
