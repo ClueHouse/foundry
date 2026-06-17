@@ -262,7 +262,6 @@ p {
 
 .foundry-overlay.is-open {
   display: flex;
-  animation: foundryOverlayFade 1.5s ease forwards;
 }
 
 @keyframes foundryOverlayFade {
