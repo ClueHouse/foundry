@@ -925,12 +925,15 @@ body.foundry-info-page main {
 }
 
 .foundry-principle-icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 0 18px;
+  width: 78px;
+  height: 78px;
+  margin: 0 0 22px;
+
   color: #ff7f18;
   stroke-width: 1.55;
-  filter: drop-shadow(0 0 12px rgba(255, 119, 20, 0.18));
+
+  filter:
+    drop-shadow(0 0 14px rgba(255, 119, 20, 0.22));
 }
 
 .foundry-principle-card h2 {
