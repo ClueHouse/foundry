@@ -878,68 +878,72 @@ body.foundry-info-page main {
   color: rgba(255, 248, 234, 0.8);
   font-family: Georgia, "Times New Roman", serif;
 }
-
 .foundry-principles {
-  padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+  padding: 52px clamp(1.5rem, 4vw, 4rem) 74px;
   background: transparent;
 }
 
 .foundry-principles-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(2rem, 4vw, 3.5rem);
-  width: 100%;
-  max-width: 1400px;
+  width: min(1120px, 100%);
   margin: 0 auto;
+  gap: 0;
 }
 
 .foundry-principle-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: clamp(2rem, 3vw, 2.5rem);
-  border: 1px solid rgba(255, 248, 234, 0.12);
-  border-radius: clamp(16px, 2vw, 24px);
-  background: rgba(255, 248, 234, 0.04);
-  backdrop-filter: blur(8px);
+  min-height: 210px;
+  padding: 12px 34px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
   text-align: center;
-  transition: all 300ms ease;
+  transition: none;
+}
+
+.foundry-principle-card + .foundry-principle-card {
+  border-left: 1px solid rgba(255, 248, 234, 0.16);
 }
 
 .foundry-principle-card:hover {
-  background: rgba(255, 248, 234, 0.08);
-  border-color: rgba(255, 138, 50, 0.3);
-  transform: translateY(-4px);
+  background: transparent;
+  border-color: rgba(255, 248, 234, 0.16);
+  transform: none;
 }
 
 .foundry-principle-icon {
-  width: clamp(48px, 8vw, 64px);
-  height: auto;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
   color: #ff8a32;
-  stroke-width: 1.5;
+  stroke-width: 1.6;
 }
 
 .foundry-principle-card h2 {
-  margin: 0;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  color: rgba(255, 248, 234, 0.95);
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 2.7vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: rgba(255, 248, 234, 0.94);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 600;
 }
 
 .foundry-principle-card p {
-  margin: 0;
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-  line-height: 1.5;
-  color: rgba(255, 248, 234, 0.75);
+  margin: 0 0 8px;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: rgba(255, 248, 234, 0.84);
   font-family: Georgia, "Times New Roman", serif;
 }
 
 .foundry-principle-card p:last-child {
   margin-bottom: 0;
+}
 }
 
 .foundry-accent {
