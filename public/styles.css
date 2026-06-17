@@ -982,8 +982,8 @@ font-size: clamp(1.55rem, 2vw, 2.15rem);
 }
 
 .foundry-care-content h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  margin: 0 0 .75rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: rgba(255, 248, 234, 0.95);
