@@ -1243,10 +1243,8 @@ font-size: clamp(2.4rem, 4vw, 3.6rem);
     gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
-  .foundry-care {
-    padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
-  }
-
+.foundry-care {
+  padding: 120px 40px 80px;
   .foundry-care-list {
     grid-template-columns: 1fr;
     gap: 1rem 0;
