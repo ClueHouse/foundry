@@ -968,9 +968,10 @@ font-size: clamp(1.35rem, 1.8vw, 1.9rem);
 background:
   radial-gradient(
     ellipse at center,
-    rgba(80,25,8,.18) 0%,
-    rgba(40,12,4,.08) 45%,
-    transparent 85%
+    rgba(120,40,10,.22) 0%,
+    rgba(70,22,8,.18) 35%,
+    rgba(35,12,5,.12) 65%,
+    transparent 100%
   );
 }
 
