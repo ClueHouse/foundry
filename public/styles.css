@@ -248,12 +248,16 @@ p {
 .foundry-overlay {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  z-index: 9999;
+
   display: none;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 82px 42px 2rem 2rem;
-  background: rgba(33, 24, 18, 0);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .foundry-overlay.is-open {
