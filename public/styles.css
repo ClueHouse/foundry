@@ -965,12 +965,13 @@ font-size: clamp(1.35rem, 1.8vw, 1.9rem);
 .foundry-care {
   padding: 70px 40px 80px;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(42, 25, 17, 0.92) 0%,
-      rgba(31, 18, 12, 0.96) 100%
-    );
+background:
+  radial-gradient(
+    ellipse at center,
+    rgba(80,25,8,.18) 0%,
+    rgba(40,12,4,.08) 45%,
+    transparent 85%
+  );
 }
 
 .foundry-care-content {
