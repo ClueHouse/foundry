@@ -91,8 +91,7 @@ a {
   outline: none;
 
   line-height: 0;
-  cursor: pointer;
-}
+cursor: default;
 
 .foundry-anvil-menu img {
   display: block;
