@@ -30,7 +30,49 @@ a {
 
 /* TITLE BAR */
 
+.foundry-header {
+  height: 92px;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2d1a11 0%,
+      #1c100a 100%
+    );
+
+  border-bottom: 1px solid rgba(255,138,50,.12);
+}
+
+.foundry-brand {
+  text-decoration: none;
+
+  color: #ff8a32;
+
+  font-family:
+    "Courier New",
+    Courier,
+    monospace;
+
+  font-size: 2.3rem;
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+.foundry-header-anvil {
+  width: 64px;
+  height: auto;
+
+  display: block;
+}
 
 /* HOME PAGE */
 
