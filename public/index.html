@@ -11,43 +11,19 @@
 </head>
 
 <body>
-  <header class="site-title-bar">
+  <header class="foundry-header">
 
-    <button
-      class="mobile-menu-button"
-      type="button"
-      id="foundryToggleMobile"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
+    <span class="foundry-brand">
+      THE FOUNDRY
+    </span>
 
-    <a class="home-link" href="./" aria-label="Home">
-      <span class="home-text">Home</span>
+    <div class="foundry-anvil-menu">
       <img
-        src="./assets/brand/foundry-home.png"
+        class="foundry-header-anvil"
+        src="./assets/brand/anvil-mark.svg"
         alt=""
-        class="home-icon"
       />
-    </a>
-
-    <button
-      class="foundry-mark"
-      type="button"
-      id="foundryToggle"
-      aria-label="Open Foundry menu"
-      aria-expanded="false"
-    >
-      <span class="foundry-mark-small">The</span>
-      <span class="foundry-mark-large">Foundry</span>
-
-      <img
-        src="./assets/brand/foundry-anvil.png"
-        alt=""
-        class="foundry-mark-anvil"
-      />
-    </button>
+    </div>
 
   </header>
 
@@ -70,69 +46,6 @@
       </section>
     </main>
   </div>
-
-  <section
-    class="foundry-overlay"
-    id="foundryOverlay"
-    aria-hidden="true"
-  >
-
-    <button
-      class="foundry-close"
-      type="button"
-      id="foundryClose"
-      aria-label="Close menu"
-    >
-      ×
-    </button>
-
-    <div class="foundry-window-wrap foundry-desktop-menu">
-
-<a
-  class="foundry-window"
-  href="./whywebsite/"
->
-  <span>Why have a website?</span>
-</a>
-
-      <a
-        class="foundry-window"
-        href="./the-foundry/"
-      >
-        <span>Why choose The Foundry?</span>
-      </a>
-
-    </div>
-
-    <div class="foundry-window-wrap foundry-menu-list">
-
-      <a class="foundry-menu-link" href="./">
-        Home
-      </a>
-
-      <a class="foundry-menu-link" href="./start/">
-        Start Here
-      </a>
-
-      <a class="foundry-menu-link" href="./possibilities/">
-        Possibilities
-      </a>
-
-      <a class="foundry-menu-link" href="#">
-        Pricing (Coming Soon)
-      </a>
-
-      <a class="foundry-menu-link" href="#">
-        Client Stories (Coming Soon)
-      </a>
-
-      <a class="foundry-menu-link" href="#">
-        Contact (Coming Soon)
-      </a>
-
-    </div>
-
-  </section>
 
   <script src="./script.js"></script>
 </body>
