@@ -250,9 +250,9 @@ p {
   inset: 0;
   z-index: 200;
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 82px 42px 2rem 2rem;
   background: rgba(33, 24, 18, 0);
 }
 
