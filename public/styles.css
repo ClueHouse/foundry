@@ -1244,7 +1244,7 @@ font-size: clamp(2.4rem, 4vw, 3.6rem);
   }
 
 .foundry-care {
-  padding: 120px 40px 80px;
+  padding: 140px 40px 80px;
   .foundry-care-list {
     grid-template-columns: 1fr;
     gap: 1rem 0;
