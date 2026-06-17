@@ -204,11 +204,25 @@
     const foundryModalOpen = document.querySelector(".foundry-care-button");
     const foundryModalClose = document.querySelector(".foundry-modal-close");
 
-    function openFoundryModal() {
-      foundryModal.classList.add("is-open");
-      foundryModal.setAttribute("aria-hidden", "false");
-      foundryModalClose.focus();
+function openFoundryModal() {
+  const foundryModalPanel = foundryModal.querySelector(".foundry-modal-panel");
+
+  foundryModal.classList.add("is-open");
+  foundryModal.setAttribute("aria-hidden", "false");
+
+  if (foundryModalPanel) {
+    foundryModalPanel.scrollTop = 0;
+  }
+
+  requestAnimationFrame(function () {
+    const modalTitle = document.getElementById("foundrycare-definitions-title");
+
+    if (modalTitle) {
+      modalTitle.setAttribute("tabindex", "-1");
+      modalTitle.focus();
     }
+  });
+}
 
     function closeFoundryModal() {
       foundryModal.classList.remove("is-open");
