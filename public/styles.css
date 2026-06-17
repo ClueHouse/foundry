@@ -964,7 +964,6 @@ font-size: clamp(1.35rem, 1.8vw, 1.9rem);
 
 .foundry-care {
   padding: 120px 40px 80px;
-  border-top: 1px solid rgba(255,248,234,.03);
 
   background:
     radial-gradient(circle at center,
