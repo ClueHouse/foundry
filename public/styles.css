@@ -918,7 +918,7 @@ body.foundry-info-page main {
 .foundry-principle-icon {
   width: 48px;
   height: 48px;
-  margin-bottom: 22px;
+margin-bottom: 10px;
   color: #ff8a32;
   stroke-width: 1.6;
 }
