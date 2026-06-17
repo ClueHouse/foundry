@@ -1196,9 +1196,9 @@ body.foundry-info-page main {
 }
 
 .foundry-back-home a:hover {
-  color: #ffd054;
+  color: #ffffff;
+  opacity: 1;
 }
-
 
 
 /* FOUNDRY MODAL */
