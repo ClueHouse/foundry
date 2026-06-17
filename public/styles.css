@@ -816,7 +816,7 @@ body.foundry-info-page main {
 }
 
 .foundry-hero-anvil {
-  width: clamp(280px, 50vw, 520px);
+  width: clamp(260px, 30vw, 380px);
   height: auto;
   aspect-ratio: 700 / 450;
   filter: drop-shadow(0 0 40px rgba(255, 138, 50, 0.3));
