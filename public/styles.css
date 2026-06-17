@@ -925,7 +925,7 @@ margin-bottom: 10px;
 
 .foundry-principle-card h2 {
   margin: 0 0 20px;
-font-size: clamp(1.55rem, 2vw, 2.15rem);
+font-size: clamp(1.35rem, 1.8vw, 1.9rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
   color: rgba(255, 248, 234, 0.94);
