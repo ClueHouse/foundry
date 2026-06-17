@@ -1064,11 +1064,13 @@ body.foundry-info-page main {
 }
 
 .foundry-care-list li::before {
-  content: "â€”";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #ff7f18;
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: #ff8a32;
+  margin-right: 12px;
+  vertical-align: middle;
 }
 
 .foundry-care-button {
