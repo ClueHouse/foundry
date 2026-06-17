@@ -1035,32 +1035,37 @@ font-size: clamp(1.55rem, 2vw, 2.15rem);
   color: #ff8a32;
   margin-right: 0.5rem;
 }
-
 .foundry-care-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(0.8rem, 1.2vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
-  font-size: clamp(0.8rem, 1vw, 0.95rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  background: none;
+  border: none;
+  padding: 0;
+
+  color: #ff8a32;
+
+  font-family:
+    "Courier New",
+    Courier,
+    monospace;
+
+  font-size: .95rem;
   font-weight: 700;
-  font-family: Arial, sans-serif;
-  color: #000;
-  background: #ff8a32;
-  border: 0;
-  border-radius: 4px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+
   cursor: pointer;
-  transition: all 200ms ease;
-  box-shadow: 0 8px 24px rgba(255, 138, 50, 0.3);
+
+  text-decoration: underline;
+  text-underline-offset: 6px;
+
+  box-shadow: none;
 }
 
 .foundry-care-button:hover,
 .foundry-care-button:focus-visible {
-  background: #ffd054;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(255, 138, 50, 0.4);
-  outline: none;
+  color: #ffd054;
+  background: none;
+  transform: none;
+  box-shadow: none;
 }
 
 /* FOUNDRY MODAL */
