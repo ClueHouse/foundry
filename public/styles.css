@@ -1153,9 +1153,40 @@ body.foundry-info-page main {
     transform .2s ease,
     box-shadow .2s ease,
     color .2s ease;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
 }
-position: relative;
-overflow: visible;
+
+.foundry-care-button::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -28px;
+
+  transform: translateX(-50%);
+
+  width: 240px;
+  height: 70px;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,127,24,.55) 0%,
+      rgba(255,127,24,.30) 34%,
+      rgba(255,127,24,.12) 62%,
+      transparent 100%
+    );
+
+  filter: blur(18px);
+
+  z-index: -1;
+}
+
 .foundry-care-button:hover,
 .foundry-care-button:focus-visible {
   color: #ffd054;
@@ -1196,34 +1227,6 @@ overflow: visible;
   opacity: .85;
 }
 
-.foundry-care-button::before {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: -22px;
-
-  transform: translateX(-50%);
-
-  width: 180px;
-  height: 50px;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255,127,24,.45) 0%,
-      rgba(255,127,24,.22) 35%,
-      rgba(255,127,24,.08) 65%,
-      transparent 100%
-    );
-
-  filter: blur(12px);
-
-  z-index: -1;
-}
 
 .foundry-back-home a:hover {
   color: #ffffff;
