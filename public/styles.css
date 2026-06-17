@@ -944,7 +944,6 @@ font-size: clamp(1.35rem, 1.8vw, 1.9rem);
 .foundry-principle-card p:last-child {
   margin-bottom: 0;
 }
-}
 
 .foundry-accent {
   color: #ff8a32;
