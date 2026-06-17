@@ -1395,5 +1395,24 @@ body.foundry-info-page main {
     font-size: 1.02rem;
   }
 
+  .foundry-back-home {
+  text-align: center;
+  padding: 0 0 80px;
+}
+
+.foundry-back-home a {
+  color: #ff7f18;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.foundry-back-home a:hover {
+  color: #ffd054;
+}
+
 
 }
