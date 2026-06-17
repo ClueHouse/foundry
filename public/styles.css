@@ -916,7 +916,11 @@ body.foundry-info-page main {
 }
 
 .foundry-principle-card + .foundry-principle-card {
-  border-left: 1px solid rgba(255, 248, 234, 0.15);
+  border-left: 1px solid rgba(255, 248, 234, 0.20);
+}
+
+.foundry-principle-card {
+  position: relative;
 }
 
 .foundry-principle-card:hover {
