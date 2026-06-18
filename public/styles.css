@@ -170,9 +170,14 @@ body.homepage .foundry-header-anvil {
   border-radius: 999px;
   color: inherit;
   font-family: Arial, sans-serif;
+.button,
+.floating-like {
+  ...
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.13em;
+  ...
+}
   text-decoration: none;
   text-transform: uppercase;
   transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
