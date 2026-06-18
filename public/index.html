@@ -16,7 +16,7 @@
 
     <button
       class="foundry-anvil-menu"
-      id="foundryMenuToggle"
+      id="foundryToggle"
       type="button"
       aria-label="Open Foundry menu"
       aria-expanded="false"
@@ -47,35 +47,31 @@
     </main>
   </div>
 
-  <div class="foundry-menu-overlay" id="foundryMenuOverlay">
-    <a class="foundry-menu-tile tile-one" href="./whywebsite/">
-      Why Do I Need a Website?
-    </a>
+  <div
+    class="foundry-overlay"
+    id="foundryOverlay"
+    aria-hidden="true"
+  >
+    <button
+      class="foundry-close"
+      id="foundryClose"
+      type="button"
+      aria-label="Close Foundry menu"
+    >
+      Close
+    </button>
 
-    <a class="foundry-menu-tile tile-two" href="./the-foundry/">
-      Why Choose The Foundry?
-    </a>
+    <div class="foundry-window-wrap">
+      <a class="foundry-window" href="./whywebsite/">
+        <span>Why Do I Need a Website?</span>
+      </a>
+
+      <a class="foundry-window" href="./the-foundry/">
+        <span>Why Choose The Foundry?</span>
+      </a>
+    </div>
   </div>
 
   <script src="./script.js"></script>
-
-  <script>
-    const menuToggle = document.getElementById("foundryMenuToggle");
-    const menuOverlay = document.getElementById("foundryMenuOverlay");
-
-    menuToggle.addEventListener("click", () => {
-      document.body.classList.toggle("foundry-menu-open");
-
-      const isOpen = document.body.classList.contains("foundry-menu-open");
-      menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    menuOverlay.addEventListener("click", (event) => {
-      if (event.target === menuOverlay) {
-        document.body.classList.remove("foundry-menu-open");
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  </script>
 </body>
 </html>
