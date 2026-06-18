@@ -183,9 +183,9 @@ function setupPageTransitions() {
 
       document.body.classList.add("page-exit");
 
-      setTimeout(() => {
-        window.location.href = href;
-      }, 650);
+setTimeout(() => {
+  window.location.href = href;
+}, 420);
     });
   });
 }
