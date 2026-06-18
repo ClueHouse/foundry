@@ -893,7 +893,7 @@ body.foundry-info-page main {
 .foundry-hero-intro:last-of-type {
   margin-bottom: 26px;
 }
-.foundry-hero-tagline {
+line-height: 1.05;
   margin: 22px 0 0;
 
   font-family:
