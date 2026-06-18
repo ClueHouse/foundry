@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Foundry | Maintenance</title>
+  <meta name="robots" content="noindex" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 24px;
+      background:
+        radial-gradient(circle at center, rgba(160, 70, 20, 0.16), transparent 34%),
+        linear-gradient(135deg, #1b120d 0%, #090705 55%, #050403 100%);
+      color: #f4eee7;
+      font-family: Georgia, "Times New Roman", serif;
+      text-align: center;
+    }
+
+    .maintenance-page {
+      width: min(760px, 100%);
+    }
+
+    .foundry-logo {
+      width: 170px;
+      max-width: 42vw;
+      margin: 0 auto 28px;
+      display: block;
+      filter:
+        drop-shadow(0 0 18px rgba(255, 95, 18, 0.35))
+        drop-shadow(0 0 42px rgba(255, 95, 18, 0.18));
+    }
+
+    .brand-small {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.42em;
+      font-weight: 700;
+      line-height: 1;
+      color: #f5f1ec;
+    }
+
+    .brand-large {
+      margin: 10px 0 34px;
+      font-size: clamp(3.2rem, 9vw, 6.6rem);
+      letter-spacing: 0.18em;
+      font-weight: 900;
+      line-height: 0.95;
+      color: #f5f1ec;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 70px;
+      height: 3px;
+      margin: 0 auto 42px;
+      background: #ff6a1a;
+      border-radius: 999px;
+      box-shadow: 0 0 18px rgba(255, 106, 26, 0.55);
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      color: #ff6a1a;
+      font-size: clamp(1.8rem, 4.8vw, 3.2rem);
+      line-height: 1.18;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 720px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .on-it {
+      margin-top: 28px;
+      color: #ff6a1a;
+      font-weight: 700;
+    }
+
+    .small-divider {
+      width: 52px;
+      height: 2px;
+      margin: 30px auto;
+      background: #ff6a1a;
+      border-radius: 999px;
+    }
+
+    .return {
+      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 34px 20px;
+      }
+
+      .foundry-logo {
+        width: 135px;
+        margin-bottom: 24px;
+      }
+
+      .brand-small {
+        letter-spacing: 0.28em;
+      }
+
+      .brand-large {
+        letter-spacing: 0.1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="maintenance-page" aria-label="The Foundry maintenance notice">
+    <img
+      class="foundry-logo"
+      src="../assets/brand/anvil-mark.svg"
+      alt="The Foundry anvil"
+    />
+
+    <p class="brand-small">THE</p>
+    <p class="brand-large">FOUNDRY</p>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <h1>Our site is undergoing planned maintenance.</h1>
+
+    <p>
+      We monitor, maintain, and repair the websites we build,
+      so small issues stay small.
+    </p>
+
+    <p class="on-it">We're on it.</p>
+
+    <div class="small-divider" aria-hidden="true"></div>
+
+    <p class="return">Please come back soon.</p>
+  </main>
+</body>
+</html>
