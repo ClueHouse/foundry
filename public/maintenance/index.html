@@ -7,13 +7,6 @@
   <title>The Foundry | Maintenance</title>
   <meta name="robots" content="noindex" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
   <style>
     * {
       box-sizing: border-box;
@@ -32,17 +25,8 @@
       padding: 40px 24px;
 
       background:
-        radial-gradient(
-          circle at center,
-          rgba(160, 70, 20, 0.16),
-          transparent 34%
-        ),
-        linear-gradient(
-          135deg,
-          #1b120d 0%,
-          #090705 55%,
-          #050403 100%
-        );
+        radial-gradient(circle at center, rgba(160, 70, 20, 0.16), transparent 34%),
+        linear-gradient(135deg, #1b120d 0%, #090705 55%, #050403 100%);
 
       color: #f4eee7;
       font-family: Georgia, "Times New Roman", serif;
@@ -65,30 +49,26 @@
         drop-shadow(0 0 42px rgba(255, 95, 18, 0.18));
     }
 
-    .brand-small {
-      margin: 0;
+    .foundry-wordmark {
+      margin: 0 0 34px;
 
-      font-family: "Oswald", sans-serif;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 500;
+      font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-weight: 700;
       line-height: 1;
-      letter-spacing: 0.42em;
+
+      letter-spacing: .12em;
       text-transform: uppercase;
 
-      color: #f5f1ec;
-    }
+      color: #ff8a32;
 
-    .brand-large {
-      margin: 10px 0 34px;
-
-      font-family: "Oswald", sans-serif;
-      font-size: clamp(4.5rem, 10vw, 7.5rem);
-      font-weight: 600;
-      line-height: 0.9;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-
-      color: #f5f1ec;
+      text-shadow:
+        0 0 12px rgba(255,138,50,.25),
+        0 0 28px rgba(255,138,50,.15);
     }
 
     .divider {
@@ -158,12 +138,9 @@
         margin-bottom: 24px;
       }
 
-      .brand-small {
-        letter-spacing: 0.28em;
-      }
-
-      .brand-large {
-        letter-spacing: 0.06em;
+      .foundry-wordmark {
+        font-size: clamp(1.9rem, 9vw, 3rem);
+        letter-spacing: .08em;
       }
     }
   </style>
@@ -180,13 +157,15 @@
       alt="The Foundry anvil"
     />
 
-    <p class="brand-small">THE</p>
-    <p class="brand-large">FOUNDRY</p>
+    <div class="foundry-wordmark">
+      THE FOUNDRY
+    </div>
 
     <div class="divider" aria-hidden="true"></div>
 
     <h1>
-      Our site is undergoing planned maintenance.
+      Our site is undergoing<br>
+      planned maintenance.
     </h1>
 
     <p>
