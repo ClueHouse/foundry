@@ -229,7 +229,7 @@ p {
 .start-back-link {
   display: inline-block;
 
-  color: var(--bronze-deep);
+  color: #ffffff;
 
   font-family: Arial, sans-serif;
   font-size: 0.78rem;
@@ -239,6 +239,8 @@ p {
   text-transform: uppercase;
 
   text-decoration: none;
+
+  opacity: 0.85;
 }
 
 .start-back-link:hover,
