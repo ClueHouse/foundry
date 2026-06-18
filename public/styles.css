@@ -895,14 +895,19 @@ body.foundry-info-page main {
 }
 
 .foundry-hero-tagline {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(1.55rem, 2.45vw, 2.15rem);
+  margin: 28px 0 0;
+
+  font-family: "Special Elite", "Courier New", monospace;
+
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  line-height: 1.15;
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0;
-  color: #ff7f18;
-  text-shadow: 0 0 18px rgba(255, 119, 20, 0.28);
+
+  color: #f5efe8;
+
+  text-transform: none;
+  letter-spacing: 0.02em;
+
 }
 
 .foundry-divider {
