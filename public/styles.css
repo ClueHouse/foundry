@@ -1523,14 +1523,26 @@ line-height: 1.05;
   }
 
 .foundry-hero-tagline {
-  margin: 26px 0 0;
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: clamp(3.4rem, 6vw, 5rem);
-  font-weight: 600;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: #f5efe8;
-  text-shadow: 0 2px 18px rgba(0,0,0,.72);
+  margin: 28px 0 0;
+
+  font-family:
+    "Courier New",
+    Courier,
+    monospace;
+
+  font-size: clamp(4.5rem, 8vw, 7rem);
+
+  font-weight: 700;
+  line-height: 0.85;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  color: #ff8a32;
+
+  text-shadow:
+    0 0 12px rgba(255,138,50,.25),
+    0 0 28px rgba(255,138,50,.15);
 }
 
   .foundry-hero-secondary {
