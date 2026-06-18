@@ -115,7 +115,7 @@ a {
 }
 
 .site-blur-wrap.is-blurred {
-  filter: blur(7px);
+  filter: blur(10px);
   transform: scale(1.01);
 }
 
