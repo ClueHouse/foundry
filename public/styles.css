@@ -155,8 +155,8 @@ body.homepage .foundry-header-anvil {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-top: 2.2rem;
+  gap: 1.15rem;
+  margin-top: 2.75rem;
 }
 
 .button,
