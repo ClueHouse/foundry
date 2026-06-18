@@ -25,12 +25,11 @@ body {
   overflow-x: hidden;
 
   opacity: 1;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.3s ease;
 }
 
 body.page-exit {
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 a {
