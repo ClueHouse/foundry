@@ -23,8 +23,6 @@ If one feels right, we'll refine it together.
 
 If not, tell me why. We'll go from there.
 
-There is no obligation.
-
 ---`;
 
   links.forEach((link) => {
