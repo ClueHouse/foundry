@@ -1,15 +1,13 @@
 const EMAIL = "thefoundry@rkdb.nz";
 
-function encodeMail(body) {
-  return encodeURIComponent(body);
+function encodeMail(value) {
+  return encodeURIComponent(value);
 }
 
 function setStartEmailLinks() {
   const links = document.querySelectorAll(".email-start");
 
-  if (!links.length) {
-    return;
-  }
+  if (!links.length) return;
 
   const subject = "Hand Me The Problem";
 
@@ -35,16 +33,14 @@ ________________________________________
 `;
 
   links.forEach((link) => {
-    link.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeMail(body)}`;
+    link.href = `mailto:${EMAIL}?subject=${encodeMail(subject)}&body=${encodeMail(body)}`;
   });
 }
 
 function setConceptEmailLinks() {
   const links = document.querySelectorAll(".email-concept");
 
-  if (!links.length) {
-    return;
-  }
+  if (!links.length) return;
 
   const concept =
     document.querySelector("[data-concept]")?.dataset.concept ||
@@ -64,122 +60,110 @@ ________________________________________
 `;
 
   links.forEach((link) => {
-    link.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeMail(body)}`;
+    link.href = `mailto:${EMAIL}?subject=${encodeMail(subject)}&body=${encodeMail(body)}`;
   });
 }
 
 function setupFoundryOverlay() {
-  const foundryToggle = document.getElementById("foundryToggle");
-  const foundryToggleMobile = document.getElementById("foundryToggleMobile");
-  const foundryOverlay = document.getElementById("foundryOverlay");
-  const foundryClose = document.getElementById("foundryClose");
-  const siteBlurWrap = document.getElementById("siteBlurWrap");
+  const toggles = [
+    document.getElementById("foundryToggle"),
+    document.getElementById("foundryToggleMobile")
+  ].filter(Boolean);
 
-  if (!foundryOverlay || !foundryClose || !siteBlurWrap) {
-    return;
-  }
+  const overlay = document.getElementById("foundryOverlay");
+  const closeButton = document.getElementById("foundryClose");
+  const blurWrap = document.getElementById("siteBlurWrap");
+
+  if (!overlay || !closeButton || !blurWrap || !toggles.length) return;
 
   function setExpanded(value) {
-    if (foundryToggle) {
-      foundryToggle.setAttribute("aria-expanded", value);
-    }
-
-    if (foundryToggleMobile) {
-      foundryToggleMobile.setAttribute("aria-expanded", value);
-    }
+    toggles.forEach((toggle) => {
+      toggle.setAttribute("aria-expanded", value);
+    });
   }
 
-  function openFoundryOverlay() {
-    foundryOverlay.classList.add("is-open");
-    siteBlurWrap.classList.add("is-blurred");
-    foundryOverlay.setAttribute("aria-hidden", "false");
+  function openOverlay() {
+    overlay.classList.add("is-open");
+    blurWrap.classList.add("is-blurred");
+    overlay.setAttribute("aria-hidden", "false");
     setExpanded("true");
   }
 
-  function closeFoundryOverlay() {
-    foundryOverlay.classList.remove("is-open");
-    siteBlurWrap.classList.remove("is-blurred");
-    foundryOverlay.setAttribute("aria-hidden", "true");
+  function closeOverlay() {
+    overlay.classList.remove("is-open");
+    blurWrap.classList.remove("is-blurred");
+    overlay.setAttribute("aria-hidden", "true");
     setExpanded("false");
   }
 
-  if (foundryToggle) {
-    foundryToggle.addEventListener("click", openFoundryOverlay);
-  }
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", openOverlay);
+  });
 
-  if (foundryToggleMobile) {
-    foundryToggleMobile.addEventListener("click", openFoundryOverlay);
-  }
+  closeButton.addEventListener("click", closeOverlay);
 
-  foundryClose.addEventListener("click", closeFoundryOverlay);
-
-  foundryOverlay.addEventListener("click", function (event) {
-    if (event.target === foundryOverlay) {
-      closeFoundryOverlay();
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeOverlay();
     }
   });
 
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && foundryOverlay.classList.contains("is-open")) {
-      closeFoundryOverlay();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+      closeOverlay();
     }
   });
 }
 
 function setupFoundryCareModal() {
-  const foundryModal = document.getElementById("foundrycare-definitions");
-  const foundryModalOpen = document.querySelector(".foundry-care-button");
-  const foundryModalClose = document.querySelector(".foundry-modal-close");
+  const modal = document.getElementById("foundrycare-definitions");
+  const openButton = document.querySelector(".foundry-care-button");
+  const closeButton = document.querySelector(".foundry-modal-close");
 
-  if (!foundryModal || !foundryModalOpen || !foundryModalClose) {
-    return;
-  }
+  if (!modal || !openButton || !closeButton) return;
 
-  function openFoundryModal() {
-    const foundryModalPanel = foundryModal.querySelector(".foundry-modal-panel");
+  function openModal() {
+    const panel = modal.querySelector(".foundry-modal-panel");
+    const title = document.getElementById("foundrycare-definitions-title");
 
-    foundryModal.classList.add("is-open");
-    foundryModal.setAttribute("aria-hidden", "false");
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
 
-    if (foundryModalPanel) {
-      foundryModalPanel.scrollTop = 0;
+    if (panel) {
+      panel.scrollTop = 0;
     }
 
-    requestAnimationFrame(function () {
-      const modalTitle = document.getElementById("foundrycare-definitions-title");
-
-      if (modalTitle) {
-        modalTitle.setAttribute("tabindex", "-1");
-        modalTitle.focus();
+    requestAnimationFrame(() => {
+      if (title) {
+        title.setAttribute("tabindex", "-1");
+        title.focus();
       }
     });
   }
 
-  function closeFoundryModal() {
-    foundryModal.classList.remove("is-open");
-    foundryModal.setAttribute("aria-hidden", "true");
-    foundryModalOpen.focus();
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    openButton.focus();
   }
 
-  foundryModalOpen.addEventListener("click", openFoundryModal);
-  foundryModalClose.addEventListener("click", closeFoundryModal);
+  openButton.addEventListener("click", openModal);
+  closeButton.addEventListener("click", closeModal);
 
-  foundryModal.addEventListener("click", function (event) {
-    if (event.target === foundryModal) {
-      closeFoundryModal();
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
     }
   });
 
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && foundryModal.classList.contains("is-open")) {
-      closeFoundryModal();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
     }
   });
 }
 
 function setupPageTransitions() {
-  document.body.classList.add("page-loaded");
-
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
 
@@ -188,6 +172,7 @@ function setupPageTransitions() {
       href.startsWith("#") ||
       href.startsWith("mailto:") ||
       href.startsWith("tel:") ||
+      href.startsWith("javascript:") ||
       link.hasAttribute("target")
     ) {
       return;
@@ -200,7 +185,7 @@ function setupPageTransitions() {
 
       setTimeout(() => {
         window.location.href = href;
-      }, 550);
+      }, 650);
     });
   });
 }
