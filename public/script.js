@@ -15,10 +15,6 @@ function setStartEmailLinks() {
 
 The Foundry was built to make having a website effortless.
 
-
-There is no obligation.
-
-
 In a few sentences, tell me who you are, where you are, and what you'd like your customers to know.
 
 I'll do some homework and come back with a few mockups.
@@ -26,6 +22,8 @@ I'll do some homework and come back with a few mockups.
 If one feels right, we'll refine it together.
 
 If not, tell me why. We'll go from there.
+
+There is no obligation.
 
 ---`;
 
