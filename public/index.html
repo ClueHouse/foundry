@@ -12,25 +12,26 @@
 
 <body>
   <header class="foundry-header">
+    <span class="foundry-brand">THE FOUNDRY</span>
 
-    <span class="foundry-brand">
-      THE FOUNDRY
-    </span>
-
-    <div class="foundry-anvil-menu">
+    <button
+      class="foundry-anvil-menu"
+      id="foundryMenuToggle"
+      type="button"
+      aria-label="Open Foundry menu"
+      aria-expanded="false"
+    >
       <img
         class="foundry-header-anvil"
         src="./assets/brand/anvil-mark.svg"
         alt=""
       />
-    </div>
-
+    </button>
   </header>
 
   <div class="site-blur-wrap" id="siteBlurWrap">
     <main class="page home-page">
       <section class="hero">
-
         <h1>
           <span>Your new site.</span>
           <span>Stupidly easy.</span>
@@ -42,11 +43,39 @@
           <a class="button button-primary" href="./start/">Sort It</a>
           <a class="button button-secondary" href="./possibilities/">Explore</a>
         </div>
-
       </section>
     </main>
   </div>
 
+  <div class="foundry-menu-overlay" id="foundryMenuOverlay">
+    <a class="foundry-menu-tile tile-one" href="./why-do-i-need-a-website/">
+      Why Do I Need a Website?
+    </a>
+
+    <a class="foundry-menu-tile tile-two" href="./why-choose-the-foundry/">
+      Why Choose The Foundry?
+    </a>
+  </div>
+
   <script src="./script.js"></script>
+
+  <script>
+    const menuToggle = document.getElementById("foundryMenuToggle");
+    const menuOverlay = document.getElementById("foundryMenuOverlay");
+
+    menuToggle.addEventListener("click", () => {
+      document.body.classList.toggle("foundry-menu-open");
+
+      const isOpen = document.body.classList.contains("foundry-menu-open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    menuOverlay.addEventListener("click", (event) => {
+      if (event.target === menuOverlay) {
+        document.body.classList.remove("foundry-menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
 </body>
 </html>
