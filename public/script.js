@@ -164,6 +164,10 @@ function setupFoundryCareModal() {
 }
 
 function setupPageTransitions() {
+  requestAnimationFrame(() => {
+    document.body.classList.add("page-loaded");
+  });
+
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
 
@@ -183,15 +187,9 @@ function setupPageTransitions() {
 
       document.body.classList.add("page-exit");
 
-setTimeout(() => {
-  window.location.href = href;
-}, 420);
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
     });
   });
 }
-
-setStartEmailLinks();
-setConceptEmailLinks();
-setupFoundryOverlay();
-setupFoundryCareModal();
-setupPageTransitions();
