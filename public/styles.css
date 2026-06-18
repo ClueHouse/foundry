@@ -229,10 +229,15 @@ p {
 .start-back-link {
   display: inline-block;
 
-  color: #ffffff;
+  padding: 10px 18px;
+
+  background: rgba(0,0,0,.08);
+  border-radius: 999px;
+
+  color: rgba(0,0,0,.72);
 
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 800;
 
   letter-spacing: 0.18em;
@@ -240,7 +245,7 @@ p {
 
   text-decoration: none;
 
-  opacity: 0.85;
+  transition: all .2s ease;
 }
 
 .start-back-link:hover,
