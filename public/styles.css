@@ -250,8 +250,8 @@ p {
 
 .start-back-link:hover,
 .start-back-link:focus-visible {
-  color: #ffffff;
-  opacity: 1;
+  background: rgba(0,0,0,.12);
+  color: rgba(0,0,0,.9);
   outline: none;
 }
 
