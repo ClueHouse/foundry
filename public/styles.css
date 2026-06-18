@@ -220,6 +220,33 @@ p {
   margin-top: 2.75rem;
 }
 
+.start-back-wrap {
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.start-back-link {
+  display: inline-block;
+
+  color: var(--bronze-deep);
+
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.start-back-link:hover,
+.start-back-link:focus-visible {
+  color: var(--bronze);
+  outline: none;
+}
+
 .back-link {
   position: fixed;
   top: clamp(1rem, 3vw, 2rem);
