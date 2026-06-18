@@ -304,6 +304,7 @@ p {
 
 .foundry-overlay.is-open {
   display: flex;
+  background: rgba(0, 0, 0, 0.18);
 }
 
 @keyframes foundryOverlayFade {
