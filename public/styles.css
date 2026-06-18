@@ -15,7 +15,6 @@ html {
   scroll-behavior: smooth;
   background: #000;
 }
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -24,7 +23,7 @@ body {
   background: linear-gradient(135deg, #fff9ef 0%, var(--cream) 45%, #ead7bd 100%);
   overflow-x: hidden;
   opacity: 1;
-  transition: opacity 650ms ease;
+  transition: opacity 420ms ease;
 }
 
 body.page-exit {
