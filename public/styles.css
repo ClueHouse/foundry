@@ -245,7 +245,8 @@ p {
 
 .start-back-link:hover,
 .start-back-link:focus-visible {
-  color: var(--bronze);
+  color: #ffffff;
+  opacity: 1;
   outline: none;
 }
 
