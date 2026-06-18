@@ -177,7 +177,36 @@ function setupFoundryCareModal() {
   });
 }
 
+function setupPageTransitions() {
+  document.body.classList.add("page-loaded");
+
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (
+      !href ||
+      href.startsWith("#") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:") ||
+      link.hasAttribute("target")
+    ) {
+      return;
+    }
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      document.body.classList.add("page-exit");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    });
+  });
+}
+
 setStartEmailLinks();
 setConceptEmailLinks();
 setupFoundryOverlay();
 setupFoundryCareModal();
+setupPageTransitions();
