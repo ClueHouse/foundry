@@ -982,11 +982,11 @@ body.foundry-info-page main {
   letter-spacing: .08em;
   text-transform: uppercase;
 
-  color: #ff8a32;
+color: #f5f1ec;
 
-  text-shadow:
-    0 0 12px rgba(255,138,50,.25),
-    0 0 28px rgba(255,138,50,.15);
+text-shadow:
+  0 2px 12px rgba(0,0,0,.55),
+  0 0 24px rgba(255,255,255,.08);
 }
 
 .foundry-divider {
