@@ -894,21 +894,24 @@ body.foundry-info-page main {
   margin-bottom: 26px;
 }
 .foundry-hero-tagline {
-  margin: 34px 0 0;
+  margin: 22px 0 0;
 
-  font-family: "Special Elite", "Courier New", monospace;
+  font-family:
+    "Courier New",
+    Courier,
+    monospace;
 
-  font-size: clamp(3.8rem, 7vw, 5.6rem);
-  line-height: 1.05;
-  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.25;
 
-  color: #f5efe8;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 
-  letter-spacing: 0.03em;
+  color: #ff8a32;
 
   text-shadow:
-    0 0 12px rgba(255,138,50,.15),
-    0 2px 16px rgba(0,0,0,.7);
+    0 0 10px rgba(255,138,50,.18);
 }
 
 .foundry-divider {
