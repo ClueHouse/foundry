@@ -1121,16 +1121,20 @@ body.foundry-info-page main {
   align-items: center;
   justify-content: center;
 
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+
   padding: 18px 42px;
 
   border-radius: 999px;
-  border: 1px solid rgba(255,127,24,.9);
+  border: 1px solid rgba(255, 127, 24, 0.92);
 
   background:
     linear-gradient(
       180deg,
-      rgba(40,16,8,.95) 0%,
-      rgba(18,8,4,.98) 100%
+      rgba(42, 16, 7, 0.98) 0%,
+      rgba(18, 7, 3, 0.98) 100%
     );
 
   color: #ff8a32;
@@ -1138,25 +1142,23 @@ body.foundry-info-page main {
   font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: .22em;
+  letter-spacing: 0.22em;
+  line-height: 1.4;
   text-transform: uppercase;
 
   cursor: pointer;
   text-decoration: none;
 
-box-shadow:
-  0 0 18px rgba(255,127,24,.40),
-  0 0 50px rgba(255,127,24,.30),
-  0 0 100px rgba(255,127,24,.18),
-  inset 0 1px 0 rgba(255,255,255,.08);
+  box-shadow:
+    0 0 10px rgba(255, 127, 24, 0.28),
+    0 0 28px rgba(255, 127, 24, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(255, 127, 24, 0.22);
 
   transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    color .2s ease;
-  position: relative;
-  overflow: visible;
-  z-index: 1;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
 }
 
 .foundry-care-button::before {
@@ -1165,28 +1167,65 @@ box-shadow:
   position: absolute;
 
   left: 50%;
-  bottom: -26px;
+  bottom: -8px;
+
+  width: 230px;
+  height: 3px;
 
   transform: translateX(-50%);
 
-  width: 320px;
-  height: 90px;
+  pointer-events: none;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 88, 0, 0.22) 12%,
+      rgba(255, 118, 18, 0.9) 34%,
+      rgba(255, 205, 92, 1) 50%,
+      rgba(255, 118, 18, 0.9) 66%,
+      rgba(255, 88, 0, 0.22) 88%,
+      transparent 100%
+    );
+
+  filter: blur(0.5px);
+
+  opacity: 0.95;
+
+  z-index: -1;
+}
+
+.foundry-care-button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -34px;
+
+  width: 230px;
+  height: 42px;
+
+  transform: translateX(-50%);
 
   pointer-events: none;
 
   background:
     radial-gradient(
-      ellipse at center,
-      rgba(255,138,50,.95) 0%,
-      rgba(255,138,50,.70) 18%,
-      rgba(255,138,50,.40) 42%,
-      rgba(255,138,50,.18) 68%,
-      transparent 100%
+      ellipse at top,
+      rgba(255, 118, 18, 0.62) 0%,
+      rgba(255, 118, 18, 0.34) 28%,
+      rgba(255, 80, 0, 0.14) 58%,
+      transparent 82%
     );
 
-  filter: blur(22px);
+  filter: blur(9px);
 
-  z-index: -1;
+  opacity: 0.9;
+
+  z-index: -2;
 }
 
 .foundry-care-button:hover,
@@ -1196,9 +1235,10 @@ box-shadow:
   transform: translateY(-2px);
 
   box-shadow:
-    0 0 32px rgba(255,127,24,.28),
-    0 0 80px rgba(255,127,24,.16),
-    inset 0 1px 0 rgba(255,255,255,.12);
+    0 0 14px rgba(255, 127, 24, 0.36),
+    0 0 34px rgba(255, 127, 24, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 127, 24, 0.28);
 
   outline: none;
 }
