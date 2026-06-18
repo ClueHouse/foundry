@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8" />
@@ -6,6 +6,13 @@
 
   <title>The Foundry | Maintenance</title>
   <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     * {
@@ -23,9 +30,20 @@
       display: grid;
       place-items: center;
       padding: 40px 24px;
+
       background:
-        radial-gradient(circle at center, rgba(160, 70, 20, 0.16), transparent 34%),
-        linear-gradient(135deg, #1b120d 0%, #090705 55%, #050403 100%);
+        radial-gradient(
+          circle at center,
+          rgba(160, 70, 20, 0.16),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #1b120d 0%,
+          #090705 55%,
+          #050403 100%
+        );
+
       color: #f4eee7;
       font-family: Georgia, "Times New Roman", serif;
       text-align: center;
@@ -33,6 +51,7 @@
 
     .maintenance-page {
       width: min(760px, 100%);
+      transform: translateY(40px);
     }
 
     .foundry-logo {
@@ -40,6 +59,7 @@
       max-width: 42vw;
       margin: 0 auto 28px;
       display: block;
+
       filter:
         drop-shadow(0 0 18px rgba(255, 95, 18, 0.35))
         drop-shadow(0 0 42px rgba(255, 95, 18, 0.18));
@@ -47,34 +67,45 @@
 
     .brand-small {
       margin: 0;
+
+      font-family: "Oswald", sans-serif;
       font-size: clamp(1.8rem, 4vw, 3rem);
-      letter-spacing: 0.42em;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+
       color: #f5f1ec;
     }
 
     .brand-large {
       margin: 10px 0 34px;
-      font-size: clamp(3.2rem, 9vw, 6.6rem);
-      letter-spacing: 0.18em;
-      font-weight: 900;
-      line-height: 0.95;
-      color: #f5f1ec;
+
+      font-family: "Oswald", sans-serif;
+      font-size: clamp(4.5rem, 10vw, 7.5rem);
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+
+      color: #f5f1ec;
     }
 
     .divider {
       width: 70px;
       height: 3px;
       margin: 0 auto 42px;
+
       background: #ff6a1a;
       border-radius: 999px;
-      box-shadow: 0 0 18px rgba(255, 106, 26, 0.55);
+
+      box-shadow:
+        0 0 18px rgba(255, 106, 26, 0.55);
     }
 
     h1 {
       margin: 0 0 28px;
+
       color: #ff6a1a;
       font-size: clamp(1.8rem, 4.8vw, 3.2rem);
       line-height: 1.18;
@@ -84,14 +115,17 @@
     p {
       margin: 0 auto;
       max-width: 720px;
+
       font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+      font-size: clamp(1.25rem, 2.7vw, 1.75rem);
       line-height: 1.55;
+
       color: rgba(255, 255, 255, 0.9);
     }
 
     .on-it {
       margin-top: 28px;
+
       color: #ff6a1a;
       font-weight: 700;
     }
@@ -100,18 +134,23 @@
       width: 52px;
       height: 2px;
       margin: 30px auto;
+
       background: #ff6a1a;
       border-radius: 999px;
     }
 
     .return {
-      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      font-size: clamp(1.05rem, 2.3vw, 1.4rem);
       color: rgba(255, 255, 255, 0.86);
     }
 
     @media (max-width: 560px) {
       body {
         padding: 34px 20px;
+      }
+
+      .maintenance-page {
+        transform: none;
       }
 
       .foundry-logo {
@@ -124,14 +163,17 @@
       }
 
       .brand-large {
-        letter-spacing: 0.1em;
+        letter-spacing: 0.06em;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="maintenance-page" aria-label="The Foundry maintenance notice">
+  <main
+    class="maintenance-page"
+    aria-label="The Foundry maintenance notice"
+  >
     <img
       class="foundry-logo"
       src="../assets/brand/anvil-hero.svg"
@@ -143,18 +185,24 @@
 
     <div class="divider" aria-hidden="true"></div>
 
-    <h1>Our site is undergoing planned maintenance.</h1>
+    <h1>
+      Our site is undergoing planned maintenance.
+    </h1>
 
     <p>
       We monitor, maintain, and repair the websites we build,
       so small issues stay small.
     </p>
 
-    <p class="on-it">We're on it.</p>
+    <p class="on-it">
+      We're on it.
+    </p>
 
     <div class="small-divider" aria-hidden="true"></div>
 
-    <p class="return">Please come back soon.</p>
+    <p class="return">
+      Please come back soon.
+    </p>
   </main>
 </body>
 </html>
