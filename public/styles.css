@@ -399,6 +399,11 @@ p {
   animation-delay: 1.5s;
 }
 
+.foundry-overlay.is-open .foundry-window:nth-child(3) {
+  animation: foundryWindowReveal 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
 @keyframes foundryWindowReveal {
   from {
     opacity: 0;
