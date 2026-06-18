@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>The Foundry</title>
-  <meta name="description" content="Your new site. Stupidly easy. Future-proof. Done." />
+  <meta
+    name="description"
+    content="Your new site. Stupidly easy. Future-proof. Done."
+  />
 
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body class="homepage">
+
   <header class="foundry-header">
-    <span class="foundry-brand">THE FOUNDRY</span>
+    <span class="foundry-brand">
+      THE FOUNDRY
+    </span>
 
     <button
       class="foundry-anvil-menu"
@@ -29,9 +35,14 @@
     </button>
   </header>
 
-  <div class="site-blur-wrap" id="siteBlurWrap">
+  <div
+    class="site-blur-wrap"
+    id="siteBlurWrap"
+  >
     <main class="page home-page">
+
       <section class="hero">
+
         <h1>
           <span>Your new site.</span>
           <span>Stupidly easy.</span>
@@ -40,10 +51,26 @@
         </h1>
 
         <div class="button-row">
-          <a class="button button-primary" href="./start/">Sort It</a>
-          <a class="button button-secondary" href="./possibilities/">Explore</a>
+
+          <a
+            class="button button-primary"
+            href="./start/"
+          >
+            Sort It
+          </a>
+
+          <button
+            class="button button-secondary"
+            id="foundryExplore"
+            type="button"
+          >
+            Explore
+          </button>
+
         </div>
+
       </section>
+
     </main>
   </div>
 
@@ -52,6 +79,7 @@
     id="foundryOverlay"
     aria-hidden="true"
   >
+
     <button
       class="foundry-close"
       id="foundryClose"
@@ -62,16 +90,39 @@
     </button>
 
     <div class="foundry-window-wrap">
-      <a class="foundry-window" href="./whywebsite/">
-        <span>Why Do I Need a Website?</span>
+
+      <a
+        class="foundry-window"
+        href="./whywebsite/"
+      >
+        <span>
+          Why Do I Need A Website?
+        </span>
       </a>
 
-      <a class="foundry-window" href="./the-foundry/">
-        <span>Why Choose The Foundry?</span>
+      <a
+        class="foundry-window"
+        href="./the-foundry/"
+      >
+        <span>
+          Why Choose The Foundry?
+        </span>
       </a>
+
+      <a
+        class="foundry-window boardroom-window"
+        href="./possibilities/"
+      >
+        <span>
+          Enter The Boardroom
+        </span>
+      </a>
+
     </div>
+
   </div>
 
   <script src="./script.js"></script>
+
 </body>
 </html>
