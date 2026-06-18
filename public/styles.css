@@ -81,7 +81,6 @@ a {
 
   display: block;
 }
-
 .foundry-anvil-menu {
   appearance: none;
   -webkit-appearance: none;
@@ -89,9 +88,6 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  cursor: default;
-}
 
   padding: 0;
   margin: 0;
@@ -102,7 +98,7 @@ a {
   outline: none;
 
   line-height: 0;
-  cursor: pointer;
+  cursor: default;
 }
 
 .foundry-anvil-menu img {
