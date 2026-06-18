@@ -110,8 +110,7 @@ a {
 }
 
 .foundry-anvil-menu:focus-visible {
-  outline: 1px solid #ff7f18;
-  outline-offset: 6px;
+  outline: none;
 }
 
 body.homepage .foundry-header-anvil {
