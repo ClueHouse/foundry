@@ -1637,4 +1637,44 @@ body.page-exit {
   opacity: 0;
 }
 
+  /* Stronger page fade */
+
+body {
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+body.page-exit {
+  opacity: 0;
+}
+
+
+/* Homepage anvil breathing glow */
+
+.home-page ~ .foundry-menu-overlay,
+body:has(.home-page) .foundry-header-anvil {
+  animation: foundryAnvilBreathe 2.8s ease-in-out infinite;
+}
+
+@keyframes foundryAnvilBreathe {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 5px rgba(255, 138, 50, 0.18))
+      drop-shadow(0 0 12px rgba(255, 138, 50, 0.12));
+    transform: scale(1);
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 12px rgba(255, 138, 50, 0.55))
+      drop-shadow(0 0 28px rgba(255, 95, 20, 0.36));
+    transform: scale(1.045);
+  }
+}
+
 }
