@@ -359,7 +359,7 @@ body.homepage .foundry-header-anvil {
 .start-body {
   background:
     radial-gradient(circle at top left, rgba(184, 128, 62, 0.12), transparent 32rem),
-    linear-gradient(135deg, #f8f3e7 0%, #e7eadc 48%, #dce2ce 100%);
+linear-gradient(135deg, #f6f0e4 0%, #dde2d0 48%, #cfd7bf 100%);
 }
 
 .start-page .button {
