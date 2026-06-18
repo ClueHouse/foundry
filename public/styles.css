@@ -116,24 +116,22 @@ a {
 }
 
 body.homepage .foundry-header-anvil {
-  animation: foundryAnvilBreathe 2.8s ease-in-out infinite;
-  transform-origin: center;
+  animation: foundryAnvilGlow 3.5s ease-in-out infinite;
 }
 
-@keyframes foundryAnvilBreathe {
+@keyframes foundryAnvilGlow {
   0%,
   100% {
     filter:
-      drop-shadow(0 0 5px rgba(255, 138, 50, 0.25))
-      drop-shadow(0 0 12px rgba(255, 138, 50, 0.16));
-    transform: scale(1);
+      drop-shadow(0 0 8px rgba(255, 245, 220, 0.20))
+      drop-shadow(0 0 18px rgba(255, 245, 220, 0.12));
   }
 
   50% {
     filter:
-      drop-shadow(0 0 16px rgba(255, 138, 50, 0.75))
-      drop-shadow(0 0 34px rgba(255, 90, 18, 0.48));
-    transform: scale(1.055);
+      drop-shadow(0 0 16px rgba(255, 245, 220, 0.55))
+      drop-shadow(0 0 34px rgba(255, 245, 220, 0.35))
+      drop-shadow(0 0 60px rgba(255, 245, 220, 0.15));
   }
 }
 
