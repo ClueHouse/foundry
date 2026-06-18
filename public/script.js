@@ -57,40 +57,32 @@ Anything else you'd like me to know?
 }
 
 function setupFoundryOverlay() {
-  const toggles = [
-    document.getElementById("foundryToggle"),
-    document.getElementById("foundryToggleMobile")
-  ].filter(Boolean);
-
+  const exploreButton = document.getElementById("foundryExplore");
   const overlay = document.getElementById("foundryOverlay");
   const closeButton = document.getElementById("foundryClose");
   const blurWrap = document.getElementById("siteBlurWrap");
 
-  if (!overlay || !closeButton || !blurWrap || !toggles.length) return;
-
-  function setExpanded(value) {
-    toggles.forEach((toggle) => {
-      toggle.setAttribute("aria-expanded", value);
-    });
-  }
+  if (!exploreButton || !overlay || !closeButton || !blurWrap) return;
 
   function openOverlay() {
     overlay.classList.add("is-open");
-    blurWrap.classList.add("is-blurred");
     overlay.setAttribute("aria-hidden", "false");
-    setExpanded("true");
+
+    blurWrap.classList.add("is-blurred");
+
+    exploreButton.setAttribute("aria-expanded", "true");
   }
 
   function closeOverlay() {
     overlay.classList.remove("is-open");
-    blurWrap.classList.remove("is-blurred");
     overlay.setAttribute("aria-hidden", "true");
-    setExpanded("false");
+
+    blurWrap.classList.remove("is-blurred");
+
+    exploreButton.setAttribute("aria-expanded", "false");
   }
 
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", openOverlay);
-  });
+  exploreButton.addEventListener("click", openOverlay);
 
   closeButton.addEventListener("click", closeOverlay);
 
@@ -105,6 +97,10 @@ function setupFoundryOverlay() {
       closeOverlay();
     }
   });
+
+  if (window.location.hash === "#explore") {
+    openOverlay();
+  }
 }
 
 function setupFoundryCareModal() {
@@ -114,10 +110,10 @@ function setupFoundryCareModal() {
 
   if (!modal || !openButton || !closeButton) return;
 
-  function openModal() {
-    const panel = modal.querySelector(".foundry-modal-panel");
-    const title = document.getElementById("foundrycare-definitions-title");
+  const panel = modal.querySelector(".foundry-modal-panel");
+  const title = document.getElementById("foundrycare-definitions-title");
 
+  function openModal() {
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
 
@@ -186,8 +182,10 @@ function setupPageTransitions() {
   });
 }
 
-setStartEmailLinks();
-setConceptEmailLinks();
-setupFoundryOverlay();
-setupFoundryCareModal();
-setupPageTransitions();
+document.addEventListener("DOMContentLoaded", () => {
+  setStartEmailLinks();
+  setConceptEmailLinks();
+  setupFoundryOverlay();
+  setupFoundryCareModal();
+  setupPageTransitions();
+});
