@@ -15,9 +15,9 @@ function setStartEmailLinks() {
 
 The Foundry was built to make having a website effortless.
 
-You're almost ready to launch.
 
 There is no obligation.
+
 
 In a few sentences, tell me who you are, where you are, and what you'd like your customers to know.
 
