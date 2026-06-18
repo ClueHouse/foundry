@@ -893,21 +893,22 @@ body.foundry-info-page main {
 .foundry-hero-intro:last-of-type {
   margin-bottom: 26px;
 }
-
 .foundry-hero-tagline {
-  margin: 28px 0 0;
+  margin: 34px 0 0;
 
   font-family: "Special Elite", "Courier New", monospace;
 
-  font-size: clamp(2.8rem, 5vw, 4rem);
-  line-height: 1.15;
+  font-size: clamp(3.8rem, 7vw, 5.6rem);
+  line-height: 1.05;
   font-weight: 400;
 
   color: #f5efe8;
 
-  text-transform: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 
+  text-shadow:
+    0 0 12px rgba(255,138,50,.15),
+    0 2px 16px rgba(0,0,0,.7);
 }
 
 .foundry-divider {
