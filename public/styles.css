@@ -1522,9 +1522,16 @@ line-height: 1.05;
     font-size: 1.12rem;
   }
 
-  .foundry-hero-tagline {
-    font-size: 1.45rem;
-  }
+.foundry-hero-tagline {
+  margin: 26px 0 0;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: clamp(3.4rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: #f5efe8;
+  text-shadow: 0 2px 18px rgba(0,0,0,.72);
+}
 
   .foundry-hero-secondary {
     font-size: 1.05rem;
