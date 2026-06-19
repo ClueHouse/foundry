@@ -1018,6 +1018,10 @@ body.foundry-info-page main {
 }
 
 @media (max-width: 560px) {
+  .foundry-header {
+    padding: 0 12px;
+  }
+
   .page,
   .demo-site {
     padding: 2rem 1rem;
