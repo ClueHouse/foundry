@@ -1052,7 +1052,8 @@ body.foundry-info-page main {
   }
 
   .foundry-hero-tagline {
-    font-size: clamp(4.5rem, 8vw, 7rem);
+    font-size: clamp(2.2rem, 8vw, 7rem);
+    letter-spacing: 0.01em;
     color: #ff8a32;
     text-shadow:
       0 0 12px rgba(255, 138, 50, 0.25),
