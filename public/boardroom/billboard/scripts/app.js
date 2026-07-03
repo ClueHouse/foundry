@@ -60,17 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
                 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-                
-                // Close mobile nav if open
-                if (mobileNav.style.display === 'block') {
-                    hamburger.click();
-                }
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // If target section does not exist, show a modal
+                        const linkText = this.textContent.toLowerCase();
+                        showModal(`The ${linkText} section is coming soon! Please check back later.`);
+                    }
+                    
+                    // Close mobile nav if open
+                    if (mobileNav.style.display === 'block') {
+                        hamburger.click();
+                    }
             }
         });
     });
