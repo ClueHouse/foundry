@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#062f24">
+  <meta name="description" content="A Hole in One — tropical mini golf in Tauranga.">
+  <title>A Hole in One | Tropical Mini Golf</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="back-to-billboard" href="../../index.html" aria-label="Back to Billboard">← Back to Billboard</a>
+  <main class="viewport" aria-label="A Hole in One tropical mini golf">
+    <div class="stage" id="stage">
+      <img class="artwork" src="assets/images/puttputt-hero.webp" alt="Tropical mini golf course with feature cards and Tauranga map">
+
+      <a class="brand-mask" href="#" aria-label="A Hole in One home">
+        <span class="brand-kicker">TAURANGA'S TROPICAL</span>
+        <span class="brand-name">A Hole<br><em>in One</em></span>
+        <span class="brand-sub">PUTT PUTT</span>
+        <span class="brand-palm" aria-hidden="true">🌴</span>
+      </a>
+
+      <nav class="hotspots" aria-label="Primary navigation">
+        <button class="hotspot hotspot--course" data-overlay="course" type="button" aria-label="Open The Course"></button>
+        <button class="hotspot hotspot--story" data-overlay="story" type="button" aria-label="Open Our Story"></button>
+        <button class="hotspot hotspot--locations" data-overlay="locations" type="button" aria-label="Open Locations"></button>
+        <button class="hotspot hotspot--events" data-overlay="events" type="button" aria-label="Open Parties and Events"></button>
+        <button class="hotspot hotspot--book" data-overlay="book" type="button" aria-label="Book now"></button>
+      </nav>
+
+      <section class="overlay overlay--course" id="overlay-course" role="dialog" aria-modal="true" aria-labelledby="course-title" hidden>
+        <div class="overlay-panel">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <p class="eyebrow">Eighteen holes. Endless stories.</p>
+          <h1 id="course-title">The Course</h1>
+          <div class="course-grid">
+            <article><b>01</b><h2>Waterfall Run</h2><p>Thread the ball around volcanic rock and across the bridge without finding the water.</p></article>
+            <article><b>07</b><h2>Palm Alley</h2><p>A deceptively straight-looking hole with a late break and a mischievous bank.</p></article>
+            <article><b>12</b><h2>The Island</h2><p>Commit to the shot. The safest route is not always the shortest one.</p></article>
+            <article><b>18</b><h2>Last Chance</h2><p>A dramatic finishing hole where one clean putt can change the whole scorecard.</p></article>
+          </div>
+          <div class="panel-note">Fun for first-timers. Tricky enough for repeat players.</div>
+        </div>
+      </section>
+
+      <section class="overlay overlay--story" id="overlay-story" role="dialog" aria-modal="true" aria-labelledby="story-title" hidden>
+        <div class="overlay-panel overlay-panel--split">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <div>
+            <p class="eyebrow">Built for good times</p>
+            <h1 id="story-title">Our Story</h1>
+            <p class="lead">A Hole in One was created to feel like a tiny tropical holiday hiding in the middle of Tauranga.</p>
+            <p>We wanted a course that children could enjoy immediately, adults would still find challenging, and families would talk about on the drive home.</p>
+            <p>Every corner is designed for laughter, friendly rivalry and one more round.</p>
+          </div>
+          <div class="story-badge"><span>LOCALLY</span><strong>OWNED</strong><small>PLAYED WITH PRIDE</small></div>
+        </div>
+      </section>
+
+      <section class="overlay overlay--locations" id="overlay-locations" role="dialog" aria-modal="true" aria-labelledby="locations-title" hidden>
+        <div class="overlay-panel overlay-panel--location">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <div class="location-copy">
+            <p class="eyebrow">Easy to find. Hard to leave.</p>
+            <h1 id="locations-title">Find Us</h1>
+            <address><strong>A Hole in One Putt Putt</strong><br>15 Palm Drive<br>Tauranga, New Zealand</address>
+            <p><b>Open daily</b><br>10:00am–9:00pm</p>
+            <button class="secondary-action" type="button">Open in Google Maps ↗</button>
+          </div>
+          <div class="map-illustration" aria-label="Stylised Tauranga map">
+            <div class="map-water"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
+            <span class="map-label map-label--city">Tauranga</span><span class="map-label map-label--mount">Mount<br>Maunganui</span>
+            <span class="map-pin">●</span><span class="map-site">A Hole in One</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="overlay overlay--events" id="overlay-events" role="dialog" aria-modal="true" aria-labelledby="events-title" hidden>
+        <div class="overlay-panel">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <p class="eyebrow">Bring the whole crew</p>
+          <h1 id="events-title">Parties & Events</h1>
+          <div class="events-grid">
+            <article><span>🎈</span><h2>Birthday Parties</h2><p>Reserved tables, game passes and easy food options for a low-stress celebration.</p></article>
+            <article><span>🏆</span><h2>Team Challenges</h2><p>Scorecards, group heats and bragging rights for workplaces, clubs and teams.</p></article>
+            <article><span>🌴</span><h2>Private Events</h2><p>Talk to us about evening bookings, school groups and exclusive course sessions.</p></article>
+          </div>
+          <button class="primary-action" type="button" data-open-book>Plan an event →</button>
+        </div>
+      </section>
+
+      <section class="overlay overlay--book" id="overlay-book" role="dialog" aria-modal="true" aria-labelledby="book-title" hidden>
+        <div class="overlay-panel overlay-panel--booking">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <div>
+            <p class="eyebrow">Your next round starts here</p>
+            <h1 id="book-title">Book Now</h1>
+            <p class="lead">Send a booking request and we will confirm your tee time.</p>
+          </div>
+          <form id="booking-form">
+            <label>Name<input name="name" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Players<select name="players"><option>2 players</option><option>3–4 players</option><option>5–8 players</option><option>9+ players / group</option></select></label>
+            <label>Preferred date<input name="date" type="date" required></label>
+            <label class="wide">Notes<textarea name="notes" rows="2" placeholder="Preferred time, party details, accessibility needs…"></textarea></label>
+            <button class="primary-action wide" type="submit">Send booking request →</button>
+            <p class="form-status wide" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

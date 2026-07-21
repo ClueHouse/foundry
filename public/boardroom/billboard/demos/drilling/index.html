@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="A Hole in One — specialist drilling, delivered with precision.">
+  <title>A Hole in One | Specialist Drilling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="back-to-billboard" href="../../index.html" aria-label="Back to Billboard">← Back to Billboard</a>
+  <main class="viewport" aria-label="A Hole in One specialist drilling">
+    <section class="site" id="site">
+      <img class="artwork" src="assets/images/drilling-hero.webp" alt="Industrial drilling operation at sunset with specialist crews and equipment">
+
+      <a class="brand-replacement" href="#" aria-label="A Hole in One home">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy"><strong>A HOLE IN ONE</strong><small>DRILLING</small><em>BUILT ON PRECISION.</em></span>
+      </a>
+
+      <nav class="nav-hotspots" aria-label="Primary navigation">
+        <div class="nav-item" data-menu-root>
+          <button type="button" class="hotspot" aria-expanded="false" aria-controls="menu-services"><span class="sr-only">Our Services</span></button>
+          <div class="dropdown" id="menu-services" role="menu">
+            <p class="dropdown-kicker">Capabilities</p>
+            <a href="#" role="menuitem"><strong>Geotechnical Drilling</strong><span>Investigation, sampling and site characterisation.</span></a>
+            <a href="#" role="menuitem"><strong>Water Bore Drilling</strong><span>Reliable groundwater access and bore development.</span></a>
+            <a href="#" role="menuitem"><strong>Environmental Drilling</strong><span>Monitoring wells, remediation and compliance work.</span></a>
+            <a href="#" role="menuitem"><strong>Foundation Drilling</strong><span>Piles, anchors and specialist structural solutions.</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-menu-root>
+          <button type="button" class="hotspot" aria-expanded="false" aria-controls="menu-about"><span class="sr-only">About Us</span></button>
+          <div class="dropdown" id="menu-about" role="menu">
+            <p class="dropdown-kicker">The company</p>
+            <a href="#" role="menuitem"><strong>Our Story</strong><span>Built by experienced operators who value precision.</span></a>
+            <a href="#" role="menuitem"><strong>Our People</strong><span>Specialist crews, project managers and field experts.</span></a>
+            <a href="#" role="menuitem"><strong>Equipment Fleet</strong><span>Modern rigs selected for demanding conditions.</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-menu-root>
+          <button type="button" class="hotspot" aria-expanded="false" aria-controls="menu-projects"><span class="sr-only">Projects</span></button>
+          <div class="dropdown dropdown--wide" id="menu-projects" role="menu">
+            <p class="dropdown-kicker">Selected work</p>
+            <a href="#" role="menuitem"><strong>Infrastructure</strong><span>Transport, utilities and major civil projects.</span></a>
+            <a href="#" role="menuitem"><strong>Commercial</strong><span>Complex urban sites and constrained-access drilling.</span></a>
+            <a href="#" role="menuitem"><strong>Regional</strong><span>Remote terrain, farms and nationwide field programmes.</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-menu-root>
+          <button type="button" class="hotspot" aria-expanded="false" aria-controls="menu-safety"><span class="sr-only">Safety</span></button>
+          <div class="dropdown" id="menu-safety" role="menu">
+            <p class="dropdown-kicker">Zero compromise</p>
+            <a href="#" role="menuitem"><strong>Safety Systems</strong><span>Planning, permits, controls and field verification.</span></a>
+            <a href="#" role="menuitem"><strong>Training</strong><span>Competent crews, current certification and leadership.</span></a>
+            <a href="#" role="menuitem"><strong>Environmental Care</strong><span>Low-impact methods and responsible site management.</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item nav-item--quote" data-menu-root>
+          <button type="button" class="hotspot" aria-expanded="false" aria-controls="menu-quote"><span class="sr-only">Get a Quote</span></button>
+          <div class="dropdown dropdown--quote" id="menu-quote" role="menu">
+            <p class="dropdown-kicker">Start a project</p>
+            <strong class="quote-title">Tell us what needs drilling.</strong>
+            <p class="quote-copy">Share the location, scope and timing. Our project team will respond with the right next step.</p>
+            <form id="quote-form">
+              <label><span>Name</span><input name="name" autocomplete="name" required></label>
+              <label><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+              <label class="full"><span>Project outline</span><textarea name="project" rows="3" required></textarea></label>
+              <button type="submit">REQUEST A CALL →</button>
+              <p class="form-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
