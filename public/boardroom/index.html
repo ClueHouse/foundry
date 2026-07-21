@@ -1,46 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-NZ">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>The Boardroom | The Foundry</title>
-  <meta
-    name="description"
-    content="Step inside a few Foundry example sites and explore possible directions."
-  />
-
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b08">
+  <meta name="description" content="Explore the Foundry Boardroom and its website product directions.">
+  <title>The Boardroom | Foundry by RKDB</title>
+  <link rel="stylesheet" href="./boardroom.css">
 </head>
-
 <body>
-  <main class="page boardroom-page">
-    <section class="hero compact">
-      <p class="eyebrow">The Boardroom</p>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Foundry home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-copy"><strong>FOUNDRY</strong><small>BY RKDB</small></span>
+    </a>
 
-      <h1>
-        <span>Explore a few directions.</span>
-      </h1>
+    <a class="header-link" href="../the-foundry/">About Foundry</a>
+  </header>
 
-      <p class="short-copy">
-        Step inside a few example sites. When one feels right, tell me.
+  <main>
+    <section class="intro" aria-labelledby="boardroom-title">
+      <p class="eyebrow">The Foundry Boardroom</p>
+      <h1 id="boardroom-title">Four clear ways to build.</h1>
+      <p class="intro-copy">
+        This page is being shaped. For now, use these product placeholders to explore the direction of each board.
       </p>
+    </section>
 
-      <div class="button-row">
-        <a class="button button-primary" href="./oak-and-ash/">
-          Start With Oak &amp; Ash
-        </a>
-        <a class="button button-primary" href="./billboard/">
-          View Billboard
-        </a>
-      </div>
+    <section class="board-grid" aria-label="Foundry products">
+      <article class="board-card board-card--noticeboard">
+        <div class="board-card__top">
+          <span class="board-number">01</span>
+          <span class="status status--planned">Content coming soon</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">N</div>
+        <p class="board-label">Noticeboard</p>
+        <h2>A flexible space for changing information.</h2>
+        <p class="board-copy">Placeholder copy for announcements, opportunities, updates and owner-managed content.</p>
+        <span class="board-action board-action--disabled" aria-disabled="true">Preview in development</span>
+      </article>
 
-      <div class="start-back-wrap">
-        <a class="start-back-link" href="/#explore">← Back</a>
+      <article class="board-card board-card--billboard">
+        <div class="board-card__top">
+          <span class="board-number">02</span>
+          <span class="status status--live">Available now</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">B</div>
+        <p class="board-label">Billboard</p>
+        <h2>A polished online presence that gets to the point.</h2>
+        <p class="board-copy">See the completed Billboard product and its three working business demonstrations.</p>
+        <a class="board-action" href="./billboard/">Explore Billboard <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="board-card board-card--cheeseboard">
+        <div class="board-card__top">
+          <span class="board-number">03</span>
+          <span class="status status--planned">Content coming soon</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">C</div>
+        <p class="board-label">Cheeseboard</p>
+        <h2>A product-led site for menus, ranges and offers.</h2>
+        <p class="board-copy">Placeholder copy for businesses whose products deserve to be the centre of attention.</p>
+        <span class="board-action board-action--disabled" aria-disabled="true">Preview in development</span>
+      </article>
+
+      <article class="board-card board-card--skateboard">
+        <div class="board-card__top">
+          <span class="board-number">04</span>
+          <span class="status status--planned">Content coming soon</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">S</div>
+        <p class="board-label">Skateboard</p>
+        <h2>A compact single-page site with smooth movement.</h2>
+        <p class="board-copy">Placeholder copy for smaller businesses that need one strong page and nothing unnecessary.</p>
+        <span class="board-action board-action--disabled" aria-disabled="true">Preview in development</span>
+      </article>
+    </section>
+
+    <section class="working-note" aria-labelledby="working-note-title">
+      <div>
+        <p class="eyebrow">Working page</p>
+        <h2 id="working-note-title">The final story can come later.</h2>
       </div>
+      <p>
+        The structure is now solid enough to use while the precise language, imagery and personality of the Boardroom are worked out.
+      </p>
     </section>
   </main>
 
-  <script src="../script.js"></script>
+  <footer class="site-footer">
+    <a href="../">Foundry home</a>
+    <span>Foundry by RKDB</span>
+    <a href="mailto:foundry@rkdb.nz">Let’s talk</a>
+  </footer>
 </body>
 </html>
