@@ -170,7 +170,7 @@ h1 {
 
 .board-card--noticeboard { --accent: var(--blue); }
 .board-card--billboard { --accent: var(--gold); border-color: rgba(213,170,88,.46); }
-.board-card--cheeseboard { --accent: var(--orange); }
+.board-card--springboard { --accent: var(--orange); }
 .board-card--skateboard { --accent: var(--teal); }
 
 .board-card__top {
