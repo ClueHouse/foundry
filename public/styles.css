@@ -1103,7 +1103,7 @@ body.homepage {
   color: #ead9ba;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.22)),
-    url("./assets/brand/foundry-wallpaper.webp") center / cover no-repeat fixed;
+    url("./assets/backgrounds/hero-bg.webp") center / cover no-repeat fixed;
 }
 
 body.homepage::before {
@@ -1145,60 +1145,15 @@ body.homepage .site-blur-wrap {
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
   transform: translateY(-1vh);
 }
 
-.foundry-home-anvil {
-  width: clamp(230px, 25vw, 410px);
-  max-height: 42vh;
-  object-fit: contain;
-  filter:
-    drop-shadow(0 0 10px rgba(255, 226, 176, 0.48))
-    drop-shadow(0 0 28px rgba(255, 95, 0, 0.72))
-    drop-shadow(0 0 72px rgba(255, 72, 0, 0.34));
-  animation: foundryHeroGlow 4.5s ease-in-out infinite;
-}
-
-@keyframes foundryHeroGlow {
-  0%, 100% {
-    filter:
-      drop-shadow(0 0 10px rgba(255, 226, 176, 0.44))
-      drop-shadow(0 0 26px rgba(255, 95, 0, 0.66))
-      drop-shadow(0 0 64px rgba(255, 72, 0, 0.28));
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 14px rgba(255, 239, 204, 0.62))
-      drop-shadow(0 0 38px rgba(255, 105, 0, 0.82))
-      drop-shadow(0 0 88px rgba(255, 72, 0, 0.42));
-  }
-}
-
-.foundry-home-the,
-.foundry-home-name {
-  margin: 0;
-  color: #d86a27;
-  font-family: Georgia, "Times New Roman", serif;
-  text-transform: uppercase;
-  text-shadow:
-    0 1px 0 #2d1208,
-    0 2px 0 #160904,
-    0 0 12px rgba(255, 96, 0, 0.42);
-}
-
-.foundry-home-the {
-  margin-top: 0.7rem;
-  font-size: clamp(1.5rem, 2.2vw, 2.4rem);
-  letter-spacing: 0.34em;
-  transform: translateX(0.17em);
-}
-
-.foundry-home-name {
-  margin-top: 0.35rem;
-  font-size: clamp(3rem, 5.6vw, 6.2rem);
-  letter-spacing: 0.11em;
-  line-height: 0.94;
-  transform: translateX(0.055em);
+.foundry-home-logo {
+  width: min(42vw, 620px);
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .foundry-home-content {
@@ -1298,7 +1253,7 @@ body.homepage .site-blur-wrap {
   color: #f5dfc2;
   background:
     linear-gradient(rgba(120, 31, 4, 0.22), rgba(64, 13, 2, 0.22)),
-    url("./assets/brand/foundry-wallpaper.webp") 28% 52% / 1200px auto;
+    url("./assets/backgrounds/hero-bg.webp") 28% 52% / 1200px auto;
   box-shadow:
     inset 0 1px 0 rgba(255, 207, 158, 0.2),
     inset 0 0 30px rgba(255, 74, 0, 0.14),
@@ -1347,7 +1302,7 @@ body.homepage .foundry-window {
   border: 1px solid rgba(215, 107, 42, 0.5);
   background:
     linear-gradient(rgba(17, 8, 3, 0.34), rgba(7, 3, 1, 0.48)),
-    url("./assets/brand/foundry-wallpaper.webp") center / cover;
+    url("./assets/backgrounds/hero-bg.webp") center / cover;
   box-shadow:
     inset 0 1px 0 rgba(255, 226, 183, 0.08),
     0 26px 60px rgba(0, 0, 0, 0.34);
@@ -1369,13 +1324,8 @@ body.homepage .foundry-window {
     transform: none;
   }
 
-  .foundry-home-anvil {
-    width: min(280px, 58vw);
-    max-height: 30vh;
-  }
-
-  .foundry-home-name {
-    font-size: clamp(2.8rem, 12vw, 5rem);
+  .foundry-home-logo {
+    width: min(72vw, 460px);
   }
 
   .foundry-home-content {
@@ -1412,10 +1362,6 @@ body.homepage .foundry-window {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .foundry-home-anvil {
-    animation: none;
-  }
-
   .foundry-home-panel,
   .foundry-home-panel.is-active {
     transition-duration: 1ms;
@@ -1448,16 +1394,8 @@ body.homepage::before {
   transform: translateY(-0.5vh);
 }
 
-.foundry-home-anvil {
-  width: clamp(270px, 27vw, 455px);
-}
-
-.foundry-home-the {
-  margin-top: 0.45rem;
-}
-
-.foundry-home-name {
-  font-size: clamp(3.4rem, 5.8vw, 6.5rem);
+.foundry-home-logo {
+  width: min(42vw, 620px);
 }
 
 .foundry-home-content {
