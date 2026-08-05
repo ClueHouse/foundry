@@ -124,6 +124,65 @@ function setupFoundryOverlay() {
   }
 }
 
+
+function setupHomepageSortPanel() {
+  const sortButton = document.getElementById("foundrySort");
+  const backButton = document.getElementById("foundryBack");
+  const introPanel = document.getElementById("foundryIntroPanel");
+  const startPanel = document.getElementById("foundryStartPanel");
+
+  if (!sortButton || !backButton || !introPanel || !startPanel) return;
+
+  let isTransitioning = false;
+
+  function showStartPanel() {
+    if (isTransitioning) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reducedMotion) {
+      introPanel.classList.remove("is-active");
+      introPanel.setAttribute("aria-hidden", "true");
+      startPanel.classList.add("is-active");
+      startPanel.setAttribute("aria-hidden", "false");
+      startPanel.querySelector(".email-start")?.focus();
+      return;
+    }
+
+    isTransitioning = true;
+    sortButton.disabled = true;
+    document.body.classList.add("is-forging");
+
+    window.setTimeout(() => {
+      introPanel.classList.remove("is-active");
+      introPanel.setAttribute("aria-hidden", "true");
+      startPanel.classList.add("is-active");
+      startPanel.setAttribute("aria-hidden", "false");
+    }, 610);
+
+    window.setTimeout(() => {
+      document.body.classList.remove("is-forging");
+      sortButton.disabled = false;
+      isTransitioning = false;
+      startPanel.querySelector(".email-start")?.focus();
+    }, 1420);
+  }
+
+  function showIntroPanel() {
+    startPanel.classList.remove("is-active");
+    startPanel.setAttribute("aria-hidden", "true");
+    introPanel.classList.add("is-active");
+    introPanel.removeAttribute("aria-hidden");
+
+    window.setTimeout(() => {
+      sortButton.focus();
+    }, 700);
+  }
+
+  sortButton.addEventListener("click", showStartPanel);
+  backButton.addEventListener("click", showIntroPanel);
+}
+
 function setupFoundryCareModal() {
   const modal = document.getElementById("foundrycare-definitions");
   const openButton = document.querySelector(".foundry-care-button");
@@ -207,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setStartEmailLinks();
   setConceptEmailLinks();
   setupFoundryOverlay();
+  setupHomepageSortPanel();
   setupFoundryCareModal();
   setupPageTransitions();
 });

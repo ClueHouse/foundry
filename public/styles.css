@@ -1091,3 +1091,547 @@ body.foundry-info-page main {
     font-size: clamp(3.2rem, 16vw, 5rem);
   }
 }
+
+/* =========================================================
+   FOUNDRY HOMEPAGE — FORGED METAL HERO
+   Scoped to body.homepage so the rest of the site is untouched.
+   ========================================================= */
+
+body.homepage {
+  min-height: 100svh;
+  overflow: hidden;
+  color: #ead9ba;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.22)),
+    url("./assets/brand/foundry-wallpaper.webp") center / cover no-repeat fixed;
+}
+
+body.homepage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255, 87, 0, 0.12), transparent 34%),
+    radial-gradient(circle at 74% 48%, rgba(180, 93, 32, 0.06), transparent 34%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.28));
+}
+
+body.homepage .foundry-header {
+  display: none;
+}
+
+body.homepage .site-blur-wrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+}
+
+.foundry-home-shell {
+  width: min(1540px, 100%);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(520px, 1.05fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 8rem);
+}
+
+.foundry-home-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-1vh);
+}
+
+.foundry-home-anvil {
+  width: clamp(230px, 25vw, 410px);
+  max-height: 42vh;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 10px rgba(255, 226, 176, 0.48))
+    drop-shadow(0 0 28px rgba(255, 95, 0, 0.72))
+    drop-shadow(0 0 72px rgba(255, 72, 0, 0.34));
+  animation: foundryHeroGlow 4.5s ease-in-out infinite;
+}
+
+@keyframes foundryHeroGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 10px rgba(255, 226, 176, 0.44))
+      drop-shadow(0 0 26px rgba(255, 95, 0, 0.66))
+      drop-shadow(0 0 64px rgba(255, 72, 0, 0.28));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 14px rgba(255, 239, 204, 0.62))
+      drop-shadow(0 0 38px rgba(255, 105, 0, 0.82))
+      drop-shadow(0 0 88px rgba(255, 72, 0, 0.42));
+  }
+}
+
+.foundry-home-the,
+.foundry-home-name {
+  margin: 0;
+  color: #d86a27;
+  font-family: Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  text-shadow:
+    0 1px 0 #2d1208,
+    0 2px 0 #160904,
+    0 0 12px rgba(255, 96, 0, 0.42);
+}
+
+.foundry-home-the {
+  margin-top: 0.7rem;
+  font-size: clamp(1.5rem, 2.2vw, 2.4rem);
+  letter-spacing: 0.34em;
+  transform: translateX(0.17em);
+}
+
+.foundry-home-name {
+  margin-top: 0.35rem;
+  font-size: clamp(3rem, 5.6vw, 6.2rem);
+  letter-spacing: 0.11em;
+  line-height: 0.94;
+  transform: translateX(0.055em);
+}
+
+.foundry-home-content {
+  position: relative;
+  min-height: min(590px, 68vh);
+  display: grid;
+  align-items: center;
+}
+
+.foundry-home-panel {
+  grid-area: 1 / 1;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(34px) scale(0.985);
+  transition:
+    opacity 460ms ease,
+    transform 620ms cubic-bezier(0.2, 0.82, 0.2, 1),
+    visibility 0s linear 620ms;
+}
+
+.foundry-home-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 500ms ease 120ms,
+    transform 660ms cubic-bezier(0.16, 1, 0.3, 1) 70ms,
+    visibility 0s;
+}
+
+.foundry-home-panel h1,
+.foundry-home-panel h2 {
+  margin: 0;
+  color: #ddccb0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(4rem, 6.1vw, 7.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.58);
+}
+
+.foundry-home-panel h1 span,
+.foundry-home-panel h2 span {
+  display: block;
+}
+
+.foundry-home-panel h2 {
+  font-size: clamp(4rem, 5.9vw, 7rem);
+}
+
+.foundry-home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.foundry-metal-button {
+  min-width: 220px;
+  min-height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(219, 95, 26, 0.78);
+  border-radius: 7px;
+  color: #e8d2b0;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 235, 204, 0.12),
+    0 16px 40px rgba(0, 0, 0, 0.32);
+  transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+}
+
+.foundry-metal-button:hover,
+.foundry-metal-button:focus-visible,
+.foundry-back-button:hover,
+.foundry-back-button:focus-visible {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+  outline: none;
+}
+
+.foundry-metal-button-primary {
+  color: #f5dfc2;
+  background:
+    linear-gradient(rgba(120, 31, 4, 0.22), rgba(64, 13, 2, 0.22)),
+    url("./assets/brand/foundry-wallpaper.webp") 28% 52% / 1200px auto;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 207, 158, 0.2),
+    inset 0 0 30px rgba(255, 74, 0, 0.14),
+    0 16px 42px rgba(0, 0, 0, 0.36);
+}
+
+.foundry-metal-button-secondary {
+  color: #da6b2a;
+  background: rgba(9, 5, 3, 0.45);
+}
+
+.foundry-home-actions-start {
+  align-items: center;
+}
+
+.foundry-home-actions-start .foundry-metal-button-primary {
+  min-width: 305px;
+}
+
+.foundry-back-button {
+  min-height: 46px;
+  padding: 0.8rem 1.25rem;
+  border: 1px solid rgba(207, 129, 73, 0.5);
+  border-radius: 999px;
+  color: #d7b78e;
+  background: rgba(8, 5, 3, 0.42);
+  font-family: Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+body.homepage .foundry-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+
+body.homepage .foundry-overlay.is-open {
+  background: rgba(0, 0, 0, 0.34);
+}
+
+body.homepage .foundry-window {
+  color: #e8d4b4;
+  border: 1px solid rgba(215, 107, 42, 0.5);
+  background:
+    linear-gradient(rgba(17, 8, 3, 0.34), rgba(7, 3, 1, 0.48)),
+    url("./assets/brand/foundry-wallpaper.webp") center / cover;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 226, 183, 0.08),
+    0 26px 60px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width: 980px) {
+  body.homepage {
+    overflow-y: auto;
+  }
+
+  .foundry-home-shell {
+    min-height: 100svh;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .foundry-home-brand {
+    transform: none;
+  }
+
+  .foundry-home-anvil {
+    width: min(280px, 58vw);
+    max-height: 30vh;
+  }
+
+  .foundry-home-name {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+  }
+
+  .foundry-home-content {
+    min-height: 440px;
+    text-align: center;
+  }
+
+  .foundry-home-panel h1,
+  .foundry-home-panel h2 {
+    font-size: clamp(3.2rem, 12vw, 5.4rem);
+  }
+
+  .foundry-home-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .foundry-home-shell {
+    padding-inline: 1rem;
+  }
+
+  .foundry-home-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .foundry-metal-button,
+  .foundry-home-actions-start .foundry-metal-button-primary,
+  .foundry-back-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foundry-home-anvil {
+    animation: none;
+  }
+
+  .foundry-home-panel,
+  .foundry-home-panel.is-active {
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+  }
+}
+
+/* =========================================================
+   HOMEPAGE REFINEMENT — WHITE TYPE + FORGED SORT TRANSITION
+   ========================================================= */
+body.homepage {
+  background-position: center center;
+}
+
+body.homepage::before {
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255, 86, 0, 0.16), transparent 35%),
+    radial-gradient(circle at 72% 48%, rgba(255, 122, 44, 0.055), transparent 34%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3));
+}
+
+.foundry-home-shell {
+  width: min(1600px, 100%);
+  grid-template-columns: minmax(0, 0.94fr) minmax(520px, 1.06fr);
+  gap: clamp(4rem, 7vw, 8.5rem);
+  padding: clamp(2rem, 4vw, 4.5rem) clamp(2rem, 5vw, 5.5rem);
+}
+
+.foundry-home-brand {
+  transform: translateY(-0.5vh);
+}
+
+.foundry-home-anvil {
+  width: clamp(270px, 27vw, 455px);
+}
+
+.foundry-home-the {
+  margin-top: 0.45rem;
+}
+
+.foundry-home-name {
+  font-size: clamp(3.4rem, 5.8vw, 6.5rem);
+}
+
+.foundry-home-content {
+  min-height: min(560px, 65vh);
+}
+
+.foundry-home-panel h1,
+.foundry-home-panel h2 {
+  color: #fffaf1;
+  font-size: clamp(3.7rem, 5.7vw, 6.85rem);
+  line-height: 0.93;
+  letter-spacing: -0.058em;
+  text-shadow:
+    0 3px 24px rgba(0, 0, 0, 0.72),
+    0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.foundry-home-panel h2 {
+  font-size: clamp(3.7rem, 5.5vw, 6.55rem);
+}
+
+.foundry-home-actions {
+  gap: 1.65rem;
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.foundry-metal-button {
+  min-width: 240px;
+  min-height: 72px;
+}
+
+#foundryExplore {
+  color: #ef7836;
+}
+
+/* The transition is a controlled heat pulse, not a page gimmick. */
+.forge-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.forge-transition::before,
+.forge-transition::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  opacity: 0;
+}
+
+.forge-transition::before {
+  background:
+    radial-gradient(circle at 31% 48%, rgba(255, 244, 215, 0.9) 0 1%, rgba(255, 128, 30, 0.58) 4%, rgba(255, 60, 0, 0.2) 12%, transparent 31%);
+  filter: blur(3px);
+}
+
+.forge-transition::after {
+  background: linear-gradient(90deg, transparent 0 43%, rgba(255, 122, 41, 0.08) 49%, rgba(255, 244, 220, 0.34) 50%, rgba(255, 98, 24, 0.08) 51%, transparent 57% 100%);
+  transform: translateX(-62%) skewX(-10deg);
+}
+
+.forge-transition-line {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 112, 25, 0.45), #fff7e7, rgba(255, 112, 25, 0.45), transparent);
+  box-shadow: 0 0 18px rgba(255, 93, 10, 0.72), 0 0 54px rgba(255, 70, 0, 0.32);
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.forge-transition-core {
+  position: absolute;
+  top: 50%;
+  left: 31%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff9ea;
+  box-shadow:
+    0 0 12px 4px rgba(255, 239, 204, 0.95),
+    0 0 36px 15px rgba(255, 107, 19, 0.72),
+    0 0 96px 42px rgba(255, 55, 0, 0.3);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+}
+
+body.is-forging .forge-transition {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.is-forging .forge-transition::before {
+  animation: forgeBloom 1150ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+body.is-forging .forge-transition::after {
+  animation: forgeSweep 1050ms cubic-bezier(.18,.75,.18,1) 180ms both;
+}
+
+body.is-forging .forge-transition-line {
+  animation: forgeLine 800ms cubic-bezier(.16,1,.3,1) 90ms both;
+}
+
+body.is-forging .forge-transition-core {
+  animation: forgeCore 900ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+body.is-forging .foundry-home-brand {
+  animation: forgeBrand 1350ms cubic-bezier(.16,1,.3,1) both;
+}
+
+body.is-forging #foundryIntroPanel {
+  animation: forgeIntroOut 720ms cubic-bezier(.55,0,.45,1) both;
+}
+
+body.is-forging #foundryStartPanel.is-active {
+  animation: forgeStartIn 760ms cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes forgeBloom {
+  0% { opacity: 0; transform: scale(.84); }
+  34% { opacity: 1; }
+  70% { opacity: .52; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.18); }
+}
+
+@keyframes forgeSweep {
+  0% { opacity: 0; transform: translateX(-62%) skewX(-10deg); }
+  32% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(62%) skewX(-10deg); }
+}
+
+@keyframes forgeLine {
+  0% { opacity: 0; transform: scaleX(0); }
+  38% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0; transform: scaleX(1); }
+}
+
+@keyframes forgeCore {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.2); }
+  26% { opacity: 1; }
+  58% { opacity: .9; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(260%, -50%) scale(.3); }
+}
+
+@keyframes forgeBrand {
+  0% { transform: translateY(-.5vh) scale(1); filter: brightness(1); }
+  34% { transform: translateY(-.5vh) scale(1.018); filter: brightness(1.32); }
+  100% { transform: translateY(-.5vh) scale(1); filter: brightness(1); }
+}
+
+@keyframes forgeIntroOut {
+  0% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  65% { opacity: .18; transform: translateY(-12px) scale(.992); filter: blur(2px); }
+  100% { opacity: 0; transform: translateY(-24px) scale(.985); filter: blur(7px); }
+}
+
+@keyframes forgeStartIn {
+  0% { opacity: 0; transform: translateY(34px) scale(.985); filter: blur(8px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .forge-transition { display: none; }
+  body.is-forging .foundry-home-brand,
+  body.is-forging #foundryIntroPanel,
+  body.is-forging #foundryStartPanel.is-active {
+    animation: none;
+  }
+}

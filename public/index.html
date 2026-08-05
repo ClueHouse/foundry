@@ -14,56 +14,78 @@
 </head>
 
 <body class="homepage">
-  <header class="foundry-header">
+  <header class="foundry-header" aria-label="The Foundry">
     <span class="foundry-brand">THE FOUNDRY</span>
-
     <span class="foundry-anvil-menu" aria-hidden="true">
-      <img
-        class="foundry-header-anvil"
-        src="./assets/brand/anvil-mark.svg"
-        alt=""
-      />
+      <img class="foundry-header-anvil" src="./assets/brand/anvil-mark.svg" alt="" />
     </span>
   </header>
 
+  <div class="forge-transition" id="forgeTransition" aria-hidden="true">
+    <span class="forge-transition-line"></span>
+    <span class="forge-transition-core"></span>
+  </div>
+
   <div class="site-blur-wrap" id="siteBlurWrap">
-    <main class="page home-page">
-      <section class="hero">
-        <h1>
-          <span>Your new site.</span>
-          <span>Stupidly easy.</span>
-          <span>Future-proof.</span>
-          <span>Done.</span>
-        </h1>
+    <main class="foundry-home-shell">
+      <section class="foundry-home-brand" aria-label="The Foundry">
+        <img
+          class="foundry-home-anvil"
+          src="./assets/brand/anvil-hero.svg"
+          alt=""
+        />
+        <p class="foundry-home-the">THE</p>
+        <p class="foundry-home-name">FOUNDRY</p>
+      </section>
 
-        <div class="button-row">
-          <a class="button button-primary" href="./start/">Sort It</a>
+      <section class="foundry-home-content" aria-live="polite">
+        <div class="foundry-home-panel is-active" id="foundryIntroPanel">
+          <h1>
+            <span>Your new site.</span>
+            <span>Stupidly easy.</span>
+            <span>Future-proof.</span>
+            <span>Done.</span>
+          </h1>
 
-          <button
-            class="button button-secondary"
-            id="foundryExplore"
-            type="button"
-            aria-label="Open Explore menu"
-            aria-expanded="false"
-          >
-            Explore
-          </button>
+          <div class="foundry-home-actions">
+            <button class="foundry-metal-button foundry-metal-button-primary" id="foundrySort" type="button">
+              Sort It
+            </button>
+
+            <button
+              class="foundry-metal-button foundry-metal-button-secondary"
+              id="foundryExplore"
+              type="button"
+              aria-label="Open Explore menu"
+              aria-expanded="false"
+            >
+              Explore
+            </button>
+          </div>
+        </div>
+
+        <div class="foundry-home-panel" id="foundryStartPanel" aria-hidden="true">
+          <h2>
+            <span>Need a website?</span>
+            <span>Leave it with me.</span>
+          </h2>
+
+          <div class="foundry-home-actions foundry-home-actions-start">
+            <a class="foundry-metal-button foundry-metal-button-primary email-start" href="mailto:thefoundry@rkdb.nz">
+              Hand Me The Problem
+            </a>
+
+            <button class="foundry-back-button" id="foundryBack" type="button">
+              <span aria-hidden="true">←</span> Back
+            </button>
+          </div>
         </div>
       </section>
     </main>
   </div>
 
-  <div
-    class="foundry-overlay"
-    id="foundryOverlay"
-    aria-hidden="true"
-  >
-    <button
-      class="foundry-close"
-      id="foundryClose"
-      type="button"
-      aria-label="Close Explore menu"
-    >
+  <div class="foundry-overlay" id="foundryOverlay" aria-hidden="true">
+    <button class="foundry-close" id="foundryClose" type="button" aria-label="Close Explore menu">
       Close
     </button>
 
