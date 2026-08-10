@@ -48,6 +48,7 @@ function showSortPanel() {
 }
 
 function showIntroPanel() {
+    document.documentElement.classList.remove("restore-explore");
     document.body.classList.remove("explore-open");
     if (typeof exploreScreen !== "undefined" && exploreScreen) {
         exploreScreen.setAttribute("aria-hidden", "true");

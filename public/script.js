@@ -272,3 +272,50 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFoundryCareModal();
   setupPageTransitions();
 });
+
+/* =========================================================
+GLOBAL PAGE TRANSITION
+========================================================= */
+
+window.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => {
+        document.body.classList.add('page-ready');
+    });
+});
+
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+
+    if (!link) return;
+    if (link.target === '_blank') return;
+    if (link.hasAttribute('download')) return;
+
+    const href = link.getAttribute('href');
+
+    if (!href) return;
+    if (href.startsWith('#')) return;
+    if (href.startsWith('mailto:')) return;
+    if (href.startsWith('tel:')) return;
+    if (href.startsWith('javascript:')) return;
+
+    const destination = new URL(link.href, window.location.href);
+
+    if (destination.origin !== window.location.origin) return;
+
+    event.preventDefault();
+
+    document.body.classList.remove('page-ready');
+    document.body.classList.add('page-leaving');
+
+    window.setTimeout(() => {
+        window.location.href = destination.href;
+    }, 280);
+});
+
+window.addEventListener('pageshow', () => {
+    document.body.classList.remove('page-leaving');
+
+    requestAnimationFrame(() => {
+        document.body.classList.add('page-ready');
+    });
+});

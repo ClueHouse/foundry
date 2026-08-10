@@ -1616,3 +1616,24 @@ body.is-forging #foundryStartPanel.is-active {
 html.foundry-explore-boot body {
   visibility: hidden;
 }
+
+/* =========================================================
+GLOBAL PAGE TRANSITION
+========================================================= */
+
+html {
+    background: #111;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 280ms ease;
+}
+
+body.page-ready {
+    opacity: 1;
+}
+
+body.page-leaving {
+    opacity: 0;
+}

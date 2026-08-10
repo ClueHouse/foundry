@@ -2315,3 +2315,49 @@ a.hero-button:visited {
     color: #f4d39a;
     opacity: 1;
 }
+
+/* Prevent Home flashing before Explore restores */
+html.restore-explore .hero {
+    visibility: hidden;
+}
+html.restore-explore body.explore-open .hero {
+    visibility: visible;
+}
+
+/* Show Explore immediately when returning with #explore */
+html.restore-explore .explore-screen {
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+html.restore-explore .hero {
+    display: none !important;
+}
+
+/* Returning from a subpage: show Explore instantly */
+html.restore-explore .landing::after {
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+html.restore-explore .explore-screen {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    animation: none !important;
+}
+
+html.restore-explore .brand,
+html.restore-explore #introPanel,
+html.restore-explore .hero {
+    display: none !important;
+}
+
+html.restore-explore .explore-boardroom,
+html.restore-explore .explore-choices {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
