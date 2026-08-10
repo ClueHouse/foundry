@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Zai Olivetti Lettera 22";
+  src: url("./assets/fonts/zai-olivetti-lettera-22.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -548,9 +556,9 @@ body.foundry-info-page main {
 .foundry-hero-tagline {
   margin: 28px 0 0;
   color: #f5f1ec;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Zai Olivetti Lettera 22", "Courier New", Courier, monospace;
   font-size: clamp(3.6rem, 6.4vw, 5.6rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 0.85;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1572,4 +1580,39 @@ body.is-forging #foundryStartPanel.is-active {
   body.is-forging #foundryStartPanel.is-active {
     animation: none;
   }
+}
+
+/* WHY WEBSITE — bring typography into the Foundry family */
+.whywebsite-copy h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.6rem, 5.2vw, 6.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: #2b1c12;
+}
+
+.whywebsite-subline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.whywebsite-copy p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.whywebsite-final {
+  font-weight: 600 !important;
+}
+
+/* WHY WEBSITE — Olivetti heading */
+.whywebsite-copy h1 {
+  font-family: "Zai Olivetti Lettera 22", "Courier New", Courier, monospace;
+  font-weight: 400;
+}
+
+/* EXPLORE ZERO-FLASH BOOT */
+html.foundry-explore-boot body {
+  visibility: hidden;
 }

@@ -1,0 +1,2317 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: #090806;
+    color: #f2dfbc;
+}
+
+
+/* =========================
+   FULL-SCREEN LANDING PAGE
+   ========================= */
+
+.landing {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("../assets/images/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   FOUNDRY BRAND
+   ========================= */
+
+.brand {
+    position: absolute;
+    left: 9%;
+    top: 28%;
+    width: 31%;
+    text-align: center;
+}
+
+
+/* top THE line */
+
+.brand-topline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 7px;
+}
+
+.brand-rule {
+    display: block;
+    width: 92px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(135, 91, 47, 0.5) 24%,
+            rgba(186, 134, 72, 0.72) 66%,
+            rgba(211, 165, 95, 0.82) 100%
+        );
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.brand-rule:last-child {
+    transform: scaleX(-1);
+}
+
+.brand-the {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 1.6vw, 30px);
+    font-weight: 400;
+    letter-spacing: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #c99a5a 0%,
+            #8f5d2f 50%,
+            #b87d40 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    filter:
+        drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.95))
+        drop-shadow(3px 4px 3px rgba(0, 0, 0, 0.45));
+}
+
+
+/* main FOUNDRY word */
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(62px, 5.7vw, 106px);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -2px;
+
+    transform: scaleX(0.96);
+
+    background:
+        linear-gradient(
+            180deg,
+            #c89a59 0%,
+            #8f582b 20%,
+            #b77839 43%,
+            #6d3f20 67%,
+            #9e642f 84%,
+            #7a4926 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    filter:
+        drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.96))
+        drop-shadow(4px 5px 3px rgba(0, 0, 0, 0.68))
+        drop-shadow(7px 8px 8px rgba(0, 0, 0, 0.25));
+}
+
+
+/* tagline */
+
+.brand-tagline {
+    margin-top: 17px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(11px, 0.95vw, 17px);
+    font-weight: 400;
+    letter-spacing: 6px;
+    white-space: nowrap;
+
+background:
+    linear-gradient(
+        180deg,
+        #e0bd7a 0%,
+        #b98245 55%,
+        #d3a15e 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    filter:
+        drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.95));
+}
+
+
+/* =========================
+   RIGHT-HAND COPY
+   ========================= */
+
+.hero {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    width: 41%;
+}
+
+
+/* =========================
+   METALLIC TEXT
+   ========================= */
+
+.hero-title,
+.hero-lines {
+    background:
+        linear-gradient(
+            180deg,
+            #fff4d5 0%,
+            #f4d8a6 24%,
+            #fff0cb 48%,
+            #d7aa6c 72%,
+            #f1d3a0 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    filter:
+        drop-shadow(0 2px 1px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 5px rgba(193, 125, 49, 0.18));
+}
+
+
+.hero-title {
+    margin: 0 0 32px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(50px, 4.5vw, 84px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+
+.hero-lines {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 2.15vw, 41px);
+    line-height: 1.42;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.hero-actions {
+    display: flex;
+    gap: 28px;
+    margin-top: 72px;
+}
+
+
+.hero-button {
+    position: relative;
+    min-width: 270px;
+    padding: 22px 30px;
+
+    border: 1px solid rgba(138, 96, 48, 0.58);
+    border-radius: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(64, 46, 29, 0.96) 0%,
+            rgba(45, 34, 24, 0.98) 16%,
+            rgba(27, 23, 19, 0.99) 52%,
+            rgba(31, 25, 20, 0.99) 100%
+        );
+
+    color: #e2c894;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 1px 0 rgba(248, 199, 119, 0.28),
+        inset 1px 0 0 rgba(191, 132, 64, 0.12),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.96),
+        0 4px 8px rgba(0, 0, 0, 0.46);
+
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.95);
+}
+
+.hero-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.008) 0px,
+            rgba(255, 255, 255, 0.008) 1px,
+            rgba(0, 0, 0, 0.010) 1px,
+            rgba(0, 0, 0, 0.010) 5px
+        );
+
+    opacity: 0.22;
+}
+
+.hero-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 210, 132, 0.48) 0%,
+            rgba(215, 148, 69, 0.32) 45%,
+            rgba(120, 76, 36, 0.10) 100%
+        );
+}
+
+.hero-button:hover {
+    border-color: rgba(192, 137, 67, 0.76);
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+.menu-button {
+    position: absolute;
+    top: 6%;
+    right: 5%;
+
+    width: 46px;
+    height: 40px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 7px 0;
+
+    border-top: 1px solid rgba(255, 218, 145, 0.60);
+    border-bottom: 1px solid rgba(45, 25, 10, 0.95);
+
+    background:
+        linear-gradient(
+            180deg,
+            #c6924e 0%,
+            #8e5b2c 38%,
+            #57351c 72%,
+            #2d1d12 100%
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 233, 184, 0.25),
+        0 2px 2px rgba(0, 0, 0, 0.85),
+        0 4px 5px rgba(0, 0, 0, 0.30);
+
+    transition:
+        transform 160ms ease,
+        filter 160ms ease;
+}
+
+.menu-button:hover span {
+    filter: brightness(1.12);
+}
+/* =========================
+   SMALLER SCREENS
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .brand {
+        left: 6%;
+        top: 27%;
+        width: 42%;
+    }
+
+    .hero {
+        left: 51%;
+        top: 35%;
+        width: 44%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .hero-button {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SORT-IT / FORGE TRANSITION
+   Left-hand Foundry scene remains completely immovable.
+   Only the right-hand hero content transitions.
+   ========================================================= */
+
+.hero {
+    isolation: isolate;
+}
+
+.hero-panel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-panel.is-active {
+    position: relative;
+
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* =========================
+   SECOND HERO STATE
+   ========================= */
+
+.sort-title,
+.sort-lines {
+    background:
+        linear-gradient(
+            180deg,
+            #fff4d5 0%,
+            #f4d8a6 24%,
+            #fff0cb 48%,
+            #d7aa6c 72%,
+            #f1d3a0 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    filter:
+        drop-shadow(0 2px 1px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 5px rgba(193, 125, 49, 0.18));
+}
+
+.sort-title {
+    margin: 0 0 32px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(50px, 4.5vw, 84px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.sort-lines {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 2.15vw, 41px);
+    line-height: 1.42;
+}
+
+.sort-actions {
+    align-items: center;
+}
+
+.hero-back {
+    border: 0;
+    padding: 18px 8px;
+
+    background: transparent;
+    color: #d7b77f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: 0.82;
+
+    transition:
+        opacity 180ms ease,
+        transform 180ms ease;
+}
+
+.hero-back:hover {
+    opacity: 1;
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   FORGE EFFECT
+   IMPORTANT:
+   confined to the RHS so the Foundry/anvil remain grounded.
+   ========================================================= */
+
+.forge-transition {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 20;
+
+    overflow: hidden;
+
+    visibility: hidden;
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.forge-transition::before,
+.forge-transition::after {
+    content: "";
+
+    position: absolute;
+    inset: -20%;
+
+    opacity: 0;
+}
+
+
+/* bloom begins near the leading edge of the RHS content */
+
+.forge-transition::before {
+    background:
+        radial-gradient(
+            circle at 12% 48%,
+            rgba(255, 244, 215, 0.90) 0 1%,
+            rgba(255, 128, 30, 0.58) 4%,
+            rgba(255, 60, 0, 0.20) 12%,
+            transparent 31%
+        );
+
+    filter: blur(3px);
+}
+
+
+/* travelling hot vertical sweep */
+
+.forge-transition::after {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0 43%,
+            rgba(255, 122, 41, 0.08) 49%,
+            rgba(255, 244, 220, 0.34) 50%,
+            rgba(255, 98, 24, 0.08) 51%,
+            transparent 57% 100%
+        );
+
+    transform: translateX(-62%) skewX(-10deg);
+}
+
+
+/* horizontal white-hot forge line */
+
+.forge-transition-line {
+    position: absolute;
+
+    top: 50%;
+    left: 4%;
+    right: 5%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 112, 25, 0.45),
+            #fff7e7,
+            rgba(255, 112, 25, 0.45),
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(255, 93, 10, 0.72),
+        0 0 54px rgba(255, 70, 0, 0.32);
+
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+
+/* white-hot travelling core */
+
+.forge-transition-core {
+    position: absolute;
+
+    top: 50%;
+    left: 10%;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #fff9ea;
+
+    box-shadow:
+        0 0 12px 4px rgba(255, 239, 204, 0.95),
+        0 0 36px 15px rgba(255, 107, 19, 0.72),
+        0 0 96px 42px rgba(255, 55, 0, 0.30);
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.25);
+}
+
+
+/* =========================
+   FORGING STATE
+   ========================= */
+
+body.is-forging .forge-transition {
+    visibility: visible;
+    opacity: 1;
+}
+
+body.is-forging .forge-transition::before {
+    animation:
+        forgeBloom
+        1150ms
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+body.is-forging .forge-transition::after {
+    animation:
+        forgeSweep
+        1050ms
+        cubic-bezier(.18,.75,.18,1)
+        180ms
+        both;
+}
+
+body.is-forging .forge-transition-line {
+    animation:
+        forgeLine
+        800ms
+        cubic-bezier(.16,1,.3,1)
+        90ms
+        both;
+}
+
+body.is-forging .forge-transition-core {
+    animation:
+        forgeCore
+        900ms
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+/*
+   ONLY the right-hand content moves.
+   There is deliberately no animation on:
+   .brand
+   .landing
+   .menu-button
+*/
+
+body.is-forging #introPanel {
+    animation:
+        forgeIntroOut
+        720ms
+        cubic-bezier(.55,0,.45,1)
+        both;
+}
+
+body.is-forging #sortPanel.is-active {
+    animation:
+        forgeStartIn
+        760ms
+        cubic-bezier(.16,1,.3,1)
+        both;
+}
+
+
+/* =========================
+   KEYFRAMES
+   ========================= */
+
+@keyframes forgeBloom {
+
+    0% {
+        opacity: 0;
+        transform: scale(.84);
+    }
+
+    34% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: .52;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.18);
+    }
+}
+
+
+@keyframes forgeSweep {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateX(-62%)
+            skewX(-10deg);
+    }
+
+    32% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateX(62%)
+            skewX(-10deg);
+    }
+}
+
+
+@keyframes forgeLine {
+
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    38% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes forgeCore {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.20);
+    }
+
+    26% {
+        opacity: 1;
+    }
+
+    58% {
+        opacity: .90;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(550%, -50%)
+            scale(.30);
+    }
+}
+
+
+@keyframes forgeIntroOut {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+
+    65% {
+        opacity: .18;
+
+        transform:
+            translateY(-12px)
+            scale(.992);
+
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-24px)
+            scale(.985);
+
+        filter: blur(7px);
+    }
+}
+
+
+@keyframes forgeStartIn {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(34px)
+            scale(.985);
+
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+}
+
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .forge-transition {
+        display: none;
+    }
+
+    body.is-forging #introPanel,
+    body.is-forging #sortPanel.is-active {
+        animation: none;
+    }
+}
+
+/* FULL-SCREEN FORGE PASS */
+
+body.is-forging .forge-transition::before {
+    animation-duration: 1800ms;
+}
+
+body.is-forging .forge-transition::after {
+    animation-duration: 1650ms;
+    animation-delay: 180ms;
+}
+
+body.is-forging .forge-transition-line {
+    animation-duration: 1300ms;
+}
+
+body.is-forging .forge-transition-core {
+    animation-duration: 1500ms;
+}
+
+.forge-transition::before {
+    background:
+        radial-gradient(
+            circle at 38% 48%,
+            rgba(255, 244, 215, 0.88) 0 1%,
+            rgba(255, 128, 30, 0.52) 5%,
+            rgba(255, 60, 0, 0.18) 16%,
+            transparent 38%
+        );
+}
+
+.forge-transition::after {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0 40%,
+            rgba(255, 122, 41, 0.07) 46%,
+            rgba(255, 244, 220, 0.30) 50%,
+            rgba(255, 98, 24, 0.07) 54%,
+            transparent 60% 100%
+        );
+
+    transform: translateX(-78%) skewX(-10deg);
+}
+
+@keyframes forgeSweep {
+    0% {
+        opacity: 0;
+        transform: translateX(-78%) skewX(-10deg);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    76% {
+        opacity: .82;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(78%) skewX(-10deg);
+    }
+}
+
+@keyframes forgeCore {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.20);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: .95;
+        transform: translate(900%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(1450%, -50%) scale(.30);
+    }
+}
+
+/* =========================================
+   FORGE TIMING + SECOND SCREEN FADE
+   15% slower, no rise-in motion
+   ========================================= */
+
+body.is-forging .forge-transition::before {
+    animation-duration: 2070ms;
+}
+
+body.is-forging .forge-transition::after {
+    animation-duration: 1898ms;
+    animation-delay: 207ms;
+}
+
+body.is-forging .forge-transition-line {
+    animation-duration: 1495ms;
+}
+
+body.is-forging .forge-transition-core {
+    animation-duration: 1725ms;
+}
+
+body.is-forging #sortPanel.is-active {
+    animation:
+        forgeStartIn
+        874ms
+        cubic-bezier(.16,1,.3,1)
+        both;
+}
+
+@keyframes forgeStartIn {
+    0% {
+        opacity: 0;
+        transform: none;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+        filter: blur(0);
+    }
+}
+
+/* =========================================
+   STABLE LANDING ARRIVAL
+   Reusable for initial load, Back, and Home
+   ========================================= */
+
+#introPanel.is-arriving {
+    animation:
+        landingFadeIn
+        900ms
+        ease-out
+        both;
+}
+
+@keyframes landingFadeIn {
+    0% {
+        opacity: 0;
+        transform: none;
+        filter: blur(3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   FOUNDRY SLIDE-OUT DRAWER
+   ========================================================= */
+
+.menu-button {
+    z-index: 102;
+}
+
+.menu-button span {
+    transform-origin: center;
+    transition:
+        transform 420ms cubic-bezier(.2,.8,.2,1),
+        opacity 220ms ease,
+        width 320ms ease;
+}
+
+/* hamburger -> X */
+
+body.menu-open .menu-button span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+body.menu-open .menu-button span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(.2);
+}
+
+body.menu-open .menu-button span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* darkened area behind drawer */
+
+.menu-backdrop {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.18) 55%,
+            rgba(0, 0, 0, 0.42) 100%
+        );
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 540ms ease,
+        visibility 0s linear 540ms;
+}
+
+body.menu-open .menu-backdrop {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transition:
+        opacity 540ms ease,
+        visibility 0s;
+}
+
+
+/* actual steel drawer */
+
+.site-drawer {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: min(430px, 88vw);
+
+    z-index: 100;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 12% 25%,
+            rgba(180, 129, 71, 0.08),
+            transparent 34%
+        ),
+        linear-gradient(
+            105deg,
+            rgba(255,255,255,.025),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #171513 0%,
+            #100f0e 48%,
+            #0b0a09 100%
+        );
+
+    border-left:
+        1px solid rgba(185, 139, 83, 0.32);
+
+    box-shadow:
+        -22px 0 70px rgba(0, 0, 0, 0.58),
+        inset 1px 0 rgba(255, 221, 170, 0.06);
+
+    transform: translateX(102%);
+
+    visibility: hidden;
+
+    transition:
+        transform 560ms cubic-bezier(.18,.82,.22,1),
+        visibility 0s linear 560ms;
+}
+
+.site-drawer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(232, 183, 116, .34) 24%,
+            rgba(232, 183, 116, .12) 70%,
+            transparent 100%
+        );
+}
+
+body.menu-open .site-drawer {
+    visibility: visible;
+
+    transform: translateX(0);
+
+    transition:
+        transform 560ms cubic-bezier(.18,.82,.22,1),
+        visibility 0s;
+}
+
+
+/* inner layout */
+
+.drawer-inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    padding:
+        clamp(100px, 13vh, 145px)
+        clamp(32px, 4vw, 52px)
+        34px;
+}
+
+.drawer-kicker {
+    margin-bottom: 34px;
+
+    color: rgba(210, 169, 114, 0.72);
+
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+/* menu links */
+
+.drawer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-link {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 13px;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    border: 0;
+    border-bottom:
+        1px solid rgba(210, 169, 114, 0.10);
+
+    background: transparent;
+
+    color: rgba(244, 231, 211, 0.84);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 1.45vw, 23px);
+    font-weight: 400;
+
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 220ms ease,
+        padding-left 300ms cubic-bezier(.2,.8,.2,1),
+        border-color 220ms ease;
+}
+
+.drawer-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 45px;
+    right: 100%;
+    bottom: -1px;
+
+    height: 1px;
+
+    background: rgba(210, 157, 91, 0.75);
+
+    transition:
+        right 350ms cubic-bezier(.2,.8,.2,1);
+}
+
+.drawer-link:hover,
+.drawer-link:focus-visible {
+    color: #fff1d5;
+    padding-left: 7px;
+
+    border-color: rgba(210, 169, 114, 0.18);
+}
+
+.drawer-link:hover::after,
+.drawer-link:focus-visible::after {
+    right: 0;
+}
+
+.drawer-number {
+    color: rgba(210, 169, 114, 0.42);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* restrained footer */
+
+.drawer-footer {
+    margin-top: auto;
+    padding-top: 28px;
+
+    color: rgba(190, 160, 121, 0.42);
+
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* links quietly arrive after steel panel */
+
+body.menu-open .drawer-link {
+    animation:
+        drawerLinkIn
+        520ms
+        ease
+        both;
+}
+
+body.menu-open .drawer-link:nth-child(1) {
+    animation-delay: 150ms;
+}
+
+body.menu-open .drawer-link:nth-child(2) {
+    animation-delay: 185ms;
+}
+
+body.menu-open .drawer-link:nth-child(3) {
+    animation-delay: 220ms;
+}
+
+body.menu-open .drawer-link:nth-child(4) {
+    animation-delay: 255ms;
+}
+
+body.menu-open .drawer-link:nth-child(5) {
+    animation-delay: 290ms;
+}
+
+body.menu-open .drawer-link:nth-child(6) {
+    animation-delay: 325ms;
+}
+
+body.menu-open .drawer-link:nth-child(7) {
+    animation-delay: 360ms;
+}
+
+@keyframes drawerLinkIn {
+    from {
+        opacity: 0;
+        transform: translateX(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+    .site-drawer {
+        width: min(360px, 92vw);
+    }
+
+    .drawer-inner {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .drawer-link {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+}
+
+
+/* reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-drawer,
+    .menu-backdrop,
+    .menu-button span {
+        transition-duration: 0.01ms;
+    }
+
+    body.menu-open .drawer-link {
+        animation: none;
+    }
+}
+
+/* =========================================================
+   DRAWER VISIBILITY FIX
+   Keep the existing animated X exactly as-is.
+   ========================================================= */
+
+.site-drawer {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    display: block !important;
+
+    z-index: 10000 !important;
+
+    opacity: 1;
+
+    will-change: transform;
+}
+
+.menu-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+
+    z-index: 9998 !important;
+}
+
+.menu-button {
+    position: fixed !important;
+    z-index: 10001 !important;
+}
+
+body.menu-open .site-drawer {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+body:not(.menu-open) .site-drawer {
+    transform: translateX(102%) !important;
+}
+
+body.menu-open .menu-backdrop {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   HOME RETURN — calm, grounded re-entry
+   ========================================= */
+
+#introPanel.home-return {
+    animation:
+        homeReturnFade
+        1100ms
+        cubic-bezier(.22,.61,.36,1)
+        both;
+}
+
+@keyframes homeReturnFade {
+    0% {
+        opacity: 0;
+        transform: none;
+        filter: blur(4px);
+    }
+
+    35% {
+        opacity: .18;
+        transform: none;
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+        filter: blur(0);
+    }
+}
+
+/* =========================================
+   HOME RETURN — sturdy, stationary fade
+   ========================================= */
+
+#introPanel.home-return {
+    animation:
+        homeReturnFade
+        1250ms
+        ease-out
+        both;
+}
+
+@keyframes homeReturnFade {
+    from {
+        opacity: 0;
+        transform: none;
+        filter: none;
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* =========================================================
+   DEFINITIVE LANDING ARRIVAL
+   One animation for load, Home and Back.
+   ========================================================= */
+
+#introPanel.landing-enter {
+    animation: landingEnter 1050ms ease-out both !important;
+}
+
+@keyframes landingEnter {
+    0% {
+        opacity: 0;
+        transform: none;
+        filter: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* retire the earlier competing arrival animations */
+
+#introPanel.is-arriving,
+#introPanel.home-return {
+    animation: none !important;
+}
+
+
+/* =========================================================
+   LET ME CHOOSE / EXPLORE
+   ========================================================= */
+
+.explore-screen {
+    position: absolute;
+    inset: 0;
+
+    z-index: 8;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    padding:
+        clamp(110px, 12vh, 150px)
+        clamp(80px, 8vw, 155px);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* bare wall replaces the original environment */
+
+.landing::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        url("../assets/images/barebackground.webp")
+        center center / cover
+        no-repeat;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 1200ms ease;
+}
+
+body.explore-open .landing::after {
+    opacity: 1;
+}
+
+
+/* keep Explore content above new wallpaper */
+
+body.explore-open .explore-screen {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    animation:
+        exploreFadeIn
+        1100ms
+        ease-out
+        both;
+}
+
+
+/* original Foundry identity quietly disappears */
+
+.brand {
+    transition:
+        opacity 900ms ease;
+}
+
+body.explore-open .brand {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* original RHS disappears too */
+
+body.explore-open #introPanel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   BOARDROOM — primary element
+   ----------------------------------------- */
+
+.explore-boardroom {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(520px, 88%);
+
+    padding-right: clamp(40px, 5vw, 90px);
+}
+
+.explore-kicker {
+    margin-bottom: 24px;
+
+    color: rgba(201, 155, 98, 0.72);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.explore-boardroom h2 {
+    margin:
+        0
+        0
+        27px;
+
+    color: #f1dfc3;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(31px, 2.65vw, 48px);
+
+    font-weight: 400;
+    line-height: 1.12;
+
+    text-shadow:
+        0 2px 3px rgba(0,0,0,.75);
+}
+
+.explore-boardroom p {
+    margin:
+        0
+        0
+        17px;
+
+    color: rgba(237, 222, 199, 0.78);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(16px, 1.15vw, 20px);
+
+    line-height: 1.62;
+}
+
+
+/* Boardroom invitation */
+
+.boardroom-link {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 15px;
+    padding-bottom: 7px;
+
+    color: #d8ad72;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(17px, 1.2vw, 21px);
+
+    font-style: italic;
+
+    text-decoration: none;
+
+    transition:
+        color 220ms ease;
+}
+
+.boardroom-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 100%;
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        rgba(216, 173, 114, .72);
+
+    transition:
+        right 350ms
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.boardroom-link:hover {
+    color: #f0d5ad;
+}
+
+.boardroom-link:hover::after {
+    right: 0;
+}
+
+
+/* -----------------------------------------
+   RIGHT-HAND CHOICES
+   ----------------------------------------- */
+
+.explore-choices {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-self: center;
+
+    width:
+        min(390px, 85%);
+
+    gap: 22px;
+}
+
+.explore-choice {
+    width: 100%;
+
+    padding:
+        23px
+        28px;
+
+    border:
+        1px solid
+        rgba(177, 128, 70, 0.50);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(47, 39, 31, .70),
+            rgba(19, 17, 15, .82)
+        );
+
+    color:
+        rgba(240, 222, 195, .90);
+
+    box-shadow:
+        inset 0 1px
+        rgba(255,255,255,.035),
+        0 12px 35px
+        rgba(0,0,0,.20);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(18px, 1.35vw, 23px);
+
+    cursor: pointer;
+
+    transition:
+        border-color 240ms ease,
+        background 240ms ease,
+        transform 240ms ease;
+}
+
+.explore-choice:hover {
+    border-color:
+        rgba(211, 160, 96, .82);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(61, 48, 36, .78),
+            rgba(25, 21, 18, .88)
+        );
+
+    transform:
+        translateX(-3px);
+}
+
+
+/* stationary content arrival */
+
+@keyframes exploreFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* mobile groundwork */
+
+@media (max-width: 800px) {
+
+    .explore-screen {
+        grid-template-columns: 1fr;
+
+        align-content: center;
+
+        gap: 45px;
+
+        padding:
+            100px
+            34px
+            50px;
+    }
+
+    .explore-boardroom {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .explore-choices {
+        justify-self: start;
+
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   EXPLORE SCREEN — COMPOSITION POLISH
+   Boardroom dominant left / secondary choices right
+   ========================================================= */
+
+.explore-screen {
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, .85fr);
+
+    column-gap:
+        clamp(70px, 7vw, 135px);
+
+    padding:
+        clamp(95px, 10vh, 125px)
+        clamp(105px, 8.5vw, 165px)
+        clamp(90px, 9vh, 115px);
+
+    align-items: center;
+}
+
+
+/* subtle architectural divider */
+
+.explore-screen::before {
+    content: "";
+
+    position: absolute;
+
+    top: 20%;
+    bottom: 20%;
+    left: 57%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(205, 153, 91, .16) 18%,
+            rgba(205, 153, 91, .28) 50%,
+            rgba(205, 153, 91, .16) 82%,
+            transparent 100%
+        );
+
+    box-shadow:
+        1px 0 rgba(0,0,0,.38);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BOARDROOM
+   ========================================================= */
+
+.explore-boardroom {
+    width: min(630px, 100%);
+
+    padding-right: 0;
+
+    transform: translate(
+        clamp(10px, 1vw, 18px),
+        -18px
+    );
+}
+
+.explore-kicker {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding-bottom: 11px;
+
+    color: rgba(220, 171, 108, .82);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 4.5px;
+}
+
+.explore-kicker::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 74px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(213, 158, 92, .72),
+            transparent
+        );
+}
+
+
+/* stronger but more elegant headline */
+
+.explore-boardroom h2 {
+    max-width: 620px;
+
+    margin:
+        0
+        0
+        28px;
+
+    color: #f2dfc1;
+
+    font-size:
+        clamp(33px, 2.55vw, 46px);
+
+    line-height: 1.13;
+
+    letter-spacing: -.4px;
+
+    text-wrap: balance;
+
+    text-shadow:
+        0 2px 2px rgba(0,0,0,.82),
+        0 0 18px rgba(126, 75, 31, .10);
+}
+
+
+/* body copy gets more air */
+
+.explore-boardroom p {
+    max-width: 565px;
+
+    margin:
+        0
+        0
+        18px;
+
+    color: rgba(239, 224, 201, .79);
+
+    font-size:
+        clamp(16px, 1.02vw, 18px);
+
+    line-height: 1.68;
+
+    text-shadow:
+        0 1px 2px rgba(0,0,0,.65);
+}
+
+
+/* Boardroom invitation becomes a proper discovery */
+
+.boardroom-link {
+    margin-top: 20px;
+
+    padding:
+        5px
+        0
+        8px;
+
+    color: #deb47b;
+
+    font-size:
+        clamp(17px, 1.08vw, 20px);
+
+    font-style: italic;
+
+    letter-spacing: .1px;
+
+    text-shadow:
+        0 1px 2px rgba(0,0,0,.62);
+}
+
+.boardroom-link::after {
+    right: 0;
+
+    opacity: .48;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(220, 171, 108, .85),
+            rgba(220, 171, 108, .10)
+        );
+}
+
+.boardroom-link:hover {
+    color: #f3d5aa;
+}
+
+.boardroom-link:hover::after {
+    opacity: .9;
+}
+
+
+/* =========================================================
+   RIGHT-HAND DISCOVERIES
+   ========================================================= */
+
+.explore-choices {
+    justify-self: start;
+
+    width: min(365px, 100%);
+
+    gap: 18px;
+
+    transform: translateY(-4px);
+}
+
+
+/* quieter, more architectural buttons */
+
+.explore-choice {
+    position: relative;
+
+    padding:
+        20px
+        26px;
+
+    border:
+        1px solid
+        rgba(185, 136, 77, .36);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(38, 32, 27, .60),
+            rgba(17, 15, 13, .72)
+        );
+
+    color:
+        rgba(242, 226, 203, .91);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.025),
+        0 10px 28px rgba(0,0,0,.18);
+
+    font-size:
+        clamp(17px, 1.08vw, 20px);
+
+    line-height: 1.25;
+
+    text-align: left;
+
+    transition:
+        border-color 260ms ease,
+        background 260ms ease,
+        padding-left 320ms cubic-bezier(.2,.8,.2,1),
+        color 260ms ease;
+}
+
+
+/* tiny bronze marker */
+
+.explore-choice::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #d7a360,
+            #8c5c2f
+        );
+
+    transform: translateY(-50%);
+
+    transition:
+        height 280ms cubic-bezier(.2,.8,.2,1);
+}
+
+.explore-choice:hover,
+.explore-choice:focus-visible {
+    border-color:
+        rgba(216, 164, 99, .68);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(49, 39, 31, .69),
+            rgba(21, 18, 15, .80)
+        );
+
+    color: #f6ddbb;
+
+    padding-left: 32px;
+
+    transform: none;
+}
+
+.explore-choice:hover::before,
+.explore-choice:focus-visible::before {
+    height: 52%;
+}
+
+
+/* =========================================================
+   EXPLORE ARRIVAL
+   Stationary, restrained, deliberate
+   ========================================================= */
+
+body.explore-open .explore-boardroom,
+body.explore-open .explore-choices {
+    animation:
+        exploreContentResolve
+        1050ms
+        ease-out
+        both;
+}
+
+body.explore-open .explore-choices {
+    animation-delay: 120ms;
+}
+
+@keyframes exploreContentResolve {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP BALANCE
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+    .explore-screen {
+        padding-left: 125px;
+        padding-right: 135px;
+    }
+
+    .explore-boardroom {
+        transform: translate(18px, -20px);
+    }
+
+    .explore-screen::before {
+        left: 58%;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALLER DESKTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .explore-screen {
+        grid-template-columns:
+            minmax(0, 1.1fr)
+            minmax(280px, .9fr);
+
+        column-gap: 50px;
+
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .explore-screen::before {
+        left: 58%;
+    }
+
+    .explore-boardroom h2 {
+        font-size:
+            clamp(31px, 3.5vw, 40px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE / NARROW
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .explore-screen {
+        grid-template-columns: 1fr;
+
+        align-content: center;
+
+        gap: 38px;
+
+        padding:
+            100px
+            34px
+            55px;
+    }
+
+    .explore-screen::before {
+        display: none;
+    }
+
+    .explore-boardroom {
+        width: 100%;
+
+        transform: none;
+    }
+
+    .explore-boardroom h2 {
+        max-width: 560px;
+    }
+
+    .explore-boardroom p {
+        max-width: 600px;
+    }
+
+    .explore-choices {
+        width: min(430px, 100%);
+
+        justify-self: start;
+
+        transform: none;
+    }
+}
+
+/* Full-repo integration: Explore choices are real links. */
+a.explore-choice {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Left-align landing hero copy */
+.hero-title,
+.hero-lines {
+    text-align: left;
+}
+
+/* Add breathing room between headline and supporting lines */
+.hero-title {
+    margin-bottom: 64px;
+}
+
+/* Raise headline only */
+.hero-title {
+    transform: translateY(-32px);
+}
+
+/* Hero buttons used as links should never be underlined */
+a.hero-button,
+a.hero-button:hover,
+a.hero-button:focus,
+a.hero-button:visited {
+    text-decoration: none;
+}
+
+/* Give Back more separation and presence */
+.sort-actions .hero-back {
+    margin-left: 32px;
+    color: #f4d39a;
+    opacity: 1;
+}
