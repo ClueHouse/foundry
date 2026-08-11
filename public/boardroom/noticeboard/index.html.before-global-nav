@@ -64,6 +64,5 @@
     <span>Foundry by RKDB</span>
     <a href="../">Boardroom</a>
   </footer>
-  <script src="../../js/foundry-internal-nav.js" data-root="../../" data-back="../"></script>
 </body>
 </html>

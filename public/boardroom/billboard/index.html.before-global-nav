@@ -71,6 +71,5 @@
   </footer>
 
   <script src="js/app.js"></script>
-  <script src="../../js/foundry-internal-nav.js" data-root="../../" data-back="../"></script>
 </body>
 </html>
