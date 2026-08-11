@@ -3,232 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>The Foundry</title>
-  <meta
-    name="description"
-    content="The Foundry is a Tauranga web design studio shaped by one idea: simplicity, done well."
-  >
-
+  <title>About The Foundry</title>
+  <meta name="description" content="The Foundry is a Tauranga web design studio shaped by one idea: simplicity, done well.">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/foundry-info.css">
 </head>
-
 <body class="foundry-info-page">
-
   <header class="foundry-about-header">
     <a class="foundry-about-brand" href="../" aria-label="The Foundry home">
-      <span>THE</span>
-      <span>FOUNDRY</span>
+      <span>THE</span><span>FOUNDRY</span>
     </a>
-
-    <a class="foundry-about-menu" href="../#explore" aria-label="Back to The Foundry">
-      <span></span>
-      <span></span>
-      <span></span>
+    <a class="foundry-about-menu" href="../#explore" aria-label="Back to Explore">
+      <span></span><span></span><span></span>
     </a>
   </header>
 
-  <main>
-
-    <!-- HERO -->
-    <section class="foundry-about-hero">
-      <div class="foundry-about-hero-shade"></div>
-
-      <div class="foundry-about-hero-inner">
+  <main class="foundry-about-page">
+    <section class="foundry-about-scene">
+      <div class="foundry-about-vignette" aria-hidden="true"></div>
+      <div class="foundry-about-layout">
         <div class="foundry-about-copy">
           <p class="foundry-about-eyebrow">ABOUT THE FOUNDRY</p>
-
-          <p class="foundry-about-lead">
-            The Foundry is a Tauranga web design studio<br>
-            shaped by one idea:
-          </p>
-
-          <h1>
-            Simplicity.<br>
-            Done well.
-          </h1>
-
-          <p class="foundry-about-statement">
-            Our small print matches our large print.<br>
-            Our work follows four key principles.
-          </p>
+          <p class="foundry-about-lead">The Foundry is a Tauranga web design studio<br>shaped by one idea:</p>
+          <h1>Simplicity.<br>Done well.</h1>
+          <p class="foundry-about-statement">Our small print matches our large print.<br>Our work follows four key principles.</p>
         </div>
 
-        <div class="foundry-wall-mark" aria-hidden="true">F</div>
-      </div>
-    </section>
-
-
-    <!-- PRINCIPLES -->
-    <section class="foundry-principles-new">
-      <div class="foundry-principles-inner">
-
-        <div class="foundry-principles-heading">
-          <p>OUR<br>PRINCIPLES</p>
-          <span></span>
-        </div>
-
-        <article class="foundry-principle-new">
-          <span class="foundry-principle-number">01</span>
-          <span class="foundry-principle-rule"></span>
-          <h2>Simple Launch.</h2>
-          <p>
-            You focus on your business.
-            We'll handle the website.
-          </p>
-        </article>
-
-        <article class="foundry-principle-new">
-          <span class="foundry-principle-number">02</span>
-          <span class="foundry-principle-rule"></span>
-          <h2>Clear Pricing.</h2>
-          <p>
-            $800. Website launched.
-            Six months FoundryCare included.
-          </p>
-        </article>
-
-        <article class="foundry-principle-new">
-          <span class="foundry-principle-number">03</span>
-          <span class="foundry-principle-rule"></span>
-          <h2>Fair Ownership.</h2>
-          <p>
-            You paid for it.
-            The site is yours.
-          </p>
-        </article>
-
-        <article class="foundry-principle-new">
-          <span class="foundry-principle-number">04</span>
-          <span class="foundry-principle-rule"></span>
-          <h2>FoundryCare.</h2>
-          <p>
-            Website stewardship.
-            You're never on your own.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- FOUNDRYCARE -->
-    <section id="foundrycare" class="foundry-care-new">
-      <div class="foundry-care-glow"></div>
-
-      <div class="foundry-care-new-inner">
-
-        <div class="foundry-care-new-copy">
-          <p class="foundry-about-eyebrow">FOUNDRYCARE</p>
-
-          <h2>
-            Care beyond<br>
-            launch.
-          </h2>
-
-          <p>
-            Every Foundry website includes six months of FoundryCare.
-            After that, FoundryCare continues for $40 per month,
-            or $200 per six months.
-          </p>
-
-          <button
-            class="foundry-care-button"
-            type="button"
-            aria-controls="foundrycare-definitions"
-          >
-            WHAT'S INCLUDED? <span aria-hidden="true">→</span>
-          </button>
-        </div>
-
-        <div class="foundry-care-stage" aria-hidden="true">
-          <div class="foundry-care-plinth">
-            <div class="foundry-care-plaque">
-              <span class="foundry-care-plaque-f">F</span>
-              <span class="foundry-care-plaque-name">FOUNDRYCARE</span>
-            </div>
+        <section class="foundry-principles" aria-labelledby="principles-title">
+          <div class="foundry-principles-title" id="principles-title">OUR PRINCIPLES</div>
+          <div class="foundry-principles-grid">
+            <article class="foundry-principle">
+              <div class="foundry-principle-head"><span class="foundry-principle-number">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 8c9 4 15 11 18 20L40 44 20 24C25 15 31 10 38 8Z"/><circle cx="39" cy="24" r="4"/><path d="M22 28 12 31 8 42l14-4M36 42l-4 14 11-4 3-10M18 43l-7 10M25 47l-4 9"/></svg></div>
+              <h2>Simple Launch.</h2>
+              <p>You focus on your business. We'll handle the website — from the first idea through to launch, without turning you into a web designer along the way.</p>
+            </article>
+            <article class="foundry-principle">
+              <div class="foundry-principle-head"><span class="foundry-principle-number">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30 31 9h20v20L30 50 10 30Z"/><circle cx="43" cy="17" r="3.5"/></svg></div>
+              <h2>Clear Pricing.</h2>
+              <p>$800. Website launched. Six months FoundryCare included. You know what the job costs before we begin, with no mystery invoice waiting at the end.</p>
+            </article>
+            <article class="foundry-principle">
+              <div class="foundry-principle-head"><span class="foundry-principle-number">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="24" r="14"/><path d="M34 34 54 54M44 44l5-5M49 49l5-5"/></svg></div>
+              <h2>Fair Ownership.</h2>
+              <p>You paid for it. The site is yours. Your website should never be held hostage by the person who happened to build it.</p>
+            </article>
+            <article class="foundry-principle foundry-principle-care">
+              <div class="foundry-principle-head"><span class="foundry-principle-number">04</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 7 50 14v15c0 13-8 22-18 28-10-6-18-15-18-28V14L32 7Z"/><path d="m23 31 6 6 13-14"/></svg></div>
+              <h2>FoundryCare.</h2>
+              <p>Website stewardship. Launching isn't goodbye; we keep looking after what we've built, so you're never left on your own with it.</p>
+              <a href="../foundrycare/">Discover FoundryCare <span aria-hidden="true">→</span></a>
+            </article>
           </div>
-        </div>
+        </section>
 
+        <a class="foundry-about-back" href="../#explore"><span aria-hidden="true">←</span> Back</a>
       </div>
     </section>
-
-
   </main>
-
-
-  <!-- EXISTING FOUNDRYCARE DETAIL MODAL -->
-  <div class="foundry-modal" id="foundrycare-definitions" aria-hidden="true">
-    <div
-      class="foundry-modal-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="foundrycare-definitions-title"
-    >
-      <h2 id="foundrycare-definitions-title">FoundryCare explained.</h2>
-
-      <section class="foundry-definition">
-        <h3>Hosting</h3>
-        <p>
-          Your website runs on our infrastructure, so you don't have to worry about
-          hosting accounts, domain settings, SSL renewals, DNS records, website
-          backups, uptime monitoring, software updates, security patches, or any
-          other operational tech running in the background.
-        </p>
-      </section>
-
-      <section class="foundry-definition">
-        <h3>Security &amp; Maintenance</h3>
-        <p>Forms break. Certificates expire. Technology changes.</p>
-        <p>We work hard at keeping your website healthy.</p>
-      </section>
-
-      <section class="foundry-definition">
-        <h3>Content Updates</h3>
-        <p>Your website will evolve with you.</p>
-        <p>
-          Seasonal specials, important events, and that weekly deal all deserve
-          a place on your website.
-        </p>
-        <p>
-          Contact us to discuss strategies for handling more frequently changing content.
-        </p>
-      </section>
-
-      <section class="foundry-definition">
-        <h3>Search &amp; Listing Reviews</h3>
-        <p>
-          Your customers shouldn't be reading "Add a website?"
-          when looking for your business.
-        </p>
-        <p>
-          We'll make sure key business listings and directories point customers to your site.
-        </p>
-      </section>
-
-      <section class="foundry-definition">
-        <h3>Regular Check-ins</h3>
-        <p>We will not disappear after launch.</p>
-        <p>
-          We periodically check in to ensure your website remains accurate
-          and to identify opportunities for it to work harder for you.
-        </p>
-      </section>
-
-      <section class="foundry-definition">
-        <h3>Website Archive</h3>
-        <p>You paid for your website. You should always have a copy of it.</p>
-        <p>
-          Every six months, we'll provide an up-to-date archive
-          of your website for your records.
-        </p>
-      </section>
-
-      <button class="foundry-modal-close" type="button">Close</button>
-    </div>
-  </div>
-
   <script src="../script.js"></script>
 </body>
 </html>
