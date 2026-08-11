@@ -987,16 +987,3 @@ body.foundrycare-page p { color:inherit; }
     stroke-linejoin: round;
   }
 }
-
-/* FOUNDRYCARE — centred service headings */
-@media (min-width: 1051px) {
-
-  .foundrycare-services h2 {
-    text-align: center !important;
-  }
-
-  .foundrycare-service-icon {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}

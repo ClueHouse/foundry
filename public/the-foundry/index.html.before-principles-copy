@@ -35,22 +35,22 @@
             <article class="foundry-principle">
               <div class="foundry-principle-head"><span class="foundry-principle-number">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 8c9 4 15 11 18 20L40 44 20 24C25 15 31 10 38 8Z"/><circle cx="39" cy="24" r="4"/><path d="M22 28 12 31 8 42l14-4M36 42l-4 14 11-4 3-10M18 43l-7 10M25 47l-4 9"/></svg></div>
               <h2>Simple Launch.</h2>
-              <p>Focus on your business.<br>We'll handle the website.</p>
+              <p>You focus on your business. We'll handle the website — from the first idea through to launch, without turning you into a web designer along the way.</p>
             </article>
             <article class="foundry-principle">
               <div class="foundry-principle-head"><span class="foundry-principle-number">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30 31 9h20v20L30 50 10 30Z"/><circle cx="43" cy="17" r="3.5"/></svg></div>
               <h2>Clear Pricing.</h2>
-              <p>$800. Website launched.<br>Six months FoundryCare.</p>
+              <p>$800. Website launched. Six months FoundryCare included. You know what the job costs before we begin, with no mystery invoice waiting at the end.</p>
             </article>
             <article class="foundry-principle">
               <div class="foundry-principle-head"><span class="foundry-principle-number">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="24" r="14"/><path d="M34 34 54 54M44 44l5-5M49 49l5-5"/></svg></div>
               <h2>Fair Ownership.</h2>
-              <p>You paid for it.<br>The site is yours.</p>
+              <p>You paid for it. The site is yours. Your website should never be held hostage by the person who happened to build it.</p>
             </article>
             <article class="foundry-principle foundry-principle-care">
               <div class="foundry-principle-head"><span class="foundry-principle-number">04</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 7 50 14v15c0 13-8 22-18 28-10-6-18-15-18-28V14L32 7Z"/><path d="m23 31 6 6 13-14"/></svg></div>
               <h2>FoundryCare.</h2>
-              <p>Website stewardship.<br>You're never on your own.</p>
+              <p>Website stewardship. Launching isn't goodbye; we keep looking after what we've built, so you're never left on your own with it.</p>
               <a href="../foundrycare/">Discover FoundryCare <span aria-hidden="true">→</span></a>
             </article>
           </div>
