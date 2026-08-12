@@ -723,3 +723,125 @@ h1 span {
     transition: none !important;
   }
 }
+
+
+/* =========================================================
+   BOARDROOM FINAL GLASS + VERTICAL POSITIONING
+   ========================================================= */
+
+/* Spread the four boards through the available height */
+.boards {
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: clamp(14px, 1.8vh, 24px);
+
+  height: min(76vh, 800px);
+  max-width: 800px;
+
+  justify-self: end;
+  align-content: center;
+}
+
+
+/* Genuine smoked glass — room remains clearly visible */
+.board-card {
+  min-height: 0;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.018) 34%,
+      rgba(0, 0, 0, 0.055) 100%
+    ),
+    rgba(8, 7, 6, 0.28);
+
+  border: 1px solid rgba(225, 192, 151, 0.32);
+
+  -webkit-backdrop-filter: blur(5px) brightness(0.82);
+  backdrop-filter: blur(5px) brightness(0.82);
+
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+
+/* Remove the heavy black appearance from the fake rear sheets */
+.glass-layer {
+  background: rgba(14, 11, 8, 0.07);
+  border-color: rgba(225, 192, 151, 0.13);
+
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.glass-layer--one {
+  opacity: 0.55;
+  transform: translate(6px, 5px);
+}
+
+.glass-layer--two {
+  opacity: 0.28;
+  transform: translate(11px, 9px);
+}
+
+
+/* Very subtle light catching the glass */
+.board-card::before {
+  background:
+    linear-gradient(
+      118deg,
+      rgba(255, 244, 224, 0.055) 0%,
+      rgba(255, 255, 255, 0.015) 22%,
+      transparent 48%,
+      rgba(216, 138, 45, 0.018) 100%
+    );
+}
+
+
+/* Keep hover elegant rather than turning the card black */
+.board-card:hover,
+.board-card:focus-visible {
+  transform: translateX(-7px);
+
+  border-color: rgba(216, 138, 45, 0.58);
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0.022) 34%,
+      rgba(0, 0, 0, 0.06) 100%
+    ),
+    rgba(10, 8, 6, 0.34);
+
+  box-shadow:
+    10px 22px 48px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+
+/* Desktop: position the entire stack slightly higher */
+@media (min-width: 1251px) {
+  .boards {
+    transform: translateY(-1vh);
+  }
+}
+
+
+/* Don't force desktop-height cards on smaller screens */
+@media (max-width: 1250px) {
+  .boards {
+    height: auto;
+    grid-template-rows: none;
+  }
+
+  .board-card {
+    min-height: 158px;
+    height: auto;
+  }
+}
+
