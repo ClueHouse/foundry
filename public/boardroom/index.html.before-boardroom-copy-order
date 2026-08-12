@@ -37,49 +37,28 @@
     <section class="intro" aria-labelledby="boardroom-title">
       <p class="eyebrow">The Foundry Boardroom</p>
 
-      <h1 id="boardroom-title">What’s possible<span>.</span></h1>
+      <h1 id="boardroom-title">
+        Four clear<br>
+        ways to build<span>.</span>
+      </h1>
 
       <div class="intro-rule" aria-hidden="true"></div>
 
-      <div class="intro-copy">
-        <p>Four boards. Four different ways a website can take shape.</p>
-        <p>But how it looks is only part of the story. <strong>Your website has a job to do.</strong></p>
-        <p>These aren’t templates. They’re design prompts — different ways to think about what your site needs to say, show and do.</p>
-        <p><strong>There’s one here that will fit your needs <em>perfectly</em>.</strong></p>
-      </div>
+      <p class="intro-copy">
+        Explore four distinct website formats,<br>
+        each built around a different kind<br>
+        of business need.
+      </p>
     </section>
 
 
     <section class="boards" aria-label="Foundry website formats">
 
-      <a class="board-card" href="./billboard/">
-        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
-        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
-
-        <span class="board-number">01</span>
-
-        <span class="board-icon" aria-hidden="true">B</span>
-
-        <span class="board-main">
-          <span class="board-label">Billboard</span>
-          <strong>
-            A polished online presence that gets to the point.
-          </strong>
-        </span>
-
-        <span class="board-description">
-          See the completed Billboard product and its three working business examples.
-        </span>
-
-        <span class="board-arrow" aria-hidden="true">→</span>
-      </a>
-
-
       <a class="board-card" href="./noticeboard/">
         <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
         <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
 
-        <span class="board-number">02</span>
+        <span class="board-number">01</span>
 
         <span class="board-icon" aria-hidden="true">N</span>
 
@@ -98,23 +77,23 @@
       </a>
 
 
-      <a class="board-card" href="./skateboard/">
+      <a class="board-card" href="./billboard/">
         <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
         <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
 
-        <span class="board-number">03</span>
+        <span class="board-number">02</span>
 
-        <span class="board-icon" aria-hidden="true">S</span>
+        <span class="board-icon" aria-hidden="true">B</span>
 
         <span class="board-main">
-          <span class="board-label">Skateboard</span>
+          <span class="board-label">Billboard</span>
           <strong>
-            An immersive parallax site with smooth movement.
+            A polished online presence that gets to the point.
           </strong>
         </span>
 
         <span class="board-description">
-          For brands that lead with visual storytelling and experience.
+          See the completed Billboard product and its three working business examples.
         </span>
 
         <span class="board-arrow" aria-hidden="true">→</span>
@@ -125,7 +104,7 @@
         <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
         <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
 
-        <span class="board-number">04</span>
+        <span class="board-number">03</span>
 
         <span class="board-icon" aria-hidden="true">S</span>
 
@@ -138,6 +117,29 @@
 
         <span class="board-description">
           For businesses that need dedicated pages, deeper information and a broader online presence.
+        </span>
+
+        <span class="board-arrow" aria-hidden="true">→</span>
+      </a>
+
+
+      <a class="board-card" href="./skateboard/">
+        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
+        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
+
+        <span class="board-number">04</span>
+
+        <span class="board-icon" aria-hidden="true">S</span>
+
+        <span class="board-main">
+          <span class="board-label">Skateboard</span>
+          <strong>
+            An immersive parallax site with smooth movement.
+          </strong>
+        </span>
+
+        <span class="board-description">
+          For brands that lead with visual storytelling and experience.
         </span>
 
         <span class="board-arrow" aria-hidden="true">→</span>
