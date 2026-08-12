@@ -300,8 +300,8 @@ h1 span {
 .board-card {
   position: relative;
 
-  min-height: 0;
-  padding: 22px 66px 22px 25px;
+  min-height: 178px;
+  padding: 25px 66px 25px 25px;
 
   display: grid;
 
@@ -845,16 +845,3 @@ h1 span {
   }
 }
 
-
-/* === Boardroom: vertically centre both sides === */
-@media (min-width: 901px) {
-  .boardroom {
-    min-height: 100vh;
-    align-items: center;
-  }
-
-  .intro,
-  .boards {
-    align-self: center;
-  }
-}

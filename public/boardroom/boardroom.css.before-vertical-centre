@@ -845,16 +845,3 @@ h1 span {
   }
 }
 
-
-/* === Boardroom: vertically centre both sides === */
-@media (min-width: 901px) {
-  .boardroom {
-    min-height: 100vh;
-    align-items: center;
-  }
-
-  .intro,
-  .boards {
-    align-self: center;
-  }
-}

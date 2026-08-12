@@ -16,6 +16,22 @@
 
   <div class="page-shade" aria-hidden="true"></div>
 
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Foundry home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+
+      <span class="brand-copy">
+        <strong>FOUNDRY</strong>
+        <small>BY RKDB</small>
+      </span>
+    </a>
+
+    <a class="header-link" href="../the-foundry/">
+      About Foundry
+      <span aria-hidden="true">→</span>
+    </a>
+  </header>
+
   <main class="boardroom">
 
     <section class="intro" aria-labelledby="boardroom-title">
