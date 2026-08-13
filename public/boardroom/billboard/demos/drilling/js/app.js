@@ -1,62 +1,48 @@
 (() => {
-  const roots = [...document.querySelectorAll('[data-menu-root]')];
-  const buttons = roots.map(root => root.querySelector('.hotspot'));
+  const body = document.body;
+  const toggle = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.menu-drawer');
+  const close = document.querySelector('.menu-close');
+  const backdrop = document.querySelector('.menu-backdrop');
+  const links = [...document.querySelectorAll('.drawer-link')];
+  const panels = [...document.querySelectorAll('.drawer-panel')];
 
-  function closeAll(except = null) {
-    roots.forEach(root => {
-      if (root === except) return;
-      root.classList.remove('open');
-      root.querySelector('.hotspot')?.setAttribute('aria-expanded', 'false');
-    });
+  function openMenu() {
+    body.classList.add('menu-open');
+    toggle?.setAttribute('aria-expanded', 'true');
+    drawer?.setAttribute('aria-hidden', 'false');
+    close?.focus({preventScroll:true});
   }
 
-  roots.forEach(root => {
-    const button = root.querySelector('.hotspot');
-    const menu = root.querySelector('.dropdown');
+  function closeMenu() {
+    body.classList.remove('menu-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    drawer?.setAttribute('aria-hidden', 'true');
+    toggle?.focus({preventScroll:true});
+  }
 
-    button.addEventListener('click', event => {
-      event.stopPropagation();
-      const opening = !root.classList.contains('open');
-      closeAll(root);
-      root.classList.toggle('open', opening);
-      button.setAttribute('aria-expanded', String(opening));
-      if (opening) menu.querySelector('a, input, button')?.focus({preventScroll:true});
-    });
+  function showPanel(name) {
+    links.forEach(link => link.classList.toggle('is-active', link.dataset.panel === name));
+    panels.forEach(panel => panel.classList.toggle('is-active', panel.dataset.content === name));
+  }
 
-    root.addEventListener('mouseenter', () => {
-      closeAll(root);
-      root.classList.add('open');
-      button.setAttribute('aria-expanded', 'true');
-    });
+  toggle?.addEventListener('click', () => {
+    if (body.classList.contains('menu-open')) closeMenu();
+    else openMenu();
+  });
+  close?.addEventListener('click', closeMenu);
+  backdrop?.addEventListener('click', closeMenu);
 
-    root.addEventListener('mouseleave', () => {
-      root.classList.remove('open');
-      button.setAttribute('aria-expanded', 'false');
-    });
-
-    menu.addEventListener('click', event => event.stopPropagation());
+  links.forEach(link => {
+    link.addEventListener('click', () => showPanel(link.dataset.panel));
   });
 
-  document.addEventListener('click', () => closeAll());
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-      const openRoot = roots.find(root => root.classList.contains('open'));
-      closeAll();
-      openRoot?.querySelector('.hotspot')?.focus();
-    }
-  });
-
-  document.querySelectorAll('.dropdown a').forEach(link => {
-    link.addEventListener('click', event => event.preventDefault());
+    if (event.key === 'Escape' && body.classList.contains('menu-open')) closeMenu();
   });
 
   document.getElementById('quote-form')?.addEventListener('submit', event => {
     event.preventDefault();
     event.currentTarget.querySelector('.form-status').textContent = 'Request captured — ready to connect to your email or CRM.';
-  });
-
-  document.querySelector('.brand-replacement')?.addEventListener('click', event => {
-    event.preventDefault();
-    closeAll();
   });
 })();
