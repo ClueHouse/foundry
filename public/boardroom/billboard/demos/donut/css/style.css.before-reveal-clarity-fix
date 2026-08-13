@@ -1,4 +1,4 @@
-site {s*transition: filter .*?}s*site {s*transition: filter .*?}s*:root {
+:root {
   --wine: #5f0f20;
   --rose: #e95d78;
   --blush: #fff1ed;
@@ -256,7 +256,7 @@ input:focus,select:focus,textarea:focus { border-color:#c42b55; box-shadow:0 0 0
 }
 
 /* Foundry refinement: Donut editorial slide reveal */
-site {.*?}s*#site {
+body.overlay-open #site {
   filter: blur(9px) saturate(.72) brightness(.72);
   transform: scale(.975);
   transition: filter .42s ease, transform .42s cubic-bezier(.2,.75,.25,1);
@@ -352,86 +352,4 @@ site {.*?}s*#site {
     padding: 68px 28px 34px;
     border-radius: 0 22px 22px 0;
   }
-}
-
-/* Donut slide reveal — clarity + reliable dismissal */
-site {.*?}s*.topbar,
-body.overlay-open .hero,
-body.overlay-open .features {
-  filter: brightness(.58) saturate(.72);
-  transition: filter .3s ease;
-}
-
-.topbar,
-.hero,
-.features {
-  transition: filter .3s ease;
-}
-
-.overlay {
-  background: rgba(38,10,17,.28);
-}
-
-.overlay:not([hidden]) {
-  display: block;
-  pointer-events: auto;
-}
-
-.overlay-panel {
-  filter: none !important;
-  opacity: 1 !important;
-}
-
-.overlay.is-closing {
-  pointer-events: none;
-}
-
-/* FINAL Donut reveal blur:
-   blur the page BEHIND the sheet, never the sheet itself */
-.overlay {
-  background: rgba(38,10,17,.18) !important;
-  backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  -webkit-backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  pointer-events: auto !important;
-}
-
-.overlay-panel,
-.overlay-panel--split,
-.overlay-panel--order {
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Clicking outside the sheet remains possible */
-.overlay:not([hidden]) {
-  display: block !important;
-  pointer-events: auto !important;
-}
-
-/* FINAL Donut reveal blur:
-   blur the page BEHIND the sheet, never the sheet itself */
-.overlay {
-  background: rgba(38,10,17,.18) !important;
-  backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  -webkit-backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  pointer-events: auto !important;
-}
-
-.overlay-panel,
-.overlay-panel--split,
-.overlay-panel--order {
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Clicking outside the sheet remains possible */
-.overlay:not([hidden]) {
-  display: block !important;
-  pointer-events: auto !important;
 }

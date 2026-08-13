@@ -1,4 +1,4 @@
-site {s*transition: filter .*?}s*site {s*transition: filter .*?}s*:root {
+site {s*transition: filter .*?}s*:root {
   --wine: #5f0f20;
   --rose: #e95d78;
   --blush: #fff1ed;
@@ -355,7 +355,7 @@ site {.*?}s*#site {
 }
 
 /* Donut slide reveal — clarity + reliable dismissal */
-site {.*?}s*.topbar,
+body.overlay-open .topbar,
 body.overlay-open .hero,
 body.overlay-open .features {
   filter: brightness(.58) saturate(.72);
@@ -384,31 +384,6 @@ body.overlay-open .features {
 
 .overlay.is-closing {
   pointer-events: none;
-}
-
-/* FINAL Donut reveal blur:
-   blur the page BEHIND the sheet, never the sheet itself */
-.overlay {
-  background: rgba(38,10,17,.18) !important;
-  backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  -webkit-backdrop-filter: blur(9px) saturate(.78) brightness(.76) !important;
-  pointer-events: auto !important;
-}
-
-.overlay-panel,
-.overlay-panel--split,
-.overlay-panel--order {
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Clicking outside the sheet remains possible */
-.overlay:not([hidden]) {
-  display: block !important;
-  pointer-events: auto !important;
 }
 
 /* FINAL Donut reveal blur:
