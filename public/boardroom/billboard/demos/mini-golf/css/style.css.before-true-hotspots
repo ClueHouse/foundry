@@ -276,37 +276,3 @@
 .overlay--locations {
   display: none !important;
 }
-
-/* =========================================================
-   TRUE NAV HOTSPOTS
-   Percentage-based so they track the 1536x1024 artwork
-   at every rendered size.
-   ========================================================= */
-
-.hotspot--course {
-  left: 30.34% !important;
-  top: 3.71% !important;
-  width: 14.13% !important;
-  height: 8.01% !important;
-}
-
-.hotspot--story {
-  left: 45.77% !important;
-  top: 3.71% !important;
-  width: 13.15% !important;
-  height: 8.01% !important;
-}
-
-.hotspot--events {
-  left: 60.22% !important;
-  top: 3.71% !important;
-  width: 16.86% !important;
-  height: 8.01% !important;
-}
-
-.hotspot--book {
-  left: 80.60% !important;
-  top: 3.61% !important;
-  width: 16.47% !important;
-  height: 8.20% !important;
-}
