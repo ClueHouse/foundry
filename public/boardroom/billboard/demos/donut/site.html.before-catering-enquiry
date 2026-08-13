@@ -118,7 +118,7 @@
             <article><span>02</span><strong>Corporate Gifting</strong><p>Branded cards, scheduled delivery and polished presentation.</p></article>
             <article><span>03</span><strong>Events</strong><p>Donut walls, dessert tables and custom flavours for your occasion.</p></article>
           </div>
-          <button class="soft-action" id="catering-enquiry" type="button">Create an enquiry →</button>
+          <button class="soft-action" type="button">Start an enquiry →</button>
         </div>
       </section>
 
@@ -133,7 +133,6 @@
           <form id="order-form">
             <label>Name<input name="name" required autocomplete="name"></label>
             <label>Email<input name="email" type="email" required autocomplete="email"></label>
-            <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
             <label>Box size<select name="box"><option>Six donuts</option><option>Twelve donuts</option><option>Twenty-four donuts</option></select></label>
             <label>Notes<textarea name="notes" rows="3" placeholder="Flavours, occasion, collection time…"></textarea></label>
             <button class="submit-button" type="submit">Send order request →</button>

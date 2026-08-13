@@ -59,7 +59,7 @@
   document.getElementById('order-form')?.addEventListener('submit', event => {
     event.preventDefault();
     const status = event.currentTarget.querySelector('.form-status');
-    status.textContent = 'Thank you — an agent will be in touch within the next 20 minutes.';
+    status.textContent = 'Thank you — your request is ready to be connected to the ordering service.';
   });
 
   site.querySelector('.brand')?.addEventListener('click', event => {

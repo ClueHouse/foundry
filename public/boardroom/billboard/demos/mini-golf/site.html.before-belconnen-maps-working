@@ -31,7 +31,7 @@
       <section class="overlay overlay--course" id="overlay-course" role="dialog" aria-modal="true" aria-labelledby="course-title" hidden>
         <div class="overlay-panel">
           <button class="overlay-close" type="button" aria-label="Close">×</button>
-          <p class="eyebrow">Eighteen holes. Aim optional.</p>
+          <p class="eyebrow">Eighteen holes. Endless stories.</p>
           <h1 id="course-title">The Course</h1>
           <div class="course-grid">
             <article><b>01</b><h2>Waterfall Run</h2><p>Thread the ball around volcanic rock and across the bridge without finding the water.</p></article>
@@ -65,11 +65,11 @@
             <h1 id="locations-title">Find Us</h1>
             <address><strong>A Hole in One Putt Putt</strong><br>15 Palm Drive<br>Wāpereki, New Zealand</address>
             <p><b>Open daily</b><br>10:00am–9:00pm</p>
-            <a class="secondary-action" href="https://www.google.com/maps/" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+            <button class="secondary-action" type="button">Open in Google Maps ↗</button>
           </div>
           <div class="map-illustration" aria-label="Stylised Wāpereki map">
             <div class="map-water"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
-            <span class="map-label map-label--city">Wāpereki</span><span class="map-label map-label--mount">Belconnen</span>
+            <span class="map-label map-label--city">Wāpereki</span><span class="map-label map-label--mount">Mount<br>Maunganui</span>
             <span class="map-pin">●</span><span class="map-site">A Hole in One</span>
           </div>
         </div>

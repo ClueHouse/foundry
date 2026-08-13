@@ -52,14 +52,14 @@
     button.classList.add('is-sending');
 
     setTimeout(() => {
-      window.location.href = 'mailto:aholein1@rkdb.nz?subject=Catering%20Enquiry&body=Hi%20there%2C%0A%0AI%27d%20like%20to%20make%20a%20catering%20enquiry.%0A%0A';
+      window.location.href = 'mailto:aholeinone.nz?subject=Catering%20Enquiry&body=Hi%20there%2C%0A%0AI%27d%20like%20to%20make%20a%20catering%20enquiry.%0A%0A';
     }, 320);
   });
 
   document.getElementById('order-form')?.addEventListener('submit', event => {
     event.preventDefault();
     const status = event.currentTarget.querySelector('.form-status');
-    status.textContent = 'Thank you — an agent will be in touch within the next 20 minutes.';
+    status.textContent = 'Thank you — your request is ready to be connected to the ordering service.';
   });
 
   site.querySelector('.brand')?.addEventListener('click', event => {

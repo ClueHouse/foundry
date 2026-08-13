@@ -31,7 +31,7 @@
       <section class="overlay overlay--course" id="overlay-course" role="dialog" aria-modal="true" aria-labelledby="course-title" hidden>
         <div class="overlay-panel">
           <button class="overlay-close" type="button" aria-label="Close">×</button>
-          <p class="eyebrow">Eighteen holes. Aim optional.</p>
+          <p class="eyebrow">Eighteen holes. Endless stories.</p>
           <h1 id="course-title">The Course</h1>
           <div class="course-grid">
             <article><b>01</b><h2>Waterfall Run</h2><p>Thread the ball around volcanic rock and across the bridge without finding the water.</p></article>

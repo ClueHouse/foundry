@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#062f24">
-  <meta name="description" content="A Hole in One — tropical mini golf in Wāpereki.">
+  <meta name="description" content="A Hole in One — tropical mini golf in Tauranga.">
   <title>A Hole in One | Tropical Mini Golf</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main class="viewport" aria-label="A Hole in One tropical mini golf">
     <div class="stage" id="stage">
-      <img class="artwork" src="assets/images/puttputt-hero.webp" alt="Tropical mini golf course with feature cards and Wāpereki map">
+      <img class="artwork" src="assets/images/puttputt-hero.webp" alt="Tropical mini golf course with feature cards and Tauranga map">
 
       <a class="brand-mask" href="#" aria-label="A Hole in One home">
         <span class="brand-kicker">TAURANGA'S TROPICAL</span>
@@ -31,7 +31,7 @@
       <section class="overlay overlay--course" id="overlay-course" role="dialog" aria-modal="true" aria-labelledby="course-title" hidden>
         <div class="overlay-panel">
           <button class="overlay-close" type="button" aria-label="Close">×</button>
-          <p class="eyebrow">Eighteen holes. Aim optional.</p>
+          <p class="eyebrow">Eighteen holes. Endless stories.</p>
           <h1 id="course-title">The Course</h1>
           <div class="course-grid">
             <article><b>01</b><h2>Waterfall Run</h2><p>Thread the ball around volcanic rock and across the bridge without finding the water.</p></article>
@@ -49,7 +49,7 @@
           <div>
             <p class="eyebrow">Built for good times</p>
             <h1 id="story-title">Our Story</h1>
-            <p class="lead">A Hole in One was created to feel like a tiny tropical holiday hiding in the middle of Wāpereki.</p>
+            <p class="lead">A Hole in One was created to feel like a tiny tropical holiday hiding in the middle of Tauranga.</p>
             <p>We wanted a course that children could enjoy immediately, adults would still find challenging, and families would talk about on the drive home.</p>
             <p>Every corner is designed for laughter, friendly rivalry and one more round.</p>
           </div>
@@ -63,13 +63,13 @@
           <div class="location-copy">
             <p class="eyebrow">Easy to find. Hard to leave.</p>
             <h1 id="locations-title">Find Us</h1>
-            <address><strong>A Hole in One Putt Putt</strong><br>15 Palm Drive<br>Wāpereki, New Zealand</address>
+            <address><strong>A Hole in One Putt Putt</strong><br>15 Palm Drive<br>Tauranga, New Zealand</address>
             <p><b>Open daily</b><br>10:00am–9:00pm</p>
-            <a class="secondary-action" href="https://www.google.com/maps/" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+            <button class="secondary-action" type="button">Open in Google Maps ↗</button>
           </div>
-          <div class="map-illustration" aria-label="Stylised Wāpereki map">
+          <div class="map-illustration" aria-label="Stylised Tauranga map">
             <div class="map-water"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
-            <span class="map-label map-label--city">Wāpereki</span><span class="map-label map-label--mount">Belconnen</span>
+            <span class="map-label map-label--city">Tauranga</span><span class="map-label map-label--mount">Mount<br>Maunganui</span>
             <span class="map-pin">●</span><span class="map-site">A Hole in One</span>
           </div>
         </div>
