@@ -23,6 +23,7 @@
       <nav class="hotspots" aria-label="Primary navigation">
         <button class="hotspot hotspot--course" data-overlay="course" type="button" aria-label="Open The Course"></button>
         <button class="hotspot hotspot--story" data-overlay="story" type="button" aria-label="Open Our Story"></button>
+        <button class="hotspot hotspot--locations" data-overlay="locations" type="button" aria-label="Open Locations"></button>
         <button class="hotspot hotspot--events" data-overlay="events" type="button" aria-label="Open Parties and Events"></button>
         <button class="hotspot hotspot--book" data-overlay="book" type="button" aria-label="Book now"></button>
       </nav>
@@ -56,6 +57,24 @@
         </div>
       </section>
 
+      <section class="overlay overlay--locations" id="overlay-locations" role="dialog" aria-modal="true" aria-labelledby="locations-title" hidden>
+        <div class="overlay-panel overlay-panel--location">
+          <button class="overlay-close" type="button" aria-label="Close">×</button>
+          <div class="location-copy">
+            <p class="eyebrow">Easy to find. Hard to leave.</p>
+            <h1 id="locations-title">Find Us</h1>
+            <address><strong>A Hole in One Putt Putt</strong><br>15 Palm Drive<br>Wāpereki, New Zealand</address>
+            <p><b>Open daily</b><br>10:00am–9:00pm</p>
+            <a class="secondary-action" href="https://www.google.com/maps/" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+          </div>
+          <div class="map-illustration" aria-label="Stylised Wāpereki map">
+            <div class="map-water"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
+            <span class="map-label map-label--city">Wāpereki</span><span class="map-label map-label--mount">Belconnen</span>
+            <span class="map-pin">●</span><span class="map-site">A Hole in One</span>
+          </div>
+        </div>
+      </section>
+
       <section class="overlay overlay--events" id="overlay-events" role="dialog" aria-modal="true" aria-labelledby="events-title" hidden>
         <div class="overlay-panel">
           <button class="overlay-close" type="button" aria-label="Close">×</button>
@@ -66,7 +85,7 @@
             <article><span>🏆</span><h2>Team Challenges</h2><p>Scorecards, group heats and bragging rights for workplaces, clubs and teams.</p></article>
             <article><span>🌴</span><h2>Private Events</h2><p>Talk to us about evening bookings, school groups and exclusive course sessions.</p></article>
           </div>
-          <a class="primary-action" data-open-book href="mailto:aholeinone@rkdb.nz?subject=Event%20Enquiry">Plan an event →</a>
+          <a class="primary-action" type="button" data-open-book href="mailto:aholeinone@rkdb.nz?subject=Event%20Enquiry">Plan an event →</a>
         </div>
       </section>
 

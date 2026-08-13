@@ -4,7 +4,9 @@
   let lastTrigger = null;
 
   function scaleStage() {
-    stage.style.transform = "none";
+    if (window.innerWidth <= 900) return;
+    const scale = Math.min(window.innerWidth / 1536, window.innerHeight / 1024);
+    stage.style.transform = `scale(${scale})`;
   }
 
   function closeAll() {
