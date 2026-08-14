@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ash & Oak — Where Presence Begins</title><link rel="stylesheet" href="css/main.css">
 </head><body>
 <div id="progress" style="transform:scaleX(0)"></div>
-<nav id="topnav"><a class="wordmark" href="index.html">ASH & OAK</a><div class="links"><a href="shop/index.html">Shop</a><a href="#boutiques" data-goto="4">Boutiques</a></div></nav>
+<nav id="topnav"><a class="wordmark" href="site.html">ASH & OAK</a><div class="links">" data-open-drawer>Bag (<span id="bag-count">0</span>)</a>shop/index.html">Shop</a><a href="#boutiques" data-goto="4">Boutiques</a><a href="#" data-open-drawer>Bag (<span id="bag-count">0</span>)</a></div></nav>
 <div id="chapter-ind"><div class="cur">01</div><div class="meta">Arrival<br>01 / 05</div></div>
 <div id="counter">01 — 05</div>
 <div class="wheel-hint" id="wheel-hint"><div class="mouse"></div><div class="tiny" style="opacity:1">Scroll</div></div>
@@ -14,7 +14,7 @@
   <div class="hero img-reveal in"><img src="images/arrival-mustard.webp" alt="Arrival"></div>
   <div class="floating-num display">01</div>
   <div class="type">
-    <div class="tiny reveal in">Tauranga · Milan</div>
+    <div class="tiny reveal in">Wāpereki · Milan</div>
     <h1 class="display reveal in reveal-slow" style="margin-top:12px">Ash &<br>Oak</h1>
     <div class="tiny reveal in" style="margin-top:24px;opacity:0.8;letter-spacing:0.32em">Where Presence Begins</div>
     <p class="tag reveal in">A contemporary house for architects, founders, and those who understand that presence is built, not announced. The mustard overcoat, cut in Biella wool.</p>
@@ -74,13 +74,13 @@
     </header>
 
     <article class="boutique-panel">
-      <img src="images/boutique-main.webp" alt="Ash & Oak Tauranga boutique interior">
+      <img src="images/boutique-main.webp" alt="Ash & Oak Wāpereki boutique interior">
       <div class="boutique-info">
-        <div class="tiny">Tauranga — New Zealand</div>
+        <div class="tiny">Wāpereki — New Zealand</div>
         <h3 class="display">Strand, 212</h3>
-        <p>Harbour light, polished concrete, walnut that has darkened with hands. Floor-to-ceiling glass looking to Mauao. Harakeke beyond the deck. Open by appointment and 10—5, Monday to Saturday.</p>
+        <p>Harbour light, polished concrete, walnut that has darkened with hands. Floor-to-ceiling glass looking to North-West. Harakeke beyond the deck. Open by appointment and 10—5, Monday to Saturday.</p>
         <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Made-to-measure</li><li>Alterations while you wait, coffee</li><li>Archive viewings</li></ul></div>
-        <a href="mailto:Ash+Oak@rkdb.nz" class="btn boutique-static">Book a visit</a>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
       </div>
     </article>
 
@@ -90,7 +90,7 @@
         <h3 class="display">Brera, 9</h3>
         <p>Brera district, second courtyard, stone, blackened steel, silence. Winter light through a single skylight. The same walnut, the same concrete, a different city.</p>
         <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Trunk shows, quarterly</li><li>Materials library</li></ul></div>
-        <a href="mailto:Ash+Oak@rkdb.nz" class="btn boutique-static">Book a visit</a>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
       </div>
       <img src="images/boutique-milan.webp" alt="Ash & Oak Milan boutique interior">
     </article>

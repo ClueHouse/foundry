@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ash & Oak — Where Presence Begins</title><link rel="stylesheet" href="css/main.css">
 </head><body>
 <div id="progress" style="transform:scaleX(0)"></div>
-<nav id="topnav"><a class="wordmark" href="index.html">ASH & OAK</a><div class="links"><a href="shop/index.html">Shop</a><a href="#boutiques" data-goto="4">Boutiques</a></div></nav>
+<nav id="topnav"><a class="wordmark" href="index.html">ASH & OAK</a><div class="links"><a href="shop/index.html">Shop</a><a href="#boutiques" data-goto="4">Boutiques</a><a href="#" data-open-drawer>Bag (<span id="bag-count">0</span>)</a></div></nav>
 <div id="chapter-ind"><div class="cur">01</div><div class="meta">Arrival<br>01 / 05</div></div>
 <div id="counter">01 — 05</div>
 <div class="wheel-hint" id="wheel-hint"><div class="mouse"></div><div class="tiny" style="opacity:1">Scroll</div></div>
@@ -80,7 +80,7 @@
         <h3 class="display">Strand, 212</h3>
         <p>Harbour light, polished concrete, walnut that has darkened with hands. Floor-to-ceiling glass looking to Mauao. Harakeke beyond the deck. Open by appointment and 10—5, Monday to Saturday.</p>
         <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Made-to-measure</li><li>Alterations while you wait, coffee</li><li>Archive viewings</li></ul></div>
-        <a href="mailto:Ash+Oak@rkdb.nz" class="btn boutique-static">Book a visit</a>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
       </div>
     </article>
 
@@ -90,7 +90,7 @@
         <h3 class="display">Brera, 9</h3>
         <p>Brera district, second courtyard, stone, blackened steel, silence. Winter light through a single skylight. The same walnut, the same concrete, a different city.</p>
         <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Trunk shows, quarterly</li><li>Materials library</li></ul></div>
-        <a href="mailto:Ash+Oak@rkdb.nz" class="btn boutique-static">Book a visit</a>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
       </div>
       <img src="images/boutique-milan.webp" alt="Ash & Oak Milan boutique interior">
     </article>
