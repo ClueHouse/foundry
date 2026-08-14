@@ -69,7 +69,7 @@
 
     const close = overlay.querySelector('.overlay-close');
     if (close) {
-      close.textContent = 'Back to site';
+      close.textContent = 'Back to shop';
       close.addEventListener('click', () => closeAll());
     }
   });
