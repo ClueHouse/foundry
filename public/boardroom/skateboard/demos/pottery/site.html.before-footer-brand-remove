@@ -225,6 +225,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/images/logo.png" alt="Ash & Oak logo" /><p>Ash & Oak Pottery is a fictional artisan studio created as a demonstration site for The Foundry.</p></div>
         <div><h5>Studio</h5><a href="#studio">The Studio</a><a href="#process">Process</a><a href="#gallery">Gallery</a></div>
         <div><h5>Visit</h5><a href="#workshops">Workshops</a><a href="#visit">Find Us</a><a href="#contact">Contact</a></div>
         <div><h5>Follow</h5><a href="#">Instagram</a><a href="#">Journal</a><a href="#">Newsletter</a></div>

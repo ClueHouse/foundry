@@ -38,7 +38,7 @@ nav#topnav .links a:hover::after{width:100%}
 .ch1 .type h1{font-size:11vw;line-height:0.85;letter-spacing:-0.03em}
 .ch1 .type .tag{margin-top:5vh;max-width:22ch;font-size:14px;line-height:1.7;opacity:0.6}
 .ch1 .floating-num{position:absolute;right:4vw;top:14vh;font-family:'Instrument Serif';font-size:18vw;opacity:0.04;line-height:1;pointer-events:none}
-.ch1 .ch1-passage{position:absolute;left:30vw;bottom:4vh;max-width:24ch;line-height:1.6;text-wrap:balance;z-index:3;color:var(--cream);text-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.ch1 .ch1-passage{position:absolute;left:16vw;bottom:6vh;max-width:24ch;line-height:1.6;text-wrap:balance;z-index:3}
 
 .ch2{background:var(--paper)}
 .ch2 .left-img{position:absolute;left:0;top:0;width:46vw;height:100vh}
