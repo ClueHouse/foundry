@@ -20,7 +20,7 @@
 <div id="farm" class="retreat-full"><div class="retreat-media img-reveal"><img src="assets/images/farm-exterior.webp" alt="Farm Retreat barn exterior"></div><div class="retreat-copy"><span class="eyebrow">Farm — Sleeps 6</span><h2>Farm Retreat</h2><p>1880s milking shed rebuilt around a courtyard. Vineyard beyond, pool at centre. Stone walls, poured concrete, long oak table.</p><div class="retreat-highlights"><span class="hl">Courtyard pool</span><span class="hl">Vineyard</span><span class="hl">Wood-fired oven</span></div><div class="retreat-thumbs"><button class="retreat-thumb-btn" type="button" aria-label="Open Farm living"><img src="assets/images/farm-living.webp" alt="Farm living"></button><button class="retreat-thumb-btn" type="button" aria-label="Open Farm bedroom"><img src="assets/images/farm-bedroom.webp" alt="Farm bedroom"></button><button class="retreat-thumb-btn" type="button" aria-label="Open Farm detail"><img src="assets/images/farm-detail.webp" alt="Farm detail"></button></div><br><a class="btn" href="book.html">Enquire — Farm</a></div></div>
 <div id="town" class="retreat-full"><div class="retreat-media img-reveal"><img src="assets/images/village-exterior.webp" alt="Town Retreat cottage lane"></div><div class="retreat-copy"><span class="eyebrow">Town — Sleeps 6</span><h2>Town Retreat</h2><p>Behind a grocer on the high street. Limestone cottage, secret garden, espresso machine always on. Walk to market, return to silence.</p><div class="retreat-highlights"><span class="hl">Garden</span><span class="hl">Town centre</span><span class="hl">Record player</span></div><div class="retreat-thumbs"><button class="retreat-thumb-btn" type="button" aria-label="Open Town living"><img src="assets/images/village-living.webp" alt="Town living"></button><button class="retreat-thumb-btn" type="button" aria-label="Open Town bedroom"><img src="assets/images/village-bedroom.webp" alt="Town bedroom"></button><button class="retreat-thumb-btn" type="button" aria-label="Open Town detail"><img src="assets/images/village-detail.webp" alt="Town detail"></button></div><br><a class="btn" href="book.html">Enquire — Town</a></div></div>
 
-<section id="inclusions" class="retreat-inclusions wrap" aria-label="Thoughtfully included in each retreat">
+<section class="retreat-inclusions wrap" aria-label="Thoughtfully included in each retreat">
 	<span class="eyebrow">Thoughtfully included in each retreat</span>
 	<ul class="inclusion-list">
 		<li>Three king bedrooms</li>
@@ -45,6 +45,8 @@
 	</figure>
 	<button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">&#10095;</button>
 </div>
+
+<footer class="footer"><div><strong class="serif" style="font-size:20px;letter-spacing:.2em">CLEMENTINE'S</strong><br>A collection of distinctive retreats.<br><a href="mailto:Clementines.rkdb.nz">Clementines.rkdb.nz</a><br>© 2026 Clementine's</div></footer>
 <script src="js/main.js"></script>
 <script>document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')==='retreats.html')a.classList.add('active')})</script>
 </body></html>

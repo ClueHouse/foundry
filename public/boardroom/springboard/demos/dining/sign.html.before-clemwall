@@ -39,7 +39,7 @@
 <button class="btn" type="submit">Request Table</button>
 </form>
 <p style="margin-top:16px; font-size:11px; color:#999">We confirm by text. No deposit for tables under six.</p>
-<img src="assets/images/clemwall.webp" alt="Reservation book" style="margin-top:32px; border-radius:2px">
+<img src="assets/images/host_stand_editorial.webp" alt="Reservation book" style="margin-top:32px; border-radius:2px">
 </div>
 </div>
 

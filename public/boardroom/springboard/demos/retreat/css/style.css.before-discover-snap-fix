@@ -305,32 +305,13 @@ label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;ma
   display:none!important;
 }
 
-
-/* Discover page — full-scene scroll snap */
+/* Discover page — section scroll snap */
 .discover-snap{
-  scroll-snap-type:y mandatory;
-}
-
-.discover-snap .discover-shell{
-  padding-bottom:0;
+  scroll-snap-type:y proximity;
+  scroll-padding-top:64px;
 }
 
 .discover-snap .d-scene{
-  height:100vh;
-  min-height:100vh;
-  margin-top:0;
   scroll-snap-align:start;
   scroll-snap-stop:always;
-}
-
-.discover-snap .d-scene + .d-scene{
-  margin-top:0;
-}
-
-@media(max-width:900px){
-  .discover-snap .d-scene,
-  .discover-snap .d-scene-hero{
-    height:100vh;
-    min-height:100vh;
-  }
 }

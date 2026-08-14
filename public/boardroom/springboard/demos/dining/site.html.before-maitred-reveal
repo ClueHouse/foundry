@@ -49,7 +49,7 @@
       </div>
       <div class="panel" data-panel="sign" tabindex="0" role="button" aria-label="Sign" onclick="location.href='sign.html'">
         <div class="card-image-stack">
-          <img class="card-image card-image--busy" src="assets/images/maitred.webp" alt="Fountain pen">
+          <img class="card-image card-image--busy" src="assets/images/pen.webp" alt="Fountain pen">
           <img class="card-image card-image--neat" src="assets/images/pen.webp" alt="Fountain pen">
         </div>
         <div class="panel-content">

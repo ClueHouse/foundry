@@ -45,6 +45,8 @@
 	</figure>
 	<button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">&#10095;</button>
 </div>
+
+<footer class="footer"><div><strong class="serif" style="font-size:20px;letter-spacing:.2em">CLEMENTINE'S</strong><br>A collection of distinctive retreats.<br><a href="mailto:Clementines.rkdb.nz">Clementines.rkdb.nz</a><br>© 2026 Clementine's</div></footer>
 <script src="js/main.js"></script>
 <script>document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')==='retreats.html')a.classList.add('active')})</script>
 </body></html>
