@@ -11,23 +11,3 @@
 @media(max-width:1180px){.layout{grid-template-columns:1fr 1fr;height:auto;overflow:visible}.hero{grid-column:1/-1;min-height:68vh}.center-col,.right-col{height:auto;overflow:visible}.card-about{min-height:430px}.journal-card{min-height:520px}.message-card{min-height:360px}.boots-card{min-height:440px}html,body{overflow:auto}}
 @media(max-width:760px){.site-header{height:56px;padding:0 14px}.brand-sub{display:none}.layout{grid-template-columns:1fr;height:auto;overflow:visible;padding:8px}.hero{min-height:72vh;border-radius:16px}.hero-title{font-size:46px}.card-about{grid-template-columns:1fr;min-height:auto}.about-portrait{height:390px}.about-text{padding:22px}.journal-card{min-height:auto}.journal-entry{min-height:78px}.next-stop-route{grid-template-columns:1fr auto 1.25fr}.message-card{min-height:auto}.boots-card{min-height:430px}.mobile-foot{display:flex;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--stone);font-variant:all-small-caps;letter-spacing:.14em;font-size:9px;color:var(--blue);background:#fff}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
-
-/* Keep Kōkiri intro copy comfortably inside its card */
-.about-text{
-  padding:16px 18px;
-}
-
-.about-text h2{
-  font-size:28px;
-  margin-bottom:9px;
-}
-
-.about-text p{
-  font-size:10px;
-  line-height:1.4;
-  margin-bottom:6px;
-}
-
-.about-text .small-note{
-  font-size:9.8px;
-}

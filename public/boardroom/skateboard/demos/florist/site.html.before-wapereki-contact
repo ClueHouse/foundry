@@ -32,7 +32,7 @@
   <section id="hero" class="solid">
     <div class="hero-inner">
       <div>
-        <div class="eyebrow">Floral Studio — Wāpereki, NZ</div>
+        <div class="eyebrow">Floral Studio — Tauranga, NZ</div>
         <h1 class="h1">For people who<br>choose meaning<br><i>over trends.</i></h1>
         <p class="lead" style="margin-top:28px">ASH & OAK is a floral studio working with seasonal, garden-gathered and locally grown stems. Every arrangement is composed for proportion and scent.  From stem to story. Always personal.</p>
         <a href="#collections" data-scroll="collections" style="display:inline-flex; margin-top:36px; font-size:10px; letter-spacing:0.32em; text-transform:uppercase; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:10px">Explore Collections —</a>
@@ -63,7 +63,7 @@
   </section>
 
   <section id="reveal-gap" class="transparent" aria-hidden="true">
-    <div class="label">Wāpereki, Aotearoa</div>
+    <div class="label">Tauranga, Aotearoa</div>
   </section>
 
   <section class="solid" style="padding:0 48px 120px; background:var(--ivory)">
@@ -88,7 +88,7 @@
       <div class="form-intro">
         <h2>Enquire</h2>
         <p>For weddings, event styling and private commissions. We work with what is in season and most beautiful that week.</p>
-        <p style="margin-top:24px">18 Kowhai Lane, Wāpereki<br>07 555 1842<br><a href="mailto:ashandoak@rkdb.nz" style="color:inherit">ashandoak@rkdb.nz</a></p><p style="margin-top:24px; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone)">Response within two working days</p>
+        <p style="margin-top:24px; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--stone)">Response within two working days</p>
       </div>
       <form id="enquiryForm" class="form-grid" novalidate>
         <div class="field"><label>Name</label><input name="name" type="text" placeholder="Full name" required/></div>
