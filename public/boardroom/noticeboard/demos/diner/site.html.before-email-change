@@ -205,9 +205,9 @@
     </div>
 
     <div class="menu-feature-strip">
-      <article><img src="assets/images/loadedfries.png" alt="Loaded fries"><div><strong>Loaded fries</strong><span>Seriously good.</span><b>$12.90</b></div></article>
-      <article><img src="assets/images/thickshakes.png" alt="Diner shakes and desserts"><div><strong>Thick shakes</strong><span>Made thick. Made fresh.</span><b>$9.50</b></div></article>
-      <article><img src="assets/images/kidsmeal.png" alt="Kids diner meal"><div><strong>Kids meals</strong><span>For little legends.</span><b>$9.90</b></div></article>
+      <article><img src="assets/images/menu-5.webp" alt="Loaded fries"><div><strong>Loaded fries</strong><span>Seriously good.</span><b>$12.90</b></div></article>
+      <article><img src="assets/images/menu-3.webp" alt="Diner shakes and desserts"><div><strong>Thick shakes</strong><span>Made thick. Made fresh.</span><b>$9.50</b></div></article>
+      <article><img src="assets/images/menu-4.webp" alt="Kids diner meal"><div><strong>Kids meals</strong><span>For little legends.</span><b>$9.90</b></div></article>
     </div>
   </aside>
 
@@ -231,7 +231,7 @@
 
     <div class="find-details">
       <section><h3>Open every day</h3><dl class="hours"><div><dt>Monday–Sunday</dt><dd>24 hours</dd></div><div><dt>Happy hour</dt><dd>6–7pm weekdays</dd></div></dl></section>
-      <section><h3>Contact</h3><p><a href="tel:+6475552477">07 555 2477</a><br><a href="mailto:ontheroard@rkdb.nz">ontheroard@rkdb.nz</a></p></section>
+      <section><h3>Contact</h3><p><a href="tel:+6475552477">07 555 2477</a><br><a href="mailto:hello@ontheroad.nz">hello@ontheroad.nz</a></p></section>
     </div>
     <a class="directions-button" href="https://maps.google.com/?q=17+Lantern+Road+Wāpereki" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
   </aside>

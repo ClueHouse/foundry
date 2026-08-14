@@ -42,7 +42,7 @@
 
         <span class="board-number">01</span>
 
-        <span class="board-icon" aria-hidden="true"></span>
+        <span class="board-icon" aria-hidden="true">B</span>
 
         <span class="board-main">
           <span class="board-label">Billboard</span>
@@ -65,7 +65,7 @@
 
         <span class="board-number">02</span>
 
-        <span class="board-icon" aria-hidden="true"></span>
+        <span class="board-icon" aria-hidden="true">N</span>
 
         <span class="board-main">
           <span class="board-label">Noticeboard</span>
@@ -88,7 +88,7 @@
 
         <span class="board-number">03</span>
 
-        <span class="board-icon" aria-hidden="true"></span>
+        <span class="board-icon" aria-hidden="true">S</span>
 
         <span class="board-main">
           <span class="board-label">Skateboard</span>
@@ -111,7 +111,7 @@
 
         <span class="board-number">04</span>
 
-        <span class="board-icon" aria-hidden="true"></span>
+        <span class="board-icon" aria-hidden="true">S</span>
 
         <span class="board-main">
           <span class="board-label">Springboard</span>

@@ -96,7 +96,7 @@ body.skateboard{
 }
 body.skateboard::before{
   background:
-    linear-gradient(135deg,#3b241b 0%,#5a3929 47%,#2c1a14 100%);
+    linear-gradient(135deg,#8f9b9d 0%,#b6c0c1 47%,#8c989a 100%);
 }
 body.skateboard::after{
   opacity:.46;

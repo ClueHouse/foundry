@@ -858,20 +858,3 @@ h1 span {
     align-self: center;
   }
 }
-
-/* Boardroom destination colour swatches */
-.board-card:nth-child(1) .board-icon {
-  background: linear-gradient(135deg,#17191a,#090b0c);
-}
-
-.board-card:nth-child(2) .board-icon {
-  background: linear-gradient(135deg,#f5efe2,#ded4c2);
-}
-
-.board-card:nth-child(3) .board-icon {
-  background: linear-gradient(135deg,#3b241b,#5a3929 47%,#2c1a14);
-}
-
-.board-card:nth-child(4) .board-icon {
-  background: linear-gradient(135deg,#173522,#0b2f1b);
-}

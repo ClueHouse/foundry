@@ -22,20 +22,3 @@ html.foundry-demo-shell body{font-family:"Segoe UI",Arial,sans-serif}
   .foundry-demo-return{top:10px!important;left:10px!important;padding:9px 11px!important;font-size:10px!important}
   .foundry-demo-frame{top:52px;left:0;width:100vw;height:calc(100vh - 52px);box-shadow:none}
 }
-
-/* Match demo surround to its Boardroom colour */
-html.foundry-demo-shell:has(.foundry-demo-frame[title*="Billboard"]) body {
-  background:#0f0d0b;
-}
-
-html.foundry-demo-shell:has(.foundry-demo-frame[title*="Noticeboard"]) body {
-  background:#f5efe2;
-}
-
-html.foundry-demo-shell:has(.foundry-demo-frame[title*="Skateboard"]) body {
-  background:#3b241b;
-}
-
-html.foundry-demo-shell:has(.foundry-demo-frame[title*="Springboard"]) body {
-  background:#0b2f1b;
-}
