@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b08">
+  <meta name="description" content="Billboard — a sharp, dependable online presence from Foundry by RKDB.">
+  <title>Billboard | Foundry by RKDB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Foundry Boardroom">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-copy"><strong>FOUNDRY</strong><small>BY RKDB</small></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Product navigation">
+      <a href="../">Boardroom</a>
+      <a class="active" href="./" aria-current="page">Billboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="billboard-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Billboard</p>
+        <h1 id="billboard-title">Billboard</h1>
+        <h2>Your online presence. Done right.</h2>
+        <span class="accent-rule" aria-hidden="true"></span>
+        <p>Make it clear who you are, what you do, and how people can reach you.</p>
+        <p>A sharp, dependable website that stays online, stays simple, and keeps customers coming your way.</p>
+        <p class="closing-line">When a simple, polished online presence is all you need.</p>
+        <a class="hero-action" href="#demonstrations">Explore the demonstrations <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/images/billboard-hero.webp" alt="">
+        <span class="hero-glow"></span>
+      </div>
+    </section>
+
+    <section class="demonstrations" id="demonstrations" aria-labelledby="demonstrations-title">
+      <div class="section-heading">
+        <p class="eyebrow">In practice</p>
+        <h2 id="demonstrations-title">Three examples. One dependable format.</h2>
+      </div>
+
+      <div class="demo-grid">
+        <a class="demo-card demo-card--donut" href="demos/donut/index.html">
+          <img src="assets/images/donut-preview.webp" alt="A Hole in One gourmet donut website preview">
+          <span class="demo-meta"><strong>Donut Shop</strong><span>View Demo →</span></span>
+        </a>
+
+        <a class="demo-card demo-card--golf" href="demos/mini-golf/index.html">
+          <img src="assets/images/golf-preview.webp" alt="A Hole in One mini golf website preview">
+          <span class="demo-meta"><strong>Mini Golf</strong><span>View Demo →</span></span>
+        </a>
+
+        <a class="demo-card demo-card--drilling" href="demos/drilling/index.html">
+          <img src="assets/images/drilling-preview.webp" alt="A Hole in One drilling website preview">
+          <span class="demo-meta"><strong>Drilling</strong><span>View Demo →</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Foundry by RKDB</span>
+    <a href="../">Boardroom</a>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

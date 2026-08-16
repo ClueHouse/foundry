@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book — Clementine's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/icons/favicon.svg">
+</head>
+<body>
+<header class="header"><a class="logo" href="index.html">Clementine's</a>
+<nav class="nav"><a href="index.html">Home</a><a href="retreats.html">Retreats</a><a href="discover.html">Discover</a><a href="reviews.html">Reviews</a><a href="book.html">Book</a></nav>
+<button class="menu-btn">Menu</button>
+</header>
+
+<section class="section wrap" style="padding-top:22vh"><span class="eyebrow">Book</span><h1 class="h2">Simple. Calm. Beautiful.</h1></section>
+<div class="wrap book-grid">
+<div><p style="margin-bottom:5vh;max-width:40ch;color:rgba(43,43,40,.75)">Rates are tailored to the season and length of stay. We'd love to prepare a personalised quote for your visit.</p><form onsubmit="event.preventDefault();alert('Enquiry sent — we will reply within a few hours.');" style="max-width:520px">
+<label>Retreat</label><select class="input"><option>Woodland Retreat</option><option>Coastal Retreat</option><option>Farm Retreat</option><option>Town Retreat</option><option>Undecided</option></select>
+<label>Dates</label><input class="input" type="text" placeholder="Flexible dates?">
+<label>Guests</label><input class="input" type="number" min="1" max="6" value="2">
+<label>Name</label><input class="input" required>
+<label>Email</label><input class="input" type="email" required>
+<label>Message</label><textarea class="input" rows="4" placeholder="Tell us about your stay..."></textarea>
+<br><br><button class="btn btn-dark" type="submit">Send Enquiry</button>
+</form>
+</div>
+<div><div style="background:var(--stone);aspect-ratio:1;overflow:hidden"><img src="assets/images/book-map-fallback.webp" alt="Map of Clementines locations"><div style="padding:24px"><span class="eyebrow">Location</span><p>Thirty minutes apart, all within an hour of the city. Exact addresses shared on booking. Forest to coast in one afternoon.</p></div></div>
+</div>
+</div>
+
+<footer class="footer"><div><strong class="serif" style="font-size:20px;letter-spacing:.2em">CLEMENTINE'S</strong><br>A collection of distinctive retreats.<br><a href="mailto:Clementines.rkdb.nz">Clementines.rkdb.nz</a><br>© 2026 Clementine's</div></footer>
+<script src="js/main.js"></script>
+<script>document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')==='book.html')a.classList.add('active')})</script>
+</body></html>

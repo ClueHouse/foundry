@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090705">
+  <meta
+    name="description"
+    content="Explore the Foundry Boardroom and its four website directions."
+  >
+  <title>The Boardroom | Foundry by RKDB</title>
+  <link rel="stylesheet" href="./boardroom.css">
+</head>
+
+<body>
+
+  <div class="page-shade" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Foundry home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+
+      <span class="brand-copy">
+        <strong>FOUNDRY</strong>
+        <small>BY RKDB</small>
+      </span>
+    </a>
+
+    <a class="header-link" href="../the-foundry/">
+      About Foundry
+      <span aria-hidden="true">→</span>
+    </a>
+  </header>
+
+  <main class="boardroom">
+
+    <section class="intro" aria-labelledby="boardroom-title">
+      <p class="eyebrow">The Foundry Boardroom</p>
+
+      <h1 id="boardroom-title">
+        Four clear<br>
+        ways to build<span>.</span>
+      </h1>
+
+      <div class="intro-rule" aria-hidden="true"></div>
+
+      <p class="intro-copy">
+        Explore four distinct website formats,<br>
+        each built around a different kind<br>
+        of business need.
+      </p>
+    </section>
+
+<section class="boards" aria-label="Foundry website formats">
+
+
+
+
+
+
+
+
+
+</section>
+
+      <a class="board-card" href="./noticeboard/">
+        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
+        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
+
+        <span class="board-number">01</span>
+
+        <span class="board-icon" aria-hidden="true">N</span>
+
+        <span class="board-main">
+          <span class="board-label">Noticeboard</span>
+          <strong>
+            A polished website with information you can keep current.
+          </strong>
+        </span>
+
+        <span class="board-description">
+          Perfect for organisations, clubs and service-based businesses.
+        </span>
+
+        <span class="board-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="board-card" href="./billboard/">
+        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
+        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
+
+        <span class="board-number">02</span>
+
+        <span class="board-icon" aria-hidden="true">B</span>
+
+        <span class="board-main">
+          <span class="board-label">Billboard</span>
+          <strong>
+            A polished online presence that gets to the point.
+          </strong>
+        </span>
+
+        <span class="board-description">
+          See the completed Billboard product and its three working business examples.
+        </span>
+
+        <span class="board-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="board-card" href="./springboard/">
+        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
+        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
+
+        <span class="board-number">03</span>
+
+        <span class="board-icon" aria-hidden="true">S</span>
+
+        <span class="board-main">
+          <span class="board-label">Springboard</span>
+          <strong>
+            A complete multi-page website with room to grow.
+          </strong>
+        </span>
+
+        <span class="board-description">
+          For businesses that need dedicated pages, deeper information and a broader online presence.
+        </span>
+
+        <span class="board-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="board-card" href="./skateboard/">
+        <span class="glass-layer glass-layer--one" aria-hidden="true"></span>
+        <span class="glass-layer glass-layer--two" aria-hidden="true"></span>
+
+        <span class="board-number">04</span>
+
+        <span class="board-icon" aria-hidden="true">S</span>
+
+        <span class="board-main">
+          <span class="board-label">Skateboard</span>
+          <strong>
+            An immersive parallax site with smooth movement.
+          </strong>
+        </span>
+
+        <span class="board-description">
+          For brands that lead with visual storytelling and experience.
+        </span>
+
+        <span class="board-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

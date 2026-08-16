@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100906">
+  <title>On the Road — 24 Hour Roadside Diner</title>
+  <meta name="description" content="On the Road is Wāpereki's all-night roadside diner. Good food, strong coffee, all night long.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="site-shell">
+    <section class="hero" aria-label="On the Road roadside diner">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="brand" aria-label="On the Road Roadside Diner">
+          <span class="brand-kicker">Roadside diner</span>
+          <span class="brand-name">On the<br>Road</span>
+          <span class="brand-star">★</span>
+        </div>
+
+        <div class="pitch">
+          <p class="eyebrow">Open 24 hours · 7 days</p>
+          <h1>Good food.<br>Strong coffee.<br><em>All night long.</em></h1>
+        </div>
+
+        <div class="actions">
+          <button class="action action-menu" type="button" data-panel="menu-panel">
+            <span class="action-icon" aria-hidden="true">☰</span>
+            <span>Menu</span>
+          </button>
+          <button class="action action-find" type="button" data-panel="find-panel">
+            <span class="action-icon pin" aria-hidden="true">⌖</span>
+            <span>Find us</span>
+          </button>
+        </div>
+
+        <address class="contact-block">
+          <a href="https://maps.google.com/?q=17+Lantern+Road+Wāpereki" target="_blank" rel="noopener">
+            <span class="contact-symbol">●</span>
+            <span>17 Lantern Road<br>Wāpereki, 3456</span>
+          </a>
+          <a href="tel:+6475552477">
+            <span class="contact-symbol">☎</span>
+            <span>07 555 2477</span>
+          </a>
+        </address>
+      </div>
+
+      <div class="service-card" aria-label="Service highlights">
+        <div><strong>24</strong><span>hours</span></div>
+        <div><strong>7</strong><span>days</span></div>
+        <p>Dine in · takeaway<br>Drive-thru coffee</p>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Current announcements">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>★</span><strong>Open all long weekend.</strong><span>Happy hour 6–7pm weekdays.</span>
+          <span>★</span><strong>Open all long weekend.</strong><span>Happy hour 6–7pm weekdays.</span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>★</span><strong>Open all long weekend.</strong><span>Happy hour 6–7pm weekdays.</span>
+          <span>★</span><strong>Open all long weekend.</strong><span>Happy hour 6–7pm weekdays.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="scrim" data-close-panels></div>
+
+  <aside class="panel menu-panel" id="menu-panel" aria-hidden="true" aria-labelledby="menu-title">
+    <button class="panel-close" type="button" aria-label="Close menu" data-close-panels>×</button>
+
+    <header class="panel-header menu-heading">
+      <span class="panel-kicker">Fresh off the grill</span>
+      <h2 id="menu-title">Our Menu</h2>
+      <p>Big roadside favourites, proper portions and breakfast whenever you need it.</p>
+    </header>
+
+    <div class="menu-layout">
+      <nav class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" type="button" data-category="burgers"><span>▤</span>Burgers</button>
+        <button class="menu-tab" type="button" data-category="hotdogs"><span>◒</span>Hot dogs</button>
+        <button class="menu-tab" type="button" data-category="pizzas"><span>◔</span>Pizzas</button>
+        <button class="menu-tab" type="button" data-category="salads"><span>❧</span>Salads</button>
+        <button class="menu-tab" type="button" data-category="sides"><span>♨</span>Fries & sides</button>
+        <button class="menu-tab" type="button" data-category="breakfast"><span>☀</span>Breakfast</button>
+        <button class="menu-tab" type="button" data-category="shakes"><span>▽</span>Shakes</button>
+        <button class="menu-tab" type="button" data-category="drinks"><span>◡</span>Drinks</button>
+        <button class="menu-tab" type="button" data-category="desserts"><span>△</span>Desserts</button>
+        <button class="menu-tab" type="button" data-category="kids"><span>☺</span>Kids</button>
+      </nav>
+
+      <section class="menu-content" aria-live="polite">
+        <div class="category-panel active" data-category-panel="burgers">
+          <div class="category-title"><span></span><h3>Burgers</h3><span></span></div>
+          <div class="menu-list">
+            <article class="menu-row hero-item">
+              <img src="assets/images/menu-1.webp" alt="The Roadhouse burger with fries">
+              <div><div class="item-heading"><h4>The Roadhouse</h4><strong>$18.90</strong></div><p>Double smashed beef, cheddar, bacon, pickles, caramelised onions and smoky house sauce.</p></div>
+            </article>
+            <article class="menu-row"><img src="assets/images/menu-2.webp" alt="Barbecue brisket burger"><div><div class="item-heading"><h4>BBQ Brisket</h4><strong>$19.90</strong></div><p>Slow-smoked brisket, barbecue glaze, slaw, crispy onions and pickles.</p></div></article>
+            <article class="menu-row"><img src="assets/images/menu-3.webp" alt="Fried chicken burger"><div><div class="item-heading"><h4>Chicken Deluxe</h4><strong>$17.90</strong></div><p>Buttermilk fried chicken, lettuce, tomato, pickles and roasted garlic mayo.</p></div></article>
+            <article class="menu-row"><img src="assets/images/menu-4.webp" alt="Classic cheeseburger"><div><div class="item-heading"><h4>The Classic</h4><strong>$15.90</strong></div><p>Smashed beef, cheese, ketchup, mustard, pickles and onions.</p></div></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="hotdogs">
+          <div class="category-title"><span></span><h3>Hot Dogs</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Lantern Dog</h4><p>All-beef frank, mustard, ketchup, onions and relish.</p></div><strong>$10.90</strong></article>
+            <article class="text-item"><div><h4>Chilli Cheese Dog</h4><p>House chilli, cheddar, jalapeños and sour cream.</p></div><strong>$14.90</strong></article>
+            <article class="text-item"><div><h4>Loaded Brisket Dog</h4><p>Smoked brisket, barbecue sauce, slaw and crispy onions.</p></div><strong>$15.90</strong></article>
+            <article class="text-item"><div><h4>Garden Dog</h4><p>Plant-based frank, pickles, slaw, mustard and relish.</p></div><strong>$13.90</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="pizzas">
+          <div class="category-title"><span></span><h3>Pizzas</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Roadhouse Supreme</h4><p>Pepperoni, smoked ham, mushrooms, peppers, olives and mozzarella.</p></div><strong>$24.90</strong></article>
+            <article class="text-item"><div><h4>Brisket & BBQ</h4><p>Smoked brisket, red onion, mozzarella, barbecue sauce and ranch drizzle.</p></div><strong>$25.90</strong></article>
+            <article class="text-item"><div><h4>Hot Honey Pepperoni</h4><p>Double pepperoni, mozzarella, chilli flakes and hot honey.</p></div><strong>$22.90</strong></article>
+            <article class="text-item"><div><h4>Garden After Dark</h4><p>Roast capsicum, mushrooms, spinach, olives, feta and pesto.</p></div><strong>$21.90</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="salads">
+          <div class="category-title"><span></span><h3>Salads</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Grilled Chicken Caesar</h4><p>Cos lettuce, parmesan, bacon, croutons, egg and Caesar dressing.</p></div><strong>$18.90</strong></article>
+            <article class="text-item"><div><h4>Roadside Cobb</h4><p>Chicken, avocado, bacon, egg, tomato, corn and ranch.</p></div><strong>$19.90</strong></article>
+            <article class="text-item"><div><h4>Roast Pumpkin & Feta</h4><p>Spinach, roast pumpkin, feta, walnuts and maple balsamic.</p></div><strong>$17.50</strong></article>
+            <article class="text-item"><div><h4>Crispy Chicken Ranch</h4><p>Fried chicken, leaves, tomato, cucumber, cheddar and ranch.</p></div><strong>$19.50</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="sides">
+          <div class="category-title"><span></span><h3>Fries & Sides</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Classic Fries</h4><p>Hot, crisp and salted.</p></div><strong>$6.50</strong></article>
+            <article class="text-item"><div><h4>Loaded Chilli Fries</h4><p>House chilli, cheese sauce, jalapeños and sour cream.</p></div><strong>$12.90</strong></article>
+            <article class="text-item"><div><h4>Onion Rings</h4><p>Beer-battered with smoky dipping sauce.</p></div><strong>$8.90</strong></article>
+            <article class="text-item"><div><h4>Mac & Cheese Bites</h4><p>Golden crumb, molten centre, ranch dip.</p></div><strong>$9.90</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="breakfast">
+          <div class="category-title"><span></span><h3>Breakfast All Day</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Truckstop Breakfast</h4><p>Eggs, bacon, sausages, hash browns, mushrooms, tomato and sourdough.</p></div><strong>$24.00</strong></article>
+            <article class="text-item"><div><h4>Sunrise Burger</h4><p>Beef, egg, bacon, hash brown, cheddar and relish.</p></div><strong>$16.50</strong></article>
+            <article class="text-item"><div><h4>Buttermilk Pancakes</h4><p>Maple syrup, whipped butter and berry compote.</p></div><strong>$15.90</strong></article>
+            <article class="text-item"><div><h4>Avocado Sourdough</h4><p>Smashed avocado, feta, chilli oil and poached eggs.</p></div><strong>$17.90</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="shakes">
+          <div class="category-title"><span></span><h3>Thick Shakes</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Salted Caramel</h4><p>Vanilla ice cream, caramel and sea salt.</p></div><strong>$9.50</strong></article>
+            <article class="text-item"><div><h4>Chocolate Fudge</h4><p>Chocolate ice cream, fudge sauce and brownie crumb.</p></div><strong>$9.50</strong></article>
+            <article class="text-item"><div><h4>Strawberry Cheesecake</h4><p>Strawberry, vanilla ice cream and biscuit crumb.</p></div><strong>$9.50</strong></article>
+            <article class="text-item"><div><h4>Peanut Butter Crunch</h4><p>Peanut butter, chocolate and malt crunch.</p></div><strong>$10.50</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="drinks">
+          <div class="category-title"><span></span><h3>Drinks</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Bottomless Filter Coffee</h4><p>Hot, strong and always topped up.</p></div><strong>$5.50</strong></article>
+            <article class="text-item"><div><h4>Barista Coffee</h4><p>Flat white, latte, cappuccino, long black or mocha.</p></div><strong>$5.90</strong></article>
+            <article class="text-item"><div><h4>House Lemonade</h4><p>Fresh lemon, soda and mint.</p></div><strong>$6.90</strong></article>
+            <article class="text-item"><div><h4>Soft Drinks</h4><p>Cola, lemonade, ginger beer or sparkling water.</p></div><strong>$5.00</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="desserts">
+          <div class="category-title"><span></span><h3>Desserts</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Warm Apple Pie</h4><p>Vanilla ice cream and salted caramel.</p></div><strong>$12.90</strong></article>
+            <article class="text-item"><div><h4>Chocolate Brownie</h4><p>Hot fudge, vanilla ice cream and toasted pecans.</p></div><strong>$13.50</strong></article>
+            <article class="text-item"><div><h4>Banana Split</h4><p>Three scoops, banana, fudge, cream and cherry.</p></div><strong>$14.90</strong></article>
+            <article class="text-item"><div><h4>New York Cheesecake</h4><p>Berry compote and whipped cream.</p></div><strong>$12.50</strong></article>
+          </div>
+        </div>
+
+        <div class="category-panel" data-category-panel="kids">
+          <div class="category-title"><span></span><h3>Kids Meals</h3><span></span></div>
+          <div class="menu-list compact-list">
+            <article class="text-item"><div><h4>Little Roadie Burger</h4><p>Cheeseburger, fries and a juice.</p></div><strong>$11.90</strong></article>
+            <article class="text-item"><div><h4>Chicken Bites</h4><p>Crumbed chicken, fries and a juice.</p></div><strong>$11.90</strong></article>
+            <article class="text-item"><div><h4>Mini Pizza</h4><p>Cheese or pepperoni with fries.</p></div><strong>$10.90</strong></article>
+            <article class="text-item"><div><h4>Pancake Stack</h4><p>Mini pancakes, syrup and strawberries.</p></div><strong>$9.90</strong></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="menu-feature-strip">
+      <article><img src="assets/images/loadedfries.png" alt="Loaded fries"><div><strong>Loaded fries</strong><span>Seriously good.</span><b>$12.90</b></div></article>
+      <article><img src="assets/images/thickshakes.png" alt="Diner shakes and desserts"><div><strong>Thick shakes</strong><span>Made thick. Made fresh.</span><b>$9.50</b></div></article>
+      <article><img src="assets/images/kidsmeal.png" alt="Kids diner meal"><div><strong>Kids meals</strong><span>For little legends.</span><b>$9.90</b></div></article>
+    </div>
+  </aside>
+
+  <aside class="panel find-panel" id="find-panel" aria-hidden="true" aria-labelledby="find-title">
+    <button class="panel-close" type="button" aria-label="Close location" data-close-panels>×</button>
+    <header class="panel-header">
+      <span class="panel-kicker">Pull in. Park up.</span>
+      <h2 id="find-title">Find Us</h2>
+      <p>Just off the highway, with easy parking and the lights always on.</p>
+    </header>
+
+    <div class="map-card">
+      <svg class="map" viewBox="0 0 900 500" role="img" aria-label="Stylised map showing On the Road at 17 Lantern Road">
+        <defs><linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13222c"/><stop offset="1" stop-color="#071015"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <rect width="900" height="500" fill="url(#mapBg)"/>
+        <g fill="none" stroke-linecap="round"><path d="M-30 370 C170 315 290 420 470 345 S720 210 940 255" stroke="#203c4d" stroke-width="58"/><path d="M-30 370 C170 315 290 420 470 345 S720 210 940 255" stroke="#46748d" stroke-width="5"/><path d="M40 70 L825 455M-20 220 L670 12M170 520 L730 -40M395 540 L930 80" stroke="#27424f" stroke-width="13"/><path d="M30 115 L810 490M0 268 L700 48M210 500 L760 5M455 510 L900 130" stroke="#587284" stroke-width="2" opacity=".7"/><path d="M100 460 C300 180 540 180 820 60" stroke="#d69b31" stroke-width="11" opacity=".9"/><path d="M100 460 C300 180 540 180 820 60" stroke="#ffe294" stroke-width="2"/></g>
+        <g transform="translate(535 205)" filter="url(#glow)"><path d="M0 0 C-37 0 -64 28 -64 64 C-64 112 0 178 0 178 C0 178 64 112 64 64 C64 28 37 0 0 0Z" fill="#ef2b23"/><circle cy="64" r="24" fill="#170b08"/></g>
+        <g transform="translate(615 235)"><rect width="230" height="84" rx="10" fill="#070a0c" stroke="#dfad42"/><text x="18" y="34" fill="#f7f0df" font-family="Arial" font-size="24" font-weight="700">ON THE ROAD</text><text x="18" y="64" fill="#d2c6b1" font-family="Arial" font-size="18">17 Lantern Road</text></g>
+      </svg>
+    </div>
+
+    <div class="find-details">
+      <section><h3>Open every day</h3><dl class="hours"><div><dt>Monday–Sunday</dt><dd>24 hours</dd></div><div><dt>Happy hour</dt><dd>6–7pm weekdays</dd></div></dl></section>
+      <section><h3>Contact</h3><p><a href="tel:+6475552477">07 555 2477</a><br><a href="mailto:ontheroard@rkdb.nz">ontheroard@rkdb.nz</a></p></section>
+    </div>
+    <a class="directions-button" href="https://maps.google.com/?q=17+Lantern+Road+Wāpereki" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
+  </aside>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

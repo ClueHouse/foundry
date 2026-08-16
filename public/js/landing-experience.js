@@ -81,7 +81,7 @@ backButton.addEventListener('click', showIntroPanel);
    FOUNDRY DRAWER CONTROLLER
    ========================================================= */
 
-const menuButton = document.querySelector('.menu-button');
+const menuButton = document.querySelector('.foundry-global-menu') || document.querySelector('.menu-button');
 const siteDrawer = document.getElementById('siteDrawer');
 const menuBackdrop = document.getElementById('menuBackdrop');
 
@@ -168,6 +168,10 @@ drawerSite.addEventListener('click', () => {
 function showExploreScreen() {
     closeDrawer();
 
+    if (window.location.hash !== "#explore") {
+        history.pushState(null, "", "#explore");
+    }
+
     document.body.classList.add("explore-open");
 
     introPanel.setAttribute("aria-hidden", "true");
@@ -197,3 +201,25 @@ function restoreExploreFromHash() {
 
 window.addEventListener("DOMContentLoaded", restoreExploreFromHash);
 window.addEventListener("hashchange", restoreExploreFromHash);
+
+/* Restore Explore correctly after browser Back from a Foundry subpage */
+window.addEventListener("pageshow", () => {
+    if (window.location.hash === "#explore") {
+        showExploreScreen();
+    }
+});
+
+window.addEventListener("popstate", () => {
+    if (window.location.hash === "#explore") {
+        showExploreScreen();
+    }
+});
+
+/* Keep landing-page view in sync with browser Back / Forward */
+window.addEventListener("popstate", () => {
+    if (window.location.hash === "#explore") {
+        showExploreScreen();
+    } else {
+        showIntroPanel();
+    }
+});

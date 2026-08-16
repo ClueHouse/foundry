@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dine — CLEMENTINES</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="dine-page">
+<nav class="nav">
+  <a href="index.html" class="nav-logo">CLEMENTINES</a>
+  <div class="nav-links">
+    <a href="dine.html">Dine</a>
+    <a href="wine.html">Wine</a>
+    <a href="sign.html">Sign</a>
+    <a href="reviews.html">Reviews</a>
+  </div>
+  <button class="mobile-toggle" aria-label="Menu">—</button>
+</nav>
+
+<header class="page-head dine-head">
+  <h1 class="serif">Choose wisely.</h1>
+  <p>Then steal a bite from someone else's plate.</p>
+</header>
+
+<main class="dine-layout">
+  <section class="dine-menu" aria-label="Dinner menu">
+    <div class="menu-grid">
+      <div>
+        <div class="menu-section"><h2>Entrées</h2>
+          <div class="menu-item"><div><h3>Hokkaido scallop crudo, olive oil, finger lime <span class="symbol">gf</span></h3><p>Raw, sweet, coastal - with cold-pressed Leccino oil</p></div><div class="price">24</div></div>
+          <div class="menu-item"><div><h3>Leek & potato vichyssoise, brown butter, chives <span class="symbol">v gf •</span></h3><p>Served cool, finished at the table</p></div><div class="price">19</div></div>
+          <div class="menu-item"><div><h3>Beef tartare, cured yolk, capers, rye <span class="symbol">•</span></h3><p>Hand cut, aged 28 days</p></div><div class="price">26</div></div>
+          <div class="menu-item"><div><h3>Grilled courgette, almond, basil, lemon <span class="symbol">vg gf</span></h3><p>From the morning market</p></div><div class="price">18</div></div>
+          <div class="menu-item"><div><h3>Line-caught snapper, kohlrabi, verjus <span class="symbol">gf</span></h3><p>Lightly cured, fennel pollen</p></div><div class="price">25</div></div>
+          <div class="menu-item"><div><h3>Sourdough, cultured butter, sea salt <span class="symbol">v</span></h3><p>Baked at 4pm daily</p></div><div class="price">9</div></div>
+        </div>
+        <div class="menu-section"><h2>Mains</h2>
+          <div class="menu-item"><div><h3>Market fish, coastal herbs, verjus beurre blanc <span class="symbol">gf •</span></h3><p>What came in best today</p></div><div class="price">42</div></div>
+          <div class="menu-item"><div><h3>Dry-aged duck, beetroot, blackcurrant leaf <span class="symbol">gf</span></h3><p>With its own jus</p></div><div class="price">46</div></div>
+          <div class="menu-item"><div><h3>Pork chop, mustard greens, apple <span class="symbol">gf</span></h3><p>Free-range, wood grilled</p></div><div class="price">44</div></div>
+          <div class="menu-item"><div><h3>Celeriac, hazelnut, wild mushrooms <span class="symbol">vg gf</span></h3><p>Roasted all afternoon</p></div><div class="price">38</div></div>
+          <div class="menu-item"><div><h3>Lamb shoulder, white beans, rosemary <span class="symbol">gf</span></h3><p>Shared, slow cooked</p></div><div class="price">52</div></div>
+          <div class="menu-item"><div><h3>Handmade pappardelle, tomato, basil, pecorino <span class="symbol">v</span></h3><p>Simple, late summer</p></div><div class="price">39</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="menu-section"><h2>Sides</h2>
+          <div class="menu-item"><div><h3>Leaves, vinaigrette <span class="symbol">vg gf</span></h3></div><div class="price">12</div></div>
+          <div class="menu-item"><div><h3>Roast potatoes, rosemary salt <span class="symbol">vg gf</span></h3></div><div class="price">14</div></div>
+          <div class="menu-item"><div><h3>Charred carrots, cumin yoghurt <span class="symbol">v gf</span></h3></div><div class="price">13</div></div>
+        </div>
+        <div class="menu-section"><h2>Desserts</h2>
+          <div class="menu-item"><div><h3>Chocolate tart, creme fraiche <span class="symbol">v</span></h3><p>72% Valrhona</p></div><div class="price">16</div></div>
+          <div class="menu-item"><div><h3>Olive oil cake, stone fruit, bay <span class="symbol">v</span></h3><p>With cultured cream</p></div><div class="price">15</div></div>
+          <div class="menu-item"><div><h3>Affogato, hazelnut biscotti <span class="symbol">v gf</span></h3></div><div class="price">14</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="dine-feature fade-in" aria-label="Signature dish">
+    <img src="assets/images/kinfolk_kitchen_plating.webp" alt="Signature dish plated on handcrafted ceramics in warm evening light">
+  </figure>
+</main>
+
+<section class="dine-story">
+  <div class="dine-rule" aria-hidden="true"></div>
+  <div class="meet meet-editorial">
+    <img class="meet-photo fade-in" src="assets/images/host_stand_editorial.webp" alt="Clementine smiling in a softly lit dining room">
+    <div class="meet-copy">
+      <h2 class="serif">Meet Clementine</h2>
+      <p>I started cooking because I liked feeding my friends. Not impressing them - feeding them. The best nights were always around a table that was a little too small, with a little too much food, and nowhere to be afterwards. Clementines is that table. We cook what we want to eat, we pour what we want to drink, and we try to make you feel like you belong here. Nothing pretentious. Just excellent ingredients, treated simply, with a lot of care. Come hungry. Stay late.</p>
+      <p class="signature serif">- Clementine</p>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

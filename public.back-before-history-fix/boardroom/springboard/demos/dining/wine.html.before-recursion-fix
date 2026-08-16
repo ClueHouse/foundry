@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wine — CLEMENTINES</title>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="wine-page">
+<nav class="nav">
+  <a href="index.html" class="nav-logo">CLEMENTINES</a>
+  <div class="nav-links">
+    <a href="dine.html">Dine</a>
+    <a href="wine.html">Wine</a>
+    <a href="sign.html">Sign</a>
+    <a href="reviews.html">Reviews</a>
+  </div>
+  <button class="mobile-toggle" aria-label="Menu">—</button>
+</nav>
+
+<header class="wine-hero">
+  <figure class="wine-hero-media fade-up" style="--delay: 70ms">
+    <img src="assets/images/wine_cellar_kinfolk.webp" alt="Warm cellar shelves with aged bottles and oak barrels">
+  </figure>
+  <div class="wine-hero-copy">
+    <p class="wine-kicker fade-up" style="--delay: 130ms">Cellar notes</p>
+    <h1 class="serif fade-up" style="--delay: 190ms">The Cellar</h1>
+    <p class="wine-lede fade-up" style="--delay: 250ms">A small collection.<br>Growers we know.<br>Wines we enjoy drinking ourselves.</p>
+  </div>
+</header>
+
+<section class="wine-philosophy">
+  <p class="serif fade-up" style="--delay: 80ms">We don't collect bottles. We collect evenings worth remembering.</p>
+</section>
+
+<main id="wine-archive" class="wine-archive">
+  <div class="wine-grid">
+    <div class="wine-column wine-column--left">
+      <section class="wine-cat">
+        <h2>Champagne</h2>
+        <div class="wine-row"><div class="name">Bollinger Special Cuvée Brut</div><div class="meta">Champagne, France NV</div><div class="note">Biscuit, citrus peel, deep — the house pour</div><div class="meta">22 / 135</div></div>
+        <div class="wine-row"><div class="name">Larmandier-Bernier Longitude Blanc de Blancs</div><div class="meta">Côte des Blancs NV — Extra Brut</div><div class="note">Chalk, precision, saline</div><div class="meta">28 / 168</div></div>
+      </section>
+
+      <section class="wine-cat wine-cat--offset">
+        <h2>Pinot Noir</h2>
+        <div class="wine-row"><div class="name">Felton Road Bannockburn Pinot Noir 2022</div><div class="meta">Central Otago</div><div class="note">Wild thyme, cherry, whole bunch lift</div><div class="meta">26 / 145</div></div>
+        <div class="wine-row"><div class="name">Domaine de l'Horizon Rouge 2021</div><div class="meta">Côte Chalonnaise</div><div class="note">Earthy, honest, food wine</div><div class="meta">17 / 89</div></div>
+      </section>
+
+      <section class="wine-cat">
+        <h2>Cocktails — Coffee — Beer</h2>
+        <div class="wine-row"><div class="name">Negroni — Martini — Whisky Sour</div><div class="meta">Classic, no twist — 19</div></div>
+        <div class="wine-row"><div class="name">Garage Project Beer — Small batch</div><div class="meta">Pils, Pale, Lager — 12</div></div>
+        <div class="wine-row"><div class="name">Coffee by Peoples — Tea by Tea Total</div><div class="meta">Espresso, filter, pot</div></div>
+      </section>
+    </div>
+
+    <div class="wine-column wine-column--right">
+      <section class="wine-cat wine-cat--offset">
+        <h2>Whites</h2>
+        <div class="wine-row"><div class="name">Château de Béru Chablis Terroirs de Béru 2022</div><div class="meta">Burgundy</div><div class="note">Oyster shell, lemon, quiet intensity</div><div class="meta">18 / 98</div></div>
+        <div class="wine-row"><div class="name">Weiser-Künstler Enkircher Ellergrub Riesling 2021</div><div class="meta">Mosel</div><div class="note">White peach, slate, electric</div><div class="meta">19 / 102</div></div>
+      </section>
+
+      <section class="wine-cat">
+        <h2>Syrah & Cabernet</h2>
+        <div class="wine-row"><div class="name">Craggy Range Le Sol Syrah 2020</div><div class="meta">Gimblett Gravels</div><div class="note">Pepper, violet, iron</div><div class="meta">24 / 138</div></div>
+        <div class="wine-row"><div class="name">Château Lumière Cabernet 2016</div><div class="meta">Bordeaux</div><div class="note">Cedar, cassis, time in bottle</div><div class="meta">22 / 126</div></div>
+      </section>
+
+      <section class="wine-cat">
+        <h2>Rosé, Dessert, etc</h2>
+        <div class="wine-row"><div class="name">Domaine Tempier Bandol Rosé 2023</div><div class="meta">Provence</div><div class="note">Watermelon, garrigue — summer</div><div class="meta">16 / 88</div></div>
+        <div class="wine-row"><div class="name">Moulin des Collines Syrah 2017 — Dessert</div><div class="meta">Sticky, late harvest</div><div class="note">Fig, spice, long</div><div class="meta">14 / 72</div></div>
+      </section>
+    </div>
+  </div>
+
+  <section class="wine-callout">
+    <div class="wine-rule"></div>
+    <div class="wine-callout-copy fade-up" style="--delay: 70ms">
+      <h2 class="serif">Clementine's Pour</h2>
+      <p>If you're unsure, tell us what you're eating.<br>We'll choose the wine.</p>
+    </div>
+    <div class="wine-links">
+      <a class="wine-link" href="#wine-archive">View the full cellar →</a>
+      <a class="wine-link" href="sign.html">Reserve dinner →</a>
+    </div>
+  </section>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

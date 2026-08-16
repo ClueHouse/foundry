@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Thank You — ASH & OAK</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="layer-bg"></div>
+<div id="layer-logo"><div class="mark"><span>ASH</span><em>&</em><span>OAK</span></div></div>
+<aside id="rail"><div id="rail-brand"><span>ASH</span><span class="amp">&</span><span>OAK</span></div></aside>
+<nav id="topnav"><div class="logo" onclick="location.href='index.html'">ASH & OAK</div><div class="links"><a href="index.html#hero">Ash & Oak</a><a href="index.html#collections">Collections</a><a href="index.html#enquire">Enquire</a></div></nav>
+<main id="content">
+  <section class="success-hero">
+    <div class="success-card">
+      <div class="big-logo">ASH & OAK</div>
+      <h1>Thank you.</h1>
+      <p>Your enquiry has been received. We'll respond within two working days with seasonal availability, palette notes and approach.<br><br><em style="font-family:'Cormorant Garamond',serif; font-style:italic">Flowers for each and every moments.</em></p>
+      <a href="index.html" class="btn-submit" style="text-decoration:none; display:inline-block">Back to Ash & Oak</a>
+      <p style="margin-top:28px; font-size:13px; letter-spacing:0.16em; color:var(--stone)">Architects of slow beauty.</p>
+    </div>
+  </section>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
