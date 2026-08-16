@@ -387,15 +387,3 @@ body.foundry-global-open .foundry-global-drawer {
   margin: 10px 0 !important;
   background: rgba(183, 122, 61, .48) !important;
 }
-
-/* Global drawer: give menu labels the full available width */
-.foundry-global-drawer .foundry-global-link {
-    width: 100% !important;
-}
-
-.foundry-global-drawer .foundry-global-link > span:last-child {
-    width: auto !important;
-    max-width: none !important;
-    min-width: 0 !important;
-    white-space: nowrap !important;
-}
