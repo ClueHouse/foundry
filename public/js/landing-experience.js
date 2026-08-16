@@ -78,87 +78,25 @@ backButton.addEventListener('click', showIntroPanel);
 
 
 /* =========================================================
-   FOUNDRY DRAWER CONTROLLER
+   GLOBAL DRAWER: LANDING-PAGE ACTIONS ONLY
    ========================================================= */
 
-const menuButton = document.querySelector('.foundry-global-menu') || document.querySelector('.menu-button');
-const siteDrawer = document.getElementById('siteDrawer');
-const menuBackdrop = document.getElementById('menuBackdrop');
-
-const drawerHome = document.querySelector(
-    '[data-drawer-action="home"]'
-);
-
-const drawerSite = document.querySelector(
-    '[data-drawer-action="site"]'
-);
-
-function openDrawer() {
-    document.body.classList.add('menu-open');
-
-    menuButton.setAttribute('aria-label', 'Close menu');
-    menuButton.setAttribute('aria-expanded', 'true');
-
-    siteDrawer.setAttribute('aria-hidden', 'false');
-    menuBackdrop.setAttribute('aria-hidden', 'false');
-}
+const drawerHome = document.querySelector('[data-drawer-action="home"]');
+const drawerSite = document.querySelector('[data-drawer-action="site"]');
 
 function closeDrawer() {
-    document.body.classList.remove('menu-open');
-
-    menuButton.setAttribute('aria-label', 'Open menu');
-    menuButton.setAttribute('aria-expanded', 'false');
-
-    siteDrawer.setAttribute('aria-hidden', 'true');
-    menuBackdrop.setAttribute('aria-hidden', 'true');
-}
-
-function toggleDrawer() {
-    if (document.body.classList.contains('menu-open')) {
-        closeDrawer();
-    } else {
-        openDrawer();
+    if (typeof window.closeFoundryDrawer === 'function') {
+        window.closeFoundryDrawer();
     }
 }
 
-menuButton.setAttribute('aria-expanded', 'false');
-menuButton.setAttribute('aria-controls', 'siteDrawer');
-
-menuButton.addEventListener('click', toggleDrawer);
-
-menuBackdrop.addEventListener('click', closeDrawer);
-
-document.addEventListener('keydown', (event) => {
-    if (
-        event.key === 'Escape' &&
-        document.body.classList.contains('menu-open')
-    ) {
-        closeDrawer();
-        menuButton.focus();
-    }
+drawerHome?.addEventListener('click', () => {
+    window.setTimeout(showIntroPanel, 600);
 });
 
-
-/* HOME */
-
-drawerHome.addEventListener("click", () => {
-    closeDrawer();
-
+drawerSite?.addEventListener('click', () => {
     window.setTimeout(() => {
-        showIntroPanel();
-    }, 600);
-});
-
-
-/* MAKE ME A SITE */
-
-drawerSite.addEventListener('click', () => {
-    closeDrawer();
-
-    window.setTimeout(() => {
-        if (typeof showSortPanel === 'function') {
-            showSortPanel();
-        }
+        if (typeof showSortPanel === 'function') showSortPanel();
     }, 380);
 });
 

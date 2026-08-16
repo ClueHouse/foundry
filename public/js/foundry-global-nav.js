@@ -4,7 +4,7 @@
   const script = document.currentScript;
   const root = script?.dataset.root || '../';
   const fallback = script?.dataset.back || `${root}#explore`;
-  const useExistingDrawer = script?.dataset.existingDrawer === 'true';
+  const landingActions = script?.dataset.landingActions === 'true';
   const menuOnly = script?.dataset.menuOnly === 'true';
 
   const nav = document.createElement('nav');
@@ -50,13 +50,6 @@
   });
 
 
-  /*
-     The landing page already owns its drawer because Home / Make me a site
-     are animated in-page states. There we create only the shared control
-     and let landing-experience.js drive the existing drawer.
-  */
-  if (useExistingDrawer) return;
-
   const backdrop = document.createElement('div');
   backdrop.className = 'foundry-global-backdrop';
   backdrop.setAttribute('aria-hidden', 'true');
@@ -70,22 +63,22 @@
     <div class="foundry-global-drawer-inner">
       <div class="foundry-global-kicker">THE FOUNDRY</div>
       <nav aria-label="Main navigation">
-        <a class="foundry-global-link" href="${root}"><span class="foundry-global-number">01</span><span>Home</span></a>
+        ${landingActions ? `<button class="foundry-global-link" type="button" data-drawer-action="home"><span>Home</span></button>` : `<a class="foundry-global-link" href="${root}"><span>Home</span></a>`}
 
         <div class="foundry-global-menu-divider" aria-hidden="true"></div>
 
-        <a class="foundry-global-link" href="${root}boardroom/"><span class="foundry-global-number">02</span><span>The Boardroom</span></a>
-        <a class="foundry-global-link" href="${root}foundrycare/"><span class="foundry-global-number">03</span><span>FoundryCare</span></a>
+        <a class="foundry-global-link" href="${root}boardroom/"><span>The Boardroom</span></a>
+        <a class="foundry-global-link" href="${root}foundrycare/"><span>FoundryCare</span></a>
 
         <div class="foundry-global-menu-divider" aria-hidden="true"></div>
 
-        <a class="foundry-global-link" href="${root}the-foundry/"><span class="foundry-global-number">04</span><span>About The Foundry</span></a>
-        <a class="foundry-global-link" href="${root}whywebsite/"><span class="foundry-global-number">05</span><span>Why own a website?</span></a>
+        <a class="foundry-global-link" href="${root}the-foundry/"><span>About The Foundry</span></a>
+        <a class="foundry-global-link" href="${root}whywebsite/"><span>Why own a website?</span></a>
 
         <div class="foundry-global-menu-divider" aria-hidden="true"></div>
 
-        <a class="foundry-global-link" href="${root}start/"><span class="foundry-global-number">06</span><span>Make me a site</span></a>
-        <a class="foundry-global-link" href="mailto:thefoundry@rkdb.nz"><span class="foundry-global-number">07</span><span>Contact</span></a>
+        ${landingActions ? `<button class="foundry-global-link" type="button" data-drawer-action="site"><span>Make me a site</span></button>` : `<a class="foundry-global-link" href="${root}start/"><span>Make me a site</span></a>`}
+        <a class="foundry-global-link" href="mailto:thefoundry@rkdb.nz"><span>Contact</span></a>
       </nav>
       <div class="foundry-global-footer">WEB DESIGN · FOUNDRYCARE</div>
     </div>
@@ -102,6 +95,8 @@
     backdrop.setAttribute('aria-hidden', 'true');
   };
 
+  window.closeFoundryDrawer = closeMenu;
+
   const openMenu = () => {
     document.body.classList.add('foundry-global-open');
     menuButton.setAttribute('aria-expanded', 'true');
@@ -116,7 +111,7 @@
   });
 
   backdrop.addEventListener('click', closeMenu);
-  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  drawer.querySelectorAll('a, button').forEach(link => link.addEventListener('click', closeMenu));
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && document.body.classList.contains('foundry-global-open')) {

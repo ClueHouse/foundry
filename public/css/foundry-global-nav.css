@@ -368,3 +368,22 @@ body.foundry-global-open .foundry-global-drawer {
     margin: 10px 0 !important;
     background: rgba(183, 122, 61, 0.48) !important;
 }
+
+/* Global drawer is the single menu implementation on every Foundry page. */
+.foundry-global-link:is(button) {
+  width: 100%;
+  margin: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Clear, restrained hierarchy breaks. */
+.foundry-global-menu-divider {
+  height: 1px !important;
+  margin: 10px 0 !important;
+  background: rgba(183, 122, 61, .48) !important;
+}
