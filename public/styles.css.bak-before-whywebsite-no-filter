@@ -1869,3 +1869,9 @@ WHY WEBSITE — FINAL WALL HEADING
 }
 
 
+/* === WHY WEBSITE — LIGHTER BACKGROUND === */
+
+.whywebsite-photo {
+  filter: brightness(1.18) saturate(.92);
+}
+
