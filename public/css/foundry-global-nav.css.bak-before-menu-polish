@@ -356,15 +356,3 @@ body.foundry-global-open .foundry-global-drawer {
     margin: 8px 0;
     background: rgba(183, 122, 61, 0.28);
 }
-
-/* Menu polish: hide numbers */
-.foundry-global-number {
-    display: none !important;
-}
-
-/* Group dividers: visible, but restrained */
-.foundry-global-menu-divider {
-    height: 1px !important;
-    margin: 10px 0 !important;
-    background: rgba(183, 122, 61, 0.48) !important;
-}
