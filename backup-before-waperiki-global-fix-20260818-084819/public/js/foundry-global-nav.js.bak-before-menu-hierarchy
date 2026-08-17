@@ -1,0 +1,127 @@
+(() => {
+  if (document.querySelector('.foundry-global-nav')) return;
+
+  const script = document.currentScript;
+  const root = script?.dataset.root || '../';
+  const fallback = script?.dataset.back || `${root}#explore`;
+  const useExistingDrawer = script?.dataset.existingDrawer === 'true';
+  const menuOnly = script?.dataset.menuOnly === 'true';
+
+  const nav = document.createElement('nav');
+  nav.className = 'foundry-global-nav';
+  nav.setAttribute('aria-label', 'Foundry navigation');
+
+  nav.innerHTML = `
+    <button class="foundry-global-control foundry-global-back" type="button" aria-label="Back" title="Back">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M38 24H12"></path>
+        <path d="M22 14 12 24l10 10"></path>
+      </svg>
+    </button>
+
+    <a class="foundry-global-control foundry-global-home" href="${root}" aria-label="Home" title="Home">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="foundry-home-metal" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d5a25d"/>
+            <stop offset=".42" stop-color="#a76e35"/>
+            <stop offset="1" stop-color="#64391e"/>
+          </linearGradient>
+        </defs>
+        <path d="M8 23.5 24 10l16 13.5h-5V39H27V28h-6v11h-8V23.5Z"></path>
+      </svg>
+    </a>
+
+    <button class="foundry-global-control foundry-global-menu" type="button" aria-label="Open menu" aria-expanded="false" title="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  `;
+
+  document.body.append(nav);
+
+  if (menuOnly) nav.classList.add('foundry-global-nav--menu-only');
+
+  const backButton = nav.querySelector('.foundry-global-back');
+  const menuButton = nav.querySelector('.foundry-global-menu');
+
+  
+  backButton.addEventListener('click', () => {
+    history.back();
+  });
+
+
+  /*
+     The landing page already owns its drawer because Home / Make me a site
+     are animated in-page states. There we create only the shared control
+     and let landing-experience.js drive the existing drawer.
+  */
+  if (useExistingDrawer) return;
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'foundry-global-backdrop';
+  backdrop.setAttribute('aria-hidden', 'true');
+
+  const drawer = document.createElement('aside');
+  drawer.className = 'foundry-global-drawer';
+  drawer.setAttribute('aria-hidden', 'true');
+  drawer.setAttribute('aria-label', 'Site navigation');
+
+  drawer.innerHTML = `
+    <div class="foundry-global-drawer-inner">
+      <div class="foundry-global-kicker">THE FOUNDRY</div>
+      <nav aria-label="Main navigation">
+        <a class="foundry-global-link" href="${root}"><span class="foundry-global-number">01</span><span>Home</span></a>
+
+        <div class="foundry-global-menu-divider" aria-hidden="true"></div>
+
+        <a class="foundry-global-link" href="${root}boardroom/"><span class="foundry-global-number">02</span><span>The Boardroom</span></a>
+        <a class="foundry-global-link" href="${root}foundrycare/"><span class="foundry-global-number">03</span><span>FoundryCare</span></a>
+
+        <div class="foundry-global-menu-divider" aria-hidden="true"></div>
+
+        <a class="foundry-global-link" href="${root}the-foundry/"><span class="foundry-global-number">04</span><span>About The Foundry</span></a>
+        <a class="foundry-global-link" href="${root}whywebsite/"><span class="foundry-global-number">05</span><span>Why own a website?</span></a>
+
+        <div class="foundry-global-menu-divider" aria-hidden="true"></div>
+
+        <a class="foundry-global-link" href="${root}start/"><span class="foundry-global-number">06</span><span>Make me a site</span></a>
+        <a class="foundry-global-link" href="mailto:thefoundry@rkdb.nz"><span class="foundry-global-number">07</span><span>Contact</span></a>
+      </nav>
+      <div class="foundry-global-footer">WEB DESIGN · FOUNDRYCARE</div>
+    </div>
+  `;
+
+  document.body.append(backdrop, drawer);
+
+  const closeMenu = () => {
+    document.body.classList.remove('foundry-global-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open menu');
+    menuButton.title = 'Menu';
+    drawer.setAttribute('aria-hidden', 'true');
+    backdrop.setAttribute('aria-hidden', 'true');
+  };
+
+  const openMenu = () => {
+    document.body.classList.add('foundry-global-open');
+    menuButton.setAttribute('aria-expanded', 'true');
+    menuButton.setAttribute('aria-label', 'Close menu');
+    menuButton.title = 'Close menu';
+    drawer.setAttribute('aria-hidden', 'false');
+    backdrop.setAttribute('aria-hidden', 'false');
+  };
+
+  menuButton.addEventListener('click', () => {
+    document.body.classList.contains('foundry-global-open') ? closeMenu() : openMenu();
+  });
+
+  backdrop.addEventListener('click', closeMenu);
+  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.body.classList.contains('foundry-global-open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+})();

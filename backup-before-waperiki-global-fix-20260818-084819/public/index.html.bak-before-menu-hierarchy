@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+    <script>if (location.hash === "#explore") document.documentElement.classList.add("restore-explore");</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Foundry</title>
+    <meta name="description" content="Your new site. Forged. Finished. Future-proof.">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/landing-experience.css">
+    <link rel="stylesheet" href="./css/foundry-global-nav.css">
+</head>
+<body class="homepage">
+    <script>if (location.hash === "#explore") document.body.classList.add("explore-open");</script>
+    <main class="landing">
+        <div class="brand">
+            <div class="brand-topline">
+                <span class="brand-rule"></span><span class="brand-the">THE</span><span class="brand-rule"></span>
+            </div>
+            <div class="brand-name">FOUNDRY</div>
+            <div class="brand-tagline">WEB DESIGN · FOUNDRYCARE</div>
+        </div>
+
+        <div class="hero">
+            <section class="hero-panel is-active" id="introPanel">
+                <h1 class="hero-title">Your new site.</h1>
+                <div class="hero-lines"><div>Forged.</div><div>Finished.</div><div>Future-proof.</div></div>
+                <div class="hero-actions">
+                    <button id="sortButton" class="hero-button" type="button">Make me a site</button>
+                    <button id="exploreButton" class="hero-button" type="button">Let me choose</button>
+                </div>
+            </section>
+
+            <section class="hero-panel" id="sortPanel" aria-hidden="true">
+                <h2 class="sort-title">Need a website?</h2>
+                <div class="sort-lines">Leave it with me.</div>
+                <div class="hero-actions sort-actions">
+                    <a class="hero-button email-start" href="mailto:thefoundry@rkdb.nz">Hand me the problem</a>
+                    <button id="backButton" class="hero-back" type="button">← Back</button>
+                </div>
+            </section>
+        </div>
+
+        <section class="explore-screen" id="exploreScreen" aria-hidden="true">
+            <div class="explore-boardroom">
+                <div class="explore-kicker">THE BOARDROOM</div>
+                <h2>At the centre of the Foundry sits our Boardroom.</h2>
+                <p>It’s where we find the right website for your business.</p>
+                <p>Building a site starts with ideas — what could it look like? How could it feel? What could it become?</p>
+                <p>The Boardroom is where you explore your options.</p>
+                <a class="boardroom-link" href="./boardroom/">Let us show you around…</a>
+            </div>
+            <div class="explore-choices">
+                <a class="explore-choice" href="./whywebsite/">Why do I need a website?</a>
+                <a class="explore-choice" href="./foundrycare/">FoundryCare</a>
+                <a class="explore-choice" href="./the-foundry/">About The Foundry</a>
+            </div>
+        </section>
+
+        <div class="forge-transition" aria-hidden="true">
+            <span class="forge-transition-line"></span><span class="forge-transition-core"></span>
+        </div>
+    </main>
+
+    <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+    <aside class="site-drawer" id="siteDrawer" aria-hidden="true" aria-label="Site navigation">
+        <div class="drawer-inner">
+            <div class="drawer-kicker">THE FOUNDRY</div>
+            <nav class="drawer-nav" aria-label="Main navigation">
+                <button class="drawer-link" type="button" data-drawer-action="home"><span class="drawer-number">01</span><span>Home</span></button>
+                <button class="drawer-link" type="button" data-drawer-action="site"><span class="drawer-number">02</span><span>Make me a site</span></button>
+                <a class="drawer-link" href="./boardroom/"><span class="drawer-number">03</span><span>The Boardroom</span></a>
+                <a class="drawer-link" href="./whywebsite/"><span class="drawer-number">04</span><span>Why own a website?</span></a>
+                <a class="drawer-link" href="./foundrycare/"><span class="drawer-number">05</span><span>FoundryCare</span></a>
+                <a class="drawer-link" href="./the-foundry/"><span class="drawer-number">06</span><span>About The Foundry</span></a>
+                <a class="drawer-link" href="mailto:thefoundry@rkdb.nz"><span class="drawer-number">07</span><span>Contact</span></a>
+            </nav>
+            <div class="drawer-footer">WEB DESIGN · FOUNDRYCARE</div>
+        </div>
+    </aside>
+
+    <script src="./script.js"></script>
+    <script src="./js/foundry-global-nav.js" data-root="./" data-existing-drawer="true"></script>
+    <script src="./js/landing-experience.js"></script>
+</body>
+</html>

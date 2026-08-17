@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Visit Clementine Street Theatre in Wāpereki. Learn about the venue, accessibility, technical facilities, location and venue hire.">
+  <title>Clementine Street - Clementine Street Theatre</title>
+  <link rel="icon" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="desktop-lock">
+
+<a href="#main" class="skip">Skip to content</a>
+<header class="site-header">
+  <a href="index.html" class="brand"><span class="brand-mark"><i></i></span><span>Clementine Street Theatre</span></a>
+  <nav class="nav" aria-label="Primary"><a href="index.html">Home</a><a href="now-playing.html">Now Playing</a><a href="coming-soon.html">Coming Soon</a><a href="book-tickets.html" class="nav-cta">Book Tickets</a><a href="clementine-street.html" aria-current="page">Clementine Street</a></nav>
+  <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+</header>
+<div id="mobilePanel" class="mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation" style="display:none">
+  <a href="index.html">Home</a><a href="now-playing.html">Now Playing</a><a href="coming-soon.html">Coming Soon</a><a href="book-tickets.html" class="nav-cta">Book Tickets</a><a href="clementine-street.html" aria-current="page">Clementine Street</a>
+</div>
+
+<main id="main" class="clem-main clem-theatre-page">
+  <nav class="clem-nav" aria-label="Clementine Street sections" role="tablist">
+    <button role="tab" id="tab-theatre" data-panel="theatre" aria-controls="theatre" aria-selected="true" tabindex="0">The Theatre</button>
+    <button role="tab" id="tab-hire" data-panel="hire" aria-controls="hire" aria-selected="false" tabindex="-1">Hire</button>
+    <button role="tab" id="tab-technical" data-panel="technical" aria-controls="technical" aria-selected="false" tabindex="-1">Technical</button>
+    <button role="tab" id="tab-accessibility" data-panel="accessibility" aria-controls="accessibility" aria-selected="false" tabindex="-1">Accessibility</button>
+    <button role="tab" id="tab-find" data-panel="find" aria-controls="find" aria-selected="false" tabindex="-1">Find Us</button>
+  </nav>
+
+  <div class="clem-center">
+    <section data-section="theatre" id="theatre" role="tabpanel" aria-labelledby="tab-theatre" class="theatre-editorial">
+      <h1>Small theatre. Live performance. Bold storytelling.</h1>
+
+      <p class="theatre-intro">Clementine Street is an independent 200-seat theatre made for live drama at human scale. The room asks for attention rather than volume, and performances unfold with the audience close enough to feel each shift in tone.</p>
+      <p class="theatre-intro">Set inside a converted warehouse at the edge of W&#257;pereki, the building keeps its timber trusses and blackened steel bones. What remains is deliberate and spare: a theatre that trusts writing, actors and silence.</p>
+
+      <div class="theatre-photo-row">
+        <figure class="theatre-photo">
+          <img src="assets/images/theatre1.webp" alt="The interior of Clementine Street Theatre with close audience seating" loading="lazy">
+        </figure>
+        <figure class="theatre-photo theatre-photo-secondary">
+          <img src="assets/images/theatre2.webp" alt="Evening atmosphere inside Clementine Street Theatre" loading="lazy">
+        </figure>
+      </div>
+
+      <section class="theatre-block" aria-labelledby="building-title">
+        <h2 id="building-title">The Building</h2>
+        <p>Before it was a theatre, this address worked as a harbour warehouse: practical, weathered, and built for weight. The conversion kept that character, then shaped it for performance with careful acoustics and a compact rake that holds the room together.</p>
+        <p>The auditorium seats around 200 people, with blackened steel, exposed timber and soft light doing most of the visual work. There is no ornamental distance between stage and audience, only clear sightlines and materials that carry sound honestly.</p>
+        <p>Everything here is tuned for live drama rather than spectacle. Actors can read the room; audiences can read the breath between lines. By design, everyone becomes part of the same event.</p>
+      </section>
+
+      <aside class="theatre-fact" aria-label="Clementine Street fact">
+        <h3>Did You Know?</h3>
+        <p>Actors often hear audience reactions as clearly as the audience hears them.</p>
+      </aside>
+
+      <section class="theatre-block" aria-labelledby="listen-title">
+        <h2 id="listen-title">Built to Listen</h2>
+        <p>Clementine Street is a theatre where silence matters. Performances rely on intimacy, and stories are experienced in the room with focus, attention and shared energy.</p>
+      </section>
+    </section>
+
+    <section data-section="hire" hidden id="hire" role="tabpanel" aria-labelledby="tab-hire">
+      <h2>Hire Clementine Street</h2>
+      <p style="line-height:1.7;max-width:56ch">The theatre is available for dramatic productions, rehearsals, staged readings, small creative launches, theatre workshops and private performance events.<br><br>We prioritise work that respects the room - drama-first, intimate, live. If you have a project that needs closeness, talk to us.</p>
+      <ul style="line-height:1.6;font-size:.9rem"><li>Dramatic productions</li><li>Rehearsals</li><li>Staged readings</li><li>Small creative launches</li><li>Theatre workshops</li><li>Private performance events</li></ul>
+    </section>
+
+    <section data-section="technical" hidden id="technical" role="tabpanel" aria-labelledby="tab-technical">
+      <h2>Technical Overview</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.86rem;line-height:1.6"><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Approximately 200 fixed seats on a gentle rake with clear sightlines.</div><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Proscenium stage with configurable masking. Width 8.5m, depth 6m, height to grid 5.2m.</div><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Lighting grid with digital control - ETC Ion, LED wash + profile stock.</div><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Stereo front-of-house sound, 4-way monitor, playback via QLab.</div><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Backstage: 2 dressing rooms (4 persons), green room, accessible WC.</div><div style="border:1px solid rgba(0,0,0,.1);padding:12px">Loading access by arrangement via roller door on Clementine Lane.</div></div>
+    </section>
+
+    <section data-section="access" hidden id="accessibility" role="tabpanel" aria-labelledby="tab-accessibility">
+      <h2>Accessibility</h2>
+      <ul style="line-height:1.8;font-size:.9rem"><li>Step-free entrance via side lane - level threshold, no steps</li><li>4 accessible seating spaces in Row D and Row K with companion seating</li><li>Accessible toilet on ground floor</li><li>Hearing assistance available - loop and personal receivers by request</li><li>Staff assistance by request - contact us before your visit</li><li>Guide dogs welcome - water bowl available</li></ul>
+      <p style="font-size:.84rem;opacity:.7;margin-top:12px">If you have specific access requirements, email clementinesttheatre@rkdb.nz or call (07) 555 0148 and we will hold suitable seats.</p>
+    </section>
+
+    <section data-section="find" hidden id="find" role="tabpanel" aria-labelledby="tab-find">
+      <h2>Find Us</h2>
+      <p><strong>Clementine Street Theatre</strong><br>18 Clementine Street<br>W&#257;pereki<br><br>Phone: (07) 555 0148<br>Email: clementinesttheatre@rkdb.nz</p>
+      <img src="assets/images/map.webp" alt="Map showing the location of Clementine Street Theatre" loading="lazy" style="margin-top:16px;width:50%;height:auto">
+      <p style="font-size:.78rem;opacity:.6;margin-top:12px">18 Clementine Street, W&#257;pereki.</p>
+    </section>
+  </div>
+  <div class="clem-right">
+    <div id="formWrap">
+      <div class="section-label">Venue Hire Enquiry</div>
+      <form id="hireForm" class="form-grid" novalidate style="margin-top:12px">
+        <div><label for="fName">Name *</label><input id="fName" name="name" required><div class="field-error" style="font-size:.7rem;color:#8a1a1a;min-height:1em"></div></div>
+        <div><label for="fOrg">Organisation</label><input id="fOrg" name="org"></div>
+        <div><label for="fEmail">Email *</label><input id="fEmail" type="email" name="email" required><div class="field-error" style="font-size:.7rem;color:#8a1a1a;min-height:1em"></div></div>
+        <div><label for="fPhone">Phone</label><input id="fPhone" name="phone"></div>
+        <div><label for="fDate">Proposed date</label><input id="fDate" type="date" name="date"></div>
+        <div><label for="fType">Event type *</label><select id="fType" required><option value="">Select...</option><option>Dramatic production</option><option>Rehearsal</option><option>Staged reading</option><option>Small creative launch</option><option>Theatre workshop</option><option>Private performance event</option></select><div class="field-error" style="font-size:.7rem;color:#8a1a1a;min-height:1em"></div></div>
+        <div><label for="fAtt">Expected attendance</label><input id="fAtt" type="number" min="1" max="200" name="attendance" ></div>
+        <div><label for="fMsg">Message *</label><textarea id="fMsg" name="message" rows="4" required></textarea><div class="field-error" style="font-size:.7rem;color:#8a1a1a;min-height:1em"></div></div>
+        <div><label style="display:flex;gap:8px;align-items:start;font-size:.76rem;text-transform:none;letter-spacing:0"><input type="checkbox" required id="fConsent"> I confirm the details in this enquiry are correct. *</label><div class="field-error" style="font-size:.7rem;color:#8a1a1a;min-height:1em"></div></div>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
+      </form>
+      <div id="formSuccess" class="form-success" tabindex="-1" aria-live="polite">
+        <strong>Thank you.</strong>
+        <p style="margin:8px 0 0;font-size:.84rem;line-height:1.5">Thank you for your enquiry. Our team will respond within 2 working days.</p>
+        <button id="sendAnotherBtn" class="btn" style="margin-top:10px">Send another</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div>Clementine Street Theatre - 18 Clementine Street, W&#257;pereki - <a href="mailto:clementinesttheatre@rkdb.nz">clementinesttheatre@rkdb.nz</a> (07) 555 0148</div>
+  <div class="foot-right"><a href="book-tickets.html">Book Tickets</a><a href="clementine-street.html#accessibility">Accessibility</a><span>© 2026 Clementine Street Theatre. All rights reserved.</span></div>
+</footer>
+<script src="assets/js/main.js"></script><script src="assets/js/venue-form.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+/* THE FOUNDRY — ABOUT */
+body.foundry-info-page { --cream:#eee4d4; --bronze:#bd8350; --orange:#d17a2b; margin:0; min-height:100vh; overflow-x:hidden; color:var(--cream); background:#090806; }
+body.foundry-info-page p { color:inherit; }
+.foundry-about-header { position:fixed; z-index:30; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:flex-start; padding:30px 34px 0; pointer-events:none; }
+.foundry-about-brand { display:flex; flex-direction:column; color:#b9824f; font:400 clamp(1.05rem,1.7vw,1.45rem)/.88 Georgia,"Times New Roman",serif; letter-spacing:.11em; text-decoration:none; pointer-events:auto; }
+.foundry-about-brand span:first-child { margin-bottom:.18em; font-size:.7em; letter-spacing:.22em; }
+.foundry-about-menu { width:44px; height:44px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; border:1px solid rgba(179,122,67,.34); background:rgba(8,7,5,.28); backdrop-filter:blur(5px); pointer-events:auto; }
+.foundry-about-menu span { width:13px; height:1px; display:block; background:#b9824f; }
+.foundry-about-scene { position:relative; isolation:isolate; min-height:100svh; background-image:linear-gradient(90deg,rgba(5,4,3,.88) 0%,rgba(7,6,4,.70) 33%,rgba(7,6,4,.28) 62%,rgba(5,4,3,.52) 100%),url("../assets/images/foundry1a.webp"); background-position:center; background-size:cover; }
+.foundry-about-scene::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.12),transparent 36%,transparent 72%,rgba(0,0,0,.38)); }
+.foundry-about-vignette { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 22% 35%,rgba(190,130,74,.09),transparent 42%); }
+.foundry-about-layout { position:relative; z-index:2; width:min(1280px,calc(100% - 96px)); min-height:100svh; margin:0 auto; display:grid; grid-template-columns:minmax(350px,.82fr) minmax(610px,1.18fr); grid-template-rows:1fr auto; align-items:center; gap:clamp(48px,6vw,96px); padding:116px 0 48px; }
+.foundry-about-copy { max-width:500px; }
+.foundry-about-eyebrow,.foundry-principles-title { color:var(--bronze); font:700 .72rem/1.2 Arial,Helvetica,sans-serif; letter-spacing:.31em; text-transform:uppercase; }
+.foundry-about-eyebrow { margin:0 0 18px; }
+.foundry-about-lead,.foundry-about-statement { color:rgba(238,228,212,.82)!important; font-family:Georgia,"Times New Roman",serif; line-height:1.62; }
+.foundry-about-lead { margin:0 0 24px; font-size:clamp(1rem,1.2vw,1.18rem); }
+.foundry-about-copy h1 { margin:0; color:#f1e8da; font:400 clamp(4.4rem,6.5vw,7rem)/.91 Georgia,"Times New Roman",serif; letter-spacing:-.05em; }
+.foundry-about-statement { margin:29px 0 0; font-size:clamp(.98rem,1.08vw,1.1rem); }
+.foundry-principles { padding:clamp(28px,3vw,44px); border:1px solid rgba(189,131,80,.22); background:linear-gradient(145deg,rgba(10,9,7,.88),rgba(20,17,13,.72)); box-shadow:0 30px 80px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.025); backdrop-filter:blur(7px); }
+.foundry-principles-title { margin-bottom:26px; }
+.foundry-principles-title::after { content:""; width:42px; height:1px; display:inline-block; margin:0 0 3px 16px; background:rgba(189,131,80,.72); }
+.foundry-principles-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.foundry-principle { min-width:0; padding:24px 30px 27px 0; border-top:1px solid rgba(238,228,212,.10); }
+.foundry-principle:nth-child(even) { padding-left:32px; border-left:1px solid rgba(238,228,212,.10); }
+.foundry-principle:nth-child(-n+2) { border-top:0; padding-top:4px; }
+.foundry-principle-head { min-height:46px; display:flex; align-items:center; gap:16px; margin-bottom:13px; }
+.foundry-principle-number { color:rgba(189,131,80,.92); font:400 .86rem Georgia,"Times New Roman",serif; }
+.foundry-principle svg { width:36px; height:36px; fill:none; stroke:var(--orange); stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.foundry-principle h2 { margin:0 0 10px; color:#eee4d4; font:400 clamp(1.42rem,1.65vw,1.82rem)/1.05 Georgia,"Times New Roman",serif; letter-spacing:-.025em; }
+.foundry-principle p { margin:0; color:rgba(231,219,202,.68)!important; font:400 .86rem/1.62 Arial,Helvetica,sans-serif; }
+.foundry-principle a { display:inline-flex; align-items:center; gap:10px; margin-top:14px; color:#d08a4b; font:700 .7rem/1 Arial,Helvetica,sans-serif; letter-spacing:.12em; text-decoration:none; text-transform:uppercase; }
+.foundry-about-back { grid-column:1/-1; justify-self:center; display:inline-flex; align-items:center; gap:9px; color:rgba(238,228,212,.67); font:400 .8rem/1 Georgia,"Times New Roman",serif; letter-spacing:.12em; text-decoration:none; text-transform:uppercase; }
+@media (max-width:1080px) { .foundry-about-layout { width:min(820px,calc(100% - 70px)); min-height:auto; grid-template-columns:1fr; padding-top:145px; padding-bottom:58px; } .foundry-about-copy { max-width:590px; } }
+@media (max-width:660px) { .foundry-about-header { padding:20px 18px 0; } .foundry-about-menu { width:40px; height:40px; } .foundry-about-scene { background-position:58% center; } .foundry-about-layout { width:calc(100% - 34px); gap:38px; padding:108px 0 38px; } .foundry-about-copy h1 { font-size:clamp(3.8rem,18vw,5.4rem); } .foundry-about-lead br,.foundry-about-statement br { display:none; } .foundry-principles { padding:25px 22px; } .foundry-principles-grid { grid-template-columns:1fr; } .foundry-principle,.foundry-principle:nth-child(even),.foundry-principle:nth-child(-n+2) { padding:23px 0; border-left:0; border-top:1px solid rgba(238,228,212,.10); } .foundry-principle:first-child { border-top:0; padding-top:4px; } }

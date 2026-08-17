@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Deepcore Drilling — specialist drilling, delivered with precision.">
+  <title>Deepcore Drilling | Specialist Drilling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="viewport" aria-label="Deepcore Drilling">
+    <section class="site" id="site">
+      <img class="artwork" src="assets/images/drilling-hero.webp" alt="Industrial drilling operation at sunset with specialist crews and equipment">
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>MENU</span>
+      </button>
+
+      <div class="menu-backdrop" aria-hidden="true"></div>
+
+      <aside class="menu-drawer" id="site-menu" aria-hidden="true" aria-label="Site menu">
+        <div class="drawer-head">
+          <p>DEEPCORE DRILLING</p>
+          <button class="menu-close" type="button" aria-label="Close menu">×</button>
+        </div>
+
+        <div class="drawer-grid">
+          <nav class="drawer-nav" aria-label="Primary navigation">
+            <button class="drawer-link is-active" type="button" data-panel="services"><span>01</span> Our Services</button>
+            <button class="drawer-link" type="button" data-panel="about"><span>02</span> About Us</button>
+            <button class="drawer-link" type="button" data-panel="projects"><span>03</span> Projects</button>
+            <button class="drawer-link" type="button" data-panel="safety"><span>04</span> Safety</button>
+            <button class="drawer-link drawer-link--quote" type="button" data-panel="quote"><span>05</span> Get a Quote</button>
+          </nav>
+
+          <div class="drawer-content">
+            <section class="drawer-panel is-active" data-content="services">
+              <p class="panel-kicker">CAPABILITIES</p>
+              <h2>Built for difficult ground.</h2>
+              <div class="panel-list">
+                <article><strong>Geotechnical Drilling</strong><p>Investigation, sampling and site characterisation.</p></article>
+                <article><strong>Water Bore Drilling</strong><p>Reliable groundwater access and bore development.</p></article>
+                <article><strong>Environmental Drilling</strong><p>Monitoring wells, remediation and compliance work.</p></article>
+                <article><strong>Foundation Drilling</strong><p>Piles, anchors and specialist structural solutions.</p></article>
+              </div>
+            </section>
+
+            <section class="drawer-panel" data-content="about">
+              <p class="panel-kicker">THE COMPANY</p>
+              <h2>Experienced people. Proven systems.</h2>
+              <div class="panel-list">
+                <article><strong>Our Story</strong><p>Built by experienced operators who value precision.</p></article>
+                <article><strong>Our People</strong><p>Specialist crews, project managers and field experts.</p></article>
+                <article><strong>Equipment Fleet</strong><p>Modern rigs selected for demanding conditions.</p></article>
+              </div>
+            </section>
+
+            <section class="drawer-panel" data-content="projects">
+              <p class="panel-kicker">SELECTED WORK</p>
+              <h2>Real sites. Real constraints. Real results.</h2>
+              <div class="panel-list">
+                <article><strong>Infrastructure</strong><p>Transport, utilities and major civil projects.</p></article>
+                <article><strong>Commercial</strong><p>Complex urban sites and constrained-access drilling.</p></article>
+                <article><strong>Regional</strong><p>Remote terrain, farms and nationwide field programmes.</p></article>
+              </div>
+            </section>
+
+            <section class="drawer-panel" data-content="safety">
+              <p class="panel-kicker">ZERO COMPROMISE</p>
+              <h2>Everyone goes home safe.</h2>
+              <div class="panel-list">
+                <article><strong>Safety Systems</strong><p>Planning, permits, controls and field verification.</p></article>
+                <article><strong>Training</strong><p>Competent crews, current certification and leadership.</p></article>
+                <article><strong>Environmental Care</strong><p>Low-impact methods and responsible site management.</p></article>
+              </div>
+            </section>
+
+            <section class="drawer-panel" data-content="quote">
+              <p class="panel-kicker">START A PROJECT</p>
+              <h2>Tell us what needs drilling.</h2>
+              <p class="quote-copy">Share the location, scope and timing. Our project team will respond with the right next step.</p>
+              <form id="quote-form">
+                <label><span>Name</span><input name="name" autocomplete="name" required></label>
+                <label><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+                <label class="full"><span>Project outline</span><textarea name="project" rows="4" required></textarea></label>
+                <button type="submit">REQUEST A CALL →</button>
+                <p class="form-status" role="status"></p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

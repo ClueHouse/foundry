@@ -283,3 +283,9 @@ html.foundry-demo-shell:has(.foundry-demo-frame[title*="Springboard"])
         width: 62px !important;
     }
 }
+
+/* MINI-GOLF — no shadow contaminating the surround grey */
+.foundry-demo-frame[title="Mini Golf — Billboard demo"] {
+  background: #292929 !important;
+  box-shadow: none !important;
+}

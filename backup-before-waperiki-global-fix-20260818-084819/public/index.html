@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+    <script>if (location.hash === "#explore") document.documentElement.classList.add("restore-explore");</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Foundry</title>
+    <meta name="description" content="Your new site. Forged. Finished. Future-proof.">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/landing-experience.css">
+    <link rel="stylesheet" href="./css/foundry-global-nav.css">
+</head>
+<body class="homepage">
+    <script>if (location.hash === "#explore") document.body.classList.add("explore-open");</script>
+    <main class="landing">
+        <div class="brand">
+            <div class="brand-topline">
+                <span class="brand-rule"></span><span class="brand-the">THE</span><span class="brand-rule"></span>
+            </div>
+            <div class="brand-name">FOUNDRY</div>
+            <div class="brand-tagline">WEB DESIGN · FOUNDRYCARE</div>
+        </div>
+
+        <div class="hero">
+            <section class="hero-panel is-active" id="introPanel">
+                <h1 class="hero-title">Your new site.</h1>
+                <div class="hero-lines"><div>Forged.</div><div>Finished.</div><div>Future-proof.</div></div>
+                <div class="hero-actions">
+                    <button id="sortButton" class="hero-button" type="button">Make me a site</button>
+                    <button id="exploreButton" class="hero-button" type="button">Let me choose</button>
+                </div>
+            </section>
+
+            <section class="hero-panel" id="sortPanel" aria-hidden="true">
+                <h2 class="sort-title">Need a website?</h2>
+                <div class="sort-lines">Leave it with me.</div>
+                <div class="hero-actions sort-actions">
+                    <a class="hero-button email-start" href="mailto:thefoundry@rkdb.nz">Hand me the problem</a>
+                    <button id="backButton" class="hero-back" type="button">← Back</button>
+                </div>
+            </section>
+        </div>
+
+        <section class="explore-screen" id="exploreScreen" aria-hidden="true">
+            <div class="explore-boardroom">
+                <div class="explore-kicker">THE BOARDROOM</div>
+                <h2>At the centre of the Foundry sits our Boardroom.</h2>
+                <p>It’s where we find the right website for your business.</p>
+                <p>Building a site starts with ideas — what could it look like? How could it feel? What could it become?</p>
+                <p>The Boardroom is where you explore your options.</p>
+            </div>
+            <div class="explore-choices">
+                <a class="explore-choice" href="./boardroom/">The Boardroom</a>
+<a class="explore-choice" href="./the-foundry/">About The Foundry</a>
+<a class="explore-choice" href="./foundrycare/">FoundryCare</a>
+<a class="explore-choice" href="./whywebsite/">Why do I need a website?</a>
+            </div>
+        </section>
+
+        <div class="forge-transition" aria-hidden="true">
+            <span class="forge-transition-line"></span><span class="forge-transition-core"></span>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./js/foundry-global-nav.js" data-root="./" data-landing-actions="true"></script>
+    <script src="./js/landing-experience.js"></script>
+</body>
+</html>

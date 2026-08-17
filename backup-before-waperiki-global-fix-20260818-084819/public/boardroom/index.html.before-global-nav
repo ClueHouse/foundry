@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b08">
+  <meta name="description" content="Explore the Foundry Boardroom and its website product directions.">
+  <title>The Boardroom | Foundry by RKDB</title>
+  <link rel="stylesheet" href="./boardroom.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Foundry home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-copy"><strong>FOUNDRY</strong><small>BY RKDB</small></span>
+    </a>
+
+    <a class="header-link" href="../the-foundry/">About Foundry</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="boardroom-title">
+      <p class="eyebrow">The Foundry Boardroom</p>
+      <h1 id="boardroom-title">Four clear ways to build.</h1>
+      <p class="intro-copy">
+        Explore four distinct website formats, each built around a different kind of business need.
+      </p>
+    </section>
+
+    <section class="board-grid" aria-label="Foundry products">
+      <article class="board-card board-card--noticeboard">
+        <div class="board-card__top">
+          <span class="board-number">01</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">N</div>
+        <p class="board-label">Noticeboard</p>
+        <h2>A polished website with information you can keep current.</h2>
+        <p class="board-copy">Explore three demonstrations built around owner-editable specials, availability, announcements and progress updates.</p>
+        <a class="board-action" href="./noticeboard/">Explore Noticeboard <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="board-card board-card--billboard">
+        <div class="board-card__top">
+          <span class="board-number">02</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">B</div>
+        <p class="board-label">Billboard</p>
+        <h2>A polished online presence that gets to the point.</h2>
+        <p class="board-copy">See the completed Billboard product and its three working business demonstrations.</p>
+        <a class="board-action" href="./billboard/">Explore Billboard <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="board-card board-card--springboard">
+        <div class="board-card__top">
+          <span class="board-number">03</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">S</div>
+        <p class="board-label">Springboard</p>
+        <h2>A complete multi-page website with room to grow.</h2>
+        <p class="board-copy">For businesses that need dedicated pages, deeper information and a broader customer journey.</p>
+        <a class="board-action" href="./springboard/">Explore Springboard <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="board-card board-card--skateboard">
+        <div class="board-card__top">
+          <span class="board-number">04</span>
+        </div>
+        <div class="board-icon" aria-hidden="true">S</div>
+        <p class="board-label">Skateboard</p>
+        <h2>An immersive parallax site with smooth movement.</h2>
+        <p class="board-copy">Explore three layered, visually led demonstrations where scrolling becomes part of the experience.</p>
+        <a class="board-action" href="./skateboard/">Explore Skateboard <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <section class="working-note" aria-labelledby="working-note-title">
+      <div>
+        <p class="eyebrow">Working page</p>
+        <h2 id="working-note-title">The final story can come later.</h2>
+      </div>
+      <p>
+        The structure is now solid enough to use while the precise language, imagery and personality of the Boardroom are worked out.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="../">Foundry home</a>
+    <span>Foundry by RKDB</span>
+    <a href="mailto:foundry@rkdb.nz">Let’s talk</a>
+  </footer>
+</body>
+</html>

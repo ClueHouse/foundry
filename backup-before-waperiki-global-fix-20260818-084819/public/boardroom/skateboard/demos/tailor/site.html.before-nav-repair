@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ash & Oak — Where Presence Begins</title><link rel="stylesheet" href="css/main.css">
+</head><body>
+<div id="progress" style="transform:scaleX(0)"></div>
+<nav id="topnav"><a class="wordmark" href="site.html">ASH & OAK</a><div class="links">" data-open-drawer>Bag (<span id="bag-count">0</span>)</a>shop/index.html">Shop</a><a href="#boutiques" data-goto="4">Boutiques</a></div></nav>
+<div id="chapter-ind"><div class="cur">01</div><div class="meta">Arrival<br>01 / 05</div></div>
+<div id="counter">01 — 05</div>
+<div class="wheel-hint" id="wheel-hint"><div class="mouse"></div><div class="tiny" style="opacity:1">Scroll</div></div>
+
+<div id="scroller"><div id="track">
+
+<!-- CH1 -->
+<section class="chapter ch1 active">
+  <div class="hero img-reveal in"><img src="images/arrival-mustard.webp" alt="Arrival"></div>
+  <div class="floating-num display">01</div>
+  <div class="type">
+    <div class="tiny reveal in">Wāpereki · Milan</div>
+    <h1 class="display reveal in reveal-slow" style="margin-top:12px">Ash &<br>Oak</h1>
+    <div class="tiny reveal in" style="margin-top:24px;opacity:0.8;letter-spacing:0.32em">Where Presence Begins</div>
+    <p class="tag reveal in">A contemporary house for architects, founders, and those who understand that presence is built, not announced. The mustard overcoat, cut in Biella wool.</p>
+    <div class="reveal in" style="margin-top:36px"><a href="#" data-goto="1" class="btn">Enter the Atelier</a></div>
+  </div>
+  <div class="tiny reveal in ch1-passage">Boulevard · 07:42 — Natural light, wool 380gsm</div>
+</section>
+
+<!-- CH2 -->
+<section class="chapter ch2">
+  <div class="left-img img-reveal"><img src="images/atelier.webp" alt="Atelier"></div>
+  <div class="kraft reveal"><div class="tiny">Pattern 07-B</div><p>We cut at 06:30. The cloth is honest then. Chalk that vanishes with steam. Nothing decorative.</p><div class="tiny" style="margin-top:16px">— Atelier notes, 12.11</div></div>
+  <div class="right-content">
+    <div class="tiny reveal">02 / The Atelier — Emotional Centre</div>
+    <h2 class="display reveal" style="font-size:5vw;line-height:0.9;margin-top:16px">We cut in<br>natural daylight.</h2>
+    <p class="reveal" style="margin-top:24px;font-size:14px;line-height:1.9;opacity:0.6;max-width:32ch">The cloth tells us how it wants to fall. Walnut tables, blackened steel shears, brown kraft that has seen a thousand drafts. No mood boards. The material is the brief.</p>
+    <div class="reveal" style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:36ch">
+      <div style="border-top:1px solid var(--line);padding-top:12px"><div class="tiny">Cutting table</div><div style="font-size:12px;margin-top:6px;opacity:0.6">Walnut, 4.2m, oiled. Holds pins without scarring.</div></div>
+      <div style="border-top:1px solid var(--line);padding-top:12px"><div class="tiny">Steam</div><div style="font-size:12px;margin-top:6px;opacity:0.6">Low pressure. The chalk disappears, the shape remains.</div></div>
+    </div>
+    <div class="reveal" style="margin-top:40px"><a href="shop/index.html" class="btn-ghost">View craftsmanship</a></div>
+  </div>
+</section>
+
+<!-- CH3 -->
+<section class="chapter ch3">
+  <div class="tiny" style="position:absolute;left:5vw;top:6vh">03 / The Collection — Four looks, not products</div>
+  <div class="look look-1 reveal img-reveal"><img src="images/arrival-mustard.webp" alt="Winter"><div class="look-meta"><h4>The Winter Layer</h4><span>$1,850</span></div></div>
+  <div class="look look-2 reveal img-reveal"><img src="images/collection-executive.webp" alt="Executive"><div class="look-meta"><h4>The Executive</h4><span>$2,890 look</span></div></div>
+  <div class="look look-3 reveal img-reveal"><img src="images/collection-traveller.webp" alt="Traveller"><div class="look-meta"><h4>The Traveller</h4><span>$1,740 look</span></div></div>
+  <div class="look look-4 reveal img-reveal"><img src="images/collection-evening.webp" alt="Evening"><div class="look-meta"><h4>The Evening</h4><span>$3,200 look</span></div></div>
+  <div style="position:absolute;left:18vw;bottom:6vh;display:flex;gap:24px" class="reveal"><a href="#" class="btn" onclick="event.preventDefault();addToBag('Winter Layer Look','1850','images/arrival-mustard.webp')">Shop Looks</a><a href="shop/index.html" class="btn-ghost" style="padding:14px 0">Shop Pieces</a></div>
+</section>
+
+<!-- CH4 -->
+<section class="chapter ch4">
+  <div class="macro img-reveal"><img src="images/detail-horn.webp" alt="Detail"></div>
+  <div class="details">
+    <div class="tiny reveal" style="color:var(--cream);opacity:0.4">04 / The Details — Macro</div>
+    <h2 class="display reveal" style="font-size:4vw;line-height:0.95;margin-top:16px;color:var(--cream)">Presence is<br>in the quiet.</h2>
+    <div style="margin-top:36px">
+      <div class="ditem reveal"><div class="n">01</div><div><h5>Fabric — 380gsm</h5><p>Wool from Biella. Brushed, not boiled. Holds structure without stiffness. Falls with intent.</p></div></div>
+      <div class="ditem reveal"><div class="n">02</div><div><h5>Horn — Corzo</h5><p>Hand polished, cold to touch. No two share the same grain. Secured with brass shank.</p></div></div>
+      <div class="ditem reveal"><div class="n">03</div><div><h5>Stitch — 4mm</h5><p>Pick stitch visible at 30cm, invisible at 3m. The hand that made it remains.</p></div></div>
+      <div class="ditem reveal"><div class="n">04</div><div><h5>Leather — Veg tanned</h5><p>Darkens with your hands, not time. Rich brown, walnut binding inside.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CH5 -->
+<section class="chapter ch5" id="boutiques">
+  <div class="boutique-scroll" id="boutique-scroll" tabindex="0" aria-label="Boutiques">
+    <header class="boutique-intro">
+      <div class="tiny">05 / The House — Boutiques as galleries</div>
+      <h2 class="display">Boutiques as galleries.</h2>
+      <p>Architecture is the hero. Clothes hang with space around them. Welcome.</p>
+    </header>
+
+    <article class="boutique-panel">
+      <img src="images/boutique-main.webp" alt="Ash & Oak Wāpereki boutique interior">
+      <div class="boutique-info">
+        <div class="tiny">Wāpereki — New Zealand</div>
+        <h3 class="display">Strand, 212</h3>
+        <p>Harbour light, polished concrete, walnut that has darkened with hands. Floor-to-ceiling glass looking to North-West. Harakeke beyond the deck. Open by appointment and 10—5, Monday to Saturday.</p>
+        <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Made-to-measure</li><li>Alterations while you wait, coffee</li><li>Archive viewings</li></ul></div>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
+      </div>
+    </article>
+
+    <article class="boutique-panel reverse">
+      <div class="boutique-info">
+        <div class="tiny">Milan — Italy</div>
+        <h3 class="display">Brera, 9</h3>
+        <p>Brera district, second courtyard, stone, blackened steel, silence. Winter light through a single skylight. The same walnut, the same concrete, a different city.</p>
+        <div class="services"><div class="tiny">Services</div><ul><li>Private fittings</li><li>Trunk shows, quarterly</li><li>Materials library</li></ul></div>
+        <a href="mailto:oakandash@pourhomme.com" class="btn boutique-static">Book a visit</a>
+      </div>
+      <img src="images/boutique-milan.webp" alt="Ash & Oak Milan boutique interior">
+    </article>
+
+    <footer class="boutique-footer">
+      <div class="display">Ash & Oak. Where Presence Begins.</div>
+      <a href="shop/index.html" class="btn">View Collection</a>
+    </footer>
+  </div>
+</section>
+
+<div style="width:12vw;flex-shrink:0" id="end-spacer"></div></div></div>
+
+<div id="overlay"></div><div id="drawer"><header><div class="tiny" style="color:var(--cream);opacity:1">Bag — <span id="cart-count-drawer">0</span></div><button id="close-drawer" style="background:none;border:none;color:var(--cream);font-size:18px;cursor:pointer">✕</button></header><div class="body"><div id="cart-list"></div><div style="margin-top:40px;border-top:1px solid rgba(247,243,238,0.12);padding-top:24px"><div class="tiny" style="color:var(--cream)">Featured</div><div style="margin-top:16px;display:flex;gap:12px;cursor:pointer" onclick="addToBag('Mustard Overcoat','$1,850','images/arrival-mustard.webp')"><img src="images/arrival-mustard.webp" style="width:64px;height:80px;object-fit:cover"><div><div style="font-family:Instrument Serif;font-size:18px;color:var(--cream)">Mustard Overcoat</div><div style="font-size:11px;opacity:0.6">$1,850 — Add +</div></div></div></div></div><div style="padding:24px 32px;border-top:1px solid rgba(247,243,238,0.12)"><div style="display:flex;justify-content:space-between"><div class="tiny" style="color:var(--cream)">Total</div><div id="cart-total" style="font-family:Instrument Serif;font-size:20px;color:var(--cream)">$0</div></div><a href="#" style="display:block;margin-top:16px;background:var(--cream);color:var(--walnut);text-align:center;padding:14px" class="tiny">Checkout</a></div></div>
+
+<script src="js/app.js"></script>
+</body></html>

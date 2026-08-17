@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On the Road — Walking Te Araroa for the Cancer Society</title>
+  <meta name="description" content="Kōkiri Tamehana is walking 3,000 kilometres of Te Araroa to whakapāho awareness for the Cancer Society. Follow her journey and send her a trail note." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1 class="brand">On the Road</h1>
+      <span class="brand-sub">Walking Te Araroa for the Cancer Society</span>
+    </div>
+    <a class="header-donate" href="https://www.daffodilday.org.nz/" target="_blank" rel="noopener noreferrer">Donate</a>
+  </header>
+
+  <main class="layout">
+    <section class="hero" aria-label="Kōkiri on the Te Araroa Trail">
+      <img src="assets/images/hero.jpg" alt="Kōkiri looking towards mountains while hiking Te Araroa" />
+      <div class="hero-scrim"></div>
+      <div class="hero-content">
+        <h2 class="hero-title">3,000<br>Kilometres</h2>
+        <p class="hero-sub">One cause. Countless reasons to keep walking.</p>
+        <a class="btn btn-yellow" href="https://www.daffodilday.org.nz/" target="_blank" rel="noopener noreferrer">Support Daffodil Day</a>
+        <div class="hero-meta"><span></span> Te Araroa • Cape Reinga to Bluff • 2025</div>
+      </div>
+    </section>
+
+    <div class="center-col">
+      <section class="card card-about" aria-labelledby="about-heading">
+        <div class="about-portrait">
+          <img src="assets/images/portrait.png" alt="Kōkiri smiling directly at the camera in different trail clothing" />
+        </div>
+        <div class="about-text">
+          <h2 id="about-heading">Kia ora,<br>I'm Kōkiri.</h2>
+          <p>Cancer has touched my whānau very personally. Over the last two years, both my koro and my auntie have faced cancer. I wanted to do something difficult enough to honour them and everyone walking that same road.</p>
+          <p>I'm walking Te Araroa from Cape Reinga to Bluff — 3,000 kilometres, one day at a time. Along the way, I hope to <strong>whakapāho</strong> awareness of how deeply cancer affects Kiwi families, and encourage people to support the Cancer Society.</p>
+          <p>Every evening I update this website from my phone with where I've been, where I'm heading next, and a little story from the day. I read every message while I update the site, and it's something I genuinely look forward to.</p>
+          <p class="small-note">Ngā mihi nui — thank you for walking alongside me.</p>
+        </div>
+      </section>
+
+      <section class="card journal-card" aria-labelledby="journal-heading">
+        <div class="journal-head">
+          <div>
+            <span class="eyebrow">Updated from the trail</span>
+            <h2 id="journal-heading">On the Road with Kōkiri</h2>
+          </div>
+          <span class="journal-count" aria-label="Five recent updates">5</span>
+        </div>
+        <div class="journal-list">
+          <article class="journal-entry">
+            <div class="journal-date"><small>May</small><b>14</b></div>
+            <p>Spent the night listening to moreporks. I could hear them calling long after the hut went quiet.</p>
+          </article>
+          <article class="journal-entry">
+            <div class="journal-date"><small>May</small><b>13</b></div>
+            <p>Someone left homemade muffins at the trail shelter. That kindness carried me through the last wet kilometres.</p>
+          </article>
+          <article class="journal-entry">
+            <div class="journal-date"><small>May</small><b>12</b></div>
+            <p>The rain finally stopped. The views today were worth every blister and every soaked sock.</p>
+          </article>
+          <article class="journal-entry">
+            <div class="journal-date"><small>May</small><b>11</b></div>
+            <p>A family walked beside me and shared their own cancer journey. I carried their story all day.</p>
+          </article>
+          <article class="journal-entry">
+            <div class="journal-date"><small>May</small><b>10</b></div>
+            <p>Slow going through the mud, but a bright patch of daffodils beside the road felt like a sign to keep moving.</p>
+          </article>
+        </div>
+        <div class="journal-foot"><span aria-hidden="true">●</span> Kōkiri updates daily from her phone.</div>
+      </section>
+    </div>
+
+    <div class="right-col">
+      <section class="card next-stop-card" aria-labelledby="next-stop-heading">
+        <div class="next-stop-head">
+          <div>
+            <span class="eyebrow">Latest trail update</span>
+            <h2 id="next-stop-heading">Next stop</h2>
+          </div>
+          <span class="editable-tag">Editable</span>
+        </div>
+        <div class="next-stop-route">
+          <div><span>Today</span><strong>Taihape</strong></div>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <div><span>Tomorrow</span><strong>National Park</strong></div>
+        </div>
+        <p class="next-stop-distance">21 km walked today</p>
+      </section>
+
+      <section class="card message-card" aria-labelledby="message-heading">
+        <span class="eyebrow">A message for tonight</span>
+        <h2 id="message-heading">Leave Kōkiri a trail note.</h2>
+        <p>After updating the journey from her phone each evening, Kōkiri sits down with a hot drink and reads the messages sent from here.</p>
+        <form id="message-form">
+          <div class="form-row">
+            <label><span>Your name</span><input id="sender-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
+            <label><span>Email address</span><input id="sender-email" name="email" type="email" autocomplete="email" placeholder="Email address" required></label>
+          </div>
+          <label><span>Your message</span><textarea id="sender-message" name="message" rows="4" placeholder="Write your message to Kōkiri…" required></textarea></label>
+          <button type="submit">Send trail note <span aria-hidden="true">→</span></button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card boots-card" aria-label="Worn hiking boots with a daffodil">
+        <img src="assets/images/boots.jpg" alt="Worn hiking boots with a yellow daffodil tucked into the laces" />
+        <div class="boots-scrim"></div>
+        <div class="boots-copy">
+          <p>Tomorrow starts here.</p>
+          <span>Muddy boots. Another day closer to Bluff.</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="mobile-foot">Walking Te Araroa for the Cancer Society <span>On the Road</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

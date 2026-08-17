@@ -310,3 +310,32 @@
   width: 16.47% !important;
   height: 8.20% !important;
 }
+
+/* FINAL MINI-GOLF SURROUND MATCH */
+html,
+body,
+.viewport {
+  background: #292929 !important;
+}
+
+.stage {
+  box-shadow: none !important;
+}
+
+/* Final Mini Golf surround fix:
+   body is already the correct Billboard grey (#292929);
+   remove the stage shadow that darkens it. */
+.stage {
+  box-shadow: none !important;
+}
+
+/* MINI-GOLF — exact Billboard surround match */
+html,
+body,
+.viewport {
+  background: #292929 !important;
+}
+
+.stage {
+  box-shadow: none !important;
+}
