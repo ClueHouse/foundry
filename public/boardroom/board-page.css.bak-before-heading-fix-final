@@ -668,34 +668,87 @@ body.billboard .board-nav > a:first-child::after{
 }
 
 
-
-
-/* =========================================================
-   BILLBOARD — FINAL GALLERY HEADING LAYOUT
-   ========================================================= */
-
-body.billboard .gallery-head{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:0;
-  margin:0 0 16px;
-  transform:none;
+/* BILLBOARD — pull examples heading closer to nav divider */
+body.billboard .showcase-heading{
+  transform:translateY(-24px);
 }
 
-/* Main heading — own centred row near divider */
+
+/* BILLBOARD — move gallery heading closer to divider */
+body.billboard .gallery-head{
+  transform:translateY(-22px);
+}
+
+
+/* BILLBOARD — gallery heading tight beneath divider */
+body.billboard .gallery-head{
+  transform:translateY(-75px);
+}
+
+
+/* BILLBOARD — strengthen gallery heading */
 body.billboard .gallery-head h2{
-  order:1;
+  font-size:34px;
+}
+
+
+/* BILLBOARD — centre gallery heading */
+body.billboard .gallery-head h2{
   width:100%;
-  margin:0 0 48px;
+  text-align:center;
+}
+
+
+/* BILLBOARD — separate heading from "in action" label */
+
+/* Heading stays high beneath the divider */
+body.billboard .gallery-head{
+  position:relative;
+  transform:translateY(-75px);
+}
+
+body.billboard .gallery-head h2{
+  width:100%;
   text-align:center;
   font-size:34px;
 }
 
-/* BILLBOARD IN ACTION — separate, immediately above cards */
-body.billboard .gallery-head > p{
-  order:2;
+/* Put BILLBOARD IN ACTION back down beside the first example */
+body.billboard .gallery-head .eyebrow{
+  position:absolute;
+  left:0;
+  top:92px;
   margin:0;
-  text-align:left;
   transform:none;
+}
+
+
+/* =========================================================
+   BILLBOARD — FINAL HEADING / IN-ACTION SEPARATION
+   ========================================================= */
+
+/* Main sentence gets its own clear row */
+body.billboard .gallery-head{
+  position:relative;
+  display:block;
+  transform:translateY(-55px);
+}
+
+body.billboard .gallery-head h2{
+  display:block;
+  width:100%;
+  margin:0;
+  text-align:center;
+  font-size:34px;
+}
+
+/* BILLBOARD IN ACTION belongs with the first example */
+body.billboard .gallery-head .eyebrow{
+  position:absolute;
+  left:0;
+  top:82px;
+  margin:0;
+  transform:none;
+  text-align:left;
 }
 
