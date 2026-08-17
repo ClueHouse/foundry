@@ -1002,3 +1002,15 @@ body.billboard::after{
   }
 }
 
+
+/* OPEN SITE — 50% larger than original */
+.demo-copy a{
+  font-size:15px;
+}
+
+
+/* OPEN SITE — 50% larger than original */
+.demo-meta > span{
+  font-size:15px;
+}
+
