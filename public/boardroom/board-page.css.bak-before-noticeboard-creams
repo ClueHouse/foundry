@@ -70,14 +70,17 @@ body.noticeboard{
   --ink:#211b16;
   --muted:rgba(33,27,22,.70);
   --line:rgba(54,42,32,.18);
-  --surface:#F6F1E6;
-  --surface-strong:#F6F1E6;
+  --surface:rgba(250,246,237,.66);
+  --surface-strong:rgba(252,248,240,.80);
   --surface-line:rgba(73,56,42,.15);
   --shadow:rgba(80,58,38,.13);
   --accent:#cf8f39;
 }
 body.noticeboard::before{
-  background:#E8DFC3;
+  background:
+    linear-gradient(rgba(245,239,226,.90),rgba(245,239,226,.90)),
+    url("../assets/backgrounds/board-noticeboard.webp") center/cover no-repeat;
+  filter:saturate(.45) brightness(1.08);
 }
 body.noticeboard::after{
   opacity:.18;
@@ -1010,74 +1013,3 @@ body.billboard::after{
   font-size:15px;
 }
 
-
-/* Noticeboard approved cream palette */
-body.noticeboard .demo-card,
-body.noticeboard .board-intro {
-  background:#F6F1E6;
-}
-
-body.noticeboard .board-switcher {
-  background:#DBCCA1;
-}
-
-/* Noticeboard active nav tab — approved deep cream */
-body.noticeboard .board-tabs a.active {
-  color:#211b16;
-  background:#DBCCA1;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
-    inset -1px 0 0 rgba(90,70,45,.20),
-    4px 0 18px rgba(0,0,0,.10);
-}
-
-/* Noticeboard — darker cream above main divider */
-body.noticeboard .board-header {
-  background:#DBCCA1;
-}
-
-/* Approved board-specific active tab colours */
-body.skateboard .board-tabs a.active {
-  background:#A58B73;
-  color:#211b16;
-}
-
-body.springboard .board-tabs a.active {
-  background:#66827D;
-  color:#ffffff;
-}
-
-/* ==========================================================
-   BILLBOARD — APPROVED CHARCOAL / GREY PALETTE
-   ========================================================== */
-
-/* Donut-grey surface across all three Billboard demo cards */
-body.billboard .demo-card {
-  background:#292929;
-}
-
-/* Billboard information panel — same grey family */
-body.billboard .board-intro {
-  background:#292929;
-}
-
-/* Keep Billboard typography clean and bright */
-body.billboard .demo-card,
-body.billboard .demo-card h2,
-body.billboard .board-intro,
-body.billboard .board-intro h1,
-body.billboard .board-intro h2 {
-  color:#F4F0E8;
-}
-
-/* Approved lighter neutral active Billboard tab */
-body.billboard .board-tabs a.active {
-  background:#D8B27A;
-  color:#17130F;
-}
-
-/* Billboard active nav — soft blush pink */
-body.billboard .board-tabs a.active {
-  background:#E8CACA;
-  color:#211B1B;
-}

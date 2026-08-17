@@ -1075,9 +1075,3 @@ body.billboard .board-tabs a.active {
   background:#D8B27A;
   color:#17130F;
 }
-
-/* Billboard active nav — soft blush pink */
-body.billboard .board-tabs a.active {
-  background:#E8CACA;
-  color:#211B1B;
-}

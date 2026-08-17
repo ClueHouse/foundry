@@ -25,11 +25,11 @@ html.foundry-demo-shell body{font-family:"Segoe UI",Arial,sans-serif}
 
 /* Match demo surround to its Boardroom colour */
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Billboard"]) body {
-  background:#292929;
+  background:#0f0d0b;
 }
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Noticeboard"]) body {
-  background:#E8DFC3;
+  background:#f5efe2;
 }
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Skateboard"]) body {
@@ -38,16 +38,4 @@ html.foundry-demo-shell:has(.foundry-demo-frame[title*="Skateboard"]) body {
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Springboard"]) body {
   background:#294542;
-}
-
-/* Noticeboard approved demo surround */
-html:has(title[data-foundry-board="noticeboard"]),
-body:has([data-foundry-board="noticeboard"]) {
-  background:#F6F1E6;
-}
-
-/* Noticeboard demo padding — middle cream */
-html:has(title[data-foundry-board="noticeboard"]),
-body:has([data-foundry-board="noticeboard"]) {
-  background:#E8DFC3;
 }

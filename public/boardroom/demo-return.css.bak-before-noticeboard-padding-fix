@@ -25,11 +25,11 @@ html.foundry-demo-shell body{font-family:"Segoe UI",Arial,sans-serif}
 
 /* Match demo surround to its Boardroom colour */
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Billboard"]) body {
-  background:#292929;
+  background:#0f0d0b;
 }
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Noticeboard"]) body {
-  background:#E8DFC3;
+  background:#f5efe2;
 }
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Skateboard"]) body {
