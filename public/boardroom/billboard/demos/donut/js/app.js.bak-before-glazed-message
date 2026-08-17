@@ -105,7 +105,7 @@
   document.getElementById('order-form')?.addEventListener('submit', event => {
     event.preventDefault();
     const status = event.currentTarget.querySelector('.form-status');
-    status.textContent = 'Got it! Consider your message freshly glazed and delivered.';
+    status.textContent = 'Thank you — an agent will be in touch within the next 20 minutes.';
   });
 
   site.querySelector('.brand')?.addEventListener('click', event => {
