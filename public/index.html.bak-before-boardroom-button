@@ -48,12 +48,12 @@
                 <p>It’s where we find the right website for your business.</p>
                 <p>Building a site starts with ideas — what could it look like? How could it feel? What could it become?</p>
                 <p>The Boardroom is where you explore your options.</p>
+                <a class="boardroom-link" href="./boardroom/">Let us show you around…</a>
             </div>
             <div class="explore-choices">
-                <a class="explore-choice" href="./boardroom/">The Boardroom</a>
-<a class="explore-choice" href="./the-foundry/">About The Foundry</a>
-<a class="explore-choice" href="./foundrycare/">FoundryCare</a>
-<a class="explore-choice" href="./whywebsite/">Why do I need a website?</a>
+                <a class="explore-choice" href="./whywebsite/">Why do I need a website?</a>
+                <a class="explore-choice" href="./foundrycare/">FoundryCare</a>
+                <a class="explore-choice" href="./the-foundry/">About The Foundry</a>
             </div>
         </section>
 

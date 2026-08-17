@@ -1941,22 +1941,3 @@ WHY WEBSITE — FINAL WALL HEADING
   transform: translateX(4px);
 }
 
-
-
-/* === BOARDROOM PRIMARY DESTINATION === */
-
-a[href="./boardroom/"] {
-  border-color: rgba(213, 157, 88, .78);
-  background: rgba(30, 22, 15, .68);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 226, 180, .10),
-    0 0 18px rgba(176, 112, 45, .10);
-}
-
-a[href="./boardroom/"]:hover,
-a[href="./boardroom/"]:focus-visible {
-  border-color: rgba(229, 174, 103, .95);
-  background: rgba(42, 29, 18, .78);
-}
-
