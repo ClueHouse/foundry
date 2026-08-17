@@ -405,26 +405,182 @@ a{color:inherit}
 }
 
 
-
-
 /* =========================================================
-   FOUNDRY BOARD PAGES — FINAL SHARED NAV + LAYOUT
-   Billboard / Noticeboard / Skateboard / Springboard
+   BILLBOARD NAV TEST — segmented board selector
    ========================================================= */
 
-
-/* ---------------------------------------------------------
-   NAVIGATION
-   --------------------------------------------------------- */
-
-.board-nav{
+body.billboard .board-nav{
   padding-right:86px;
 }
 
+body.billboard .board-tabs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
 
-/* Boardroom back control */
+  width:min(820px,58vw);
+  min-height:54px;
 
-.board-nav > a:first-child{
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    ),
+    rgba(10,10,10,.72);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 8px 24px rgba(0,0,0,.22);
+}
+
+body.billboard .board-tabs a{
+  position:relative;
+
+  min-width:0;
+  min-height:54px;
+  padding:0 22px;
+
+  border:0;
+  border-radius:0;
+
+  color:rgba(244,240,233,.82);
+  background:transparent;
+
+  transition:
+    color .18s ease,
+    background .18s ease,
+    filter .18s ease;
+}
+
+body.billboard .board-tabs a+a{
+  border-left:1px solid rgba(255,255,255,.12);
+}
+
+body.billboard .board-tabs a+a::before{
+  display:none;
+}
+
+body.billboard .board-tabs a:hover,
+body.billboard .board-tabs a:focus-visible{
+  color:#fff;
+  background:rgba(255,255,255,.045);
+}
+
+body.billboard .board-tabs a.active{
+  color:#fff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #c99443 0%,
+      #a66f27 100%
+    );
+
+  border:0;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,235,190,.28),
+    inset -1px 0 0 rgba(64,37,12,.50),
+    4px 0 18px rgba(0,0,0,.18);
+}
+
+body.billboard .board-tabs a.active::before{
+  display:none;
+}
+
+
+/* Keep the normal Foundry hamburger clear of the board rail */
+body.billboard .foundry-global-nav--menu-only{
+  top:27px;
+  right:34px;
+}
+
+
+
+/* =========================================================
+   BILLBOARD — 3D BOARDROOM BACK BUTTON
+   ========================================================= */
+
+body.billboard .back-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+
+  min-height:48px;
+  padding:0 24px 0 19px;
+
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.10) 0%,
+      rgba(255,255,255,.035) 48%,
+      rgba(0,0,0,.10) 100%
+    ),
+    rgba(18,18,18,.90);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.16),
+    inset 0 -1px 0 rgba(0,0,0,.70),
+    0 7px 0 rgba(0,0,0,.38),
+    0 12px 22px rgba(0,0,0,.34);
+
+  color:#f4f0e9;
+
+  text-decoration:none;
+
+  transition:
+    transform .16s ease,
+    box-shadow .16s ease,
+    border-color .16s ease;
+}
+
+body.billboard .back-link::first-letter{
+  color:#d69a37;
+}
+
+body.billboard .back-link:hover{
+  transform:translateY(-2px);
+
+  border-color:rgba(214,154,55,.48);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -1px 0 rgba(0,0,0,.70),
+    0 9px 0 rgba(0,0,0,.36),
+    0 15px 25px rgba(0,0,0,.38);
+}
+
+body.billboard .back-link:active{
+  transform:translateY(3px);
+
+  box-shadow:
+    inset 0 1px 4px rgba(0,0,0,.40),
+    0 3px 0 rgba(0,0,0,.40),
+    0 6px 12px rgba(0,0,0,.28);
+}
+
+body.billboard .back-link:focus-visible{
+  outline:2px solid #d69a37;
+  outline-offset:4px;
+}
+
+
+
+/* =========================================================
+   BILLBOARD — 3D BOARDROOM BACK PILL — CORRECT TARGET
+   ========================================================= */
+
+body.billboard .board-nav > a:first-child{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -452,8 +608,9 @@ a{color:inherit}
 
   color:#f4f0e9;
 
-  font-size:0;
-  text-decoration:none;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
 
   transition:
     transform .15s ease,
@@ -461,29 +618,7 @@ a{color:inherit}
     border-color .15s ease;
 }
 
-.board-nav > a:first-child::before{
-  content:"←";
-
-  margin-right:15px;
-
-  color:#d69a37;
-
-  font-size:24px;
-  font-weight:700;
-  line-height:1;
-}
-
-.board-nav > a:first-child::after{
-  content:"BOARDROOM";
-
-  color:#f4f0e9;
-
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.12em;
-}
-
-.board-nav > a:first-child:hover{
+body.billboard .board-nav > a:first-child:hover{
   transform:translateY(-2px);
 
   border-color:rgba(214,157,74,.40);
@@ -495,7 +630,7 @@ a{color:inherit}
     0 13px 22px rgba(0,0,0,.42);
 }
 
-.board-nav > a:first-child:active{
+body.billboard .board-nav > a:first-child:active{
   transform:translateY(3px);
 
   box-shadow:
@@ -505,345 +640,62 @@ a{color:inherit}
 }
 
 
-/* Segmented four-board selector */
+/* BILLBOARD — gold Boardroom arrow */
+body.billboard .board-nav > a:first-child{
+  color:#f4f0e9;
+}
 
-.board-tabs{
+/* Replace existing text arrow visually */
+body.billboard .board-nav > a:first-child{
+  font-size:0;
+}
+
+body.billboard .board-nav > a:first-child::before{
+  content:"←";
+  color:#d69a37;
+  font-size:24px;
+  font-weight:700;
+  line-height:1;
+  margin-right:15px;
+}
+
+body.billboard .board-nav > a:first-child::after{
+  content:"BOARDROOM";
+  color:#f4f0e9;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+
+
+
+/* =========================================================
+   BILLBOARD — FINAL GALLERY HEADING LAYOUT
+   ========================================================= */
+
+body.billboard .gallery-head{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-
-  width:min(820px,58vw);
-  min-height:54px;
-
+  grid-template-columns:1fr;
   gap:0;
-  overflow:hidden;
-
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:999px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.055),
-      rgba(255,255,255,.018)
-    ),
-    rgba(10,10,10,.72);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.06),
-    0 8px 24px rgba(0,0,0,.22);
+  margin:0 0 16px;
+  transform:none;
 }
 
-.board-tabs a{
-  position:relative;
-
-  min-width:0;
-  min-height:54px;
-  padding:0 22px;
-
-  border:0;
-  border-radius:0;
-
-  color:rgba(244,240,233,.82);
-  background:transparent;
-
-  transition:
-    color .18s ease,
-    background .18s ease;
+/* Main heading — own centred row near divider */
+body.billboard .gallery-head h2{
+  order:1;
+  width:100%;
+  margin:0 0 48px;
+  text-align:center;
+  font-size:34px;
 }
 
-.board-tabs a+a{
-  border-left:1px solid rgba(255,255,255,.12);
-}
-
-.board-tabs a+a::before{
-  display:none;
-}
-
-.board-tabs a:hover,
-.board-tabs a:focus-visible{
-  color:#fff;
-  background:rgba(255,255,255,.045);
-}
-
-.board-tabs a.active{
-  color:#fff;
-
-  border:0;
-
-  background:
-    linear-gradient(
-      180deg,
-      #c99443 0%,
-      #a66f27 100%
-    );
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,235,190,.28),
-    inset -1px 0 0 rgba(64,37,12,.50),
-    4px 0 18px rgba(0,0,0,.18);
-}
-
-.board-tabs a.active::before{
-  display:none;
-}
-
-
-/* Existing Foundry hamburger remains completely independent.
-   This preserves its hamburger -> X animation. */
-
-.foundry-global-nav--menu-only{
-  top:27px;
-  right:34px;
-}
-
-
-/* ---------------------------------------------------------
-   DESKTOP CONTENT GRID
-
-   Row 1: large centred showcase heading
-   Row 2: "[BOARD] IN ACTION" label
-   Row 3: demo cards | board information panel
-
-   The cards and information panel therefore share the exact
-   same grid row and cannot drift vertically from one another.
-   --------------------------------------------------------- */
-
-@media(min-width:981px){
-
-  .board-main{
-    display:grid;
-
-    grid-template-columns:
-      minmax(610px,1.12fr)
-      minmax(500px,.88fr);
-
-    grid-template-rows:
-      auto
-      auto
-      auto;
-
-    column-gap:clamp(48px,5vw,88px);
-    row-gap:0;
-
-    align-items:stretch;
-    align-content:center;
-
-    padding:30px 0 42px;
-  }
-
-
-  /* Let the gallery's children participate directly
-     in the main grid rather than positioning one another. */
-
-  .board-gallery,
-  .gallery-head{
-    display:contents;
-  }
-
-
-  /* Large showcase heading — independent, centred,
-     spanning the whole working area. */
-
-  .gallery-head h2{
-    grid-column:1 / -1;
-    grid-row:1;
-
-    width:100%;
-    max-width:none;
-
-    margin:0 0 48px;
-
-    color:var(--ink);
-
-    font:
-      500
-      clamp(28px,2.15vw,42px)/1.08
-      var(--serif);
-
-    text-align:center;
-
-    opacity:.96;
-  }
-
-
-  /* Small "[BOARD] IN ACTION" line.
-     Independent of the large heading and tucked left. */
-
-  .gallery-head > p{
-    grid-column:1;
-    grid-row:2;
-
-    margin:0 0 13px;
-
-    align-self:end;
-
-    text-align:left;
-
-    transform:none;
-  }
-
-
-  /* Demo cards */
-
-  .demo-grid{
-    grid-column:1;
-    grid-row:3;
-
-    align-self:stretch;
-  }
-
-
-  /* Information panel.
-     SAME GRID ROW AS THE CARDS:
-     top and bottom therefore align cleanly. */
-
-  .board-intro{
-    grid-column:2;
-    grid-row:3;
-
-    align-self:stretch;
-
-    width:100%;
-    min-height:0;
-    height:auto;
-
-    margin:0;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   BILLBOARD BACKGROUND GOLD / FORGED TEXTURE
-   Decorative only — completely independent of layout.
-   --------------------------------------------------------- */
-
-body.billboard::after{
-  opacity:.58;
-
-  background:
-    radial-gradient(
-      ellipse at 88% 12%,
-      rgba(205,147,64,.20) 0%,
-      rgba(172,108,39,.09) 22%,
-      transparent 44%
-    ),
-    radial-gradient(
-      ellipse at 79% 78%,
-      rgba(194,130,49,.16) 0%,
-      rgba(151,88,31,.07) 25%,
-      transparent 48%
-    ),
-    radial-gradient(
-      ellipse at 18% 88%,
-      rgba(180,119,43,.11) 0%,
-      transparent 35%
-    ),
-    linear-gradient(
-      117deg,
-      transparent 0%,
-      rgba(211,152,72,.045) 42%,
-      transparent 58%
-    );
-
-  mix-blend-mode:screen;
-}
-
-
-/* ---------------------------------------------------------
-   COMPACT DESKTOP
-   --------------------------------------------------------- */
-
-@media(max-height:790px) and (min-width:981px){
-
-  .board-main{
-    padding:20px 0 26px;
-  }
-
-  .gallery-head h2{
-    margin-bottom:26px;
-    font-size:clamp(26px,1.9vw,35px);
-  }
-
-  .gallery-head > p{
-    margin-bottom:9px;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   MID-WIDTH DESKTOP
-   --------------------------------------------------------- */
-
-@media(max-width:1260px) and (min-width:981px){
-
-  .board-main{
-    grid-template-columns:
-      minmax(500px,1.05fr)
-      minmax(390px,.8fr);
-
-    column-gap:34px;
-  }
-
-  .gallery-head h2{
-    display:block;
-  }
-
-  .board-intro{
-    min-height:0;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   MOBILE / TABLET
-   Restore normal document flow.
-   --------------------------------------------------------- */
-
-@media(max-width:980px){
-
-  .board-nav{
-    padding-right:0;
-  }
-
-  .board-tabs{
-    display:flex;
-    width:100%;
-    min-height:42px;
-    overflow:auto;
-    border-radius:16px;
-  }
-
-  .board-tabs a{
-    flex:1 0 auto;
-    min-height:42px;
-    padding:0 14px;
-    font-size:11px;
-  }
-
-  .board-gallery,
-  .gallery-head{
-    display:block;
-  }
-
-  .gallery-head{
-    margin-bottom:16px;
-  }
-
-  .gallery-head h2{
-    display:block;
-    width:100%;
-    margin:12px 0 0;
-    text-align:left;
-  }
-
-  .gallery-head > p{
-    margin:0;
-    text-align:left;
-  }
-
-  .foundry-global-nav--menu-only{
-    top:16px;
-    right:16px;
-  }
+/* BILLBOARD IN ACTION — separate, immediately above cards */
+body.billboard .gallery-head > p{
+  order:2;
+  margin:0;
+  text-align:left;
+  transform:none;
 }
 
