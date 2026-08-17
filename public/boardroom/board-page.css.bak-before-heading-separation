@@ -722,33 +722,3 @@ body.billboard .gallery-head .eyebrow{
   transform:none;
 }
 
-
-/* =========================================================
-   BILLBOARD — FINAL HEADING / IN-ACTION SEPARATION
-   ========================================================= */
-
-/* Main sentence gets its own clear row */
-body.billboard .gallery-head{
-  position:relative;
-  display:block;
-  transform:translateY(-55px);
-}
-
-body.billboard .gallery-head h2{
-  display:block;
-  width:100%;
-  margin:0;
-  text-align:center;
-  font-size:34px;
-}
-
-/* BILLBOARD IN ACTION belongs with the first example */
-body.billboard .gallery-head .eyebrow{
-  position:absolute;
-  left:0;
-  top:82px;
-  margin:0;
-  transform:none;
-  text-align:left;
-}
-
