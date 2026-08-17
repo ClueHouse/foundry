@@ -1960,32 +1960,3 @@ a[href="./boardroom/"]:focus-visible {
   background: rgba(42, 29, 18, .78);
 }
 
-
-
-/* === WHY WEBSITE — FOUNDRY WORDMARK === */
-
-.why-foundry-wordmark {
-  position: fixed;
-  top: 28px;
-  left: 26px;
-  z-index: 20;
-
-  color: rgba(255, 250, 240, .94);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: .88;
-  letter-spacing: .13em;
-
-  text-decoration: none;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,.35);
-}
-
-.why-foundry-wordmark:hover,
-.why-foundry-wordmark:focus-visible {
-  color: #fff;
-}
-
