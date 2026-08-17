@@ -1,6 +1,6 @@
 # Clementine Street Theatre
 
-A complete fictional Foundry demonstration website for an independent 200-seat theatre in Wāpereki.
+A complete fictional Foundry demonstration website for an independent 200-seat theatre in Wāperiki.
 
 ## Run locally
 

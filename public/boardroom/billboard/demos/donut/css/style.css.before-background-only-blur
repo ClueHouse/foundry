@@ -135,7 +135,7 @@ input:focus,select:focus,textarea:focus { border-color:#c42b55; box-shadow:0 0 0
   border-color: rgba(255,255,255,.7);
 }
 
-/* Wāpereki locations map */
+/* Wāperiki locations map */
 .map-card {
   padding: 0;
   overflow: hidden;

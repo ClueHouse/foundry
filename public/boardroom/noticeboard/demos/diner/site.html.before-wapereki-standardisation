@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100906">
   <title>On the Road — 24 Hour Roadside Diner</title>
-  <meta name="description" content="On the Road is Wāpereki's all-night roadside diner. Good food, strong coffee, all night long.">
+  <meta name="description" content="On the Road is Wāperiki's all-night roadside diner. Good food, strong coffee, all night long.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,9 +41,9 @@
         </div>
 
         <address class="contact-block">
-          <a href="https://maps.google.com/?q=17+Lantern+Road+Wāpereki" target="_blank" rel="noopener">
+          <a href="https://maps.google.com/?q=17+Lantern+Road+Wāperiki" target="_blank" rel="noopener">
             <span class="contact-symbol">●</span>
-            <span>17 Lantern Road<br>Wāpereki, 3110</span>
+            <span>17 Lantern Road<br>Wāperiki, 3110</span>
           </a>
           <a href="tel:+6475552477">
             <span class="contact-symbol">☎</span>
@@ -233,7 +233,7 @@
       <section><h3>Open every day</h3><dl class="hours"><div><dt>Monday–Sunday</dt><dd>24 hours</dd></div><div><dt>Happy hour</dt><dd>6–7pm weekdays</dd></div></dl></section>
       <section><h3>Contact</h3><p><a href="tel:+6475552477">07 555 2477</a><br><a href="mailto:ontheroard@rkdb.nz">ontheroard@rkdb.nz</a></p></section>
     </div>
-    <a class="directions-button" href="https://maps.google.com/?q=17+Lantern+Road+Wāpereki" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
+    <a class="directions-button" href="https://maps.google.com/?q=17+Lantern+Road+Wāperiki" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
   </aside>
 
   <script src="js/app.js"></script>

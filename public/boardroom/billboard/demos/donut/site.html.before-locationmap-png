@@ -97,11 +97,11 @@
             <p class="eyebrow">Come say hello</p>
             <h2 id="locations-title">Locations</h2>
             <div class="location-list">
-              <article><strong>Wāpereki Atelier</strong><span>18 Harbour Lane, Wāpereki</span><small>Mon–Sun · 7:00am–4:00pm</small></article>
-              <article><strong>Market Counter</strong><span>7 Foundry Street, Wāpereki</span><small>Tue–Sun · 8:00am–5:00pm</small></article>
+              <article><strong>Wāperiki Atelier</strong><span>18 Harbour Lane, Wāperiki</span><small>Mon–Sun · 7:00am–4:00pm</small></article>
+              <article><strong>Market Counter</strong><span>7 Foundry Street, Wāperiki</span><small>Tue–Sun · 8:00am–5:00pm</small></article>
             </div>
           </div>
-          <div class="map-card" aria-label="Stylised map of Wāpereki showing our two locations">
+          <div class="map-card" aria-label="Stylised map of Wāperiki showing our two locations">
             <span class="map-water" aria-hidden="true"></span>
             <span class="map-road map-road--one" aria-hidden="true"></span>
             <span class="map-road map-road--two" aria-hidden="true"></span>
@@ -110,7 +110,7 @@
             <span class="map-pin map-pin--two" aria-hidden="true">2</span>
             <span class="map-label map-label--harbour">Harbour Lane</span>
             <span class="map-label map-label--foundry">Foundry Street</span>
-            <div class="map-title"><strong>Wāpereki</strong><small>Two delicious destinations</small></div>
+            <div class="map-title"><strong>Wāperiki</strong><small>Two delicious destinations</small></div>
           </div>
         </div>
       </section>

@@ -40,7 +40,7 @@
   document.getElementById('booking-form')?.addEventListener('submit', e => {
     e.preventDefault();
     const status = e.currentTarget.querySelector('.form-status');
-    status.textContent = 'Thanks — your booking request is ready to be connected to your preferred booking service.';
+    status.textContent = 'Thanks for booking with us! We’ll be in touch shortly.';
     e.currentTarget.querySelector('button[type="submit"]').disabled = true;
   });
 
