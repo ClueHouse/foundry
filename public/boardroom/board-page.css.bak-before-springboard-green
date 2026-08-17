@@ -118,8 +118,8 @@ body.springboard{
   --ink:#f5f3e9;
   --muted:rgba(245,243,233,.76);
   --line:rgba(255,255,255,.18);
-  --surface:rgba(41,69,66,.82);
-  --surface-strong:rgba(41,69,66,.92);
+  --surface:rgba(19,50,31,.58);
+  --surface-strong:rgba(14,43,26,.72);
   --surface-line:rgba(255,255,255,.20);
   --shadow:rgba(0,0,0,.30);
   --accent:#d7a448;

@@ -37,5 +37,5 @@ html.foundry-demo-shell:has(.foundry-demo-frame[title*="Skateboard"]) body {
 }
 
 html.foundry-demo-shell:has(.foundry-demo-frame[title*="Springboard"]) body {
-  background:#294542;
+  background:#0b2f1b;
 }
