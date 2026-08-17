@@ -208,12 +208,3 @@ html.foundry-demo-shell:has(.foundry-demo-frame[title*="Springboard"])
 .foundry-demo-return {
   color:#FFFFFF !important;
 }
-
-/* Force ALL return-pill text white on all 12 demos */
-.foundry-demo-return,
-.foundry-demo-return *,
-.foundry-demo-return span,
-.foundry-demo-return strong,
-.foundry-demo-return b {
-  color:#FFFFFF !important;
-}
