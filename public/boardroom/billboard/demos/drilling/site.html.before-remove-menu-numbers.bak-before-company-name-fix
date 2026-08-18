@@ -22,17 +22,17 @@
 
       <aside class="menu-drawer" id="site-menu" aria-hidden="true" aria-label="Site menu">
         <div class="drawer-head">
-          <p><span class="menu-location">NATIONWIDE NEW ZEALAND</span><span class="menu-company">A HOLE IN ONE DRILLING</span></p>
+          <p>DEEPCORE DRILLING</p>
           <button class="menu-close" type="button" aria-label="Close menu">×</button>
         </div>
 
         <div class="drawer-grid">
           <nav class="drawer-nav" aria-label="Primary navigation">
-            <button class="drawer-link is-active" type="button" data-panel="services">Our Services</button>
-            <button class="drawer-link" type="button" data-panel="about">About Us</button>
-            <button class="drawer-link" type="button" data-panel="projects">Projects</button>
-            <button class="drawer-link" type="button" data-panel="safety">Safety</button>
-            <button class="drawer-link drawer-link--quote" type="button" data-panel="quote">Get a Quote</button>
+            <button class="drawer-link is-active" type="button" data-panel="services"><span>01</span> Our Services</button>
+            <button class="drawer-link" type="button" data-panel="about"><span>02</span> About Us</button>
+            <button class="drawer-link" type="button" data-panel="projects"><span>03</span> Projects</button>
+            <button class="drawer-link" type="button" data-panel="safety"><span>04</span> Safety</button>
+            <button class="drawer-link drawer-link--quote" type="button" data-panel="quote"><span>05</span> Get a Quote</button>
           </nav>
 
           <div class="drawer-content">

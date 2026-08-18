@@ -76,27 +76,3 @@ form button{border:1px solid #ff9a46;padding:11px 14px;color:#fff;background:lin
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 
-
-/* Menu location + company branding */
-.menu-location,
-.menu-company {
-  display:block;
-}
-
-.menu-location {
-  color:#9a9a9a;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:.22em;
-  line-height:1;
-  margin-bottom:8px;
-}
-
-.menu-company {
-  color:#f36b00;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.20em;
-  line-height:1;
-}
-

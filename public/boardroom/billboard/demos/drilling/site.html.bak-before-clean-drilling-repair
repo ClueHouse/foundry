@@ -22,7 +22,7 @@
 
       <aside class="menu-drawer" id="site-menu" aria-hidden="true" aria-label="Site menu">
         <div class="drawer-head">
-          <p><span class="menu-location">NATIONWIDE NEW ZEALAND</span><span class="menu-company">A HOLE IN ONE DRILLING</span></p>
+          <p>DEEPCORE DRILLING</p>
           <button class="menu-close" type="button" aria-label="Close menu">×</button>
         </div>
 

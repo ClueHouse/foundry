@@ -43,6 +43,6 @@
 
   document.getElementById('quote-form')?.addEventListener('submit', event => {
     event.preventDefault();
-    event.currentTarget.querySelector('.form-status').textContent = 'Thanks — your request has been received. We’ll be in touch shortly.';
+    event.currentTarget.querySelector('.form-status').textContent = 'Request captured — ready to connect to your email or CRM.';
   });
 })();

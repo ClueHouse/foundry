@@ -14,7 +14,7 @@ button{cursor:pointer}
 .site{position:relative;width:min(100vw,calc(100vh * 1.5));height:min(100vh,calc(100vw / 1.5));overflow:hidden;isolation:isolate;box-shadow:0 28px 100px #000}
 .artwork{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;pointer-events:none}
 
-.menu-toggle{position:absolute;z-index:20;top:3.8%;right:4.1%;display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);padding:10px 14px 10px 12px;color:#fff;background:rgba(10,10,10,.7);box-shadow:0 8px 22px rgba(0,0,0,.35);backdrop-filter:blur(8px);font-weight:900;letter-spacing:.12em}
+.menu-toggle{position:absolute;z-index:20;top:5.1%;right:4.1%;display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);padding:10px 14px 10px 12px;color:#fff;background:rgba(10,10,10,.7);box-shadow:0 8px 22px rgba(0,0,0,.35);backdrop-filter:blur(8px);font-weight:900;letter-spacing:.12em}
 .menu-toggle::after{content:"";position:absolute;left:12px;right:12px;bottom:-5px;height:2px;background:var(--orange);transform:scaleX(.35);transform-origin:right;transition:transform .2s ease}
 .menu-toggle:hover::after,.menu-toggle:focus-visible::after{transform:scaleX(1)}
 .menu-toggle:focus-visible,.menu-close:focus-visible,.drawer-link:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
@@ -64,7 +64,7 @@ form button{border:1px solid #ff9a46;padding:11px 14px;color:#fff;background:lin
 @media(max-width:900px){
   .menu-drawer{width:82%}
   .drawer-grid{grid-template-columns:42% 1fr;gap:4%}
-  .menu-toggle{top:3.2%;right:3%}
+  .menu-toggle{top:4%;right:3%}
 }
 @media(max-width:620px){
   .menu-drawer{width:94%;padding:5%}
@@ -74,29 +74,3 @@ form button{border:1px solid #ff9a46;padding:11px 14px;color:#fff;background:lin
   .drawer-content{padding-top:18px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-
-
-
-/* Menu location + company branding */
-.menu-location,
-.menu-company {
-  display:block;
-}
-
-.menu-location {
-  color:#9a9a9a;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:.22em;
-  line-height:1;
-  margin-bottom:8px;
-}
-
-.menu-company {
-  color:#f36b00;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.20em;
-  line-height:1;
-}
-
