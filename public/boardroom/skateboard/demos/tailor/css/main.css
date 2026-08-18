@@ -141,3 +141,29 @@ body.page-scroll, body.shop-page, html.page-scroll{overflow:auto !important;heig
 #s01 .chapter-index {
   transform: translateY(18px);
 }
+
+@media(max-width:900px){
+  #chapter-ind{
+    bottom:6px;
+  }
+}
+
+@media(max-width:900px){
+  #s01 .hero-copy{
+    transform:translateY(-12px);
+  }
+}
+
+@media(max-width:900px){
+  .ch1 .type{
+    transform:translateY(-12px);
+  }
+}
+
+
+/* DESKTOP — Chapter 01 small upward nudge */
+@media (min-width:901px){
+  .ch1{
+    transform:translateY(-18px);
+  }
+}
