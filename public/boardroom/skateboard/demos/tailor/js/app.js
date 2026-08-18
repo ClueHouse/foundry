@@ -23,6 +23,8 @@ function isMobile(){ return window.innerWidth <= 900 }
 function pad(n){ return String(n).padStart(2,'0') }
 
 function updateUI(idx){
+  const topnav = document.getElementById('topnav');
+  if(topnav) topnav.style.color = idx === 3 ? '#B8B3A8' : '';
   const m = chaptersMeta[idx];
   if(chapterInd && m) chapterInd.innerHTML = `<div class="cur">${m.n}</div><div class="meta">${m.name}<br>${pad(idx+1)} / ${pad(total)}</div>`;
   if(counter) counter.textContent = `${pad(idx+1)} — ${pad(total)}`;
