@@ -151,31 +151,3 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(a) a.style.display = a.style.display==='none' ? 'block' : 'none';
   });
 });
-
-/* Clementine's — mousewheel dinner time field */
-(() => {
-  const field = document.querySelector('.time-wheel');
-  if (!field) return;
-
-  const times = [];
-  for (let mins = 17 * 60; mins <= 22 * 60; mins += 15) {
-    const hour24 = Math.floor(mins / 60);
-    const minute = mins % 60;
-    const hour12 = hour24 > 12 ? hour24 - 12 : hour24;
-    times.push(`${hour12}:${String(minute).padStart(2, '0')} pm`);
-  }
-
-  let index = Math.max(0, times.indexOf(field.value));
-
-  field.addEventListener('wheel', (event) => {
-    event.preventDefault();
-
-    if (event.deltaY > 0) {
-      index = Math.min(times.length - 1, index + 1);
-    } else {
-      index = Math.max(0, index - 1);
-    }
-
-    field.value = times[index];
-  }, { passive:false });
-})();

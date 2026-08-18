@@ -57,7 +57,7 @@
 
     <div class="wine-column wine-column--right">
       <section class="wine-cat wine-cat--offset">
-        <h2>White</h2>
+        <h2>Whites</h2>
         <div class="wine-row"><div class="name">Château de Béru Chablis Terroirs de Béru 2022</div><div class="meta">Burgundy</div><div class="note">Oyster shell, lemon, quiet intensity</div><div class="meta">18 / 98</div></div>
         <div class="wine-row"><div class="name">Weiser-Künstler Enkircher Ellergrub Riesling 2021</div><div class="meta">Mosel</div><div class="note">White peach, slate, electric</div><div class="meta">19 / 102</div></div>
       </section>
