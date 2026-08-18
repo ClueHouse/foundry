@@ -135,3 +135,104 @@ if(thumbButtons.length && lightbox){
   });
 }
 
+/* Discover — calmer one-scene-at-a-time scrolling */
+if(document.documentElement.classList.contains('discover-snap')){
+  const discoverScenes=[...document.querySelectorAll('.d-scene')];
+
+  let discoverScrolling=false;
+
+  window.addEventListener('wheel',e=>{
+    if(discoverScrolling || Math.abs(e.deltaY)<10) return;
+
+    e.preventDefault();
+
+    const current=discoverScenes.reduce((best,scene,index)=>{
+      return Math.abs(scene.getBoundingClientRect().top)
+        < Math.abs(discoverScenes[best].getBoundingClientRect().top)
+        ? index
+        : best;
+    },0);
+
+    const next=Math.max(
+      0,
+      Math.min(
+        discoverScenes.length-1,
+        current + (e.deltaY>0 ? 1 : -1)
+      )
+    );
+
+    if(next===current) return;
+
+    discoverScrolling=true;
+
+    discoverScenes[next].scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+
+    setTimeout(()=>{
+      discoverScrolling=false;
+    },900);
+  },{passive:false});
+}
+
+/* Discover — deliberately slow one-scene wheel navigation */
+if(document.documentElement.classList.contains('discover-snap')){
+  const snapScenes=[...document.querySelectorAll('.d-scene')];
+
+  let snapAnimating=false;
+
+  const easeInOutCubic=t =>
+    t < .5
+      ? 4*t*t*t
+      : 1-Math.pow(-2*t+2,3)/2;
+
+  const animateToScene=(scene,duration=1800)=>{
+    const start=window.scrollY;
+    const target=scene.offsetTop;
+    const distance=target-start;
+    const started=performance.now();
+
+    snapAnimating=true;
+
+    const step=now=>{
+      const elapsed=now-started;
+      const progress=Math.min(elapsed/duration,1);
+      const eased=easeInOutCubic(progress);
+
+      window.scrollTo(0,start+(distance*eased));
+
+      if(progress<1){
+        requestAnimationFrame(step);
+      }else{
+        snapAnimating=false;
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  window.addEventListener('wheel',e=>{
+    if(snapAnimating || Math.abs(e.deltaY)<8) return;
+
+    e.preventDefault();
+
+    const current=snapScenes.reduce((best,scene,index)=>{
+      const currentDistance=Math.abs(scene.offsetTop-window.scrollY);
+      const bestDistance=Math.abs(snapScenes[best].offsetTop-window.scrollY);
+      return currentDistance<bestDistance ? index : best;
+    },0);
+
+    const next=Math.max(
+      0,
+      Math.min(
+        snapScenes.length-1,
+        current+(e.deltaY>0 ? 1 : -1)
+      )
+    );
+
+    if(next!==current){
+      animateToScene(snapScenes[next],1800);
+    }
+  },{passive:false});
+}

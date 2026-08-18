@@ -134,4 +134,3 @@ if(thumbButtons.length && lightbox){
     if(e.key==='ArrowRight' && !nextBtn.disabled) showImage(activeIndex+1);
   });
 }
-
