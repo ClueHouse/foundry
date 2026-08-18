@@ -263,3 +263,24 @@ img{display:block;max-width:100%}
 @media(max-width:980px){
   .theatre-photo-row{grid-template-columns:1fr;gap:18px}
 }
+
+/* Coming Soon production labels — display only */
+.cs-btn,
+.cs-prod.active .cs-btn {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* Coming Soon lower labels are display-only */
+.coming-soon-page .cs-btn,
+.coming-soon-page .cs-prod.active .cs-btn {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* Coming Soon lower labels are display-only */
+.coming-soon-page .cs-btn,
+.coming-soon-page .cs-prod.active .cs-btn {
+  pointer-events: none !important;
+  cursor: default !important;
+}
