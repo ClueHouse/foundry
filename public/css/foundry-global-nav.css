@@ -399,3 +399,16 @@ body.foundry-global-open .foundry-global-drawer {
     min-width: 0 !important;
     white-space: nowrap !important;
 }
+
+/* PASS 2 / UNIT 1 — short-height drawer usability only */
+@media (max-height: 700px) {
+  .foundry-global-drawer {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .foundry-global-drawer-inner {
+    height: auto;
+    min-height: 100%;
+  }
+}

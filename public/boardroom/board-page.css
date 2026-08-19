@@ -1081,3 +1081,16 @@ body.billboard .board-tabs a.active {
   background:#E8CACA;
   color:#211B1B;
 }
+
+/* PASS 2 / UNIT 1 — wide but vertically constrained board pages */
+@media (max-height: 650px) and (min-width: 981px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .board-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+}
