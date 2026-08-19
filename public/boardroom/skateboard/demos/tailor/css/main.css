@@ -14,7 +14,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 nav#topnav{position:fixed;top:0;left:0;right:0;height:72px;display:flex;justify-content:space-between;align-items:center;padding:0 48px;z-index:900;mix-blend-mode:normal;color:var(--charcoal)}
 nav#topnav .wordmark{font-family:'Instrument Serif',serif;letter-spacing:0.12em;font-size:18px;font-weight:700}
 nav#topnav .links{display:flex;gap:40px;align-items:center}
-nav#topnav .links a{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.8;transition:opacity .6s;position:relative;font-weight:700}
+nav#topnav .links a{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.8;transition:opacity .6s;position:relative;font-weight:500}
 nav#topnav .links a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:currentColor;transition:width .6s cubic-bezier(0.22,1,0.36,1)}
 nav#topnav .links a:hover{opacity:1}
 nav#topnav .links a:hover::after{width:100%}
