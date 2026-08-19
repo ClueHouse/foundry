@@ -41,7 +41,7 @@
         </div>
 
         <address class="contact-block">
-          <a href="https://www.google.com/maps/191438.6,175.8,6z" target="_blank" rel="noopener">
+          <a href="https://maps.google.com/?q=17+Lantern+Road+Wāperiki" target="_blank" rel="noopener">
             <span class="contact-symbol">●</span>
             <span>17 Lantern Road<br>Wāperiki, 3456</span>
           </a>
@@ -258,13 +258,21 @@
       <p>Just off the highway, with easy parking and the lights always on.</p>
     </header>
 
-    <div class="map-card"><img class="map" src="assets/images/map.webp" alt="Map showing the diner location"></div>
+    <div class="map-card">
+      <svg class="map" viewBox="0 0 900 500" role="img" aria-label="Stylised map showing On the Road at 17 Lantern Road">
+        <defs><linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#13222c"/><stop offset="1" stop-color="#071015"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <rect width="900" height="500" fill="url(#mapBg)"/>
+        <g fill="none" stroke-linecap="round"><path d="M-30 370 C170 315 290 420 470 345 S720 210 940 255" stroke="#203c4d" stroke-width="58"/><path d="M-30 370 C170 315 290 420 470 345 S720 210 940 255" stroke="#46748d" stroke-width="5"/><path d="M40 70 L825 455M-20 220 L670 12M170 520 L730 -40M395 540 L930 80" stroke="#27424f" stroke-width="13"/><path d="M30 115 L810 490M0 268 L700 48M210 500 L760 5M455 510 L900 130" stroke="#587284" stroke-width="2" opacity=".7"/><path d="M100 460 C300 180 540 180 820 60" stroke="#d69b31" stroke-width="11" opacity=".9"/><path d="M100 460 C300 180 540 180 820 60" stroke="#ffe294" stroke-width="2"/></g>
+        <g transform="translate(535 205)" filter="url(#glow)"><path d="M0 0 C-37 0 -64 28 -64 64 C-64 112 0 178 0 178 C0 178 64 112 64 64 C64 28 37 0 0 0Z" fill="#ef2b23"/><circle cy="64" r="24" fill="#170b08"/></g>
+        <g transform="translate(615 235)"><rect width="230" height="84" rx="10" fill="#070a0c" stroke="#dfad42"/><text x="18" y="34" fill="#f7f0df" font-family="Arial" font-size="24" font-weight="700">ON THE ROAD</text><text x="18" y="64" fill="#d2c6b1" font-family="Arial" font-size="18">17 Lantern Road</text></g>
+      </svg>
+    </div>
 
     <div class="find-details">
       <section><h3>Open every day</h3><dl class="hours"><div><dt>Monday–Sunday</dt><dd>24 hours</dd></div><div><dt>Happy hour</dt><dd>6–7pm weekdays</dd></div></dl></section>
       <section><h3>Contact</h3><p><a href="tel:+6475552477">07 555 2477</a><br><a href="mailto:ontheroard@rkdb.nz">ontheroard@rkdb.nz</a></p></section>
     </div>
-    <a class="directions-button" href="https://www.google.com/maps/search/?api=1&query=North%20Island%2C%20New%20Zealand" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
+    <a class="directions-button" href="https://maps.google.com/?q=17+Lantern+Road+Wāperiki" target="_blank" rel="noopener">Open in Maps <span>→</span></a>
   </aside>
 
   <script src="js/app.js"></script>
