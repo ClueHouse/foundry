@@ -3,7 +3,7 @@ const progress = document.getElementById('progress');
 const chapterInd = document.getElementById('chapter-ind');
 const counter = document.getElementById('counter');
 const wheelHint = document.getElementById('wheel-hint');
-const boutiqueScroll = document.getElementById('boutique-scroll');
+const visitScroll = document.getElementById('visit-scroll');
 const chapters = track ? Array.from(track.querySelectorAll('.chapter')) : [];
 const total = chapters.length || 5;
 let currentIndex = 0;
@@ -25,6 +25,11 @@ function pad(n){ return String(n).padStart(2,'0') }
 function updateUI(idx){
   const topnav = document.getElementById('topnav');
   if(topnav) topnav.style.color = idx === 3 ? '#B8B3A8' : '';
+  document.querySelectorAll('nav#topnav .links a[data-goto]').forEach(link=>{
+    const isCurrent = parseInt(link.dataset.goto,10) === idx && idx > 0;
+    link.classList.toggle('is-current', isCurrent);
+    link.toggleAttribute('aria-current', isCurrent);
+  });
   const m = chaptersMeta[idx];
   if(chapterInd && m) chapterInd.innerHTML = `<div class="cur">${m.n}</div><div class="meta">${m.name}<br>${pad(idx+1)} / ${pad(total)}</div>`;
   if(counter) counter.textContent = `${pad(idx+1)} — ${pad(total)}`;
@@ -93,8 +98,19 @@ let wheelAcc=0;
 let wheelTimeout=null;
 function handleWheel(e){
   if(!track || isMobile()) return;
+  if(isAnimating){ e.preventDefault(); return; }
+
+  // Final chapter opens vertically: Wāperiki -> Milan.
+  // At the very top, an upward scroll returns to Craft.
+  if(targetIndex===total-1 && visitScroll){
+    if(e.deltaY < 0 && visitScroll.scrollTop <= 1){
+      e.preventDefault();
+      goTo(total-2);
+    }
+    return;
+  }
+
   e.preventDefault();
-  if(isAnimating) return;
   wheelAcc += e.deltaY;
   clearTimeout(wheelTimeout);
   wheelTimeout=setTimeout(()=>{wheelAcc=0},300);
@@ -134,15 +150,10 @@ document.getElementById('look-prev')?.addEventListener('click',()=>showLook(look
 document.getElementById('look-next')?.addEventListener('click',()=>showLook(lookIndex+1));
 showLook(0);
 
-// Visit uses the same deliberate-control rule: location buttons change the view; scroll changes chapter.
-const visitButtons=Array.from(document.querySelectorAll('[data-visit]'));
-const visitPanels=Array.from(document.querySelectorAll('[data-visit-panel]'));
-function showVisit(index){
-  visitButtons.forEach((button,i)=>button.classList.toggle('active',i===index));
-  visitPanels.forEach((panel,i)=>panel.classList.toggle('active',i===index));
-}
-visitButtons.forEach((button,i)=>button.addEventListener('click',()=>showVisit(i)));
-showVisit(0);
+// Visit is the vertical ending. Reset to Wāperiki whenever it is entered directly.
+document.querySelector('a[data-goto="4"]')?.addEventListener('click',()=>{
+  if(visitScroll) visitScroll.scrollTop=0;
+});
 
 window.addEventListener('resize',()=>{
   if(track && !isMobile()){
