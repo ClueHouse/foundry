@@ -167,3 +167,275 @@ body.page-scroll, body.shop-page, html.page-scroll{overflow:auto !important;heig
     transform:translateY(-18px);
   }
 }
+
+
+/* Tailor navigation / lookbook restructure — 2026-08-19 */
+.ch3{padding:0;isolation:isolate}
+.lookbook-kicker{position:absolute;left:5vw;top:10vh;z-index:8}
+.lookbook-stage{position:absolute;inset:0}
+.lookbook-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .65s cubic-bezier(.22,1,.36,1),visibility .65s;pointer-events:none}
+.lookbook-slide.active{opacity:1;visibility:visible;pointer-events:auto}
+.lookbook-image{position:absolute;overflow:hidden;background:#e8e1d8}
+.lookbook-image img{transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.lookbook-slide.active .lookbook-image img{transform:scale(1)}
+.lookbook-image-main{left:5vw;top:15vh;width:43vw;height:70vh}
+.lookbook-image-detail{left:51vw;top:15vh;width:16vw;height:31vh}
+.lookbook-image-detail img{object-position:center}
+.lookbook-copy{position:absolute;left:71vw;top:19vh;width:24vw}
+.lookbook-copy h2{font-size:5.3vw;line-height:.88;margin-top:18px}
+.lookbook-copy p{font-size:13px;line-height:1.85;opacity:.62;max-width:32ch;margin-top:28px}
+.lookbook-pieces{font-size:10px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7;border-top:1px solid var(--line);padding-top:16px;margin-top:30px;opacity:.62}
+.lookbook-controls{position:absolute;left:51vw;bottom:17vh;width:44vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px;z-index:9}
+.lookbook-controls button,.visit-tabs button{appearance:none;border:0;background:none;color:inherit;font:500 10px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;padding:8px 0;opacity:.62;transition:opacity .3s}
+.lookbook-controls button:hover,.visit-tabs button:hover,.visit-tabs button.active{opacity:1}
+#look-count{font-size:10px;letter-spacing:.2em;opacity:.42}
+.lookbook-note{position:absolute;left:51vw;bottom:10vh;opacity:.38}
+.ch5{background:var(--paper)}
+.visit-stage{position:absolute;inset:0;display:grid;grid-template-columns:34vw 66vw}
+.visit-copy{padding:18vh 5vw 10vh;display:flex;flex-direction:column;align-items:flex-start}
+.visit-copy h2{font-size:5.4vw;line-height:.9;margin-top:18px}
+.visit-copy>p{font-size:13px;line-height:1.85;opacity:.62;max-width:32ch;margin-top:28px}
+.visit-tabs{display:flex;gap:30px;margin-top:44px;border-top:1px solid var(--line);padding-top:16px;width:100%}
+.visit-visual{position:relative;height:100vh;overflow:hidden}
+.visit-panel{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .65s cubic-bezier(.22,1,.36,1),visibility .65s}
+.visit-panel.active{opacity:1;visibility:visible}
+.visit-panel>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.visit-card{position:absolute;right:4vw;bottom:7vh;width:min(360px,36vw);background:rgba(247,243,238,.94);backdrop-filter:blur(10px);padding:30px}
+.visit-card h3{font-size:42px;line-height:1;margin-top:10px}
+.visit-card p{font-size:12px;line-height:1.8;opacity:.64;margin-top:18px}
+.visit-card .btn{margin-top:24px}
+@media(max-width:900px){
+ .lookbook-kicker{position:relative;left:auto;top:auto;margin:100px 7vw 0}
+ .lookbook-stage{position:relative;inset:auto;min-height:78vh;margin-top:24px}
+ .lookbook-slide{inset:0 7vw}
+ .lookbook-image-main{left:0;top:0;width:58vw;height:54vh}
+ .lookbook-image-detail{left:61vw;top:0;width:25vw;height:24vh}
+ .lookbook-copy{left:0;top:57vh;width:86vw}
+ .lookbook-copy h2{font-size:12vw}
+ .lookbook-controls{position:relative;left:auto;bottom:auto;width:86vw;margin:30px 7vw 0}
+ .lookbook-note{position:relative;left:auto;bottom:auto;margin:18px 7vw 60px}
+ .visit-stage{position:relative;inset:auto;display:block}
+ .visit-copy{padding:110px 7vw 30px}
+ .visit-copy h2{font-size:13vw}
+ .visit-visual{height:72vh}
+ .visit-card{right:5vw;bottom:5vw;width:74vw;padding:22px}
+ .visit-card h3{font-size:34px}
+ nav#topnav .links{gap:14px}
+ nav#topnav .links a{font-size:8px;letter-spacing:.12em}
+}
+
+/* Magazine Collection override */
+.ch3{padding:0;background:#e8e3db}.lookbook-kicker{left:5vw;top:8vh}.book-shell{position:absolute;left:5vw;right:5vw;top:13vh;bottom:13vh;background:#f6f0e7;box-shadow:0 22px 60px #2d241c2b;overflow:hidden}.book-spine{position:absolute;z-index:20;left:50%;top:0;bottom:0;width:32px;transform:translateX(-50%);background:linear-gradient(90deg,#4a3a2814,#fff8 46%,#3a2d201c 53%,transparent);pointer-events:none}.lookbook-slide{inset:0;display:grid;grid-template-columns:1fr 1fr}.book-page{position:relative;overflow:hidden;background:#f7f1e8;border-right:1px solid #5d4c3818}.book-page>i{position:absolute;bottom:2.5vh;left:3vw;font:normal 11px Georgia;letter-spacing:.16em}.book-page:nth-child(2)>i{left:auto;right:3vw}.copy{position:absolute;z-index:4;left:4vw;top:10vh;width:17vw}.copy.top{top:6vh;width:22vw}.copy h2{font-size:4.1vw;line-height:.88;margin-top:15px;letter-spacing:-.04em}.copy p{font-size:12px;line-height:1.8;opacity:.64;margin-top:22px}.spec{font-size:9px;line-height:1.7;letter-spacing:.13em;text-transform:uppercase;border-top:1px solid #5d4c3838;margin-top:23px;padding-top:12px;opacity:.6}.book-page figure{position:absolute;margin:0;overflow:hidden;background:#ddd}.book-page figure img{width:100%;height:100%;object-fit:cover}.hero{right:3vw;top:5vh;width:22vw;height:58vh}.hero.full{left:4vw;right:auto;width:36vw;height:61vh}.hero.slim{width:19vw}.hero.evening{left:4vw;right:auto;width:30vw;height:62vh}.still{left:5vw;top:7vh;width:34vw;height:35vh}.still.low{top:auto;bottom:6vh;height:29vh}.still.big{left:4vw;top:6vh;width:36vw;height:57vh}.still.detail{left:auto;right:4vw;top:auto;bottom:5vh;width:24vw;height:27vh}.pull{position:absolute;left:5vw;top:8vh;font-size:3.4vw;line-height:.95}.closing{position:absolute;right:3.5vw;bottom:5vh;font-size:2.8vw;line-height:.92;text-align:right}.caption{position:absolute;left:4vw;bottom:3.5vh;opacity:.5}.dark{background:#171614;color:#f4eee5}.light{color:#f4eee5}blockquote{position:absolute;left:6vw;bottom:8vh;width:28vw;margin:0;font:italic 2.2vw/1.1 Georgia;color:#322b24}.lookbook-controls{left:5vw;right:5vw;bottom:6vh;width:auto}.lookbook-note{left:50%;bottom:2.5vh;transform:translateX(-50%);white-space:nowrap}
+
+/* TAILOR — restore Arrival hero scale */
+.ch1 .hero-img{
+  width: 34vw !important;
+  height: 72vh !important;
+}
+
+/* TAILOR — restore Arrival hero + remove scroll instructions */
+.ch1 .hero{
+  inset: 0 0 0 24vw !important;
+}
+
+#wheel-hint,
+.lookbook-note{
+  display:none !important;
+}
+
+/* TAILOR — protect Arrival hero from Collection .hero rules */
+.ch1 .hero{
+  position:absolute !important;
+  left:28vw !important;
+  right:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:auto !important;
+  height:auto !important;
+}
+
+/* TAILOR — final Evening spread alignment */
+.ch3 .lookbook-slide:last-of-type .book-page:first-child > i{
+  left:3.2vw !important;
+  bottom:3vh !important;
+}
+
+.ch3 .lookbook-slide:last-of-type .hero.evening{
+  left:4vw !important;
+  width:29vw !important;
+}
+
+.ch3 .lookbook-slide:last-of-type .closing{
+  right:3.2vw !important;
+  bottom:5vh !important;
+  width:12vw !important;
+  font-size:2.35vw !important;
+  line-height:.96 !important;
+  text-align:right !important;
+}
+
+.ch3 .lookbook-slide:last-of-type .book-page:nth-child(2) > i{
+  right:3.2vw !important;
+  bottom:3vh !important;
+}
+
+/* TAILOR — Evening quote final position */
+.ch3 .lookbook-slide:last-of-type .closing{
+  right:2vw !important;
+  bottom:7vh !important;
+  width:9vw !important;
+  font-size:2.1vw !important;
+  line-height:.96 !important;
+  text-align:right !important;
+}
+
+/* TAILOR — Collection page-turn controls */
+
+/* Move controls onto the magazine */
+.lookbook-controls{
+  position:absolute !important;
+  inset:13vh 5vw !important;
+  pointer-events:none !important;
+  z-index:30 !important;
+}
+
+/* Slim arrows midway down outer page edges */
+#look-prev,
+#look-next{
+  position:absolute !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+
+  width:42px !important;
+  height:80px !important;
+  padding:0 !important;
+
+  font-size:0 !important;
+  opacity:.38 !important;
+  pointer-events:auto !important;
+}
+
+#look-prev{
+  left:10px !important;
+}
+
+#look-next{
+  right:10px !important;
+}
+
+#look-prev::after,
+#look-next::after{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:300;
+  line-height:80px;
+  color:#211d19;
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+#look-prev::after{
+  content:"‹";
+}
+
+#look-next::after{
+  content:"›";
+}
+
+/* Tiny physical movement on hover */
+#look-prev:hover::after{
+  transform:translateX(-3px);
+}
+
+#look-next:hover::after{
+  transform:translateX(3px);
+}
+
+#look-prev:hover,
+#look-next:hover{
+  opacity:.8 !important;
+  transform:translateY(-50%) !important;
+}
+
+/* Spread number centred just above the spine */
+#look-count{
+  position:absolute !important;
+  left:50% !important;
+  top:-28px !important;
+  transform:translateX(-50%) !important;
+
+  font-size:9px !important;
+  letter-spacing:.24em !important;
+  opacity:.5 !important;
+  white-space:nowrap !important;
+}
+
+/* Old lower Collection controls are no longer needed */
+.lookbook-note{
+  display:none !important;
+}
+
+/* TAILOR — taller page arrows + larger spread counter */
+#look-prev,
+#look-next{
+  width:42px !important;
+  height:140px !important;
+}
+
+#look-prev::after,
+#look-next::after{
+  font-size:72px !important;
+  line-height:140px !important;
+  transform:scaleX(.55) !important;
+}
+
+#look-prev:hover::after{
+  transform:scaleX(.55) translateX(-4px) !important;
+}
+
+#look-next:hover::after{
+  transform:scaleX(.55) translateX(4px) !important;
+}
+
+#look-count{
+  font-size:18px !important;
+}
+
+/* TAILOR — make boutique location tabs clearly interactive */
+.city-tab{
+  position:relative;
+  cursor:pointer !important;
+  padding-right:18px !important;
+}
+
+.city-tab::after{
+  content:"→";
+  position:absolute;
+  right:0;
+  opacity:.45;
+  transition:transform .25s ease, opacity .25s ease;
+}
+
+.city-tab::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:18px;
+  bottom:-5px;
+  height:1px;
+  background:currentColor;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+
+.city-tab:hover::before,
+.city-tab:focus-visible::before{
+  transform:scaleX(1);
+}
+
+.city-tab:hover::after,
+.city-tab:focus-visible::after{
+  transform:translateX(4px);
+  opacity:1;
+}
