@@ -2583,7 +2583,7 @@ html.restore-explore .explore-choices {
         grid-template-rows: auto auto;
         align-items: start;
         align-content: start;
-        gap: clamp(16px, 3.2dvh, 28px);
+        gap: clamp(24px, 4.5dvh, 38px);
         padding:
             calc(68px + env(safe-area-inset-top))
             18px
@@ -2604,8 +2604,8 @@ html.restore-explore .explore-choices {
     }
 
     body.homepage .explore-kicker {
-        margin: 0 0 7px;
-        padding: 0 0 7px;
+        margin: 0 0 11px;
+        padding: 0 0 9px;
         font-size: 8.5px;
         letter-spacing: 3.2px;
     }
@@ -2618,18 +2618,18 @@ html.restore-explore .explore-choices {
 
     body.homepage .explore-boardroom h2 {
         max-width: 310px;
-        margin: 0 auto 10px;
-        font-size: clamp(20px, 6.4vw, 27px);
-        line-height: 1.08;
+        margin: 0 auto 15px;
+        font-size: clamp(21px, 6.5vw, 28px);
+        line-height: 1.1;
         letter-spacing: -.2px;
         text-align: center;
     }
 
     body.homepage .explore-boardroom p {
         max-width: 292px;
-        margin: 0 auto 7px;
-        font-size: clamp(11.5px, 3.45vw, 13.5px);
-        line-height: 1.3;
+        margin: 0 auto 10px;
+        font-size: clamp(12px, 3.6vw, 14px);
+        line-height: 1.38;
         text-align: center;
     }
 
@@ -2642,7 +2642,7 @@ html.restore-explore .explore-choices {
         justify-self: stretch;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
+        gap: 12px;
         width: 100%;
         max-width: none;
         transform: none;
@@ -2650,11 +2650,11 @@ html.restore-explore .explore-choices {
 
     body.homepage .explore-choice {
         min-width: 0;
-        min-height: 64px;
+        min-height: 70px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 8px;
+        padding: 12px 9px;
         border-color: rgba(193, 141, 76, .58);
         background:
             linear-gradient(
@@ -2716,30 +2716,30 @@ html.restore-explore .explore-choices {
 
 @media (max-width: 700px) and (orientation: portrait) and (max-height: 600px) {
     body.homepage .explore-screen {
-        gap: 9px;
+        gap: 18px;
         padding-top: calc(62px + env(safe-area-inset-top));
         padding-bottom: max(9px, env(safe-area-inset-bottom));
     }
 
     body.homepage .explore-kicker {
-        margin-bottom: 5px;
-        padding-bottom: 5px;
+        margin-bottom: 8px;
+        padding-bottom: 7px;
     }
 
     body.homepage .explore-boardroom h2 {
-        margin-bottom: 7px;
-        font-size: clamp(18px, 5.7vw, 22px);
+        margin-bottom: 11px;
+        font-size: clamp(19px, 5.9vw, 23px);
     }
 
     body.homepage .explore-boardroom p {
-        font-size: 12px;
-        line-height: 1.25;
+        font-size: 12.5px;
+        line-height: 1.32;
     }
 
     body.homepage .explore-choice {
-        min-height: 54px;
-        padding-top: 7px;
-        padding-bottom: 7px;
+        min-height: 64px;
+        padding-top: 9px;
+        padding-bottom: 9px;
         font-size: clamp(11.5px, 3.5vw, 13.5px);
     }
 }
