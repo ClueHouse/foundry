@@ -2440,6 +2440,10 @@ html.restore-explore .explore-choices {
         transform: none;
     }
 
+    body.homepage .hero-lines {
+        transform: translateY(-24px);
+    }
+
     body.homepage .hero-title {
         margin: 0 0 clamp(18px, 2.8dvh, 28px);
         font-size: clamp(46px, 15.5vw, 66px);
