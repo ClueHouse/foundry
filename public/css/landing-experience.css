@@ -2483,6 +2483,7 @@ html.restore-explore .explore-choices {
         font-size: clamp(42px, 13vw, 58px);
         line-height: .95;
         text-align: center;
+        transform: translateY(-8px);
     }
 
     body.homepage .sort-lines {
