@@ -482,3 +482,63 @@ body.foundry-global-open .foundry-global-drawer {
     transform: translate(-2px, -7px) rotate(-43deg);
   }
 }
+
+/* =========================================================
+   PASS 2 / MOBILE DRAWER — compact phone proportions
+   Desktop drawer remains unchanged.
+   ========================================================= */
+
+@media (max-width: 700px) and (orientation: portrait) {
+  .foundry-global-drawer {
+    width: min(80vw, 340px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .foundry-global-drawer-inner {
+    height: auto;
+    min-height: 100%;
+    padding: calc(68px + env(safe-area-inset-top)) 22px 14px;
+  }
+
+  .foundry-global-kicker {
+    margin-bottom: 16px;
+    font-size: 9px;
+    letter-spacing: 3.5px;
+  }
+
+  .foundry-global-link {
+    padding: 9px 0;
+    font-size: clamp(15px, 4.4vw, 17px);
+    line-height: 1.08;
+  }
+
+  .foundry-global-menu-divider {
+    margin: 5px 0 !important;
+  }
+
+  .foundry-global-footer {
+    padding-top: 10px;
+    font-size: 8px;
+    letter-spacing: .18em;
+  }
+}
+
+@media (max-width: 700px) and (orientation: portrait) and (max-height: 600px) {
+  .foundry-global-drawer-inner {
+    padding-top: calc(60px + env(safe-area-inset-top));
+  }
+
+  .foundry-global-kicker {
+    margin-bottom: 10px;
+  }
+
+  .foundry-global-link {
+    padding: 7px 0;
+    font-size: 15px;
+  }
+
+  .foundry-global-menu-divider {
+    margin: 3px 0 !important;
+  }
+}
