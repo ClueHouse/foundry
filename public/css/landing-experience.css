@@ -2743,3 +2743,18 @@ html.restore-explore .explore-choices {
         font-size: clamp(11.5px, 3.5vw, 13.5px);
     }
 }
+
+/* =========================================================
+   DESKTOP MAKE-SITE — one clear CTA
+   The global navigation already provides Back.
+   ========================================================= */
+
+@media (min-width: 701px) {
+    body.homepage .sort-actions {
+        justify-content: center;
+    }
+
+    body.homepage .sort-actions .hero-back {
+        display: none;
+    }
+}
