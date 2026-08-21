@@ -2361,3 +2361,169 @@ html.restore-explore .explore-choices {
     animation: none !important;
     transition: none !important;
 }
+
+/* =========================================================
+   PASS 2 / MOBILE HOME — single-screen portrait composition
+   Desktop remains unchanged.
+   ========================================================= */
+
+@media (max-width: 700px) and (orientation: portrait) {
+    html,
+    body.homepage {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+
+    body.homepage .landing {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0;
+        overflow: hidden;
+        background-image: url("../assets/images/foundry-home-mobile.webp");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    body.homepage .brand {
+        left: 5%;
+        top: clamp(82px, 11.5dvh, 116px);
+        width: 90%;
+        z-index: 2;
+    }
+
+    body.homepage .brand-topline {
+        gap: 12px;
+        margin-bottom: 4px;
+    }
+
+    body.homepage .brand-rule {
+        width: clamp(54px, 17vw, 78px);
+    }
+
+    body.homepage .brand-the {
+        font-size: clamp(15px, 4.4vw, 20px);
+        letter-spacing: clamp(6px, 2vw, 9px);
+    }
+
+    body.homepage .brand-name {
+        font-size: clamp(52px, 16.5vw, 72px);
+        line-height: .88;
+        letter-spacing: -1px;
+    }
+
+    body.homepage .brand-tagline {
+        margin-top: 10px;
+        font-size: clamp(8px, 2.45vw, 11px);
+        letter-spacing: clamp(2px, .72vw, 3.2px);
+        white-space: nowrap;
+    }
+
+    body.homepage .hero {
+        left: 5%;
+        top: clamp(238px, 31dvh, 300px);
+        width: 90%;
+        z-index: 2;
+    }
+
+    body.homepage #introPanel {
+        text-align: center;
+    }
+
+    body.homepage .hero-title,
+    body.homepage .hero-lines {
+        text-align: center;
+        transform: none;
+    }
+
+    body.homepage .hero-title {
+        margin: 0 0 clamp(18px, 2.8dvh, 28px);
+        font-size: clamp(46px, 15.5vw, 66px);
+        line-height: .93;
+        letter-spacing: -.035em;
+    }
+
+    body.homepage .hero-lines {
+        font-size: clamp(21px, 6.4vw, 28px);
+        line-height: 1.28;
+    }
+
+    body.homepage .hero-actions {
+        position: fixed;
+        left: 4.5vw;
+        right: 4.5vw;
+        bottom: max(16px, env(safe-area-inset-bottom));
+        z-index: 4;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: auto;
+        margin: 0;
+    }
+
+    body.homepage .hero-button {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        min-height: 50px;
+        padding: 13px 5px;
+        font-size: clamp(8.5px, 2.35vw, 11px);
+        line-height: 1.15;
+        letter-spacing: clamp(1.2px, .42vw, 2px);
+        white-space: nowrap;
+    }
+
+    body.homepage .sort-title {
+        font-size: clamp(42px, 13vw, 58px);
+        line-height: .95;
+        text-align: center;
+    }
+
+    body.homepage .sort-lines {
+        font-size: clamp(22px, 6vw, 28px);
+        text-align: center;
+    }
+
+    body.homepage .sort-actions .hero-back {
+        flex: 0 0 auto;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) and (orientation: portrait) and (max-height: 740px) {
+    body.homepage .brand {
+        top: 68px;
+    }
+
+    body.homepage .brand-name {
+        font-size: clamp(48px, 15vw, 62px);
+    }
+
+    body.homepage .brand-tagline {
+        margin-top: 7px;
+    }
+
+    body.homepage .hero {
+        top: 205px;
+    }
+
+    body.homepage .hero-title {
+        margin-bottom: 14px;
+        font-size: clamp(40px, 13.5vw, 56px);
+    }
+
+    body.homepage .hero-lines {
+        font-size: clamp(19px, 5.7vw, 24px);
+        line-height: 1.2;
+    }
+
+    body.homepage .hero-button {
+        min-height: 46px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
