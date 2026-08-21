@@ -412,3 +412,73 @@ body.foundry-global-open .foundry-global-drawer {
     min-height: 100%;
   }
 }
+
+/* =========================================================
+   PASS 2 / MOBILE HOME — slim full-width navigation bar
+   Homepage only; approved navigation elsewhere is untouched.
+   ========================================================= */
+
+@media (max-width: 700px) and (orientation: portrait) {
+  body.homepage .foundry-global-nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(52px + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) 10px 0;
+    grid-template-columns: repeat(3, 1fr);
+    border: 0;
+    border-bottom: 1px solid rgba(181, 125, 62, .36);
+    border-radius: 0;
+    background:
+      linear-gradient(180deg, rgba(24, 20, 16, .96), rgba(9, 8, 7, .88));
+    box-shadow:
+      inset 0 -1px 0 rgba(0, 0, 0, .72),
+      0 5px 16px rgba(0, 0, 0, .24);
+    backdrop-filter: blur(7px);
+  }
+
+  body.homepage .foundry-global-nav::before {
+    display: none;
+  }
+
+  body.homepage .foundry-global-control {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  body.homepage .foundry-global-control + .foundry-global-control::before {
+    display: none;
+  }
+
+  body.homepage .foundry-global-control svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  body.homepage .foundry-global-home svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  body.homepage .foundry-global-menu {
+    gap: 5px;
+  }
+
+  body.homepage .foundry-global-menu span {
+    width: 28px;
+    height: 2px;
+  }
+
+  body.homepage.foundry-global-open .foundry-global-menu span:nth-child(1),
+  body.homepage.menu-open .foundry-global-menu span:nth-child(1) {
+    width: 28px;
+    transform: translate(1px, 7px) rotate(46deg);
+  }
+
+  body.homepage.foundry-global-open .foundry-global-menu span:nth-child(3),
+  body.homepage.menu-open .foundry-global-menu span:nth-child(3) {
+    width: 30px;
+    transform: translate(-2px, -7px) rotate(-43deg);
+  }
+}
