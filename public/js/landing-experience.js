@@ -1,5 +1,6 @@
 const sortButton = document.getElementById('sortButton');
 const backButton = document.getElementById('backButton');
+backButton?.remove();
 
 const introPanel = document.getElementById('introPanel');
 const sortPanel = document.getElementById('sortPanel');
@@ -74,7 +75,6 @@ function showIntroPanel() {
 }
 
 sortButton.addEventListener('click', showSortPanel);
-backButton?.addEventListener('click', showIntroPanel);
 
 
 /* =========================================================
