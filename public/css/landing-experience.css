@@ -2716,7 +2716,7 @@ html.restore-explore .explore-choices {
 
 @media (max-width: 700px) and (orientation: portrait) and (max-height: 600px) {
     body.homepage .explore-screen {
-        gap: 18px;
+        gap: 32px;
         padding-top: calc(62px + env(safe-area-inset-top));
         padding-bottom: max(9px, env(safe-area-inset-bottom));
     }
