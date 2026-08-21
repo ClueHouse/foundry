@@ -2488,6 +2488,11 @@ html.restore-explore .explore-choices {
     body.homepage .sort-lines {
         font-size: clamp(22px, 6vw, 28px);
         text-align: center;
+        transform: translateY(-28px);
+    }
+
+    body.homepage.is-forging #sortPanel.is-active {
+        animation: none;
     }
 
     body.homepage .sort-actions {
@@ -2502,6 +2507,9 @@ html.restore-explore .explore-choices {
         flex: 0 1 82%;
         width: min(330px, 82%);
         max-width: 330px;
+        font-size: clamp(10.5px, 2.9vw, 12px);
+        font-weight: 600;
+        letter-spacing: 1.6px;
     }
 }
 
