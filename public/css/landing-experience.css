@@ -2490,9 +2490,18 @@ html.restore-explore .explore-choices {
         text-align: center;
     }
 
+    body.homepage .sort-actions {
+        justify-content: center;
+    }
+
     body.homepage .sort-actions .hero-back {
-        flex: 0 0 auto;
-        margin-left: 0;
+        display: none;
+    }
+
+    body.homepage .sort-actions .hero-button {
+        flex: 0 1 82%;
+        width: min(330px, 82%);
+        max-width: 330px;
     }
 }
 
