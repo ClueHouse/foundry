@@ -2569,7 +2569,7 @@ html.restore-explore .explore-choices {
     body.homepage.explore-open .landing::after,
     html.restore-explore body.homepage .landing::after {
         background:
-            linear-gradient(180deg, rgba(7, 6, 5, .48), rgba(7, 6, 5, .68)),
+            linear-gradient(180deg, rgba(7, 6, 5, .54), rgba(7, 6, 5, .84)),
             url("../assets/images/foundry-home-mobile.webp")
             center center / cover
             no-repeat;
@@ -2580,10 +2580,10 @@ html.restore-explore .explore-choices {
         height: 100vh;
         height: 100dvh;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: auto auto;
         align-items: start;
-        align-content: stretch;
-        gap: 14px;
+        align-content: start;
+        gap: clamp(16px, 3.2dvh, 28px);
         padding:
             calc(68px + env(safe-area-inset-top))
             18px
@@ -2638,7 +2638,7 @@ html.restore-explore .explore-choices {
     }
 
     body.homepage .explore-choices {
-        align-self: end;
+        align-self: start;
         justify-self: stretch;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2674,6 +2674,37 @@ html.restore-explore .explore-choices {
 
     body.homepage .explore-choice::before {
         display: none;
+    }
+
+    body.homepage .explore-choice:first-child {
+        border-color: rgba(238, 188, 113, .88);
+        background:
+            linear-gradient(
+                180deg,
+                #c49a61 0%,
+                #9d6c38 42%,
+                #68401f 100%
+            );
+        color: #fff3d8;
+        box-shadow:
+            inset 0 1px rgba(255, 241, 210, .42),
+            inset 0 -1px rgba(52, 27, 10, .72),
+            0 0 20px rgba(184, 123, 57, .20),
+            0 9px 24px rgba(0, 0, 0, .34);
+        text-shadow: 0 1px 2px rgba(48, 24, 8, .92);
+    }
+
+    body.homepage .explore-choice:first-child:hover,
+    body.homepage .explore-choice:first-child:focus-visible {
+        border-color: #f2c785;
+        background:
+            linear-gradient(
+                180deg,
+                #d0a76b 0%,
+                #aa7540 42%,
+                #744724 100%
+            );
+        color: #fff8e9;
     }
 
     body.homepage .explore-choice:hover,
