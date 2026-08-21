@@ -2425,7 +2425,7 @@ html.restore-explore .explore-choices {
 
     body.homepage .hero {
         left: 5%;
-        top: clamp(238px, 31dvh, 300px);
+        top: clamp(205px, 27dvh, 255px);
         width: 90%;
         z-index: 2;
     }
@@ -2440,13 +2440,9 @@ html.restore-explore .explore-choices {
         transform: none;
     }
 
-    body.homepage .hero-lines {
-        transform: translateY(-24px);
-    }
-
-    body.homepage .hero-title {
-        margin: 0 0 clamp(18px, 2.8dvh, 28px);
-        font-size: clamp(46px, 15.5vw, 66px);
+     body.homepage .hero-title {
+        margin: 0 0 clamp(12px, 2dvh, 20px);
+        font-size: clamp(42px, 14vw, 60px);
         line-height: .93;
         letter-spacing: -.035em;
     }
@@ -2512,17 +2508,17 @@ html.restore-explore .explore-choices {
     }
 
     body.homepage .hero {
-        top: 205px;
+        top: 166px;
     }
 
     body.homepage .hero-title {
-        margin-bottom: 14px;
-        font-size: clamp(40px, 13.5vw, 56px);
+        margin-bottom: 10px;
+        font-size: clamp(36px, 12.5vw, 50px);
     }
 
     body.homepage .hero-lines {
-        font-size: clamp(19px, 5.7vw, 24px);
-        line-height: 1.2;
+        font-size: clamp(18px, 5.3vw, 22px);
+        line-height: 1.18;
     }
 
     body.homepage .hero-button {
